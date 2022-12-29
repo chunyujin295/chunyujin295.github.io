@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>昱锦的贼船🏴‍☠️</title>
+  <title>浴巾的贼船🏴‍☠️</title>
   
   <subtitle>水可载舟，亦可赛艇🚤</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://chunyujin295.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://chunyujin295.github.io/"/>
   <updated>2022-12-29T06:45:36.953Z</updated>
-  <id>http://example.com/</id>
+  <id>https://chunyujin295.github.io/</id>
   
   <author>
-    <name>昱锦</name>
+    <name>浴巾</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/2022/12/29/atest/"/>
-    <id>http://example.com/2022/12/29/atest/</id>
+    <link href="https://chunyujin295.github.io/2022/12/29/atest/"/>
+    <id>https://chunyujin295.github.io/2022/12/29/atest/</id>
     <published>2022-12-29T06:45:36.951Z</published>
     <updated>2022-12-29T06:45:36.953Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2022/12/29/hello-world/"/>
-    <id>http://example.com/2022/12/29/hello-world/</id>
+    <link href="https://chunyujin295.github.io/2022/12/29/hello-world/"/>
+    <id>https://chunyujin295.github.io/2022/12/29/hello-world/</id>
     <published>2022-12-29T04:40:41.791Z</published>
     <updated>2022-12-29T04:40:41.791Z</updated>
     

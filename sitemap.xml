@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chunyujin295.github.io/2022/12/29/hello-world/</loc>
+    
+    <lastmod>2022-12-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin295.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-12-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chunyujin295.github.io/music/index.html</loc>
     
     <lastmod>2022-12-29</lastmod>
@@ -38,15 +56,6 @@
   </url>
   
   <url>
-    <loc>https://chunyujin295.github.io/2022/12/29/hello-world/</loc>
-    
-    <lastmod>2022-12-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://chunyujin295.github.io/2022/12/18/%E5%85%B3%E4%BA%8ELinux/</loc>
     
     <lastmod>2022-12-18</lastmod>
@@ -63,6 +72,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://chunyujin295.github.io/tags/test/</loc>
+    <lastmod>2022-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   

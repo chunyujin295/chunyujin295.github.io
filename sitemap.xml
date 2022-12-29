@@ -2,34 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chunyujin295.github.io/2022/12/29/%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4&%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</loc>
-    
-    <lastmod>2022-12-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chunyujin295.github.io/2022/12/29/hello-world/</loc>
-    
-    <lastmod>2022-12-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chunyujin295.github.io/categories/index.html</loc>
-    
-    <lastmod>2022-12-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chunyujin295.github.io/music/index.html</loc>
+    <loc>https://chunyujin295.github.io/2022/12/30/chunyujin295%E5%8D%9A%E5%AE%A2%E5%9B%BE%E9%9B%86(%E9%98%BF%E9%87%8C%E4%BA%91%E5%9B%BE%E5%BA%8A)/</loc>
     
     <lastmod>2022-12-29</lastmod>
     
@@ -47,7 +20,16 @@
   </url>
   
   <url>
-    <loc>https://chunyujin295.github.io/2022/12/29/atest/</loc>
+    <loc>https://chunyujin295.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-12-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin295.github.io/2022/10/21/Git%EF%BC%81%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</loc>
     
     <lastmod>2022-12-29</lastmod>
     
@@ -58,7 +40,25 @@
   <url>
     <loc>https://chunyujin295.github.io/2022/12/18/%E5%85%B3%E4%BA%8ELinux/</loc>
     
-    <lastmod>2022-12-18</lastmod>
+    <lastmod>2022-12-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin295.github.io/2022/12/29/%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4&%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</loc>
+    
+    <lastmod>2022-12-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin295.github.io/music/index.html</loc>
+    
+    <lastmod>2022-12-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -74,7 +74,14 @@
 
   
   <url>
-    <loc>https://chunyujin295.github.io/tags/test/</loc>
+    <loc>https://chunyujin295.github.io/tags/Linux/</loc>
+    <lastmod>2022-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin295.github.io/tags/Git/</loc>
     <lastmod>2022-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -84,6 +91,13 @@
   
   <url>
     <loc>https://chunyujin295.github.io/categories/Linux/</loc>
+    <lastmod>2022-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin295.github.io/categories/Skill/</loc>
     <lastmod>2022-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

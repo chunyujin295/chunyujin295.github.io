@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>浴巾的贼船🏴‍☠️</title>
+  <icon>https://www.gravatar.com/avatar/4693869db7cae9524536dea3133cf541</icon>
   
-  <subtitle>水可载舟，亦可赛艇🚤</subtitle>
   <link href="https://chunyujin295.github.io/atom.xml" rel="self"/>
   
   <link href="https://chunyujin295.github.io/"/>
@@ -11,7 +11,7 @@
   
   <author>
     <name>浴巾</name>
-    
+    <email>3029795434@qq.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>

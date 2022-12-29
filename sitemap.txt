@@ -1,2 +1,3 @@
+http://example.com/2022/12/29/atest/
 http://example.com/2022/12/29/hello-world/
 http://example.com/

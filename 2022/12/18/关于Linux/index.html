@@ -191,7 +191,7 @@ cursor: move;
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'https://chunyujin295-api.vercel.app/',
+      envId: 'https://twikoo.chunyujin.top/',
       region: '',
       onCommentLoaded: function () {
         btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
@@ -203,7 +203,7 @@ cursor: move;
     const countELement = document.getElementById('twikoo-count')
     if(!countELement) return
     twikoo.getCommentsCount({
-      envId: 'https://chunyujin295-api.vercel.app/',
+      envId: 'https://twikoo.chunyujin.top/',
       region: '',
       urls: [window.location.pathname],
       includeReply: false

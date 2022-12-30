@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chunyujin295.github.io/website/index.html</loc>
+    
+    <lastmod>2022-12-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin295.github.io/link/index.html</loc>
+    
+    <lastmod>2022-12-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chunyujin295.github.io/music/index.html</loc>
     
     <lastmod>2022-12-30</lastmod>
@@ -12,15 +30,6 @@
   
   <url>
     <loc>https://chunyujin295.github.io/about/index.html</loc>
-    
-    <lastmod>2022-12-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chunyujin295.github.io/link/index.html</loc>
     
     <lastmod>2022-12-30</lastmod>
     

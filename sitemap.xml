@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chunyujin.top/chunyujin/b51810cf.html</loc>
+    <loc>https://chunyujin.top/chunyujin/35444f4.html</loc>
     
     <lastmod>2022-12-31</lastmod>
     
@@ -12,6 +12,24 @@
   
   <url>
     <loc>https://chunyujin.top/chunyujin/c2a9db75.html</loc>
+    
+    <lastmod>2022-12-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin.top/chunyujin/768897a3.html</loc>
+    
+    <lastmod>2022-12-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin.top/chunyujin/b51810cf.html</loc>
     
     <lastmod>2022-12-31</lastmod>
     
@@ -184,6 +202,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://chunyujin.top/tags/Kindle/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin.top/tags/%E5%81%A5%E5%BA%B7/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -202,6 +234,13 @@
   
   <url>
     <loc>https://chunyujin.top/categories/Linux/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin.top/categories/%E5%81%A5%E5%BA%B7/</loc>
     <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -139,7 +139,7 @@
 
   <url>
     <loc>https://chunyujin.top/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -147,21 +147,21 @@
   
   <url>
     <loc>https://chunyujin.top/tags/Git/</loc>
-    <lastmod>2022-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://chunyujin.top/tags/%E8%B5%84%E6%BA%90/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chunyujin.top/tags/Linux/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin.top/tags/%E8%B5%84%E6%BA%90/</loc>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -170,21 +170,21 @@
   
   <url>
     <loc>https://chunyujin.top/categories/Skill/</loc>
-    <lastmod>2022-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://chunyujin.top/categories/%E5%9B%BE%E9%9B%86/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chunyujin.top/categories/Linux/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin.top/categories/%E5%9B%BE%E9%9B%86/</loc>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

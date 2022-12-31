@@ -15,9 +15,9 @@ https://chunyujin.top/messageboard/index.html
 https://chunyujin.top/categories/index.html
 https://chunyujin.top/tags/index.html
 https://chunyujin.top/
+https://chunyujin.top/tags/Linux/
 https://chunyujin.top/tags/Git/
 https://chunyujin.top/tags/%E8%B5%84%E6%BA%90/
-https://chunyujin.top/tags/Linux/
+https://chunyujin.top/categories/Linux/
 https://chunyujin.top/categories/Skill/
 https://chunyujin.top/categories/%E5%9B%BE%E9%9B%86/
-https://chunyujin.top/categories/Linux/

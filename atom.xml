@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-01-01T02:57:32.121Z</updated>
+  <updated>2023-01-01T05:40:35.200Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决butterfly在黑色模式下主页封面过暗的问题</title>
+    <link href="https://chunyujin.top/chunyujin/dffbd9e1.html"/>
+    <id>https://chunyujin.top/chunyujin/dffbd9e1.html</id>
+    <published>2022-12-31T03:52:00.000Z</published>
+    <updated>2023-01-01T05:40:35.200Z</updated>
+    
+    <content type="html"><![CDATA[<p>解决黑色模式下主页封面过暗的问题</p><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212311144894.png" alt="截屏2022-12-31 11.43.39"></p><p>调整第48行括号里的小数点后的数值，默认是.9，数值越大越暗</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;解决黑色模式下主页封面过暗的问题&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;/themes/butterfly/source/css/_mode/darkmode.styl &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzh</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    
+    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>博客图集(阿里云图床)</title>
@@ -117,6 +143,81 @@
   </entry>
   
   <entry>
+    <title>MinGw配置(Windows电脑)</title>
+    <link href="https://chunyujin.top/chunyujin/1ee5d0ce.html"/>
+    <id>https://chunyujin.top/chunyujin/1ee5d0ce.html</id>
+    <published>2022-12-15T14:14:00.000Z</published>
+    <updated>2023-01-01T05:43:46.356Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="安装MinGW"><a href="#安装MinGW" class="headerlink" title="安装MinGW"></a>安装MinGW</h4><p>相比在 Linux 平台上安装 GCC 编译环境，在 Windows 平台上安装 MinGW 是比较简单的，只需经历以下几个过程。</p><ol><li><p>打开 <a href="https://osdn.net/projects/mingw/">MinGW 官网</a>（点击即可进入官网），下载 MinGW 安装包。</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215731250.png" alt="image-20221215215731250" style="zoom:67%;" /></li><li><p>下载完成后，会得到一个名为 mingw-get-setup.exe 的安装包，双击打开它，可以看到如下的对话框：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215752602.png" alt="image-20221215215752602" style="zoom:67%;" /></li><li><p>直接点击“Install”，进入下面的对话框，自定义安装位置，然后选择continue</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215808186.png" alt="image-20221215215808186" style="zoom:67%;" /></li><li><p>进入安装 MinGW 配置器的界面。安装完成之后，得到一个名为 “MinGW Installer Manager” 的软件，借助它，可以随时根据需要修改 GCC 编译器的配置。点击“continue”,会自动弹出配置界面，如下所示：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215823311.png" alt="image-20221215215823311" style="zoom:67%;" /></li><li><p>为使 GCC 同时支持编译 C 语言和 C++，需勾选图中标注的 2 项。我们知道，GCC 还支持其它编程语言，读者可借助此配置器，随时实际需要安装自己需要的编译环境。勾选完成后，在菜单栏中选择<code>Installation -&gt; Apply Changes</code>，弹出如下对话框：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215851706.png" alt="image-20221215215851706" style="zoom:67%;" /></li></ol><p>选择“Apply”。然后耐心等待，直至安装成功，即可关闭此界面。注意，整个安装过程中可能会提示某些组件下载失败，但没关系，后续需要时，可以通过 MinGw Installer（图 4 所示）安装界面中的 “All Packages”选项中，手动选择指定的安装包进行安装。</p><h4 id="添加到环境变量"><a href="#添加到环境变量" class="headerlink" title="添加到环境变量"></a>添加到环境变量</h4><p>打开<code>我的电脑</code>-&gt;<code>属性</code>-&gt;<code>高级系统设置</code>-&gt;<code>“高级”中的环境变量</code></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213001922.png" alt="image-20221215213001922" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213141396.png" alt="image-20221215213141396" style="zoom: 67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213248912.png" alt="image-20221215213248912" style="zoom:67%;" /><p>在上方的“用户变量”的Path变量中添加MinGW的bin的位置</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213407962.png" alt="image-20221215213407962" style="zoom:67%;" /><blockquote><p>也可以在下方的“系统变量”的Path中添加MinGW的bin的位置</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213829809.png" alt="image-20221215213829809" style="zoom:67%;" /><p>环境变量、系统变量、用户变量的关系：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021" style="zoom: 50%;" /><p>环境变量只是一个总称，代表了系统变量和用户变量，因此我们说环境变量都是指的系统变量和用户变量。系统变量就是系统级别的变量，用户需要使用系统变量。如果系统变量被修改了，而任何系统用户都在用系统变量，因此每个系统用户都将受到影响。用户变量运行在系统变量之上的，每个用户拥有不同的用户变量，不同用户的用户变量之间是并列的，也是互不干扰的。</p></blockquote><h4 id="检验配置完成"><a href="#检验配置完成" class="headerlink" title="检验配置完成"></a>检验配置完成</h4><p>打开命令行提示符，输入<code>gcc -v</code>或者<code>g++ -v</code></p><p>出现下面则说明成功</p><p><img>(<a href="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png">https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png</a>)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;安装MinGW&quot;&gt;&lt;a href=&quot;#安装MinGW&quot; class=&quot;headerlink&quot; title=&quot;安装MinGW&quot;&gt;&lt;/a&gt;安装MinGW&lt;/h4&gt;&lt;p&gt;相比在 Linux 平台上安装 GCC 编译环境，在 Windows 平台上安装 MinGW 是比较</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    
+    <category term="MinGw" scheme="https://chunyujin.top/tags/MinGw/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NotePad++配置</title>
+    <link href="https://chunyujin.top/chunyujin/55caa4ef.html"/>
+    <id>https://chunyujin.top/chunyujin/55caa4ef.html</id>
+    <published>2022-12-15T14:00:00.000Z</published>
+    <updated>2023-01-01T05:48:16.377Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p>安装MinGW并添加到环境变量：</p><p><a href="">点此查看步骤(建议右键选择在新窗口中打开)</a></p><p>创建一个cpp文件并写一段测试代码</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215200029209.png" alt="image-20221215200029209"></p><p>点击顶部菜单栏的“运行”或者直接按F5</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215200205821.png" alt="image-20221215200205821"></p><p>输入一下宏定义命令</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmd /k pushd &quot;$(CURRENT_DIRECTORY)&quot; &amp;&amp; g++ -o &quot;$(NAME_PART).exe&quot; &quot;$(FULL_CURRENT_PATH)&quot; &amp;&amp; &quot;$(NAME_PART)&quot;.exe &amp; PAUSE &amp; EXIT</span><br></pre></td></tr></table></figure><p>点击运行即可</p><p>建议选择“保存”按键，将宏定义保存到快捷键，比如<code>ctrl + alt + n</code>(跟vscode的coderunner插件一样的快捷键)，下次运行直接快捷键即可</p><blockquote><p><code>cmd /k</code>：<strong>打开</strong> cmd 控制台，运行完程序让其停留而不自动关闭。</p><p><code>pushd &quot;$(CURRENT_DIRECTORY)&quot;</code>：<strong>将工作路径更换到源文件所在的路径</strong>，例如’pushd E:\kkk’相当于 cmd 中先<code>e:</code>再<code>cd kkk</code>，这条命令在源代码要调用同目录文件而只写了相对路径时尤为重要。因为 Notepad++ 的默认工作路径是它自己的安装路径。</p><p><code>g++ -o &quot;$(NAME_PART).exe&quot; &quot;$(FULL_CURRENT_PATH)&quot;</code>：调用环境变量中的编译器 g++.exe 来将源代码<strong>编译</strong>成同名 exe 文件并输出到相同路径。</p><p><code>&quot;$(NAME_PART)&quot;.exe</code>：<strong>运行</strong>源代码编译出的可执行文件。</p><p><code>PAUSE</code>：暂停，提示<strong>“按任意键继续”</strong>，配合下一条命令实现“按任意键关闭”的效果，两者都没有的话程序运行完就会秒关。</p><p><code>EXIT</code>：<strong>关闭</strong> cmd 控制台，没有的话按任意键会退到 cmd 命令台，等待输入下一条命令。</p><ul><li><p>$(CURRENT_DIRECTORY)代表文件所在目录的路径。</p></li><li><p>$(NAME_PART)表示该文件无后缀部分的文件名。</p></li><li><p>$(FULL_CURRENT_PATH)代表当前完整的文件路径。</p></li><li><p>双引号（半角）：用于防止目录或文件名中含空格的情况。</p></li><li><p>“&amp;&amp;”和“&amp;”：前者表示上一条命令正常执行完再执行下一条命令，非正常则不执行下一条；后者无顾虑。例如一分为六后的后两条子命令，表示不管源代码编译、运行是否成功，都会出现“按任意键继续”字样，并且按任意键后关闭 cmd 控制台。</p></li></ul></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h4&gt;&lt;p&gt;安装MinGW并添加到环境变量：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;点此查看步骤(建议右键选择在新窗口中打开)&lt;/a&gt;&lt;/</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    
+    <category term="NotePad++" scheme="https://chunyujin.top/tags/NotePad/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VsCode_C++环境搭建(Mac m1芯片版本)</title>
+    <link href="https://chunyujin.top/chunyujin/1580f89a.html"/>
+    <id>https://chunyujin.top/chunyujin/1580f89a.html</id>
+    <published>2022-12-13T02:11:00.000Z</published>
+    <updated>2023-01-01T05:42:13.023Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/BYGAO/p/15135609.html">文章转载自百叶的自留地(2021年8月)，非商业用途，侵删</a></p><p>文末放了我的三个json文件配置，可以参考。</p><h2 id="1-下载VS-code"><a href="#1-下载VS-code" class="headerlink" title="1.下载VS code"></a>1.下载VS code</h2><p>VS code已针对m1 芯片进行了适配，去官网下载VS code Apple Silicon版并安装。</p><h2 id="2-确保clang已安装"><a href="#2-确保clang已安装" class="headerlink" title="2.确保clang已安装"></a>2.确保clang已安装</h2><p>在终端里输入<code>clang --version</code>查看是否已安装，若未安装，输入<code>xcode-select --install</code>读完条款输入agree安装即可。</p><h2 id="3-下载扩展"><a href="#3-下载扩展" class="headerlink" title="3.下载扩展"></a>3.下载扩展</h2><p>一共有三个扩展需要下载。<br>1.C&#x2F;C++<br>2.C++ Intellisense<br>3.CodeLLDB<br>4.Chinese(中文插件，可选)</p><h2 id="4-新建cpp文件"><a href="#4-新建cpp文件" class="headerlink" title="4.新建cpp文件"></a>4.新建cpp文件</h2><p>这里直接采用<a href="https://code.visualstudio.com/docs/cpp/config-clang-mac">微软官方文档</a>里的代码。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;string&gt; msg &#123;<span class="string">&quot;Hello&quot;</span>, <span class="string">&quot;C++&quot;</span>, <span class="string">&quot;World&quot;</span>, <span class="string">&quot;from&quot;</span>, <span class="string">&quot;VS Code&quot;</span>, <span class="string">&quot;and the C++ extension!&quot;</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> string&amp; word : msg)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; word &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这个时候，在文件第10行输入<code>msg.</code>应该是能看到VS code跳出<code>assign</code>之类的提示的。</p><h2 id="5-配置文件"><a href="#5-配置文件" class="headerlink" title="5.配置文件"></a>5.配置文件</h2><h3 id="1-配置tasks-json文件"><a href="#1-配置tasks-json文件" class="headerlink" title="1.配置tasks.json文件"></a>1.配置tasks.json文件</h3><p>首先点击<code>终端</code>—<code>配置默认生成任务</code>—<code>C/C++ clang++</code>，会生成一个tasks.json文件，这是默认生成的，需要修改其中的<code>args</code>选项,添加一个<code>&quot;-std=c++17&quot;</code>，修改后为</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;args&quot;</span>: [</span><br><span class="line"><span class="string">&quot;-g&quot;</span>,</span><br><span class="line"><span class="string">&quot;<span class="variable">$&#123;file&#125;</span>&quot;</span>,</span><br><span class="line"><span class="string">&quot;-std=c++17&quot;</span>,</span><br><span class="line"><span class="string">&quot;-o&quot;</span>,</span><br><span class="line"><span class="string">&quot;<span class="variable">$&#123;fileDirname&#125;</span>/<span class="variable">$&#123;fileBasenameNoExtension&#125;</span>&quot;</span></span><br><span class="line">],</span><br></pre></td></tr></table></figure><p>配置完后，会发现VS code提示语法错误，不要急，接下来就修正它。</p><h3 id="2-配置c-cpp-properties-json文件"><a href="#2-配置c-cpp-properties-json文件" class="headerlink" title="2.配置c_cpp_properties.json文件"></a>2.配置c_cpp_properties.json文件</h3><p>使用组合键<code>shift+command+p</code>（mac下shift就是<code>fn</code>键上面那个啦），调出<code>C/C++:编辑配置（json）</code>，会自动生成一个<code>c_cpp_properties.json</code>文件。</p><p>将<code>&quot;compilerPath&quot;: &quot;/usr/bin/clang&quot;,</code>修改为<code>&quot;compilerPath&quot;: &quot;/usr/bin/clang++&quot;,</code><br>将<code>&quot;&quot;cppStandard&quot;: &quot;c++98&quot;,</code>修改为<code>&quot;cppStandard&quot;: &quot;c++17&quot;,</code></p><p>其实只是将编译器修改为clang++，cpp标准修改为C++ 17.</p><h3 id="3-编译生成文件"><a href="#3-编译生成文件" class="headerlink" title="3.编译生成文件"></a>3.编译生成文件</h3><p>这么配置完后，其实VS code还是会报两个语法错误，不过这不要紧，这是因为还没更新的缘故。<br>点击<code>终端</code>—<code>运行生成任务</code>，运行完后会生成一个二进制文件，语法报错也没了，表示我们编译成功了。<br>如果想测试的话，新建一个终端，使用<code>./你的二进制文件名</code>，即可看到输出结果。</p><h3 id="4-配置launch-json文件"><a href="#4-配置launch-json文件" class="headerlink" title="4.配置launch.json文件"></a>4.配置launch.json文件</h3><p>点击<code>运行</code>—<code>添加配置</code>—<code>C++(GDB/LLDB)</code>—<code>clang++</code>，会生成一个<code>launch.json</code>文件。<br>将<code>&quot;type&quot;: &quot;cppdbg&quot;,</code>修改为<code>&quot;type&quot;: &quot;lldb&quot;,</code><br>至此，所有文件就配置完了。</p><h3 id="5-调试"><a href="#5-调试" class="headerlink" title="5.调试"></a>5.调试</h3><p>在文件的第10行放一个断点，点击<code>运行</code>—<code>启动调试</code>，就可以看到各种变量了。</p><h2 id="我的文件配置"><a href="#我的文件配置" class="headerlink" title="我的文件配置"></a>我的文件配置</h2><p>以下是我的三个json文件配置代码。<br><code>tasks.json</code>:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">&quot;version&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line"><span class="string">&quot;tasks&quot;</span>: [</span><br><span class="line">&#123;</span><br><span class="line"><span class="string">&quot;type&quot;</span>: <span class="string">&quot;cppbuild&quot;</span>,</span><br><span class="line"><span class="string">&quot;label&quot;</span>: <span class="string">&quot;C/C++: clang++ 生成活动文件&quot;</span>,</span><br><span class="line"><span class="string">&quot;command&quot;</span>: <span class="string">&quot;/usr/bin/clang++&quot;</span>,</span><br><span class="line"><span class="string">&quot;args&quot;</span>: [</span><br><span class="line"><span class="string">&quot;-g&quot;</span>,</span><br><span class="line"><span class="string">&quot;<span class="variable">$&#123;file&#125;</span>&quot;</span>,</span><br><span class="line"><span class="string">&quot;-std=c++17&quot;</span>,</span><br><span class="line"><span class="string">&quot;-o&quot;</span>,</span><br><span class="line"><span class="string">&quot;<span class="variable">$&#123;fileDirname&#125;</span>/<span class="variable">$&#123;fileBasenameNoExtension&#125;</span>&quot;</span></span><br><span class="line">],</span><br><span class="line"><span class="string">&quot;options&quot;</span>: &#123;</span><br><span class="line"><span class="string">&quot;cwd&quot;</span>: <span class="string">&quot;<span class="variable">$&#123;fileDirname&#125;</span>&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">&quot;problemMatcher&quot;</span>: [</span><br><span class="line"><span class="string">&quot;<span class="variable">$gcc</span>&quot;</span></span><br><span class="line">],</span><br><span class="line"><span class="string">&quot;group&quot;</span>: &#123;</span><br><span class="line"><span class="string">&quot;kind&quot;</span>: <span class="string">&quot;build&quot;</span>,</span><br><span class="line"><span class="string">&quot;isDefault&quot;</span>: <span class="literal">true</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">&quot;detail&quot;</span>: <span class="string">&quot;编译器: /usr/bin/clang++&quot;</span></span><br><span class="line">&#125;</span><br><span class="line">]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>c_cpp_properties.json</code>:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Mac&quot;</span>,</span><br><span class="line">            <span class="string">&quot;includePath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;<span class="variable">$&#123;workspaceFolder&#125;</span>/**&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&quot;defines&quot;</span>: [],</span><br><span class="line">            <span class="string">&quot;macFrameworkPath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&quot;compilerPath&quot;</span>: <span class="string">&quot;/usr/bin/clang++&quot;</span>,</span><br><span class="line">            <span class="string">&quot;cStandard&quot;</span>: <span class="string">&quot;c17&quot;</span>,</span><br><span class="line">            <span class="string">&quot;cppStandard&quot;</span>: <span class="string">&quot;c++17&quot;</span>,</span><br><span class="line">            <span class="string">&quot;intelliSenseMode&quot;</span>: <span class="string">&quot;macos-clang-arm64&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;version&quot;</span>: 4</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>launch.json</code>:</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 使用 IntelliSense 了解相关属性。 </span></span><br><span class="line">    <span class="comment">// 悬停以查看现有属性的描述。</span></span><br><span class="line">    <span class="comment">// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;clang++ - 生成和调试活动文件&quot;</span>,</span><br><span class="line">            <span class="string">&quot;type&quot;</span>: <span class="string">&quot;lldb&quot;</span>,</span><br><span class="line">            <span class="string">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,</span><br><span class="line">            <span class="string">&quot;program&quot;</span>: <span class="string">&quot;<span class="subst">$&#123;fileDirname&#125;</span>/<span class="subst">$&#123;fileBasenameNoExtension&#125;</span>&quot;</span>,</span><br><span class="line">            <span class="string">&quot;args&quot;</span>: [],</span><br><span class="line">            <span class="string">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="string">&quot;cwd&quot;</span>: <span class="string">&quot;<span class="subst">$&#123;fileDirname&#125;</span>&quot;</span>,</span><br><span class="line">            <span class="string">&quot;environment&quot;</span>: [],</span><br><span class="line">            <span class="string">&quot;externalConsole&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="string">&quot;MIMode&quot;</span>: <span class="string">&quot;lldb&quot;</span>,</span><br><span class="line">            <span class="string">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;C/C++: clang++ 生成活动文件&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/BYGAO/p/15135609.html&quot;&gt;文章转载自百叶的自留地(2021年8月)，非商业用途，侵删&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;文末放了我的三个json文件配置，可以参考。&lt;/p&gt;
+&lt;h2 id=&quot;1-下载V</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    
+    <category term="VsCode" scheme="https://chunyujin.top/tags/VsCode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>用Calibre实现Kindle带封面传书</title>
     <link href="https://chunyujin.top/chunyujin/35444f4.html"/>
     <id>https://chunyujin.top/chunyujin/35444f4.html</id>
@@ -142,6 +243,82 @@
   </entry>
   
   <entry>
+    <title>Linux_历史命令</title>
+    <link href="https://chunyujin.top/chunyujin/6694219c.html"/>
+    <id>https://chunyujin.top/chunyujin/6694219c.html</id>
+    <published>2022-12-12T06:10:00.000Z</published>
+    <updated>2023-01-01T05:43:11.863Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Linux会保存用户的历史指令"><a href="#Linux会保存用户的历史指令" class="headerlink" title="Linux会保存用户的历史指令"></a>Linux会保存用户的历史指令</h3><p>历史指令保存在用户目录下的.bash_history文件(历史记录文件)中，并且每条指令都用时间戳的形式记录了执行时刻</p><p>当用户通过shell进入Linux系统时，Linux系统会先将.bash_history中的保存的之前的历史指令读取到历史记录缓存区中，在用户正常退出shell之前，执行的所有指令也会先记录在缓存区中，当用户正常退出shell(exit或者control+d)时，shell进程会自动将历史记录缓存区中的所有历史记录写入到.bash_history中</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221209114140665.png" alt="image-20221209114140665"></p><h4 id="查看历史缓冲区"><a href="#查看历史缓冲区" class="headerlink" title="查看历史缓冲区"></a>查看历史缓冲区</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">history #查看历史记录缓存区中保存的历史指令</span><br></pre></td></tr></table></figure><blockquote><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/QQ%E6%88%AA%E5%9B%BE20221209112431.png" alt="QQ截图20221209112431"  /><p>从最开始到现在为止</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/QQ%E6%88%AA%E5%9B%BE20221209112449.png"></p></blockquote><h5 id="通过键盘上下键快捷查看历史缓冲区"><a href="#通过键盘上下键快捷查看历史缓冲区" class="headerlink" title="通过键盘上下键快捷查看历史缓冲区"></a>通过键盘上下键快捷查看历史缓冲区</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/QQ%E5%BD%95%E5%B1%8F20221209120917.gif" alt="QQ录屏20221209120917"></p><h5 id="定量查看历史缓冲区的历史指令"><a href="#定量查看历史缓冲区的历史指令" class="headerlink" title="定量查看历史缓冲区的历史指令"></a>定量查看历史缓冲区的历史指令</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">history &lt;数字&gt; #查看缓冲区中最近的n条历史指令</span><br></pre></td></tr></table></figure><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221209172316597.png" alt="image-20221209172316597"></p><h4 id="手动写入-bash-history"><a href="#手动写入-bash-history" class="headerlink" title="手动写入.bash_history"></a>手动写入.bash_history</h4><p>如果执行了几条指令，比如执行两次<code>ls</code>和<code>ll</code>，查看一下历史缓存区</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221209115827151.png" alt="image-20221209115827151"></p><p>再查看.bash_history，发现没有记录在里面，因为历史记录保存在了历史缓存区，当退出shell的时候才会自动从缓存区写入.bash_history</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221209115907240.png"></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">history -w #手动将历史缓存写入用户目录下的.bash_history</span><br></pre></td></tr></table></figure><p>正常情况下，只有在 Shell 正常退出时，才会将缓冲区内容保存到.bash_history。如果想主动保存缓冲区的历史记录，执行 <code>-w</code> 选项即可</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221209120133565.png" alt="image-20221209120133565"></p><h4 id="清除历史缓冲区"><a href="#清除历史缓冲区" class="headerlink" title="清除历史缓冲区"></a>清除历史缓冲区</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">history -c #清除历史缓冲区</span><br></pre></td></tr></table></figure><p>历史缓冲区写入.bash_history其实就是用新内容覆盖掉原有内容，所以清除历史缓冲区就是清除本次登录用户时的所有操作的记录，不会删除之前的历史记录</p><h4 id="重复执行缓冲区历史指令"><a href="#重复执行缓冲区历史指令" class="headerlink" title="重复执行缓冲区历史指令"></a>重复执行缓冲区历史指令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!&lt;数字&gt; #重复执行缓冲区中的第n条历史指令</span><br></pre></td></tr></table></figure><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221209173229978.png" alt="image-20221209173229978"></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!-&lt;数字&gt; #重复执行缓冲区中倒数第n行历史指令</span><br></pre></td></tr></table></figure><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221209174342766.png" alt="image-20221209174342766"></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!! #重复执行上一条命令</span><br></pre></td></tr></table></figure><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221209174410518.png" alt="image-20221209174410518"></p><h4 id="搜索历史命令"><a href="#搜索历史命令" class="headerlink" title="搜索历史命令"></a>搜索历史命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctrl + r# 输入残缺指令，搜索对应完整历史指令</span><br></pre></td></tr></table></figure><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212121356384.gif" alt="Dec-12-2022 13-56-09"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Linux会保存用户的历史指令&quot;&gt;&lt;a href=&quot;#Linux会保存用户的历史指令&quot; class=&quot;headerlink&quot; title=&quot;Linux会保存用户的历史指令&quot;&gt;&lt;/a&gt;Linux会保存用户的历史指令&lt;/h3&gt;&lt;p&gt;历史指令保存在用户目录下的.bash</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VsCode快捷键&amp;使用技巧</title>
+    <link href="https://chunyujin.top/chunyujin/d25e6d9b.html"/>
+    <id>https://chunyujin.top/chunyujin/d25e6d9b.html</id>
+    <published>2022-12-09T09:57:00.000Z</published>
+    <updated>2023-01-01T05:41:56.209Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="运行代码"><a href="#运行代码" class="headerlink" title="运行代码"></a>运行代码</h4><p>⌃ + ⌥ + N</p><p>ctrl + alt + N</p><h4 id="格式化代码"><a href="#格式化代码" class="headerlink" title="格式化代码"></a>格式化代码</h4><p>⌥ + ⇧ + F</p><p>alt + shift + F</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202209121909898.png" alt="截屏2022-09-12 18.49.36" style="zoom: 33%;" /><h4 id="批量更改变量、函数名称"><a href="#批量更改变量、函数名称" class="headerlink" title="批量更改变量、函数名称"></a>批量更改变量、函数名称</h4><p>光标选中名称</p><p>⌘ + ⇧ + L</p><p>ctrl + shift + L</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;运行代码&quot;&gt;&lt;a href=&quot;#运行代码&quot; class=&quot;headerlink&quot; title=&quot;运行代码&quot;&gt;&lt;/a&gt;运行代码&lt;/h4&gt;&lt;p&gt;⌃ + ⌥ + N&lt;/p&gt;
+&lt;p&gt;ctrl + alt + N&lt;/p&gt;
+&lt;h4 id=&quot;格式化代码&quot;&gt;&lt;a href=&quot;#格</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    
+    <category term="VsCode" scheme="https://chunyujin.top/tags/VsCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JB全家桶快捷键&amp;操作</title>
+    <link href="https://chunyujin.top/chunyujin/1d504d03.html"/>
+    <id>https://chunyujin.top/chunyujin/1d504d03.html</id>
+    <published>2022-12-02T02:48:00.000Z</published>
+    <updated>2023-01-01T05:43:00.654Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h4><p>⌃  + R</p><p>ctrl + R</p><h4 id="格式化代码"><a href="#格式化代码" class="headerlink" title="格式化代码"></a>格式化代码</h4><p>⌘ + ⌥  + L</p><p>win + alt + L　</p><h4 id="批量更改变量、函数名称"><a href="#批量更改变量、函数名称" class="headerlink" title="批量更改变量、函数名称"></a>批量更改变量、函数名称</h4><p>光标<strong>移动到</strong>变量、函数名称上</p><p>⇧  + F6</p><p>Shift + F6</p><h4 id="CLion-vscode风格代码高亮插件"><a href="#CLion-vscode风格代码高亮插件" class="headerlink" title="CLion_vscode风格代码高亮插件"></a>CLion_vscode风格代码高亮插件</h4><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210272216897.png" alt="截屏2022-10-27 22.16.17" style="zoom:50%;" /><h4 id="CLion-vscode风格代码样式-用于格式化样式"><a href="#CLion-vscode风格代码样式-用于格式化样式" class="headerlink" title="CLion_vscode风格代码样式(用于格式化样式)"></a>CLion_vscode风格代码样式(用于格式化样式)</h4><p>Microsoft风格（vscode</p><p>舒服😌</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210272214080.png" alt="截屏2022-10-27 22.10.18" style="zoom:50%;" /><p>设置解引用符号*的位置</p><p>第一种舒服😌</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210301112448.png" alt="截屏2022-10-30 11.10.27" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210301112444.png" alt="截屏2022-10-30 11.10.50" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210301112437.png" alt="截屏2022-10-30 11.11.03" style="zoom:50%;" /><h4 id="设置背景"><a href="#设置背景" class="headerlink" title="设置背景"></a>设置背景</h4><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210272217806.png" alt="截屏2022-10-27 22.16.48" style="zoom:50%;" /><h4 id="如果在CLion外部更改了项目中的文件的属性"><a href="#如果在CLion外部更改了项目中的文件的属性" class="headerlink" title="如果在CLion外部更改了项目中的文件的属性"></a>如果在CLion外部更改了项目中的文件的属性</h4><p><strong>比如我在CLion外部将原本的main.c改名成为了GuessingGame.c</strong></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031163458930.png" alt="image-20221031163458930" style="zoom: 80%;" /><p>clion会报错</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031163348563.png" alt="image-20221031163348563" style="zoom: 80%;" /><p>发现CmakeLists.txt文件包含的文件是aaa main.c而不是aaa GuessingGame.c，说明并没有将GuessingGame.c包含在项目里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031163553021.png" alt="image-20221031163553021" style="zoom:80%;" /><p>将第6行括号里的main.c改成GuesingGame.c即可</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031164432573.png" alt="image-20221031164432573" style="zoom:80%;" /><blockquote><p>注意，如果不是替换掉main.c，而只是添加GuessingGame.c的话，CLion中其实main.c是不存在的，那么就找不到main.c，当然也会报错</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031165612625.png" alt="image-20221031165612535" style="zoom:80%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031165619957.png" alt="image-20221031165619808" style="zoom:80%;" /></blockquote><p>然后会发现提示CMake项目需要重新加载，重新加载即可</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/QQ%E5%9B%BE%E7%89%8720221031164540.jpg" alt="QQ图片20221031164540" style="zoom:80%;" /><p><strong>同样，如果在CLion外部，将文件添加到项目中，在CLion中也会报错</strong></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031164230637.png" alt="image-20221031164230449" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031164247033.png" alt="image-20221031164247033" style="zoom:67%;" /><p>在CmakeLists.txt文件中添加上这几个文件就可以</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031165652840.png" alt="image-20221031165652840" style="zoom:80%;" /><blockquote><p>&#x3D;&#x3D;<strong>注意在CmakeLists.txt中添加文件的写法格式，上图就是正确的格式</strong>&#x3D;&#x3D;</p></blockquote><p>如果是在CLion内部新建头文件或者源文件，在添加的时候，勾选上添加到目标即可</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211102142435.png" alt="截屏2022-11-10 21.40.22" style="zoom:50%;" /><p>忘记勾选也没事，在CmakeLists.txt文件中添加上就可以</p><h4 id="可以直接将没有配置环境的文件夹直接在CLion中打开"><a href="#可以直接将没有配置环境的文件夹直接在CLion中打开" class="headerlink" title="可以直接将没有配置环境的文件夹直接在CLion中打开"></a>可以直接将没有配置环境的文件夹直接在CLion中打开</h4><p>众所周知，CLion会对每一个项目配置环境，前提是这是CLion的项目</p><p>如果一个文件夹不是CLion的项目，我们在CLion中打开，CLion会提示是否配置环境</p><p>(CLion项目中的环境配置文件↓)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-10-31%20170055.png" alt="屏幕截图 2022-10-31 170055" style="zoom:80%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/QQ%E5%9B%BE%E7%89%8720221031170119.jpg" alt="QQ图片20221031170119" style="zoom:80%;" /><p>如果一个不是CLion项目的文件夹（也就是说没有配置环境），在CLion中打开</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031170502825.png" alt="image-20221031170502825" style="zoom:80%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031170513665.png" alt="image-20221031170513665" style="zoom:80%;" /><p>会提示是否创建CMake项目</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221031170644553.png" alt="image-20221031170644553" style="zoom:80%;" /><p>选择“创建”即可</p><p>这样CLion就会在文件夹中生成环境文件了，文件夹就变成了一个CLion项目</p><h4 id="Windows下CLion运行结果中文输出是乱码"><a href="#Windows下CLion运行结果中文输出是乱码" class="headerlink" title="Windows下CLion运行结果中文输出是乱码"></a>Windows下CLion运行结果中文输出是乱码</h4><ol><li>那就不输出中文呗</li><li>或者不选择”运行”，选择”调试”(不打断点)</li></ol><h4 id="彩虹括号-插件"><a href="#彩虹括号-插件" class="headerlink" title="彩虹括号 插件"></a>彩虹括号 插件</h4><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211120940116.png" alt="截屏2022-11-12 09.40.19" style="zoom:50%;" /><p>会让编译器代码高亮变慢，所以已经卸载……</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;运行程序&quot;&gt;&lt;a href=&quot;#运行程序&quot; class=&quot;headerlink&quot; title=&quot;运行程序&quot;&gt;&lt;/a&gt;运行程序&lt;/h4&gt;&lt;p&gt;⌃  + R&lt;/p&gt;
+&lt;p&gt;ctrl + R&lt;/p&gt;
+&lt;h4 id=&quot;格式化代码&quot;&gt;&lt;a href=&quot;#格式化代码&quot; cla</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    
+    <category term="JetBrains" scheme="https://chunyujin.top/tags/JetBrains/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git！从零开始连接远程仓库</title>
     <link href="https://chunyujin.top/chunyujin/b51810cf.html"/>
     <id>https://chunyujin.top/chunyujin/b51810cf.html</id>
@@ -162,6 +339,55 @@
     
     
     <category term="Git" scheme="https://chunyujin.top/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux_快捷键&amp;热键</title>
+    <link href="https://chunyujin.top/chunyujin/bd04c738.html"/>
+    <id>https://chunyujin.top/chunyujin/bd04c738.html</id>
+    <published>2022-10-20T16:52:00.000Z</published>
+    <updated>2023-01-01T05:40:35.199Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-光标移动"><a href="#1-光标移动" class="headerlink" title="1. 光标移动"></a>1. 光标移动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ctrl + &lt;      # 移动到前一个单词开头</span><br><span class="line">ctrl + &gt;      # 移动到后一个单词结尾</span><br><span class="line">ctrl + A      # 移动到开头</span><br><span class="line">ctrl + E      # 移动到结尾</span><br><span class="line">alt  + B      # 向左移动一个单词</span><br><span class="line">alt  + F      # 向右移动一个单词</span><br><span class="line">ctrl + B      # 向左移动一个字符</span><br><span class="line">ctrl + F      # 向右移动一个字符</span><br><span class="line">esc  + B      # 向左移动一个单词</span><br><span class="line">esc  + F      # 向右移动一个单词</span><br><span class="line">ctrl + XX     # 在上次光和当前光标所在字符间跳转</span><br><span class="line">esc  + T      # 交换光标位置前的两个单词</span><br></pre></td></tr></table></figure><h2 id="2-拷贝-x2F-剪切-x2F-粘贴-x2F-删除"><a href="#2-拷贝-x2F-剪切-x2F-粘贴-x2F-删除" class="headerlink" title="2. 拷贝&#x2F;剪切&#x2F;粘贴&#x2F;删除"></a>2. 拷贝&#x2F;剪切&#x2F;粘贴&#x2F;删除</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">* ctrl/shift + Insert # whindows下复制粘贴文本 </span><br><span class="line">* cmd + c/v # macOS下复制粘贴文本</span><br><span class="line">  ctrl + K      # 剪切光标后所有字符</span><br><span class="line">  ctrl + U      # 剪切光标前所有字符</span><br><span class="line">  ctrl + Y      # 粘贴ctrl+U/K剪切的内容</span><br><span class="line">  ctrl + W      # 删除光标前一个单词</span><br><span class="line">  ctrl + D      # 删除光标所在字符(光标右侧) #不建议使用</span><br><span class="line">  ctrl + H      # 删除光标前字符(光标左侧)</span><br></pre></td></tr></table></figure><h2 id="3-撤销"><a href="#3-撤销" class="headerlink" title="3. 撤销"></a>3. 撤销</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* ctrl + _      # 撤销操作</span><br><span class="line">  ctrl + ?      # 撤消前一次输入</span><br><span class="line">  alt  + R      # 撤消前一次动作</span><br></pre></td></tr></table></figure><h2 id="4-替换"><a href="#4-替换" class="headerlink" title="4. 替换"></a>4. 替换</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* ctrl + T      # 将光标当前字符与前面一个字符替换</span><br></pre></td></tr></table></figure><h2 id="5-历史命令编辑"><a href="#5-历史命令编辑" class="headerlink" title="5. 历史命令编辑"></a>5. 历史命令编辑</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  ctrl + P      # 上条输入的命令(相当于上键)</span><br><span class="line">  ctrl + N      # 上条历史命(相当于下键)</span><br><span class="line">  alt  + &gt;      # 上一次执行命令</span><br><span class="line">* ctrl + R      # 输入残缺指令，搜索对应完整历史指令</span><br></pre></td></tr></table></figure><h2 id="6-控制命令"><a href="#6-控制命令" class="headerlink" title="6. 控制命令"></a>6. 控制命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* ctrl + L      # 清除屏幕，相当于clear</span><br><span class="line">* ctrl + C      # (强制)终止命令&amp;另起一行</span><br><span class="line">* ctrl + D      # 退出(比如用户登出、退出shell、退出终端)</span><br><span class="line">* ctrl + Z      # 暂停并挂起当前任务</span><br><span class="line">  ctrl + I      # 补全功能(类似Tab键)</span><br><span class="line">  ctrl + O      # 重复执行命令</span><br><span class="line">  alt  + &lt;数字&gt;  # 操作的次数</span><br><span class="line">  ctrl + S      # 锁住终端，阻止屏幕输出</span><br><span class="line">  ctrl + Q      # 解锁终端，允许屏幕输出</span><br></pre></td></tr></table></figure><h2 id="7-补全-x2F-补齐"><a href="#7-补全-x2F-补齐" class="headerlink" title="7.补全&#x2F;补齐"></a>7.补全&#x2F;补齐</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tab</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">单击tab实现指令补全，仅当通过残缺的指令能确定唯一的完整指令时才可以实现补全</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">双击tab实现档案补全，当通过残缺的指令无法确定唯一完整指令时，显示所有对应指令</span></span><br></pre></td></tr></table></figure><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212121406831.gif" alt="Dec-12-2022 14-04-41"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212121406885.gif" alt="Dec-12-2022 14-05-29"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;1-光标移动&quot;&gt;&lt;a href=&quot;#1-光标移动&quot; class=&quot;headerlink&quot; title=&quot;1. 光标移动&quot;&gt;&lt;/a&gt;1. 光标移动&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;g</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux_与Shell的关系</title>
+    <link href="https://chunyujin.top/chunyujin/a64800cc.html"/>
+    <id>https://chunyujin.top/chunyujin/a64800cc.html</id>
+    <published>2022-10-20T16:52:00.000Z</published>
+    <updated>2023-01-01T05:43:29.712Z</updated>
+    
+    <content type="html"><![CDATA[<p>一个完整的计算机，整体结构如下图：</p><p><img src="https://img-blog.csdnimg.cn/67f4c5c0392d42bb949f4d5f71790a46.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAZmF0ZmF0bW9tbw==,size_8,color_FFFFFF,t_70,g_se,x_16" alt="img"></p><p>①我们的计算机由硬件组成，包括CPU、内存、主板、磁盘、各种外设等等。当这台计算机没有安装任何软件，只是一个硬件的集合体时，也叫做 裸机(纯硬件)。</p><p>②操作系统是系统软件，操作系统的内核控制着和管理计算机上的所有硬件和软件，从而进行任务调度、资源分配等。操作系统起到承上启下的作用。</p><p>③我们平时使用的应用软件(或叫应用程序)，如QQ音乐、英雄联盟等，是基于操作系统开发的，可以理解为在操作系统的上层。这些程序的开发往往调用了操作系统提供的接口，离开了操作系统是无法独立运行的。</p><p><strong>Shell是一个特殊的应用程序，介于操作系统内核和用户之间，是一个“命令解释器”，负责接受用户输入的指令并进行解释，将需要执行的操作传递给内核执行，并输出执行结果返回给用户。</strong></p><p><strong>在linux早期是没有图形化界面的，与系统进行交互的唯一方式就是通过shell提供的命令行界面(command-line interface, CLI)。同样在工作中，需要通过本机登录内网开发机，使用命令行界面进行开发，从而保障安全性。</strong></p><p>命令行界面只接受文本输入。我们想使用shell进行开发，则需要深入了解shell的命令，后续文章会对shell命令进行详细的介绍，本专栏主要针对想入门shell的新同学，有问题欢迎评论或私信，共同交流，一般周末公司不加班都会回复~~~</p><p>PS : 在厂里搬砖，基本都是在linux机器上进行开发的。很多同学在校时大多在机子上装个Pycharm之类的IDE就足够完成科研任务了，这也使得刚工作后不太熟悉linux开发的节奏。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一个完整的计算机，整体结构如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/67f4c5c0392d42bb949f4d5f71790a46.png?x-oss-process=image/watermark,type_d3</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
     
   </entry>
   

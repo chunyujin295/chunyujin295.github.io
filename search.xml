@@ -314,6 +314,91 @@
     
     
     <entry>
+      <title>C++_map&amp;pair类</title>
+      <link href="/chunyujin/899a3eaf.html"/>
+      <url>/chunyujin/899a3eaf.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="关联式容器"><a href="#关联式容器" class="headerlink" title="关联式容器"></a>关联式容器</h4><blockquote><p>STL中的容器分为序列式容器(vector、list、array、deque、forward_list)和关联式容器(map、multimap、set、multiset)</p><p>序列式容器的特点是保存元素时只保存元素本身，不会对存储的元素进行自动排序，元素排列的顺序取决于存储它们的顺序</p><p>关联式容器在存储元素的时候还会存储另一个跟元素相关的值，称为“键”，元素和它的“键”作为一个整体“键值对”存储在关联式容器中，关联式容器自动根据“键”的大小将元素作升序排序；另外，可以根据元素的“键”找到对应的元素。</p></blockquote><h4 id="pair类型"><a href="#pair类型" class="headerlink" title="pair类型"></a>pair类型</h4><blockquote><p>pair是C++STL标准库中的一个类模版，定义在头文件 <code>&lt;utility&gt;</code> 中</p><p>是专门用来表示“键值对”的类型</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> C++STL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++_auto关键字</title>
+      <link href="/chunyujin/b4979a36.html"/>
+      <url>/chunyujin/b4979a36.html</url>
+      
+        <content type="html"><![CDATA[<p><a href="http://c.biancheng.net/view/3718.html">auto关键字(类型推导)</a></p><p>当STL的模板类型实例化的时候，如果实例化的类型是模版类型，那么使用迭代器是会报错的</p><p>比如</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">a</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; i;<span class="comment">//vecter的实例化类型是int</span></span><br><span class="line">vector&lt;T&gt; v;<span class="comment">//vector的实例化类型是模版类型T</span></span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt;::iterator I = i.<span class="built_in">begin</span>();<span class="comment">//正确</span></span><br><span class="line">  veector&lt;T&gt;::iterator V = v.<span class="built_in">begin</span>();<span class="comment">//报错</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>因为在模板参数T实例化之前，模板类型为int的vector明确了自己的类型就是int，故迭代器可以根据类型执行相应的关于空间的操作。而模版类型为T的vector尚不知道T究竟是什么类型，所以迭代器无法通过类型来执行操作</p></blockquote><p>auto关键字是在程序编译时自动推导出变量的类型，可以很自然地和泛型编程结合而不用去提前考虑变量的类型</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">a</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">vector&lt;T&gt; v;<span class="comment">//vector的实例化类型是模版类型T</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">auto</span> V = v.<span class="built_in">begin</span>();<span class="comment">//正确</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>auto会在最后编译的时候，会判断变量的类型。在编译时，一旦调用函数，T类型就已经实例化，并且v是vector，vector.begin()函数返回的就是vector的迭代器，因此编译器会推导出此时V的类型</p><p>&#x3D;&#x3D;因此auto可以将泛型编程(模板)跟STL很好地结合&#x3D;&#x3D;</p></blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212041341428.png" alt="iShot_2022-12-04_13.40.14"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> C++STL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++_所有函数都可直接调用</title>
+      <link href="/chunyujin/5656723d.html"/>
+      <url>/chunyujin/5656723d.html</url>
+      
+        <content type="html"><![CDATA[<p>无论函数是否有返回值，都可以直接调用</p><p>并不是说有返回值的函数在调用的时候必须用一个变量去承接返回值</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++_vector常用用法</title>
       <link href="/chunyujin/170bba21.html"/>
       <url>/chunyujin/170bba21.html</url>
@@ -335,6 +420,116 @@
             <tag> C++ </tag>
             
             <tag> C++STL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++_迭代器&amp;find()函数</title>
+      <link href="/chunyujin/874d4093.html"/>
+      <url>/chunyujin/874d4093.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="迭代器-iterator"><a href="#迭代器-iterator" class="headerlink" title="迭代器(iterator)"></a><a href="http://c.biancheng.net/view/338.html">迭代器(iterator)</a></h3><h4 id="什么是迭代器"><a href="#什么是迭代器" class="headerlink" title="什么是迭代器"></a>什么是迭代器</h4><p>迭代器与容器的关系，相当于指针与数组的关系</p><p>因为容器是封装起来的，不知道内部是如何实现的，所以通过在内存中的地址的原理访问和遍历容器，一般来说是不实际的</p><p>要访问容器(顺序容器、关联容器)中的元素，就需要通过迭代器进行；就如同访问数组中的元素需要通过指针进行一样</p><p>用迭代器访问元素的操作也和用指针访问数组的操作很像</p><p>迭代器按照定义方式分成以下四种</p><blockquote><ol><li><p>正向迭代器，定义方法如下：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">容器类名::iterator 迭代器名;</span><br></pre></td></tr></table></figure></li><li><p>常量正向迭代器，定义方法如下：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">容器类名::const_iterator 迭代器名;</span><br></pre></td></tr></table></figure></li><li><p>反向迭代器，定义方法如下：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">容器类名::reverse_iterator 迭代器名;</span><br></pre></td></tr></table></figure></li><li><p>常量反向迭代器，定义方法如下：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">容器类名::const_reverse_iterator 迭代器名;</span><br></pre></td></tr></table></figure></li></ol></blockquote><h4 id="迭代器用法示例"><a href="#迭代器用法示例" class="headerlink" title="迭代器用法示例"></a>迭代器用法示例</h4><p>通过迭代器可以读取它指向的元素，<code>*迭代器名</code>就表示迭代器指向的元素。通过非常量迭代器还能修改其指向的元素。</p><p>迭代器都可以进行<code>++</code>操作。反向迭代器和正向迭代器的区别在于：</p><ul><li>对正向迭代器进行<code>++</code>操作时，迭代器会指向容器中的后一个元素；</li><li>而对反向迭代器进行<code>++</code>操作时，迭代器会指向容器中的前一个元素。</li></ul><p>下面的程序演示了如何通过迭代器&#x3D;&#x3D;遍历一个 vector 容器&#x3D;&#x3D;中的所有元素</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; v;  <span class="comment">//v是存放int类型变量的可变长数组，开始时没有元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> n = <span class="number">0</span>; n&lt;<span class="number">5</span>; ++n)</span><br><span class="line">        v.<span class="built_in">push_back</span>(n);  <span class="comment">//push_back成员函数在vector容器尾部添加一个元素</span></span><br><span class="line">  </span><br><span class="line">    vector&lt;<span class="type">int</span>&gt;::iterator i;  <span class="comment">//定义正向迭代器</span></span><br><span class="line">    <span class="keyword">for</span> (i = v.<span class="built_in">begin</span>(); i != v.<span class="built_in">end</span>(); ++i) <span class="comment">//用迭代器遍历容器</span></span><br><span class="line">    &#123;  </span><br><span class="line">        cout &lt;&lt; *i &lt;&lt; <span class="string">&quot; &quot;</span>;  <span class="comment">//*i 就是迭代器i指向的元素</span></span><br><span class="line">        *i *= <span class="number">2</span>;  <span class="comment">//每个元素变为原来的2倍</span></span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">  </span><br><span class="line">    <span class="comment">//用反向迭代器遍历容器</span></span><br><span class="line">    <span class="keyword">for</span> (vector&lt;<span class="type">int</span>&gt;::reverse_iterator j = v.<span class="built_in">rbegin</span>(); j != v.<span class="built_in">rend</span>(); ++j)</span><br><span class="line">        cout &lt;&lt; *j &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>程序的输出结果是：<br>0 1 2 3 4<br>8 6 4 2 0</p><p>第 6 行，vector 容器有多个构造函数，如果用无参构造函数初始化，则容器一开始是空的。</p><p>第 10 行，begin 成员函数返回指向容器中第一个元素的迭代器。++i 使得 i 指向容器中的下一个元素。end 成员函数返回的不是指向最后一个元素的迭代器，而是指向最后一个元素后面的位置的迭代器，因此循环的终止条件是<code>i != v.end()</code>。</p><p>第 16 行定义了反向迭代器用以遍历容器。反向迭代器进行<code>++</code>操作后，会指向容器中的上一个元素。rbegin 成员函数返回指向容器中最后一个元素的迭代器，rend 成员函数返回指向容器中第一个元素前面的位置的迭代器，因此本循环实际上是从后往前遍历整个数组。</p><p>如果迭代器指向了容器中最后一个元素的后面或第一个元素的前面，再通过该迭代器访问元素，就有可能导致程序崩溃，这和访问 NULL 或未初始化的指针指向的地方类似。</p><p>第 10 行和第 16 行，写<code>++i</code>、<code>++j</code>相比于写<code>i++</code>、<code>j++</code>，程序的执行速度更快。</p><p>回顾<code>++</code>被重载成前置和后置运算符的例子如下：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CDemo CDemo::<span class="keyword">operator</span>++ ()</span><br><span class="line">&#123;  <span class="comment">//前置++</span></span><br><span class="line">    ++n;</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line">CDemo CDemo::<span class="keyword">operator</span> ++(<span class="type">int</span> k)</span><br><span class="line">&#123;  <span class="comment">//后置++</span></span><br><span class="line">    <span class="function">CDemo <span class="title">tmp</span><span class="params">(*<span class="keyword">this</span>)</span></span>;  <span class="comment">//记录修改前的对象</span></span><br><span class="line">    n++;</span><br><span class="line">    <span class="keyword">return</span> tmp;  <span class="comment">//返回修改前的对象</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>后置<code>++</code>要多生成一个局部对象 tmp，因此执行速度比前置的慢。同理，迭代器是一个对象，<a href="http://c.biancheng.net/stl/">STL</a> 在重载迭代器的<code>++</code>运算符时，后置形式也比前置形式慢。在次数很多的循环中，<code>++i</code>和<code>i++</code>可能就会造成运行时间上可观的差别了。因此，本教程在前面特别提到，对循环控制变量i，要养成写<code>++i</code>、不写<code>i++</code>的习惯。</p></blockquote><p>注意，容器适配器 stack、queue 和 priority_queue 没有迭代器。容器适配器有一些成员函数，可以用来对元素进行访问。</p><h4 id="迭代器的功能分类"><a href="#迭代器的功能分类" class="headerlink" title="迭代器的功能分类"></a>迭代器的功能分类</h4><p>不同容器的迭代器，其功能强弱有所不同。容器的迭代器的功能强弱，决定了该容器是否支持 STL 中的某种算法。例如，排序算法需要通过随机访问迭代器来访问容器中的元素，因此有的容器就不支持排序算法。</p><p>常用的迭代器按功能强弱分为输入、输出、正向、双向、随机访问五种，这里只介绍常用的三种。</p><blockquote><ol><li><p>正向迭代器。假设 p 是一个正向迭代器，则 p 支持以下操作：++p，p++，*p。此外，两个正向迭代器可以互相赋值，还可以用<code>==</code>和<code>!=</code>运算符进行比较。</p></li><li><p>双向迭代器。双向迭代器具有正向迭代器的全部功能。除此之外，若 p 是一个双向迭代器，则<code>--p</code>和<code>p--</code>都是有定义的。<code>--p</code>使得 p 朝和<code>++p</code>相反的方向移动。</p></li><li><p>随机访问迭代器。随机访问迭代器具有双向迭代器的全部功能。若 p 是一个随机访问迭代器，i 是一个整型变量或常量，则 p 还支持以下操作：</p></li></ol><ul><li>p+&#x3D;i：使得 p 往后移动 i 个元素。</li><li>p-&#x3D;i：使得 p 往前移动 i 个元素。</li><li>p+i：返回 p 后面第 i 个元素的迭代器。</li><li>p-i：返回 p 前面第 i 个元素的迭代器。</li><li>p[i]：返回 p 后面第 i 个元素的引用。</li></ul><p>此外，两个随机访问迭代器 p1、p2 还可以用 &lt;、&gt;、&lt;&#x3D;、&gt;&#x3D; 运算符进行比较。<code>p1&lt;p2</code>的含义是：p1 经过若干次（至少一次）<code>++</code>操作后，就会等于 p2。其他比较方式的含义与此类似。</p><p>&#x3D;&#x3D;对于两个随机访问迭代器 p1、p2，表达式<code>p2-p1</code>也是有定义的，其返回值是 p2 所指向元素和 p1 所指向元素的序号(下标)之差（也可以说是 p2 和 p1 之间的元素个数减一）。&#x3D;&#x3D;</p><blockquote><p>例如在vector中返回某个元素的下标</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span><span class="comment">//std::cout</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span><span class="comment">//std::vector</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; temp = &#123; <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">0</span> &#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt;::iterator it = temp.<span class="built_in">begin</span>();</span><br><span class="line">it += <span class="number">2</span>;<span class="comment">//p+=i</span></span><br><span class="line"><span class="comment">//此时it对应的元素下标为</span></span><br><span class="line"><span class="type">int</span> index = it - temp.<span class="built_in">begin</span>();<span class="comment">//p2-p1</span></span><br><span class="line">cout &lt;&lt; index;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>输出2</p></blockquote></blockquote><p>不同容器的迭代器的功能:</p><table><thead><tr><th>容器</th><th>迭代器功能</th></tr></thead><tbody><tr><td>vector</td><td>随机访问</td></tr><tr><td>deque</td><td>随机访问</td></tr><tr><td>list</td><td>双向</td></tr><tr><td>set &#x2F; multiset</td><td>双向</td></tr><tr><td>map &#x2F; multimap</td><td>双向</td></tr><tr><td>stack</td><td>不支持迭代器</td></tr><tr><td>queue</td><td>不支持迭代器</td></tr><tr><td>priority_queue</td><td>不支持迭代器</td></tr></tbody></table><blockquote><p>vector 的迭代器是随机迭代器，因此&#x3D;&#x3D;遍历 vector 容器&#x3D;&#x3D;有以下几种做法。下面的程序中，每个循环演示了一种做法。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v</span><span class="params">(<span class="number">100</span>)</span></span>; <span class="comment">//v被初始化成有100个元素</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; v.<span class="built_in">size</span>() ; ++i) <span class="comment">//size返回元素个数</span></span><br><span class="line">        cout &lt;&lt; v[i]; <span class="comment">//像普通数组一样使用vector容器</span></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">    vector&lt;<span class="type">int</span>&gt;::iterator i;</span><br><span class="line">    <span class="keyword">for</span>(i = v.<span class="built_in">begin</span>(); i != v.<span class="built_in">end</span> (); ++i) <span class="comment">//用 != 比较两个迭代器</span></span><br><span class="line">        cout &lt;&lt; * i;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">for</span>(i = v.<span class="built_in">begin</span>(); i &lt; v.<span class="built_in">end</span> ();++i) <span class="comment">//用 &lt; 比较两个迭代器</span></span><br><span class="line">        cout &lt;&lt; * i;</span><br><span class="line">  </span><br><span class="line">    i = v.<span class="built_in">begin</span>();</span><br><span class="line">    <span class="keyword">while</span>(i &lt; v.<span class="built_in">end</span>()) &#123; <span class="comment">//间隔一个输出</span></span><br><span class="line">        cout &lt;&lt; * i;</span><br><span class="line">        i += <span class="number">2</span>; <span class="comment">// 随机访问迭代器支持 &quot;+= 整数&quot;  的操作</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote><blockquote><p>list 容器的迭代器是双向迭代器。</p><p>假设 v 和 i 的定义如下：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">list&lt;<span class="type">int</span>&gt;::const_iterator i;</span><br></pre></td></tr></table></figure><p>则以下代码是合法的：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=v.<span class="built_in">begin</span>(); i!=v.<span class="built_in">end</span>(); ++i)</span><br><span class="line">  cout &lt;&lt; *i;</span><br></pre></td></tr></table></figure><p>以下代码则不合法：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=v.<span class="built_in">begin</span>(); i&lt;v.<span class="built_in">end</span>(); ++i)</span><br><span class="line">  cout &lt;&lt; *i;</span><br></pre></td></tr></table></figure><p>因为双向迭代器不支持用 “&lt;” 进行比较。以下代码也不合法：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); ++i)</span><br><span class="line">  cout &lt;&lt; v[i];</span><br></pre></td></tr></table></figure><p>因为 list 不支持随机访问迭代器的容器，也不支持用下标随机访问其元素。</p></blockquote><p><strong>&#x3D;&#x3D;在 <a href="http://c.biancheng.net/cplus/">C++</a> 中，数组也是容器。数组的迭代器就是指针，而且是随机访问迭代器。例如，对于数组 int a[10]，int * 类型的指针就是其迭代器。则 a、a+1、a+2 都是 a 的迭代器。&#x3D;&#x3D;</strong></p><h4 id="迭代器的辅助函数-好用"><a href="#迭代器的辅助函数-好用" class="headerlink" title="迭代器的辅助函数(好用)"></a>迭代器的辅助函数(好用)</h4><p>STL 中有用于操作迭代器的三个函数模板</p><blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">advance</span>(p, n) </span><br></pre></td></tr></table></figure><p>使迭代器 p 向前或向后移动 n 个元素。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">distance</span>(p, q)</span><br></pre></td></tr></table></figure><p>计算两个迭代器之间的距离，即迭代器 p 经过多少次 + + 操作后和迭代器 q 相等。如果调用时 p 已经指向 q 的后面，则这个函数会陷入死循环。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">iter_swap</span>(p, q)</span><br></pre></td></tr></table></figure><p>用于交换两个迭代器 p、q 指向的值</p></blockquote><p>要使用上述模板，需要包含头文件 algorithm。下面的程序演示了这三个函数模板的 用法。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;list&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span> <span class="comment">//要使用操作迭代器的函数模板，需要包含此文件</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">5</span>] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">    list &lt;<span class="type">int</span>&gt; <span class="built_in">lst</span>(a, a+<span class="number">5</span>);</span><br><span class="line">    list &lt;<span class="type">int</span>&gt;::iterator p = lst.<span class="built_in">begin</span>();</span><br><span class="line">  </span><br><span class="line">    <span class="built_in">advance</span>(p, <span class="number">2</span>);  <span class="comment">//p向后移动两个元素，指向3</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;1)&quot;</span> &lt;&lt; *p &lt;&lt; endl;  <span class="comment">//输出 1)3</span></span><br><span class="line">  </span><br><span class="line">    <span class="built_in">advance</span>(p, <span class="number">-1</span>);  <span class="comment">//p向前移动一个元素，指向2</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;2)&quot;</span> &lt;&lt; *p &lt;&lt; endl;  <span class="comment">//输出 2)2</span></span><br><span class="line">  </span><br><span class="line">    list&lt;<span class="type">int</span>&gt;::iterator q = lst.<span class="built_in">end</span>();</span><br><span class="line">  </span><br><span class="line">    q--;  <span class="comment">//q 指向 5</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;3)&quot;</span> &lt;&lt; <span class="built_in">distance</span>(p, q) &lt;&lt; endl;  <span class="comment">//输出 3)3</span></span><br><span class="line">  </span><br><span class="line">    <span class="built_in">iter_swap</span>(p, q); <span class="comment">//交换 2 和 5</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;4)&quot;</span>;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">for</span> (p = lst.<span class="built_in">begin</span>(); p != lst.<span class="built_in">end</span>(); ++p)</span><br><span class="line">        cout &lt;&lt; *p &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>程序的输出结果是：<br>\1) 3<br>\2) 2<br>\3) 3<br>\4) 1 5 3 4 2</p><h4 id="返回-随机访问迭代器中某个元素的-位置-序号-下标"><a href="#返回-随机访问迭代器中某个元素的-位置-序号-下标" class="headerlink" title="返回 随机访问迭代器中某个元素的 位置(序号)(下标)"></a>返回 随机访问迭代器中某个元素的 位置(序号)(下标)</h4><p>方法1⃣️用循环，从第1个元素开始找，直到找到对应的元素，返回下标</p><p>方法2⃣️利用<a href="http://c.biancheng.net/view/7489.html">find函数</a>，找到对应元素的迭代器，利用<a href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%8A%9F%E8%83%BD%E5%88%86%E7%B1%BB">“两个随机访问迭代器相减，返回值是两个迭代器对应的元素的序号(下标)之差”</a>，用该元素的迭代器减去容器首元素迭代器，返回值就是该元素的下标</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例如：</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span><span class="comment">//std::cout</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span><span class="comment">//std::vector</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span><span class="comment">//std::find()</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; temp = &#123; <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">0</span> &#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt;::iterator it = <span class="built_in">find</span>(temp.<span class="built_in">begin</span>(), temp.<span class="built_in">end</span>(), <span class="number">5</span>);<span class="comment">//value为要查找的值，该函数返回一个指向对应元素的迭代器</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//此时it对应的元素下标为</span></span><br><span class="line"><span class="type">int</span> index = it - temp.<span class="built_in">begin</span>();</span><br><span class="line">cout &lt;&lt; index;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>find函数是algorithm的库函数</p><p>find() 函数本质上是一个模板函数，用于在指定范围内查找和目标元素值相等的第一个元素。</p><p>如下为 find() 函数的语法格式：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">InputIterator <span class="title">find</span> <span class="params">(InputIterator first, InputIterator last, <span class="type">const</span> T&amp; value)</span></span>;</span><br></pre></td></tr></table></figure><p>其中，first 和 last 为输入迭代器，[first, last) 用于指定该函数的查找范围；value 为要查找的目标元素。</p><blockquote><p>正因为 first 和 last 的类型为输入迭代器，因此该函数适用于所有的序列式容器。</p></blockquote><p>该函数会<strong>返回</strong>一个<u>输入迭代器</u>，当 find() 函数查找成功时，其指向的是在 [first, last) 区域内查找到的第一个目标元素；如果查找失败，则该迭代器的指向和 last 相同。</p><blockquote><p>例如查找vector的元素时，first是vector.begin()，end是vector.end()</p><blockquote><p> vector.end()是指向容器的最后一个元素之后的&#x2F;0</p></blockquote></blockquote><p>值得一提的是，find() 函数的底层实现，其实就是用<code>==</code>运算符将 val 和 [first, last) 区域内的元素逐个进行比对。这也就意味着，[first, last) 区域内的元素必须支持<code>==</code>运算符。</p><p>举个例子：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span>     <span class="comment">// std::cout</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span>    <span class="comment">// std::find</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span>       <span class="comment">// std::vector</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//find() 函数作用于普通数组</span></span><br><span class="line"><span class="type">char</span> stl[] = <span class="string">&quot;http://c.biancheng.net/stl/&quot;</span>;</span><br><span class="line"><span class="comment">//调用 find() 查找第一个字符 &#x27;c&#x27;</span></span><br><span class="line"><span class="type">char</span> *p = <span class="built_in">find</span>(stl, stl + <span class="built_in">strlen</span>(stl), <span class="string">&#x27;c&#x27;</span>);</span><br><span class="line"><span class="comment">//判断是否查找成功</span></span><br><span class="line"><span class="keyword">if</span> (p != stl + <span class="built_in">strlen</span>(stl))</span><br><span class="line">&#123;</span><br><span class="line">cout &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//find() 函数作用于容器</span></span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt; myvector&#123; <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span> &#125;;</span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt;::iterator it;</span><br><span class="line"></span><br><span class="line">it = <span class="built_in">find</span>(myvector.<span class="built_in">begin</span>(), myvector.<span class="built_in">end</span>(), <span class="number">30</span>);</span><br><span class="line"><span class="keyword">if</span> (it != myvector.<span class="built_in">end</span>())</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;查找成功：&quot;</span> &lt;&lt; *it;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">cout &lt;&lt; <span class="string">&quot;查找失败&quot;</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>程序执行结果为：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c.biancheng.net/stl/</span><br><span class="line">查找成功：30</span><br></pre></td></tr></table></figure><p>可以看到，find() 函数除了可以作用于序列式容器，还可以作用于普通数组(因为在C++中普通数组也是容器)</p><blockquote><p>补充：find() 函数的底层实现，C++ 标准库中给出了参数代码:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> InputIterator, <span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function">InputIterator <span class="title">find</span><span class="params">(InputIterator first, InputIterator last, <span class="type">const</span> T&amp; val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">while</span> (first != last)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (*first == val) <span class="keyword">return</span> first;</span><br><span class="line">++first;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> last;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote><h4 id="迭代器的好处"><a href="#迭代器的好处" class="headerlink" title="迭代器的好处"></a>迭代器的好处</h4><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212031252529.png" alt="截屏2022-12-03 12.51.56"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> C++STL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++_模板不支持分离编译</title>
+      <link href="/chunyujin/ad941677.html"/>
+      <url>/chunyujin/ad941677.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="C-模板不支持分离编译！！"><a href="#C-模板不支持分离编译！！" class="headerlink" title="C++模板不支持分离编译！！"></a>C++模板不支持分离编译！！</h3><p>一般情况下，自定义变量和函数的时候，在头文件中声明，在源文件中实现，在链接过程中会将分离开的声明和实现进行链接起来</p><p>但是&#x3D;&#x3D;<strong>模板变量和函数是不支持分离编译，也就是说模板的定义(声明+实现)必须在同一个文件里</strong>&#x3D;&#x3D;(一般建议在声明模板的地方定义模板，也就是头文件中)</p><p>模板是不支持声明和定义放到两个文件中的</p><blockquote><p>这就是为什么当模版是分离编译的时候，在main文件中包含模版的头文件的时候，编译时会报错：函数为定义。因为无法将模版的声明和实现进行链接</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++_模板</title>
+      <link href="/chunyujin/a0e18b05.html"/>
+      <url>/chunyujin/a0e18b05.html</url>
+      
+        <content type="html"><![CDATA[<h6 id="x3D-x3D-模板参数分为三类-x3D-x3D"><a href="#x3D-x3D-模板参数分为三类-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数分为三类&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数分为三类</strong>&#x3D;&#x3D;</h6><ol><li>类型参数</li></ol><blockquote><p>通过 关键字 typename 或者 class 引入(两者基本上是等价的)</p></blockquote><ol start="2"><li>非类型参数</li></ol><blockquote><p>模板参数不局限于类型，类型的值也可以作为模板参数，通过 关键字 值的类型 引入</p><p>目前C++只支持 <u>整形</u> &#x2F; <u>枚举类型</u> &#x2F; <u>指针类型</u>(可以是原始数据类型的指针、派生数据类型的指针、对象的指针、对象的成员的指针) &#x2F; <u>引用类型</u>(可以是原始数据类型的引用、派生数据类型的引用、对象的引用)</p></blockquote><ol start="3"><li>模板型模板参数</li></ol><h6 id="x3D-x3D-模板参数支持缺省-x3D-x3D"><a href="#x3D-x3D-模板参数支持缺省-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数支持缺省&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数支持缺省</strong>&#x3D;&#x3D;</h6><blockquote><p>但是要注意的是，缺省参数的使用不要忘了按照规范形式，比如在类或函数声明时加了缺省值，在实现时就不要加了</p><p>(缺省值在声明时添加，在实现时就不添加了)</p><p>还有，缺省要从右往左缺省</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212031014022.png" alt="截屏2022-12-03 10.14.22"></p></blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221202104949903.png" alt="image-20221202104949903"></p><p><a href="https://blog.csdn.net/zhizhengguan/article/details/115869685">https://blog.csdn.net/zhizhengguan/article/details/115869685</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>有些语句后面不用加分号</title>
+      <link href="/chunyujin/6e7957f9.html"/>
+      <url>/chunyujin/6e7957f9.html</url>
+      
+        <content type="html"><![CDATA[<p>if(){}</p><p>while(){}</p><p>for(){}</p><p>int xx(){}</p><p>if语句、while循环、for循环、函数定义是，{}是语句的一部分，后面不用跟分号</p><p>函数的只声明不定义的时候需要语句最后要加分号</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212021945977.png" alt="截屏2022-12-02 19.42.03"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
             
         </tags>
       
@@ -389,6 +584,60 @@
         <tags>
             
             <tag> JetBrains </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>条件编译</title>
+      <link href="/chunyujin/68bc2fec.html"/>
+      <url>/chunyujin/68bc2fec.html</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://baike.baidu.com/item/%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91/7692959">条件编译-百度百科</a></p><p><a href="http://c.biancheng.net/view/289.html">条件编译- C语言中文网</a></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211301126439.png" alt="iShot_2022-11-30_11.19.02"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>库文件&amp;静态库&amp;动态库</title>
+      <link href="/chunyujin/bba9c8e0.html"/>
+      <url>/chunyujin/bba9c8e0.html</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://baike.baidu.com/item/%E5%BA%93%E6%96%87%E4%BB%B6/2550595">库文件-百度百科</a></p><p><a href="https://blog.csdn.net/junxuezheng/article/details/100557176">库、动态库和静态库（.dll，.so，.lib，.a）知乎</a></p><p><a href="https://zhuanlan.zhihu.com/p/71372182">浅谈静态库和动态库_知乎</a></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211292044221.png" alt="截屏2022-11-29 20.43.42"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211292010960.png" alt="iShot_2022-11-29_20.10.12"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
             
         </tags>
       
@@ -455,6 +704,89 @@
     
     
     <entry>
+      <title>C++_类型&amp;变量&amp;类和对象</title>
+      <link href="/chunyujin/a5010295.html"/>
+      <url>/chunyujin/a5010295.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="数据类型-type"><a href="#数据类型-type" class="headerlink" title="数据类型(type)"></a>数据类型(type)</h3><p>简称类型</p><p>是具有相同特征的数据的集合，是一个抽象<strong>概念</strong></p><blockquote><p>C++的数据类型主要分为三种：</p><p><strong>原始数据类型</strong>：内置或预定义的数据类型，用户可以直接使用它们声明变量。例如：int，char，float，bool等</p><blockquote><p>整数、字符、布尔型、浮点、双浮点数、void、宽字符 等</p></blockquote><p><strong>派生数据类型</strong>：从原始或内置数据类型派生的数据类型</p><blockquote><p>函数</p><p>数组</p><p>指针</p><p>引用</p></blockquote><p><strong>用户自定义类型</strong>：这些数据类型由用户自己定义</p><blockquote><p>类</p><p>结构体</p><p>union：在并集中，所有成员共享相同的内存位置</p><p>枚举类型</p><p>typedef：为 复杂的声明 定义 简单的别名</p></blockquote><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/20200401135258635.png" alt="20200401135258635" style="zoom:67%;" /></blockquote><h3 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h3><blockquote><p>变量：数据保存在计算机中，是存储在内存中的某一块空间上，这块用来存储数据的空间就是变量，给这块空间命的名就是变量名</p><blockquote><p>变量其实只不过是程序可操作的存储区的名称。C 中每个变量都有特定的类型，类型决定了变量存储的大小和布局，该范围内的值都可以存储在内存中，运算符可应用于变量上。<a href="https://www.runoob.com/cprogramming/c-variables.html">C变量</a></p></blockquote></blockquote><p>变量类型就是存储在变量中的数据的数据类型</p><p>变量的值就是变量这块空间中存储的数据的值</p><h3 id="变量的定义"><a href="#变量的定义" class="headerlink" title="变量的定义"></a>变量的定义</h3><blockquote><p>变量的定义，告知编译器 在内存申请一块空间 用来存储数据，数据类型是什么，空间名(即变量) 叫什么，数据的值 是什么</p><p>变量的声明，只告知编译器 在内存申请一块空间 用来存储数据，数据类型是什么，空间名(即变量) 叫什么，关于数据的值，则没有说明</p></blockquote><blockquote><p>变量的定义和声明都会在内存中申请出一块空间，区别在于是否赋予变量(中的数据)具体的值</p></blockquote><blockquote><p>无论是声明还是定义，都要指定 变量的类型，因为要按照数据类型在内存中申请对应的具体大小的空间</p></blockquote><h3 id="用户自定义类型的定义"><a href="#用户自定义类型的定义" class="headerlink" title="用户自定义类型的定义"></a>用户自定义类型的定义</h3><h4 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h4><blockquote><p>函数的定义，告知编译器 函数的返回值类型、函数名、参数、函数的实现</p><p>函数的声明，只告知编译器 函数的返回值类型、函数名、参数，不进行函数的实现</p></blockquote><p>函数的定义 &#x3D; 函数的声明 + 函数的实现</p><h4 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h4><blockquote><p>类的定义，告知编译器 类的名称、类的私有成员、类的公有成员、类的成员变量的声明、类的成员函数的定义</p><p>类的声明，告知编译器 类的名称、类的私有成员、类的公有成员、类的成员变量的声明、类的成员函数的声明，不进行类的成员函数的实现</p><p>类的实现，就是类的成员函数的实现</p></blockquote><p>类的定义 &#x3D; 类的声明 + 类的(成员函数)的实现</p><blockquote><p>类和函数，有声明但没有实现，则是未定义，编译器会报错类或函数未定义(undefined)</p><p>没有声明，则编译器会报错未声明(unclear)</p></blockquote><p><strong>一般来说，在定义函数和类时，在头文件中声明，在源文件中实现</strong></p><blockquote><p>不过模版类不支持分离编译(见另一篇日记)，因此要在同一个文件中(一般是头文件)完成定义</p></blockquote><h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><blockquote><p> 类是一种用户自定义类型</p><p>STL是一个 标准 模板类 库</p></blockquote><p>类是一个数据类型，是一个抽象的概念</p><p>对象是类的实例化，对象是变量</p><blockquote><p>类是封装对象的属性和行为的载体，而对象的属性以成员变量的形式存在。对象的方法以成员方法的形式存在，在成员方法内定义的变量为局部变量</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>节点和结点</title>
+      <link href="/chunyujin/624685c8.html"/>
+      <url>/chunyujin/624685c8.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="节点和结点"><a href="#节点和结点" class="headerlink" title="节点和结点"></a>节点和结点</h3><blockquote><p>节点和结点的区别有：</p><p>节点是一个实体具有处理的能力；而结点是一个交叉点，是一个标记</p><p>一般算法中的点都称为&#x3D;&#x3D;结点&#x3D;&#x3D;</p><p>节点被认为是一个实体，有处理能力，比如网络上的一台计算机；而结点则只是一个交叉点，像”结绳记事”，打个结，做个标记，仅此而已</p><p>还有就是，要记住：一般算法中点的都是&#x3D;&#x3D;结点&#x3D;&#x3D;。</p><p> 我们在数据结构的图形表示中，对于数据集合中的每一个数据元素用中间标有元素值的方框表示，一般称它为数据结点，简称结点</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++_STL用法[持续更新]</title>
+      <link href="/chunyujin/de6e9320.html"/>
+      <url>/chunyujin/de6e9320.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h4><p><a href="http://c.biancheng.net/view/6749.html">vector容器详解</a></p><h4 id="string"><a href="#string" class="headerlink" title="string"></a>string</h4><p><a href="http://c.biancheng.net/view/2236.html">string用法详解</a></p><p><a href="https://blog.csdn.net/weixin_44267044/article/details/103578226">c++在string末尾添加字符或字符串</a></p><h4 id="stack"><a href="#stack" class="headerlink" title="stack"></a>stack</h4><p><a href="http://c.biancheng.net/view/478.html">stack用法详解</a></p><h4 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h4><p><a href="http://c.biancheng.net/view/479.html">queue用法详解</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> C++STL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++_vector访问元素的几种方式</title>
       <link href="/chunyujin/4e5ebe5e.html"/>
       <url>/chunyujin/4e5ebe5e.html</url>
@@ -476,6 +808,89 @@
             <tag> C++ </tag>
             
             <tag> C++STL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++_取整函数</title>
+      <link href="/chunyujin/d3194531.html"/>
+      <url>/chunyujin/d3194531.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="C-取整函数"><a href="#C-取整函数" class="headerlink" title="C++取整函数"></a>C++取整函数</h3><h5 id="都包含在头文件cmath中"><a href="#都包含在头文件cmath中" class="headerlink" title="都包含在头文件cmath中"></a>都包含在头文件cmath中</h5><p>#include<cmath></p><h5 id="向上取整：ceil"><a href="#向上取整：ceil" class="headerlink" title="向上取整：ceil()"></a>向上取整：ceil()</h5><p>画图很好理解</p><p>无论是整数还是负数，向上取整就是向上(x轴正方向)找距离最近的整数</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211061133486.jpeg" alt="IMG_0725" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211061133405.jpeg" alt="IMG_0726" style="zoom:50%;" /><blockquote><p>ceil(1.3)</p><p>结果是2</p><p>ceil(-1.2)</p><p>结果是-1</p></blockquote><h5 id="向下取整：floor"><a href="#向下取整：floor" class="headerlink" title="向下取整：floor()"></a>向下取整：floor()</h5><p>又叫 “地板算法”</p><p>无论是整数还是负数，向上取整就是向下(x轴负方向)找距离最近的整数</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211061136576.jpeg" alt="IMG_0723" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211061136193.jpeg" alt="IMG_0724" style="zoom:50%;" /><blockquote><p>ceil(1.3)</p><p>结果是1</p><p>ceil(-1.2)</p><p>结果是-2</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>开辟新空间与普通声明定义的一个区别</title>
+      <link href="/chunyujin/2e648a29.html"/>
+      <url>/chunyujin/2e648a29.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="开辟新空间与普通声明定义的一个区别"><a href="#开辟新空间与普通声明定义的一个区别" class="headerlink" title="开辟新空间与普通声明定义的一个区别"></a>开辟新空间与普通声明定义的一个区别</h4><p>如果在一个循环中，有一个语句是普通声明定义一个变量，在循环中，其实每次都是使用的同一个空间，只是在循环中反复覆盖这个空间的数据</p><p>而开辟新空间(C++的new，C的malloc等)是每次在敦区开辟一个新的空间，而且如果不手动释放，在程序结束之前一直都在占用。（所以有的时候需要手动释放，防止堆上的空间都被占用导致开辟不出新空间）</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210291419187.png" alt="截屏2022-10-29 14.14.50"></p><p>上面的代码是在一个while循环里的，Book是一个链表的结点类，数据域有IBSN、name、price</p><p>本意是想要每次都在链表尾插</p><p>如果划线的写成</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Book <span class="title">b</span><span class="params">(ISBN,name,price)</span></span>;</span><br></pre></td></tr></table></figure><p>其实每次循环用的都是同一块空间，是在链表的同一个结点上反复更改数据域的ISBN、name、price而已，因为b并不是产生的新结点，b用的是原来的地址，没有分配新的空间</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>链表怎么排序</title>
+      <link href="/chunyujin/d43e1a90.html"/>
+      <url>/chunyujin/d43e1a90.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="链表怎么排序"><a href="#链表怎么排序" class="headerlink" title="链表怎么排序"></a>链表怎么排序</h4><h5 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h5><p>只交换结点的数据域，不更改指针域</p><p>这样就可以采用各种排序方式了，冒泡、选择等，根据链表的特性进行一定的更改就可以</p><h5 id="方式二："><a href="#方式二：" class="headerlink" title="方式二："></a>方式二：</h5><p>将链表放到顺序表，对顺序表排序，将顺序表每个结点的数据域依次赋值给链表的每个结点的数据域</p><p>也是不用更改指针域</p><p>参考来源</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210291314360.png" alt="iShot_2022-10-29_13.14.22" style="zoom:50%;" />]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
       
@@ -644,11 +1059,204 @@
     
     
     <entry>
+      <title>C++_函数中的数字作为参数时</title>
+      <link href="/chunyujin/67b09a09.html"/>
+      <url>/chunyujin/67b09a09.html</url>
+      
+        <content type="html"><![CDATA[<h5 id="x3D-x3D-一般来说-x3D-x3D-，函数中的参数为数字的时候，有三种情况："><a href="#x3D-x3D-一般来说-x3D-x3D-，函数中的参数为数字的时候，有三种情况：" class="headerlink" title="&#x3D;&#x3D;一般来说&#x3D;&#x3D;，函数中的参数为数字的时候，有三种情况："></a>&#x3D;&#x3D;一般来说&#x3D;&#x3D;，函数中的参数为数字的时候，有三种情况：</h5><ol><li>只是作为形参，比如尾插一个数字”1“</li><li><strong>作为”第几个“</strong>，比如一个字符串删除函数DelStr(s1,1,2)中的1，是删除第一个元素（注意，这里并不是权重，1并不是权重是1（这样的话就是指s2的第二个元素了），而是就是单纯地指第1个，<strong>一般在函数中都是单纯地指第几个而不是权重是几</strong></li><li>作为处理元素的个数，比如一个字符串删除函数DelStr(s1,2,3) 中的3，是指删除三个元素</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在模版类里使用自己时可以省略模版参数</title>
+      <link href="/chunyujin/e8fa6ce6.html"/>
+      <url>/chunyujin/e8fa6ce6.html</url>
+      
+        <content type="html"><![CDATA[<p>在模版类里使用自己(以及自己类型的指针、引用)可以省略模版参数不写</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211102228794.png" alt="截屏2022-11-10 22.27.03"></p><p>比如这个left 和 right 都是Node类型的指针</p><p>一般情况下，在使用模版类的时候，一定要写上模版参数，就像left的声明</p><p>但是如果是在本类调用自己，可以省略，像right的声明</p><blockquote><p>因为在实例化的时候知道自己的模版参数具体是什么了，都是自己内部的，不用声明</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++_异常处理</title>
+      <link href="/chunyujin/68c7819c.html"/>
+      <url>/chunyujin/68c7819c.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><blockquote><p>前言：此类笔记仅用于个人复习，内容主要在于记录和体现个人理解</p></blockquote><p>[toc]</p><h4 id="什么是异常处理"><a href="#什么是异常处理" class="headerlink" title="什么是异常处理"></a>什么是异常处理</h4><blockquote><p>在程序中可能会出现各种各样的异常，比如出现了错误，常见错误主要分为语法错误和编译错误，有的错误编译器是可以检查出来的，有的错误编译器检查不出来，；又比如违背正常情况，比如要求输入小写字母，但是实际输入大写的或者数字等，这种错误编译器一般不会检查出来。</p><p>在设计程序之前，应当分析各种可能出现的异常情况，并设定相应的识别、处理方式，这就是异常处理的任务</p><p>比如如果某个数除以0，这就是一个异常，要根据除数为0的这种异常情况进行一个判断和处理（比如报错并结束程序）</p><p>当然，也可以通过断言等方式来处理一些错误，当assert中的判别式结果为false的时候，就直接异常退出程序</p></blockquote><h4 id="C-中如何实现异常处理"><a href="#C-中如何实现异常处理" class="headerlink" title="C++中如何实现异常处理"></a>C++中如何实现异常处理</h4><p>C++的异常处理机制是由三个部分组成的：检查（try）、抛出（throw）、捕捉（catch）</p><p>“异常情况“是设计者人为认定判定的：如果想要检查一段代码，在这个代码段里面出现了我们不想要的异常情况，就需要抛出”这是一个异常情况“的信号，然后由相应的捕捉代码进行捕捉，一旦捕捉到抛出的异常，就会进入到用来处理这个异常的代码。</p><p>跟assert相比，异常处理机制显然更为温和，不会直接断死代码直接退出程序</p><h5 id="throw语句"><a href="#throw语句" class="headerlink" title="throw语句"></a>throw语句</h5><blockquote><p>形式：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">throw</span> 表达式</span><br></pre></td></tr></table></figure><p>throw关键字抛出的表达式是什么样的数据由设计者自己定，可以是常规的变量，也可以是一串字符，也可以是自定义的变量</p><p>throw的关键在于表达式的结果的类型，而不是表达式的具体的值，但还是会将表达式作为“异常信号&#x2F;信息”（异常）整个抛出去，包括值</p><blockquote><p>一旦throw抛出异常，就会在进行异常处理之后，立即跳出throw所在的函数，回到上一级函数（比如main函数）</p></blockquote></blockquote><h5 id="try-catch结构"><a href="#try-catch结构" class="headerlink" title="try-catch结构"></a>try-catch结构</h5><blockquote><p>try关键字负责划定需要检查的代码区域，在区域内的代码段会接受检查，try和被检查的代码段被合称为try块</p><p>catch关键字用于接收throw抛出的异常，并针对异常进行相应处理，catch和被检查的代码段被合称为catch块</p><p>形式：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">被检查的代码段</span><br><span class="line">&#125;<span class="built_in">catch</span>(异常信息类型 变量名·一般情况下不写变量名·)&#123;</span><br><span class="line">处理异常的代码段</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注意</p><blockquote><ol><li>如果throw的表达式是类的话，可以不用单独实例化出一个对象，直接使用匿名对象，因为有的时候会定义一些空类来专门作为异常信息用，没必要为了异常信息实例化一个对象</li></ol><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">outofsize</span>&#123;&#125;；<span class="comment">//这是一个空类，专门用来当异常信息的</span></span><br><span class="line">......</span><br><span class="line"><span class="keyword">throw</span> <span class="built_in">outofsize</span>();<span class="comment">//使用的outofsize的匿名对象，格式是&quot;类名&quot;+&quot;()&quot;,其中()里面为初始化参数，跟正常类的定义不同，匿名对象再没有初始化参数的时候也要跟()</span></span><br><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;&#125;</span><br><span class="line"><span class="built_in">catch</span>(outofsize)</span><br><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li><p>被检查的代码段必须放在try里，否则不起作用</p></li><li><p>try-catch结构是一个整体，catch块必须紧跟try块，catch不能脱离try单独使用，且两者之间不能夹杂其他语句；但是try块是可以单独使用的，即只检查不处理，catch块在另一个函数里面</p></li><li><p>花括号不能省略</p></li><li><p>由于一段代码中可能存在多种错误情况，所以允许一个try块后面接多个catch块，以便匹配不同的异常信息</p></li></ol><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;&#125;</span><br><span class="line"><span class="built_in">catch</span>()</span><br><span class="line">&#123;&#125;</span><br><span class="line"><span class="built_in">catch</span>()</span><br><span class="line">&#123;&#125;</span><br><span class="line"><span class="comment">//以上省略了内容，主要体现结构</span></span><br></pre></td></tr></table></figure><ol start="6"><li>catch也只检查异常信息的类型，而不检查异常信息的值，根据异常信息的类型匹配相应的catch块，无论doule类型的值是多少，都只会匹配catch(double)；所以一般的catch写法括号内只有异常信息类型</li></ol><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">catch</span>( <span class="type">double</span> )</span><br><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure><blockquote><p>这里发现，在函数的定义的时候也可以只写类型，不写变量，因为参数从左到右依次传入函数  </p></blockquote><p>​catch括号内还有另一种写法，即除了指定类型之外还指定变量名</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">catch</span>(<span class="type">double</span> d)</span><br><span class="line">&#123;</span><br><span class="line">cout &lt;&lt; d &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>​这样catch在捕捉异常信息的时候，除了捕捉变量类型，还会捕捉变量的值，这样就可以在catch中使用这个值（当然，是拷贝的）</p><ol start="7"><li><p>如果catch括号内没有写变量类型，而是写了catch(…)，这表示这个catch块可以接受任何类型的异常信息</p></li><li><p>throw语句和try-catch块在同一个函数中，也可以不在同一个函数中。throw抛出异常信息之后，会先在本函数内让catch捕捉，如果本函数没有try-catch或者没有可以匹配的catch，则跳出本函数到上一个函数，直到找到最近的可匹配的catch</p></li><li><p>某些情况下，throw后面可以不加表达式，比如如果在catch块里有throw，则catch里的throw会将catch捕捉到的catch外的throw抛出的异常原样抛出，表示“本级函数的catch不处理这个异常，给上一级的catch块处理”</p></li></ol><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">catch</span>(<span class="type">int</span>)</span><br><span class="line">&#123;<span class="comment">//其他语句</span></span><br><span class="line">    <span class="keyword">throw</span>;<span class="comment">//将以捕获的异常信息再次原样抛出</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="10"><li>如果throw抛出的异常到最后都没有catch与之匹配，系统会调用一个系统函数terminate终止程序进行</li></ol></blockquote></blockquote><h4 id="几个例子"><a href="#几个例子" class="headerlink" title="几个例子"></a>几个例子</h4><blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">triangle</span><span class="params">(<span class="type">double</span>,<span class="type">double</span>,<span class="type">double</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="type">double</span> a,b,c;</span><br><span class="line">     cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">     <span class="keyword">try</span></span><br><span class="line">     &#123;</span><br><span class="line">         <span class="keyword">while</span>(a&gt;<span class="number">0</span>&amp;&amp;b&gt;<span class="number">0</span>&amp;&amp;a&gt;<span class="number">0</span>)</span><br><span class="line">         &#123;</span><br><span class="line">             cout&lt;&lt;<span class="built_in">triangle</span>(a,b,c)&lt;&lt;endl;<span class="comment">//try里包含了要被检查的函数</span></span><br><span class="line">             cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="built_in">catch</span>(<span class="type">double</span>)</span><br><span class="line">     &#123;</span><br><span class="line">         cout &lt;&lt; <span class="string">&quot;a=&quot;</span> &lt;&lt; a &lt;&lt; <span class="string">&quot;,b=&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;,c=&quot;</span> &lt;&lt; c &lt;&lt; <span class="string">&quot;,that is not a triangle&quot;</span> &lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">     cout&lt;&lt; <span class="string">&quot;end&quot;</span> &lt;&lt;endl;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">triangle</span><span class="params">(<span class="type">double</span> a,<span class="type">double</span> b,<span class="type">double</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="type">double</span> s = ( a+b+c )/<span class="number">2</span>;</span><br><span class="line">     <span class="keyword">if</span>( a + b &lt;= c || b + c &lt;= a || a + c &lt;= b )</span><br><span class="line">         <span class="keyword">throw</span> a;</span><br><span class="line">     <span class="keyword">return</span> <span class="built_in">sqrt</span>( s + (s-a) * (s-b) * (s-c) );<span class="comment">//如果在上面的throw中抛出了异常信息，则直接跳到上一级函数，这一行代码就不会生效</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">division</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span>( b == <span class="number">0</span> )</span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">throw</span> <span class="string">&quot;Division by zero condition!&quot;</span>;<span class="comment">//表达式的类型本质是上是字符串，也就是char指针</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> (a/b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> x = <span class="number">50</span>;</span><br><span class="line"><span class="type">int</span> y = <span class="number">0</span>;</span><br><span class="line"><span class="type">double</span> z = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> </span><br><span class="line">    &#123;</span><br><span class="line">  z = <span class="built_in">division</span>(x, y);</span><br><span class="line">  cout &lt;&lt; z &lt;&lt; endl;</span><br><span class="line">&#125;<span class="built_in">catch</span> (<span class="type">const</span> <span class="type">char</span>* msg) <span class="comment">//既有变量类型又有变量名，就可以在下面使用捕捉到的异常信息</span></span><br><span class="line">&#123;</span><br><span class="line">  cerr &lt;&lt; msg &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SIZE 10</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">outOfSize</span> &#123;&#125;;<span class="comment">//这里定义了一个空outOfSize类，只用作异常信号，不用与其他作用</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">illegalType</span> &#123;&#125;;<span class="comment">//同上</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">addWord</span><span class="params">(<span class="type">int</span>&amp;, <span class="type">char</span>*, <span class="type">char</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">char</span> a[SIZE];</span><br><span class="line">    <span class="type">char</span> b;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Please keyonte a~z&quot;</span>&lt;&lt;endl;</span><br><span class="line">            cin &gt;&gt; b;</span><br><span class="line">            <span class="built_in">addWord</span>(x, a, b);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">catch</span> (outOfSize)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Outofsize!&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">catch</span> (illegalType)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;IllegalType!&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">addWord</span><span class="params">(<span class="type">int</span>&amp; x, <span class="type">char</span>* a, <span class="type">char</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &gt;= SIZE)</span><br><span class="line">        <span class="keyword">throw</span> <span class="built_in">outOfSize</span>();<span class="comment">//抛出的是outOfSize类的匿名对象</span></span><br><span class="line">    <span class="keyword">if</span> (b &lt; <span class="string">&#x27;a&#x27;</span> || b&gt;<span class="string">&#x27;z&#x27;</span>)</span><br><span class="line">        <span class="keyword">throw</span> <span class="built_in">illegalType</span>();</span><br><span class="line">    a[x] = b;</span><br><span class="line">    x++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote><h4 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h4><p>That’s all, thanks for reading!💐</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++_cin&amp;cout</title>
+      <link href="/chunyujin/d0ce2bfa.html"/>
+      <url>/chunyujin/d0ce2bfa.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="C-cin、cout怎么写"><a href="#C-cin、cout怎么写" class="headerlink" title="C++_cin、cout怎么写"></a>C++_cin、cout怎么写</h4><p>cout是输出流，变量a进入（输入）到输出流才能输出到屏幕，就是cout&lt;&lt;a</p><p>cin是输入流，让键盘上输入流进入（输入）到变量a才能给a赋上值，也就是cin&gt;&gt;a</p><p>另外，比如这个sstringstream类，是用来将string类转化成别的数据类型</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">stringToInt</span><span class="params">(string s)</span> <span class="comment">//将操作数字符串转变成int</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    stringstream ss;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    ss &lt;&lt; s;</span><br><span class="line">    ss &gt;&gt; i;</span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>要将这个string类s输入入到stringstream类ss中，然后将转化结果从ss输入到i中</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++_vs2022DeBug Error</title>
       <link href="/chunyujin/3bb17c40.html"/>
       <url>/chunyujin/3bb17c40.html</url>
       
         <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/MIV5KC1_8NWP%7DDPB%7BUV%60QPC.png" alt="img"></p><p>这是由于从堆中释放空间内存之后，没有申请开辟，却又对那块空间执行了操作（包括再次释放</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>优秀代码的五大特性&amp;什么是封装</title>
+      <link href="/chunyujin/4793f752.html"/>
+      <url>/chunyujin/4793f752.html</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h5 id="优秀代码的五大特性"><a href="#优秀代码的五大特性" class="headerlink" title="优秀代码的五大特性"></a>优秀代码的五大特性</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20220915194347910.png" alt="image-20220915194347910"></p><h5 id="什么是封装（封装的简介"><a href="#什么是封装（封装的简介" class="headerlink" title="什么是封装（封装的简介"></a>什么是封装（封装的简介</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20220915195400299.png" alt="image-20220915195400299"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> 能力 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>类和结构体的区别</title>
+      <link href="/chunyujin/c4e745c8.html"/>
+      <url>/chunyujin/c4e745c8.html</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>C中的结构体不允许存在成员函数和this指针</p></li><li><p>C++中结构体和类的唯一区别就是结构体默认成员是公有的，类默认是私有的</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++_delete</title>
+      <link href="/chunyujin/6cf2f2d1.html"/>
+      <url>/chunyujin/6cf2f2d1.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20220911105630568.png" alt="image-20220911105630568"></p>]]></content>
       
       
       <categories>

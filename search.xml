@@ -845,6 +845,35 @@
     
     
     <entry>
+      <title>重点!_头文件&amp;源文件&amp;编译&amp;链接</title>
+      <link href="/chunyujin/e0e64692.html"/>
+      <url>/chunyujin/e0e64692.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="重点-头文件-amp-源文件-amp-编译-amp-链接"><a href="#重点-头文件-amp-源文件-amp-编译-amp-链接" class="headerlink" title="[重点!]头文件&amp;源文件&amp;编译&amp;链接"></a>[重点!]头文件&amp;源文件&amp;编译&amp;链接</h2><h4 id="C-x2F-C-支持分离式编译：一个程序可以分成多个部分保存在各个文件-头文件、源文件-中，在链接之前，各个文件-无论源文件还是头文件-是相互独立、没有关联的"><a href="#C-x2F-C-支持分离式编译：一个程序可以分成多个部分保存在各个文件-头文件、源文件-中，在链接之前，各个文件-无论源文件还是头文件-是相互独立、没有关联的" class="headerlink" title="C&#x2F;C++支持分离式编译：一个程序可以分成多个部分保存在各个文件(头文件、源文件)中，在链接之前，各个文件(无论源文件还是头文件)是相互独立、没有关联的"></a><strong>C&#x2F;C++支持分离式编译：一个程序可以分成多个部分保存在各个文件(头文件、源文件)中，在链接之前，各个文件(无论源文件还是头文件)是相互独立、没有关联的</strong></h4><blockquote><p>分离式编译是指一个完整的程序或项目由若干个源文件共同实现，每个源文件单独编译生成目标文件，最后将该项目中的所有目标文件连接成一个单一的可执行文件的过程。</p></blockquote><blockquote><p>在这里插一嘴：</p><p>&#x3D;&#x3D;<strong>#include</strong>&#x3D;&#x3D;的作用</p><p>这是一个宏定义，众所周知，宏定义就是替换，比如a.cpp中要包含a.h，写作#include”a.h”</p><p>这一行就是将#include后的”a.h”替换为a.h中的所有代码</p><blockquote><p>头文件里的内容就在这里“展开”了</p></blockquote><p><strong>但这并不能说明a.cpp和a.h是有关联的，只是a.cpp中包含了a.h，包含并不意味着有关联</strong></p><p>因为#incldue是宏定义，是替换，跟其他的宏定义一样，比如#define N 100</p></blockquote><h4 id="众所周知，-x3D-x3D-在定义变量-自定义-或者函数时，头文件保存变量-自定义-和函数的声明，源文件保存变量和函数的实现-x3D-x3D"><a href="#众所周知，-x3D-x3D-在定义变量-自定义-或者函数时，头文件保存变量-自定义-和函数的声明，源文件保存变量和函数的实现-x3D-x3D" class="headerlink" title="众所周知，&#x3D;&#x3D;在定义变量(自定义)或者函数时，头文件保存变量(自定义)和函数的声明，源文件保存变量和函数的实现&#x3D;&#x3D;"></a>众所周知，&#x3D;&#x3D;在定义变量(自定义)或者函数时，头文件保存变量(自定义)和函数的<u>声明</u>，源文件保存变量和函数的<u>实现</u>&#x3D;&#x3D;</h4><blockquote><p>头文件的作用</p><p>C&#x2F;C++编译采用的是分离编译模式。在一个项目中，有多个源文件存在，但是它们总会有一些相同的内容，比如用户自定义类型、全局变量、全局函数的声明等。将这些内容抽取出来放到头文件中，提供给各个源文件包含，就可以避免想相同内容的重复书写，提高编程效率和代码安全性。所以，设立头文件的目的主要是：提供全局变量、全局函数的声明或公用数据类型的定义，从而实现分离编译和代码复用。 </p><p>概括的说，头文件有如下三个作用。  </p><ol><li>加强类型检查，提高类型安全性。  使用头文件，可有效地保证自定义类型的一致性。虽然，在语法上，同一个数据类型（如一个class）在不同的源文件中书写多次是允许的，程序员认为他们是同一个自定义类型，但是，由于数据类型不具有外部连接特性，编译器并不关心该类型的多个版本之间是否一致，这样有可能会导致逻辑错误的发生。</li><li>减少公用代码的重复书写，提高编程效率。  程序开发过程中，对某些数据类型或者接口进行修改是在所难免的，使用头文件，只需要修改头文件中的内容，就可以保证修改在所有源文件中生效，从而避免了繁琐易错的重复修改。</li><li>提供保密和代码重用的手段。  头文件也是C++代码重用机制中不可缺少的一种手段，在很多场合，源代码不便（或不准）向用户公布，只要向用户提供头文件和二进制库即可。<u>用户只需要按照头文件的接口声明来调用库函数，而不必关心接口的具体实现，编译器会从库中连接相应的实现代码。</u>（封装性）</li></ol></blockquote><p>但是其实头文件和源文件并没有关联</p><p>比如在a.h中声明了一个类a，包含成员变量和成员函数的声明，在a.cpp中包含类a成员函数的定义(实现)</p><p>其实在编写的时候，a.h和a.cpp没有关联，编译器并不知道它俩的关系</p><p>a.cpp中对于类a的成员函数进行了定义，但a.cpp中并没有类a的声明</p><p>而a.h和a.cpp并没有关联，也就是说编译器不知道a.cpp中的类a在哪儿声明的，而类a如果没有声明，这就是一个错误</p><p>所以这就是为什么a.cpp一定要包含a.h</p><blockquote><p>如果再有一个b.h和b.cpp以及一个包含main函数的main.cpp</p><p>如果b中想要使用类a，则在b.h中包含类a的声明和定义就可以</p><p>我们知道，main.cpp中想要使用某个现有的变量或者函数，只要包含对应的<u>头文件</u>就可以</p><p>那么是不是只需要在b.h中包含头文件a.h（#include”a.h）就可以的</p><p>这是不可以的，因为a.h和a.cpp是没有关联的：a.h中只有a的声明，没有a的定义</p><blockquote><p>如果此时运行的话，在运行时会报错：缺少a的定义</p><p>但是如果不运行是不会报错的，因为a.h中虽然没有a的定义，但是有声明，并没有语法和逻辑错误</p><p>缺少a的定义是属于编译错误</p></blockquote><p>正确的做法是b.h中包含a.cpp而不是a.h</p><p>因为a.cpp中是对类a的成员函数的实现，而a.cpp中又包含a.h</p><p>话说回来，为什么main.cpp中可以包含头文件，不用包含源文件？因为<strong>链接</strong></p></blockquote><h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><p>编译是对项目中所有的源文件（注意只是源文件，不是头文件）进行编译，将它们“翻译”成为机器能识别的机器语言，每个源文件被编译后会生成一个对应的目标文件，里面是源文件代码被翻译成的机器语言</p><p>头文件是不进行编译的，理由在下面</p><p>众所周知，main函数是程序的入口，要想执行程序，就要执行main函数</p><p>含有main函数的源文件，在这里我叫它main文件吧</p><p>main文件也是源文件，也和其他源文件一样，在编译的时候会进行编译</p><p>main文件中会包含头文件</p><p>可是头文件中只有声明，没有定义，那怎么能用对应的变量和函数呢</p><h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p>在编译之后，每个源文件都会生成一个目标文件</p><p>在执行程序时，编译之后，进行链接</p><p>main文件中含有头文件，链接就是通过头文件，找到对应的实现头文件中声明的内容的源文件，再找到这些源文件的目标文件，将这些目标文件跟main文件的目标文件“链接”起来，形成一个结合体打包起来——可执行文件</p><p>所以，因为有链接这一步，main文件中只包含头文件就行，因为链接时可以找到对应的源文件</p><p>而且链接是对于main文件而言的，也就是这一步只能用在main文件上，将main文件的目标文件 与 main文件包含的头文件对应的源文件的目标文件 结合起来</p><p>跟编译不同，一般的源文件不执行链接这个步骤，因为这是没有意义的，只有main文件是程序的接口</p><h4 id="x3D-x3D-总结-x3D-x3D"><a href="#x3D-x3D-总结-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;总结&#x3D;&#x3D;"></a>&#x3D;&#x3D;总结&#x3D;&#x3D;</h4><blockquote><ol><li></li></ol><blockquote><p>&#x3D;&#x3D;<strong>只有main文件才能只包含头文件，不包含源文件</strong>&#x3D;&#x3D;</p><p>&#x3D;&#x3D;<strong>只有库函数或者库里的类被一般源文件调用的时候，一般的源文件可以只包含对应的库头文件</strong>&#x3D;&#x3D;&#x3D;&#x3D;<strong>一般的源文件想要调用别的 自定义的类 或者 自定义的函数 的时候，要在其头文件中包含对应的源文件而不是头文件</strong>&#x3D;&#x3D;</p></blockquote><ol start="2"><li></li></ol><blockquote><p>&#x3D;&#x3D;<strong>在定义变量(自定义)或者函数时，头文件保存变量(自定义)和函数的<u>声明</u>，源文件保存变量和函数的实现</strong>&#x3D;&#x3D;</p></blockquote></blockquote><blockquote><p>源文件如何根据#include来包含头文件：</p><ol><li>系统库自带的头文件(库文件)用尖括号括起来，这样编译器会在系统库文件目录下查找。 </li><li>用户自定义的文件用双引号括起来，编译器首先会在用户目录下查找，然后在到C++安装目录（比如VC中可以指定和修改库文件查找路径，Unix和Linux中可以通过环境变量来设定）中查找，最后在系统文件中查找。</li></ol></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++_vector访问元素的几种方式</title>
       <link href="/chunyujin/4e5ebe5e.html"/>
       <url>/chunyujin/4e5ebe5e.html</url>
@@ -879,6 +908,33 @@
       <url>/chunyujin/d3194531.html</url>
       
         <content type="html"><![CDATA[<h3 id="C-取整函数"><a href="#C-取整函数" class="headerlink" title="C++取整函数"></a>C++取整函数</h3><h5 id="都包含在头文件cmath中"><a href="#都包含在头文件cmath中" class="headerlink" title="都包含在头文件cmath中"></a>都包含在头文件cmath中</h5><p>#include<cmath></p><h5 id="向上取整：ceil"><a href="#向上取整：ceil" class="headerlink" title="向上取整：ceil()"></a>向上取整：ceil()</h5><p>画图很好理解</p><p>无论是整数还是负数，向上取整就是向上(x轴正方向)找距离最近的整数</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211061133486.jpeg" alt="IMG_0725" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211061133405.jpeg" alt="IMG_0726" style="zoom:50%;" /><blockquote><p>ceil(1.3)</p><p>结果是2</p><p>ceil(-1.2)</p><p>结果是-1</p></blockquote><h5 id="向下取整：floor"><a href="#向下取整：floor" class="headerlink" title="向下取整：floor()"></a>向下取整：floor()</h5><p>又叫 “地板算法”</p><p>无论是整数还是负数，向上取整就是向下(x轴负方向)找距离最近的整数</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211061136576.jpeg" alt="IMG_0723" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202211061136193.jpeg" alt="IMG_0724" style="zoom:50%;" /><blockquote><p>ceil(1.3)</p><p>结果是1</p><p>ceil(-1.2)</p><p>结果是-2</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>震惊!_类内成员函数可以访问本类对象的私有成员</title>
+      <link href="/chunyujin/3fe5c396.html"/>
+      <url>/chunyujin/3fe5c396.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="震惊-类内成员函数可以访问本类对象的私有成员"><a href="#震惊-类内成员函数可以访问本类对象的私有成员" class="headerlink" title="[震惊!]类内成员函数可以访问本类对象的私有成员"></a>[震惊!]类内成员函数可以访问本类对象的私有成员</h3><p>sList是一个类</p><p>私有成员是head，有一个成员函数的形参是本类对象(的引用，引不引用不影响结论和原因)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210301200183.png" alt="截屏2022-10-30 11.33.24" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210301200702.png" alt="截屏2022-10-30 11.33.38" style="zoom:50%;" /><h6 id="x3D-x3D-为什么呢！head明明是b的私有成员，为什么可以被访问了！！？？-x3D-x3D"><a href="#x3D-x3D-为什么呢！head明明是b的私有成员，为什么可以被访问了！！？？-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;为什么呢！head明明是b的私有成员，为什么可以被访问了！！？？&#x3D;&#x3D;"></a>&#x3D;&#x3D;为什么呢！head明明是b的私有成员，为什么可以被访问了！！？？&#x3D;&#x3D;</h6><p>因为！</p><p><strong>对象b是sList类的，而这个intersection函数是sList的成员函数</strong></p><p><strong>head虽然是sList类的对象的私有成员，但是是在sList类内访问的</strong></p><p>&#x3D;&#x3D;<strong>就是 在类内访问了本类(的实例化对象)的私有成员，这当然是可以的！ 因为这是在类内访问的，又不是在类外</strong>&#x3D;&#x3D;</p><p>这说明了，类的成员的访问权限，是对于&#x3D;&#x3D;类&#x3D;&#x3D;而言的，决定在&#x3D;&#x3D;类&#x3D;&#x3D;外是否可被访问</p><p>而非对于对象来说的（因为对象不同但是都是属于同一种类，类的实例化对象的成员，本来就是类的成员，只是抽象和实例化的问题</p><p>这非常合理地体现了 类 的封装性</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210301200083.png" alt="截屏2022-10-30 11.45.50" style="zoom:50%;" /><p>这个就是不行的，在类外访问了</p><blockquote><p>这一点是非常好用的，可以利用这一点</p><p>&#x3D;&#x3D;用成员函数肆无忌惮地访问对象的私有成员！&#x3D;&#x3D;只要声明函数是类的成员函数，将外部同类对象设为形参(或加个引用)就可以了！！</p><p>不必再为如何访问到同类外部对象的私有成员而苦思了！</p></blockquote><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210312112520.PNG" alt="IMG_2368" style="zoom: 33%;" />]]></content>
       
       
       <categories>

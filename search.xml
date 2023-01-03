@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>宏实现#pragma once&amp;#ifndef</title>
+      <link href="/chunyujin/5f33e850.html"/>
+      <url>/chunyujin/5f33e850.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>为了避免同一个头文件被包含(include)多次，C&#x2F;C++中有两种宏实现的方式：一种是#pragma once方式</p><p>一种是#ifndef的方式</p><p>有些编译器只支持其中的一种。</p><p>在能够支持这两种方式的编译器是，两者并没有太大的区别，但是两者仍然有一些细微的区别。</p><p><a href="https://blog.csdn.net/qq_43907537/article/details/107938459?ops_request_misc=&request_id=&biz_id=102&utm_term=?ops_request_misc=&request_id=&biz_id=102&utm_term=&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-107938459.nonecase&spm=1018.2226.3001.4187#pragma%20once&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-107938459.nonecase">#pragma once用法</a></p><p><a href="https://blog.csdn.net/qq_35027690/article/details/125865367">#ifndef, #define, #endif 理解</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客图集(阿里云图床)</title>
       <link href="/chunyujin/c2a9db75.html"/>
       <url>/chunyujin/c2a9db75.html</url>
@@ -592,6 +621,35 @@
     
     
     <entry>
+      <title>函数原则&amp;交互&amp;耦合</title>
+      <link href="/chunyujin/8d125c1d.html"/>
+      <url>/chunyujin/8d125c1d.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212010740120.png" alt="截屏2022-12-01 07.39.50"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>条件编译</title>
       <link href="/chunyujin/68bc2fec.html"/>
       <url>/chunyujin/68bc2fec.html</url>
@@ -976,6 +1034,33 @@
     
     
     <entry>
+      <title>从CLion和VsCode的小发现到C++的编译</title>
+      <link href="/chunyujin/f61f63a.html"/>
+      <url>/chunyujin/f61f63a.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="一场编译环境的配置让我简单思考了一下VsCode和CLion的一个小区别"><a href="#一场编译环境的配置让我简单思考了一下VsCode和CLion的一个小区别" class="headerlink" title="一场编译环境的配置让我简单思考了一下VsCode和CLion的一个小区别"></a>一场编译环境的配置让我简单思考了一下VsCode和CLion的一个小区别</h5><ul><li>CLion、VS2022一个界面只能容纳一个项目</li></ul><p>​因此一个界面只能打开一个项目</p><blockquote><p>好像是因为这两种编译器对每个项目都配置对应的环境（我猜的，因为每个项目里面有独立的配置文件</p></blockquote><ul><li>VsCode一个界面可以容纳多个项目，在”工作区”中通过不同的文件夹区分不同的项目</li></ul><p>​因此一个界面可以打开多个项目</p><blockquote><p>VsCode一个环境配置文件可以配置整个工作区中的所有文件的环境（只要工作区一级目录包含一个配置文件文件夹，工作区的所有项目都用这个文件夹，而且配置文件夹可以添加编译环境，因为一个工作区既可以编译C、C++，也可以编辑Python等，只需要下载相应的插件并将配置添加到配置文件夹就可以</p></blockquote><blockquote><p>任何程序，一个项目里面只能存在一个main函数</p></blockquote><blockquote><p>《C++ Primer Plus 第六版》1.4中写，Windows编译器如果要编译程序，要为程序创建一个项目才行，并将组成程序的文件添加到该项目中。项目中有编译器提供的IDE(集成开发环境)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210181521940.png" alt="截屏2022-10-18 15.18.36" style="zoom:40%;" /></blockquote><p>CLion、VS2022是名副其实的“编译器”</p><p>VsCode其实算是一个“编辑器”，通过各种插件来完成编译功能</p><p>所以就编辑而言，其实VsCode还是方便一点呢，一个窗口就能编辑多个项目了；而且vscode更轻量级，打开速度更快</p><p>但是就进行开发比较大的一个项目而言，还得是Clion、Xcode、VS2022，因为术业有专攻嘛~就开发、编译而言，还是它们更全面更强大</p><blockquote><p>Python因为不需要main函数，并且Python只有一种文件类型就是.py，一个.py文件就是一个项目。所以一个界面里也就没有容纳的项目个数之说啦</p><p>PyCharm一个界面就能存在所有的项目</p><p>Python的配置环境就是下载到本地的Python环境，PyCharm用的就是本地的Python环境，因此项目里不用包含环境配置文件（大概</p><p>这应该也是PyCharm一个界面可以同时存在多个项目的原因</p></blockquote><blockquote><p>CLion的Git并不是很讨喜，因为同步的时候一个窗口只能上传一个项目，所以一个项目就会占用一个仓库</p><p>相比之下，PyCharm和VsCode则可以保证一个仓库里面存在多个项目或者文件夹，还是很方便滴～</p></blockquote><p>编译器之类的都是程序猿攻城狮的工具</p><p>当然会用的工具越多越好呀～</p><p>学会在不同的编译环境下敲代码是一件好事～～</p><p>为啥要用好用的编译器，不直接敲命令行？</p><p>因为好用的编译器能提供代码补全、报错、调试、同步到Git等等等等非常好用的功能呀～～</p><p>越专业越好用呀～</p><h5 id="编写C-程序并让它运行的过程"><a href="#编写C-程序并让它运行的过程" class="headerlink" title="编写C++程序并让它运行的过程"></a>编写C++程序并让它运行的过程</h5><blockquote><p>具体步骤根据计算机环境和C++编译器是有区别的，但是都有以下大体的过程（from《C++ Primer Plus 第六版》1.4程序创建的技巧</p></blockquote><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210181446645.png" alt="截屏2022-10-18 14.46.17" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210181447632.png" alt="截屏2022-10-18 14.46.10" style="zoom: 20%;" /><h5 id="UNIX下用CC命令行调用cfront编译器实现C-的编译过程"><a href="#UNIX下用CC命令行调用cfront编译器实现C-的编译过程" class="headerlink" title="UNIX下用CC命令行调用cfront编译器实现C++的编译过程"></a>UNIX下用CC命令行调用cfront编译器实现C++的编译过程</h5><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202210181449714.png" alt="769b9e7578283e1b368621646ba2f3ae" style="zoom:50%;" /><p>Linux则是用的g++编译器，工作方式跟标准的UNIX编译器相近，此处主要是展示一下编译过程</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++_new对象加括号和不加括号的区别</title>
       <link href="/chunyujin/166a8a1f.html"/>
       <url>/chunyujin/166a8a1f.html</url>
@@ -1051,6 +1136,35 @@
             <tag> 数据结构 </tag>
             
             <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>调试真的真的十分重要且好用!!!</title>
+      <link href="/chunyujin/c1238877.html"/>
+      <url>/chunyujin/c1238877.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>记录一下，今天是2022&#x2F;10&#x2F;4</p><p>有一个问题，我找了半天，结果调试了一下就发现在哪儿出毛病了。。。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
       
@@ -1184,6 +1298,64 @@
       
       
         <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>副本</title>
+      <link href="/chunyujin/f14e76e5.html"/>
+      <url>/chunyujin/f14e76e5.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="副本"><a href="#副本" class="headerlink" title="副本"></a>副本</h4><p>副本这个词用得好啊</p><p>比如函数的形参就是实参的副本</p><p>副本就是拷贝出来的值</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于vs2022&amp;头文件和源文件的区别</title>
+      <link href="/chunyujin/7c16d58.html"/>
+      <url>/chunyujin/7c16d58.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol><li>关于vs2022</li></ol><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20220910100800098.png" alt="image-20220910100800098"  /><ol start="2"><li>头文件和源文件的区别</li></ol><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20220910101245438.png" alt="image-20220910101245438"></p><p>头文件用于函数、自定义类型声明，源文件用于定义、实现</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程日志 </category>
+          
+          <category> C&amp;C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
             
             <tag> C++ </tag>
             

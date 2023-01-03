@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-01-01T06:27:27.653Z</updated>
+  <updated>2023-01-03T06:00:54.134Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>宏实现#pragma once&amp;#ifndef</title>
+    <link href="https://chunyujin.top/chunyujin/5f33e850.html"/>
+    <id>https://chunyujin.top/chunyujin/5f33e850.html</id>
+    <published>2023-01-03T05:59:00.000Z</published>
+    <updated>2023-01-03T06:00:54.134Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>为了避免同一个头文件被包含(include)多次，C&#x2F;C++中有两种宏实现的方式：一种是#pragma once方式</p><p>一种是#ifndef的方式</p><p>有些编译器只支持其中的一种。</p><p>在能够支持这两种方式的编译器是，两者并没有太大的区别，但是两者仍然有一些细微的区别。</p><p><a href="https://blog.csdn.net/qq_43907537/article/details/107938459?ops_request_misc=&request_id=&biz_id=102&utm_term=?ops_request_misc=&request_id=&biz_id=102&utm_term=&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-107938459.nonecase&spm=1018.2226.3001.4187#pragma%20once&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-107938459.nonecase">#pragma once用法</a></p><p><a href="https://blog.csdn.net/qq_35027690/article/details/125865367">#ifndef, #define, #endif 理解</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
+    
+    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
+    
+    
+    <category term="C" scheme="https://chunyujin.top/tags/C/"/>
+    
+    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>博客图集(阿里云图床)</title>
@@ -507,37 +535,6 @@
       
       
     <summary type="html">&lt;h6 id=&quot;x3D-x3D-模板参数分为三类-x3D-x3D&quot;&gt;&lt;a href=&quot;#x3D-x3D-模板参数分为三类-x3D-x3D&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x3D;&amp;#x3D;模板参数分为三类&amp;#x3D;&amp;#x3D;&quot;&gt;&lt;/a&gt;&amp;#x3D;</summary>
-      
-    
-    
-    
-    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
-    
-    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
-    
-    
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>有些语句后面不用加分号</title>
-    <link href="https://chunyujin.top/chunyujin/6e7957f9.html"/>
-    <id>https://chunyujin.top/chunyujin/6e7957f9.html</id>
-    <published>2022-12-02T11:45:00.000Z</published>
-    <updated>2023-01-02T04:45:23.929Z</updated>
-    
-    <content type="html"><![CDATA[<p>if(){}</p><p>while(){}</p><p>for(){}</p><p>int xx(){}</p><p>if语句、while循环、for循环、函数定义是，{}是语句的一部分，后面不用跟分号</p><p>函数的只声明不定义的时候需要语句最后要加分号</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212021945977.png" alt="截屏2022-12-02 19.42.03"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;if(){}&lt;/p&gt;
-&lt;p&gt;while(){}&lt;/p&gt;
-&lt;p&gt;for(){}&lt;/p&gt;
-&lt;p&gt;int xx(){}&lt;/p&gt;
-&lt;p&gt;if语句、while循环、for循环、函数定义是，{}是语句的一部分，后面不用跟分号&lt;/p&gt;
-&lt;p&gt;函数的只声明不定义的时候需要语句最后要加分号&lt;</summary>
       
     
     

@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chunyujin.top/chunyujin/5b04b880.html</loc>
+    
+    <lastmod>2023-01-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin.top/chunyujin/dffbd9e1.html</loc>
+    
+    <lastmod>2023-01-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chunyujin.top/about/index.html</loc>
     
     <lastmod>2023-01-06</lastmod>
@@ -470,15 +488,6 @@
   </url>
   
   <url>
-    <loc>https://chunyujin.top/chunyujin/dffbd9e1.html</loc>
-    
-    <lastmod>2023-01-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://chunyujin.top/chunyujin/bd04c738.html</loc>
     
     <lastmod>2023-01-01</lastmod>
@@ -840,6 +849,13 @@
   
   <url>
     <loc>https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/</loc>
+    <lastmod>2023-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin.top/categories/Skill/Hero/</loc>
     <lastmod>2023-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

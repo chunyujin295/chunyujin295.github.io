@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>解决butterfly在黑色模式下主页和顶部封面过暗</title>
+      <link href="/chunyujin/dffbd9e1.html"/>
+      <url>/chunyujin/dffbd9e1.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解决黑色模式下主页和顶部封面过暗:</p><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061849015.png" alt="截屏2023-01-06 18.47.52"></p><p>调整第48行括号里的小数点后的数值，默认是.9，数值越大越暗</p><h5 id="before"><a href="#before" class="headerlink" title="before:"></a>before:</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061850337.png"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061848023.png" alt="截屏2023-01-06 18.48.21"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061848940.png" alt="截屏2023-01-06 18.48.32"></p><h5 id="after："><a href="#after：" class="headerlink" title="after："></a>after：</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061850100.png" alt="截屏2023-01-06 18.50.37"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061851886.png" alt="截屏2023-01-06 18.51.00"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061851284.png" alt="截屏2023-01-06 18.51.22"></p><p><a href="http://chunyujin.top/chunyujin/5b04b880.html">相关问题链接：解决黑色模式下文章预览封面及内部图片过暗</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Skill </category>
+          
+          <category> Hero </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决黑色模式下文章预览封面及内部图片过暗</title>
+      <link href="/chunyujin/5b04b880.html"/>
+      <url>/chunyujin/5b04b880.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解决黑色模式下文章预览封面及内部图片过暗</p><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061854032.png" alt="截屏2023-01-06 18.54.56"></p><p>106、108行brightness括号里的值，brightness范围0~1，值越小，图片越暗</p><h5 id="before："><a href="#before：" class="headerlink" title="before："></a>before：</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858116.png" alt="截屏2023-01-06 18.57.57"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858319.png" alt="截屏2023-01-06 18.56.21"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858195.png" alt="截屏2023-01-06 18.56.29"></p><h5 id="after："><a href="#after：" class="headerlink" title="after："></a>after：</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858048.png" alt="截屏2023-01-06 18.56.47"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858987.png" alt="截屏2023-01-06 18.57.03"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858832.png" alt="截屏2023-01-06 18.57.10"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Skill </category>
+          
+          <category> Hero </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常用指令&amp;权限管理</title>
       <link href="/chunyujin/1c776eb1.html"/>
       <url>/chunyujin/1c776eb1.html</url>
@@ -100,31 +154,6 @@
         <tags>
             
             <tag> C++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>解决butterfly在黑色模式下主页封面过暗的问题</title>
-      <link href="/chunyujin/dffbd9e1.html"/>
-      <url>/chunyujin/dffbd9e1.html</url>
-      
-        <content type="html"><![CDATA[<p>解决黑色模式下主页封面过暗的问题</p><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212311144894.png" alt="截屏2022-12-31 11.43.39"></p><p>调整第48行括号里的小数点后的数值，默认是.9，数值越大越暗</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Skill </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
             
         </tags>
       

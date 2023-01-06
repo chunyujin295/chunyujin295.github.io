@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-01-06T08:50:50.738Z</updated>
+  <updated>2023-01-06T10:54:13.811Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决butterfly在黑色模式下主页和顶部封面过暗</title>
+    <link href="https://chunyujin.top/chunyujin/dffbd9e1.html"/>
+    <id>https://chunyujin.top/chunyujin/dffbd9e1.html</id>
+    <published>2023-01-06T10:52:00.000Z</published>
+    <updated>2023-01-06T10:54:13.811Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解决黑色模式下主页和顶部封面过暗:</p><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061849015.png" alt="截屏2023-01-06 18.47.52"></p><p>调整第48行括号里的小数点后的数值，默认是.9，数值越大越暗</p><h5 id="before"><a href="#before" class="headerlink" title="before:"></a>before:</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061850337.png"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061848023.png" alt="截屏2023-01-06 18.48.21"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061848940.png" alt="截屏2023-01-06 18.48.32"></p><h5 id="after："><a href="#after：" class="headerlink" title="after："></a>after：</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061850100.png" alt="截屏2023-01-06 18.50.37"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061851886.png" alt="截屏2023-01-06 18.51.00"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061851284.png" alt="截屏2023-01-06 18.51.22"></p><p><a href="http://chunyujin.top/chunyujin/5b04b880.html">相关问题链接：解决黑色模式下文章预览封面及内部图片过暗</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Hero" scheme="https://chunyujin.top/categories/Skill/Hero/"/>
+    
+    
+    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决黑色模式下文章预览封面及内部图片过暗</title>
+    <link href="https://chunyujin.top/chunyujin/5b04b880.html"/>
+    <id>https://chunyujin.top/chunyujin/5b04b880.html</id>
+    <published>2023-01-06T10:46:00.000Z</published>
+    <updated>2023-01-06T10:59:00.060Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解决黑色模式下文章预览封面及内部图片过暗</p><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061854032.png" alt="截屏2023-01-06 18.54.56"></p><p>106、108行brightness括号里的值，brightness范围0~1，值越小，图片越暗</p><h5 id="before："><a href="#before：" class="headerlink" title="before："></a>before：</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858116.png" alt="截屏2023-01-06 18.57.57"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858319.png" alt="截屏2023-01-06 18.56.21"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858195.png" alt="截屏2023-01-06 18.56.29"></p><h5 id="after："><a href="#after：" class="headerlink" title="after："></a>after：</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858048.png" alt="截屏2023-01-06 18.56.47"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858987.png" alt="截屏2023-01-06 18.57.03"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858832.png" alt="截屏2023-01-06 18.57.10"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Hero" scheme="https://chunyujin.top/categories/Skill/Hero/"/>
+    
+    
+    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>常用指令&amp;权限管理</title>
@@ -114,32 +166,6 @@
     
     
     <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决butterfly在黑色模式下主页封面过暗的问题</title>
-    <link href="https://chunyujin.top/chunyujin/dffbd9e1.html"/>
-    <id>https://chunyujin.top/chunyujin/dffbd9e1.html</id>
-    <published>2022-12-31T03:52:00.000Z</published>
-    <updated>2023-01-01T05:40:35.200Z</updated>
-    
-    <content type="html"><![CDATA[<p>解决黑色模式下主页封面过暗的问题</p><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212311144894.png" alt="截屏2022-12-31 11.43.39"></p><p>调整第48行括号里的小数点后的数值，默认是.9，数值越大越暗</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;解决黑色模式下主页封面过暗的问题&lt;/p&gt;
-&lt;p&gt;在&lt;code&gt;/themes/butterfly/source/css/_mode/darkmode.styl &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzh</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    
-    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
     
   </entry>
   
@@ -509,32 +535,6 @@
       
       
     <summary type="html">&lt;h3 id=&quot;C-模板不支持分离编译！！&quot;&gt;&lt;a href=&quot;#C-模板不支持分离编译！！&quot; class=&quot;headerlink&quot; title=&quot;C++模板不支持分离编译！！&quot;&gt;&lt;/a&gt;C++模板不支持分离编译！！&lt;/h3&gt;&lt;p&gt;一般情况下，自定义变量和函数的时候，在头文件中声</summary>
-      
-    
-    
-    
-    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
-    
-    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
-    
-    
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++_模板</title>
-    <link href="https://chunyujin.top/chunyujin/a0e18b05.html"/>
-    <id>https://chunyujin.top/chunyujin/a0e18b05.html</id>
-    <published>2022-12-03T08:36:00.000Z</published>
-    <updated>2023-01-02T04:45:23.927Z</updated>
-    
-    <content type="html"><![CDATA[<h6 id="x3D-x3D-模板参数分为三类-x3D-x3D"><a href="#x3D-x3D-模板参数分为三类-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数分为三类&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数分为三类</strong>&#x3D;&#x3D;</h6><ol><li>类型参数</li></ol><blockquote><p>通过 关键字 typename 或者 class 引入(两者基本上是等价的)</p></blockquote><ol start="2"><li>非类型参数</li></ol><blockquote><p>模板参数不局限于类型，类型的值也可以作为模板参数，通过 关键字 值的类型 引入</p><p>目前C++只支持 <u>整形</u> &#x2F; <u>枚举类型</u> &#x2F; <u>指针类型</u>(可以是原始数据类型的指针、派生数据类型的指针、对象的指针、对象的成员的指针) &#x2F; <u>引用类型</u>(可以是原始数据类型的引用、派生数据类型的引用、对象的引用)</p></blockquote><ol start="3"><li>模板型模板参数</li></ol><h6 id="x3D-x3D-模板参数支持缺省-x3D-x3D"><a href="#x3D-x3D-模板参数支持缺省-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数支持缺省&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数支持缺省</strong>&#x3D;&#x3D;</h6><blockquote><p>但是要注意的是，缺省参数的使用不要忘了按照规范形式，比如在类或函数声明时加了缺省值，在实现时就不要加了</p><p>(缺省值在声明时添加，在实现时就不添加了)</p><p>还有，缺省要从右往左缺省</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212031014022.png" alt="截屏2022-12-03 10.14.22"></p></blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221202104949903.png" alt="image-20221202104949903"></p><p><a href="https://blog.csdn.net/zhizhengguan/article/details/115869685">https://blog.csdn.net/zhizhengguan/article/details/115869685</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h6 id=&quot;x3D-x3D-模板参数分为三类-x3D-x3D&quot;&gt;&lt;a href=&quot;#x3D-x3D-模板参数分为三类-x3D-x3D&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x3D;&amp;#x3D;模板参数分为三类&amp;#x3D;&amp;#x3D;&quot;&gt;&lt;/a&gt;&amp;#x3D;</summary>
       
     
     

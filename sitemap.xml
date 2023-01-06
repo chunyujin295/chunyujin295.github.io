@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chunyujin.top/about/index.html</loc>
+    
+    <lastmod>2023-01-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chunyujin.top/chunyujin/1c776eb1.html</loc>
     
     <lastmod>2023-01-06</lastmod>
@@ -588,15 +597,6 @@
   
   <url>
     <loc>https://chunyujin.top/website/index.html</loc>
-    
-    <lastmod>2022-12-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chunyujin.top/about/index.html</loc>
     
     <lastmod>2022-12-30</lastmod>
     

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chunyujin.top/chunyujin/c2a9db75.html</loc>
+    <loc>https://chunyujin.top/chunyujin/17e3ae31.html</loc>
     
     <lastmod>2023-01-07</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://chunyujin.top/English/index.html</loc>
+    
+    <lastmod>2023-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin.top/chunyujin/c2a9db75.html</loc>
     
     <lastmod>2023-01-07</lastmod>
     
@@ -649,6 +658,15 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://chunyujin.top/chunyujin/0.html</loc>
+    
+    <lastmod>2022-12-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>https://chunyujin.top/</loc>
@@ -763,6 +781,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://chunyujin.top/tags/English/</loc>
+    <lastmod>2023-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -865,6 +890,13 @@
   
   <url>
     <loc>https://chunyujin.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/C/</loc>
+    <lastmod>2023-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chunyujin.top/categories/English/</loc>
     <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

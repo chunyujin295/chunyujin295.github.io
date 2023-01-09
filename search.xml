@@ -383,33 +383,6 @@
     
     
     <entry>
-      <title>VsCode快捷键&amp;使用技巧</title>
-      <link href="/chunyujin/d25e6d9b.html"/>
-      <url>/chunyujin/d25e6d9b.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="运行代码"><a href="#运行代码" class="headerlink" title="运行代码"></a>运行代码</h4><p>⌃ + ⌥ + N</p><p>ctrl + alt + N</p><h4 id="格式化代码"><a href="#格式化代码" class="headerlink" title="格式化代码"></a>格式化代码</h4><p>⌥ + ⇧ + F</p><p>alt + shift + F</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202209121909898.png" alt="截屏2022-09-12 18.49.36" style="zoom: 33%;" /><h4 id="批量更改变量、函数名称"><a href="#批量更改变量、函数名称" class="headerlink" title="批量更改变量、函数名称"></a>批量更改变量、函数名称</h4><p>光标选中名称</p><p>⌘ + ⇧ + L</p><p>ctrl + shift + L</p><h4 id="深浅模式跟随系统"><a href="#深浅模式跟随系统" class="headerlink" title="深浅模式跟随系统"></a>深浅模式跟随系统</h4><p>设置中搜索</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301071256453.png" alt="截屏2023-01-07 12.54.53"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Skill </category>
-          
-          <category> IDE </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> VsCode </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>C++_map&amp;pair类</title>
       <link href="/chunyujin/899a3eaf.html"/>
       <url>/chunyujin/899a3eaf.html</url>
@@ -1566,6 +1539,66 @@
         <tags>
             
             <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于vscode下使用终端进入vim看不到光标的问题</title>
+      <link href="/chunyujin/f07d859c.html"/>
+      <url>/chunyujin/f07d859c.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>关于vscode下使用终端进入vim时光标看不到光标的问题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301091550584.png" alt="截屏2023-01-09 15.50.16" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301091550854.png" alt="截屏2023-01-09 15.49.55" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301091550988.png" alt="截屏2023-01-09 15.50.09" style="zoom:50%;" /><p>很大概率是vscode的主题配置导致的，默认的白色主题下看不到光标（如上）</p><p>换成默认的黑色主题之后就可以看到了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301091552533.png" alt="截屏2023-01-09 15.50.31" style="zoom:50%;" />]]></content>
+      
+      
+      <categories>
+          
+          <category> Skill </category>
+          
+          <category> IDE </category>
+          
+          <category> VsCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VsCode </tag>
+            
+            <tag> Vim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VsCode快捷键&amp;使用技巧</title>
+      <link href="/chunyujin/d25e6d9b.html"/>
+      <url>/chunyujin/d25e6d9b.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="运行代码"><a href="#运行代码" class="headerlink" title="运行代码"></a>运行代码</h4><p>⌃ + ⌥ + N</p><p>ctrl + alt + N</p><h4 id="格式化代码"><a href="#格式化代码" class="headerlink" title="格式化代码"></a>格式化代码</h4><p>⌥ + ⇧ + F</p><p>alt + shift + F</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202209121909898.png" alt="截屏2022-09-12 18.49.36" style="zoom: 33%;" /><h4 id="批量更改变量、函数名称"><a href="#批量更改变量、函数名称" class="headerlink" title="批量更改变量、函数名称"></a>批量更改变量、函数名称</h4><p>光标选中名称</p><p>⌘ + ⇧ + L</p><p>ctrl + shift + L</p><h4 id="深浅模式跟随系统"><a href="#深浅模式跟随系统" class="headerlink" title="深浅模式跟随系统"></a>深浅模式跟随系统</h4><p>设置中搜索</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301071256453.png" alt="截屏2023-01-07 12.54.53"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Skill </category>
+          
+          <category> IDE </category>
+          
+          <category> VsCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VsCode </tag>
             
         </tags>
       

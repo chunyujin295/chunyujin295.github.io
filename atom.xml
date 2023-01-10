@@ -241,26 +241,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://chunyujin.top/chunyujin/0.html"/>
-    <id>https://chunyujin.top/chunyujin/0.html</id>
-    <published>2022-12-15T14:14:08.000Z</published>
-    <updated>2023-01-07T15:32:18.065Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="安装MinGW"><a href="#安装MinGW" class="headerlink" title="安装MinGW"></a>安装MinGW</h4><p>相比在 Linux 平台上安装 GCC 编译环境，在 Windows 平台上安装 MinGW 是比较简单的，只需经历以下几个过程。</p><ol><li><p>打开 <a href="https://osdn.net/projects/mingw/">MinGW 官网</a>（点击即可进入官网），下载 MinGW 安装包。</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215731250.png" alt="image-20221215215731250" style="zoom:67%;" /></li><li><p>下载完成后，会得到一个名为 mingw-get-setup.exe 的安装包，双击打开它，可以看到如下的对话框：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215752602.png" alt="image-20221215215752602" style="zoom:67%;" /></li><li><p>直接点击“Install”，进入下面的对话框，自定义安装位置，然后选择continue</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215808186.png" alt="image-20221215215808186" style="zoom:67%;" /></li><li><p>进入安装 MinGW 配置器的界面。安装完成之后，得到一个名为 “MinGW Installer Manager” 的软件，借助它，可以随时根据需要修改 GCC 编译器的配置。点击“continue”,会自动弹出配置界面，如下所示：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215823311.png" alt="image-20221215215823311" style="zoom:67%;" /></li><li><p>为使 GCC 同时支持编译 C 语言和 C++，需勾选图中标注的 2 项。我们知道，GCC 还支持其它编程语言，读者可借助此配置器，随时实际需要安装自己需要的编译环境。勾选完成后，在菜单栏中选择<code>Installation -&gt; Apply Changes</code>，弹出如下对话框：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215851706.png" alt="image-20221215215851706" style="zoom:67%;" /></li></ol><p>选择“Apply”。然后耐心等待，直至安装成功，即可关闭此界面。注意，整个安装过程中可能会提示某些组件下载失败，但没关系，后续需要时，可以通过 MinGw Installer（图 4 所示）安装界面中的 “All Packages”选项中，手动选择指定的安装包进行安装。</p><h4 id="添加到环境变量"><a href="#添加到环境变量" class="headerlink" title="添加到环境变量"></a>添加到环境变量</h4><p>打开<code>我的电脑</code>-&gt;<code>属性</code>-&gt;<code>高级系统设置</code>-&gt;<code>“高级”中的环境变量</code></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213001922.png" alt="image-20221215213001922" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213141396.png" alt="image-20221215213141396" style="zoom: 67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213248912.png" alt="image-20221215213248912" style="zoom:67%;" /><p>在上方的“用户变量”的Path变量中添加MinGW的bin的位置</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213407962.png" alt="image-20221215213407962" style="zoom:67%;" /><blockquote><p>也可以在下方的“系统变量”的Path中添加MinGW的bin的位置</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213829809.png" alt="image-20221215213829809" style="zoom:67%;" /><p>环境变量、系统变量、用户变量的关系：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021" style="zoom: 50%;" /><p>环境变量只是一个总称，代表了系统变量和用户变量，因此我们说环境变量都是指的系统变量和用户变量。系统变量就是系统级别的变量，用户需要使用系统变量。如果系统变量被修改了，而任何系统用户都在用系统变量，因此每个系统用户都将受到影响。用户变量运行在系统变量之上的，每个用户拥有不同的用户变量，不同用户的用户变量之间是并列的，也是互不干扰的。</p></blockquote><h4 id="检验配置完成"><a href="#检验配置完成" class="headerlink" title="检验配置完成"></a>检验配置完成</h4><p>打开命令行提示符，输入<code>gcc -v</code>或者<code>g++ -v</code></p><p>出现下面则说明成功</p><p><img>(<a href="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png">https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png</a>)</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>MinGw配置(Windows电脑)</title>
     <link href="https://chunyujin.top/chunyujin/1ee5d0ce.html"/>
     <id>https://chunyujin.top/chunyujin/1ee5d0ce.html</id>
@@ -523,6 +503,32 @@
     <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
     
     <category term="C++STL" scheme="https://chunyujin.top/tags/C-STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++_模板</title>
+    <link href="https://chunyujin.top/chunyujin/a0e18b05.html"/>
+    <id>https://chunyujin.top/chunyujin/a0e18b05.html</id>
+    <published>2022-12-03T08:36:00.000Z</published>
+    <updated>2023-01-02T04:45:23.927Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h6 id="x3D-x3D-模板参数分为三类-x3D-x3D"><a href="#x3D-x3D-模板参数分为三类-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数分为三类&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数分为三类</strong>&#x3D;&#x3D;</h6><ol><li>类型参数</li></ol><blockquote><p>通过 关键字 typename 或者 class 引入(两者基本上是等价的)</p></blockquote><ol start="2"><li>非类型参数</li></ol><blockquote><p>模板参数不局限于类型，类型的值也可以作为模板参数，通过 关键字 值的类型 引入</p><p>目前C++只支持 <u>整形</u> &#x2F; <u>枚举类型</u> &#x2F; <u>指针类型</u>(可以是原始数据类型的指针、派生数据类型的指针、对象的指针、对象的成员的指针) &#x2F; <u>引用类型</u>(可以是原始数据类型的引用、派生数据类型的引用、对象的引用)</p></blockquote><ol start="3"><li>模板型模板参数</li></ol><h6 id="x3D-x3D-模板参数支持缺省-x3D-x3D"><a href="#x3D-x3D-模板参数支持缺省-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数支持缺省&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数支持缺省</strong>&#x3D;&#x3D;</h6><blockquote><p>但是要注意的是，缺省参数的使用不要忘了按照规范形式，比如在类或函数声明时加了缺省值，在实现时就不要加了</p><p>(缺省值在声明时添加，在实现时就不添加了)</p><p>还有，缺省要从右往左缺省</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212031014022.png" alt="截屏2022-12-03 10.14.22"></p></blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221202104949903.png" alt="image-20221202104949903"></p><p><a href="https://blog.csdn.net/zhizhengguan/article/details/115869685">https://blog.csdn.net/zhizhengguan/article/details/115869685</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
+    
+    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
+    
+    
+    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
     
   </entry>
   

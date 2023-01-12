@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>菜单栏页面内的顶部图片展示</title>
+      <link href="/chunyujin/8566742c.html"/>
+      <url>/chunyujin/8566742c.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="菜单栏页面内的顶部图片展示"><a href="#菜单栏页面内的顶部图片展示" class="headerlink" title="菜单栏页面内的顶部图片展示"></a>菜单栏页面内的顶部图片展示</h1><p>在source中有中每个页面的配置文件夹，如tags、categories、music等：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301121932556.png" alt="截屏2023-01-12 19.32.14" style="zoom: 33%;" /><p>打开一个文件夹，比如tags，都会有index.md配置文件：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301121935996.png" alt="截屏2023-01-12 19.28.42" style="zoom:50%;" /><p>里面的top_img对应的就是页面的顶部图片：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301121936911.png" alt="截屏2023-01-12 19.28.57" style="zoom:50%;" /><p>有些页面是有子页面的，比如tags、category等就有子页面</p><p>以tags为例，tags有各种标签，打开一个进去就会进入到相关的文章</p><p>在主题配置文件_config.yml中的设置中可以更改子页面的标签：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301121937303.png" alt="截屏2023-01-12 19.29.17" style="zoom:50%;" /><p>115行是tags默认的每个子页面的顶部图片，也可以分别调控每个tag的顶部图片：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301121938002.png" alt="截屏2023-01-12 19.29.05" style="zoom:50%;" /><p>例如头像、主页面顶部图片、时间轴(archive)顶部图片等的配置也在主题配置文件_config.yml中，只要在里面能找到相关配置，就可以进行修改</p><blockquote><p>像是music、about等没有子页面的标签，直接就在对应的文件夹下的inedx.md文件里进行顶部图片的配置即可</p><p>不用在主题配置文件_config.yml里进行调配(这里面也没有对应的选项)</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Skill </category>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常用指令&amp;权限管理</title>
       <link href="/chunyujin/1c776eb1.html"/>
       <url>/chunyujin/1c776eb1.html</url>
@@ -90,7 +117,7 @@
           
           <category> Skill </category>
           
-          <category> Hero </category>
+          <category> Hexo </category>
           
       </categories>
       
@@ -117,7 +144,7 @@
           
           <category> Skill </category>
           
-          <category> Hero </category>
+          <category> Hexo </category>
           
       </categories>
       

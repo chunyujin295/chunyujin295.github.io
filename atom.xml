@@ -3,11 +3,11 @@
   <title>🏴‍☠️浴巾的贼船🏴‍☠️</title>
   <icon>https://www.gravatar.com/avatar/4693869db7cae9524536dea3133cf541</icon>
   
-  <link href="https://chunyujin.top/atom.xml" rel="self"/>
+  <link href="https://chunyujin295.github.io/atom.xml" rel="self"/>
   
-  <link href="https://chunyujin.top/"/>
-  <updated>2023-01-12T11:44:38.237Z</updated>
-  <id>https://chunyujin.top/</id>
+  <link href="https://chunyujin295.github.io/"/>
+  <updated>2023-01-12T11:45:32.159Z</updated>
+  <id>https://chunyujin295.github.io/</id>
   
   <author>
     <name>浴巾</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>菜单栏页面内的顶部图片展示</title>
-    <link href="https://chunyujin.top/chunyujin/8566742c.html"/>
-    <id>https://chunyujin.top/chunyujin/8566742c.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/8566742c.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/8566742c.html</id>
     <published>2023-01-12T11:46:00.000Z</published>
-    <updated>2023-01-12T11:44:38.237Z</updated>
+    <updated>2023-01-12T11:45:32.159Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="菜单栏页面内的顶部图片展示"><a href="#菜单栏页面内的顶部图片展示" class="headerlink" title="菜单栏页面内的顶部图片展示"></a>菜单栏页面内的顶部图片展示</h1><p>在source中有中每个页面的配置文件夹，如tags、categories、music等：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301121932556.png" alt="截屏2023-01-12 19.32.14" style="zoom: 33%;" /><p>打开一个文件夹，比如tags，都会有index.md配置文件：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301121935996.png" alt="截屏2023-01-12 19.28.42" style="zoom:50%;" /><p>里面的top_img对应的就是页面的顶部图片：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301121936911.png" alt="截屏2023-01-12 19.28.57" style="zoom:50%;" /><p>有些页面是有子页面的，比如tags、category等就有子页面</p><p>以tags为例，tags有各种标签，打开一个进去就会进入到相关的文章</p><p>在主题配置文件_config.yml中的设置中可以更改子页面的标签：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301121937303.png" alt="截屏2023-01-12 19.29.17" style="zoom:50%;" /><p>115行是tags默认的每个子页面的顶部图片，也可以分别调控每个tag的顶部图片：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301121938002.png" alt="截屏2023-01-12 19.29.05" style="zoom:50%;" /><p>例如头像、主页面顶部图片、时间轴(archive)顶部图片等的配置也在主题配置文件_config.yml中，只要在里面能找到相关配置，就可以进行修改</p><blockquote><p>像是music、about等没有子页面的标签，直接就在对应的文件夹下的inedx.md文件里进行顶部图片的配置即可</p><p>不用在主题配置文件_config.yml里进行调配(这里面也没有对应的选项)</p></blockquote>]]></content>
     
@@ -33,19 +33,19 @@
     
     
     
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    <category term="Skill" scheme="https://chunyujin295.github.io/categories/Skill/"/>
     
-    <category term="Hexo" scheme="https://chunyujin.top/categories/Skill/Hexo/"/>
+    <category term="Hexo" scheme="https://chunyujin295.github.io/categories/Skill/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://chunyujin295.github.io/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>常用指令&amp;权限管理</title>
-    <link href="https://chunyujin.top/chunyujin/1c776eb1.html"/>
-    <id>https://chunyujin.top/chunyujin/1c776eb1.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/1c776eb1.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/1c776eb1.html</id>
     <published>2023-01-12T03:32:00.000Z</published>
     <updated>2023-01-12T03:32:29.138Z</updated>
     
@@ -59,17 +59,17 @@
     
     
     
-    <category term="Linux" scheme="https://chunyujin.top/categories/Linux/"/>
+    <category term="Linux" scheme="https://chunyujin295.github.io/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://chunyujin295.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>博客图集(阿里云图床)</title>
-    <link href="https://chunyujin.top/chunyujin/c2a9db75.html"/>
-    <id>https://chunyujin.top/chunyujin/c2a9db75.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/c2a9db75.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/c2a9db75.html</id>
     <published>2023-01-07T14:25:00.000Z</published>
     <updated>2023-01-09T13:04:05.135Z</updated>
     
@@ -83,17 +83,17 @@
     
     
     
-    <category term="图集" scheme="https://chunyujin.top/categories/%E5%9B%BE%E9%9B%86/"/>
+    <category term="图集" scheme="https://chunyujin295.github.io/categories/%E5%9B%BE%E9%9B%86/"/>
     
     
-    <category term="资源" scheme="https://chunyujin.top/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="资源" scheme="https://chunyujin295.github.io/tags/%E8%B5%84%E6%BA%90/"/>
     
   </entry>
   
   <entry>
     <title>20230107</title>
-    <link href="https://chunyujin.top/chunyujin/17e3ae31.html"/>
-    <id>https://chunyujin.top/chunyujin/17e3ae31.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/17e3ae31.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/17e3ae31.html</id>
     <published>2023-01-07T14:25:00.000Z</published>
     <updated>2023-01-09T13:22:22.161Z</updated>
     
@@ -107,17 +107,17 @@
     
     
     
-    <category term="English" scheme="https://chunyujin.top/categories/English/"/>
+    <category term="English" scheme="https://chunyujin295.github.io/categories/English/"/>
     
     
-    <category term="English" scheme="https://chunyujin.top/tags/English/"/>
+    <category term="English" scheme="https://chunyujin295.github.io/tags/English/"/>
     
   </entry>
   
   <entry>
     <title>解决butterfly在黑色模式下主页和顶部封面过暗</title>
-    <link href="https://chunyujin.top/chunyujin/dffbd9e1.html"/>
-    <id>https://chunyujin.top/chunyujin/dffbd9e1.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/dffbd9e1.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/dffbd9e1.html</id>
     <published>2023-01-06T10:52:00.000Z</published>
     <updated>2023-01-12T11:44:50.680Z</updated>
     
@@ -131,19 +131,19 @@
     
     
     
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    <category term="Skill" scheme="https://chunyujin295.github.io/categories/Skill/"/>
     
-    <category term="Hexo" scheme="https://chunyujin.top/categories/Skill/Hexo/"/>
+    <category term="Hexo" scheme="https://chunyujin295.github.io/categories/Skill/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://chunyujin295.github.io/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>解决黑色模式下文章预览封面及内部图片过暗</title>
-    <link href="https://chunyujin.top/chunyujin/5b04b880.html"/>
-    <id>https://chunyujin.top/chunyujin/5b04b880.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/5b04b880.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/5b04b880.html</id>
     <published>2023-01-06T10:46:00.000Z</published>
     <updated>2023-01-12T11:44:45.273Z</updated>
     
@@ -157,19 +157,19 @@
     
     
     
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    <category term="Skill" scheme="https://chunyujin295.github.io/categories/Skill/"/>
     
-    <category term="Hexo" scheme="https://chunyujin.top/categories/Skill/Hexo/"/>
+    <category term="Hexo" scheme="https://chunyujin295.github.io/categories/Skill/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://chunyujin295.github.io/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>宏实现#pragma once&amp;#ifndef</title>
-    <link href="https://chunyujin.top/chunyujin/5f33e850.html"/>
-    <id>https://chunyujin.top/chunyujin/5f33e850.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/5f33e850.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/5f33e850.html</id>
     <published>2023-01-03T05:59:00.000Z</published>
     <updated>2023-01-03T06:06:32.459Z</updated>
     
@@ -183,21 +183,21 @@
     
     
     
-    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
+    <category term="编程日志" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
     
-    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
+    <category term="C&amp;C++" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
     
     
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
+    <category term="C++" scheme="https://chunyujin295.github.io/tags/C/"/>
     
-    <category term="C" scheme="https://chunyujin.top/tags/C/"/>
+    <category term="C" scheme="https://chunyujin295.github.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>test</title>
-    <link href="https://chunyujin.top/chunyujin/d87f7e0c.html"/>
-    <id>https://chunyujin.top/chunyujin/d87f7e0c.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/d87f7e0c.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/d87f7e0c.html</id>
     <published>2023-01-01T06:07:00.000Z</published>
     <updated>2023-01-01T06:10:19.998Z</updated>
     
@@ -211,17 +211,17 @@
     
     
     
-    <category term="C++" scheme="https://chunyujin.top/categories/C/"/>
+    <category term="C++" scheme="https://chunyujin295.github.io/categories/C/"/>
     
     
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
+    <category term="C++" scheme="https://chunyujin295.github.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>电脑正确坐姿：健康才是是第一生产力</title>
-    <link href="https://chunyujin.top/chunyujin/768897a3.html"/>
-    <id>https://chunyujin.top/chunyujin/768897a3.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/768897a3.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/768897a3.html</id>
     <published>2022-12-21T12:48:00.000Z</published>
     <updated>2022-12-31T17:42:21.557Z</updated>
     
@@ -235,17 +235,17 @@
     
     
     
-    <category term="健康" scheme="https://chunyujin.top/categories/%E5%81%A5%E5%BA%B7/"/>
+    <category term="健康" scheme="https://chunyujin295.github.io/categories/%E5%81%A5%E5%BA%B7/"/>
     
     
-    <category term="健康" scheme="https://chunyujin.top/tags/%E5%81%A5%E5%BA%B7/"/>
+    <category term="健康" scheme="https://chunyujin295.github.io/tags/%E5%81%A5%E5%BA%B7/"/>
     
   </entry>
   
   <entry>
     <title>关于Linux</title>
-    <link href="https://chunyujin.top/chunyujin/7ef7519f.html"/>
-    <id>https://chunyujin.top/chunyujin/7ef7519f.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/7ef7519f.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/7ef7519f.html</id>
     <published>2022-12-18T04:22:00.000Z</published>
     <updated>2022-12-31T03:53:33.703Z</updated>
     
@@ -259,17 +259,17 @@
     
     
     
-    <category term="Linux" scheme="https://chunyujin.top/categories/Linux/"/>
+    <category term="Linux" scheme="https://chunyujin295.github.io/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://chunyujin295.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>MinGw配置(Windows电脑)</title>
-    <link href="https://chunyujin.top/chunyujin/1ee5d0ce.html"/>
-    <id>https://chunyujin.top/chunyujin/1ee5d0ce.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/1ee5d0ce.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/1ee5d0ce.html</id>
     <published>2022-12-15T14:14:00.000Z</published>
     <updated>2023-01-01T06:30:44.518Z</updated>
     
@@ -283,19 +283,19 @@
     
     
     
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    <category term="Skill" scheme="https://chunyujin295.github.io/categories/Skill/"/>
     
-    <category term="MinGw" scheme="https://chunyujin.top/categories/Skill/MinGw/"/>
+    <category term="MinGw" scheme="https://chunyujin295.github.io/categories/Skill/MinGw/"/>
     
     
-    <category term="MinGw" scheme="https://chunyujin.top/tags/MinGw/"/>
+    <category term="MinGw" scheme="https://chunyujin295.github.io/tags/MinGw/"/>
     
   </entry>
   
   <entry>
     <title>NotePad++配置</title>
-    <link href="https://chunyujin.top/chunyujin/55caa4ef.html"/>
-    <id>https://chunyujin.top/chunyujin/55caa4ef.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/55caa4ef.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/55caa4ef.html</id>
     <published>2022-12-15T14:00:00.000Z</published>
     <updated>2023-01-01T06:26:30.409Z</updated>
     
@@ -309,19 +309,19 @@
     
     
     
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    <category term="Skill" scheme="https://chunyujin295.github.io/categories/Skill/"/>
     
-    <category term="IDE" scheme="https://chunyujin.top/categories/Skill/IDE/"/>
+    <category term="IDE" scheme="https://chunyujin295.github.io/categories/Skill/IDE/"/>
     
     
-    <category term="NotePad++" scheme="https://chunyujin.top/tags/NotePad/"/>
+    <category term="NotePad++" scheme="https://chunyujin295.github.io/tags/NotePad/"/>
     
   </entry>
   
   <entry>
     <title>VsCode_C++环境搭建(Mac m1芯片版本)</title>
-    <link href="https://chunyujin.top/chunyujin/1580f89a.html"/>
-    <id>https://chunyujin.top/chunyujin/1580f89a.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/1580f89a.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/1580f89a.html</id>
     <published>2022-12-13T02:11:00.000Z</published>
     <updated>2023-01-01T06:26:14.168Z</updated>
     
@@ -335,19 +335,19 @@
     
     
     
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    <category term="Skill" scheme="https://chunyujin295.github.io/categories/Skill/"/>
     
-    <category term="IDE" scheme="https://chunyujin.top/categories/Skill/IDE/"/>
+    <category term="IDE" scheme="https://chunyujin295.github.io/categories/Skill/IDE/"/>
     
     
-    <category term="VsCode" scheme="https://chunyujin.top/tags/VsCode/"/>
+    <category term="VsCode" scheme="https://chunyujin295.github.io/tags/VsCode/"/>
     
   </entry>
   
   <entry>
     <title>用Calibre实现Kindle带封面传书</title>
-    <link href="https://chunyujin.top/chunyujin/35444f4.html"/>
-    <id>https://chunyujin.top/chunyujin/35444f4.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/35444f4.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/35444f4.html</id>
     <published>2022-12-12T16:00:00.000Z</published>
     <updated>2023-01-01T06:29:26.274Z</updated>
     
@@ -361,19 +361,19 @@
     
     
     
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    <category term="Skill" scheme="https://chunyujin295.github.io/categories/Skill/"/>
     
-    <category term="Kindle" scheme="https://chunyujin.top/categories/Skill/Kindle/"/>
+    <category term="Kindle" scheme="https://chunyujin295.github.io/categories/Skill/Kindle/"/>
     
     
-    <category term="Kindle" scheme="https://chunyujin.top/tags/Kindle/"/>
+    <category term="Kindle" scheme="https://chunyujin295.github.io/tags/Kindle/"/>
     
   </entry>
   
   <entry>
     <title>Linux_历史命令</title>
-    <link href="https://chunyujin.top/chunyujin/6694219c.html"/>
-    <id>https://chunyujin.top/chunyujin/6694219c.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/6694219c.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/6694219c.html</id>
     <published>2022-12-12T06:10:00.000Z</published>
     <updated>2023-01-01T05:43:11.863Z</updated>
     
@@ -387,17 +387,17 @@
     
     
     
-    <category term="Linux" scheme="https://chunyujin.top/categories/Linux/"/>
+    <category term="Linux" scheme="https://chunyujin295.github.io/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://chunyujin295.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>C++_map&amp;pair类</title>
-    <link href="https://chunyujin.top/chunyujin/899a3eaf.html"/>
-    <id>https://chunyujin.top/chunyujin/899a3eaf.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/899a3eaf.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/899a3eaf.html</id>
     <published>2022-12-05T03:52:00.000Z</published>
     <updated>2023-01-02T04:45:23.922Z</updated>
     
@@ -411,21 +411,21 @@
     
     
     
-    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
+    <category term="编程日志" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
     
-    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
+    <category term="C&amp;C++" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
     
     
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
+    <category term="C++" scheme="https://chunyujin295.github.io/tags/C/"/>
     
-    <category term="C++STL" scheme="https://chunyujin.top/tags/C-STL/"/>
+    <category term="C++STL" scheme="https://chunyujin295.github.io/tags/C-STL/"/>
     
   </entry>
   
   <entry>
     <title>C++_auto关键字</title>
-    <link href="https://chunyujin.top/chunyujin/b4979a36.html"/>
-    <id>https://chunyujin.top/chunyujin/b4979a36.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/b4979a36.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/b4979a36.html</id>
     <published>2022-12-04T15:02:00.000Z</published>
     <updated>2023-01-02T04:45:23.925Z</updated>
     
@@ -439,21 +439,21 @@
     
     
     
-    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
+    <category term="编程日志" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
     
-    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
+    <category term="C&amp;C++" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
     
     
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
+    <category term="C++" scheme="https://chunyujin295.github.io/tags/C/"/>
     
-    <category term="C++STL" scheme="https://chunyujin.top/tags/C-STL/"/>
+    <category term="C++STL" scheme="https://chunyujin295.github.io/tags/C-STL/"/>
     
   </entry>
   
   <entry>
     <title>C++_所有函数都可直接调用</title>
-    <link href="https://chunyujin.top/chunyujin/5656723d.html"/>
-    <id>https://chunyujin.top/chunyujin/5656723d.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/5656723d.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/5656723d.html</id>
     <published>2022-12-04T11:59:00.000Z</published>
     <updated>2023-01-02T04:45:23.924Z</updated>
     
@@ -467,19 +467,19 @@
     
     
     
-    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
+    <category term="编程日志" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
     
-    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
+    <category term="C&amp;C++" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
     
     
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
+    <category term="C++" scheme="https://chunyujin295.github.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C++_vector常用用法</title>
-    <link href="https://chunyujin.top/chunyujin/170bba21.html"/>
-    <id>https://chunyujin.top/chunyujin/170bba21.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/170bba21.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/170bba21.html</id>
     <published>2022-12-04T06:38:00.000Z</published>
     <updated>2023-01-01T06:36:43.106Z</updated>
     
@@ -493,21 +493,21 @@
     
     
     
-    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
+    <category term="编程日志" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
     
-    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
+    <category term="C&amp;C++" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
     
     
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
+    <category term="C++" scheme="https://chunyujin295.github.io/tags/C/"/>
     
-    <category term="C++STL" scheme="https://chunyujin.top/tags/C-STL/"/>
+    <category term="C++STL" scheme="https://chunyujin295.github.io/tags/C-STL/"/>
     
   </entry>
   
   <entry>
     <title>C++_迭代器&amp;find()函数</title>
-    <link href="https://chunyujin.top/chunyujin/874d4093.html"/>
-    <id>https://chunyujin.top/chunyujin/874d4093.html</id>
+    <link href="https://chunyujin295.github.io/chunyujin/874d4093.html"/>
+    <id>https://chunyujin295.github.io/chunyujin/874d4093.html</id>
     <published>2022-12-04T06:17:00.000Z</published>
     <updated>2023-01-02T04:45:23.927Z</updated>
     
@@ -521,14 +521,14 @@
     
     
     
-    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
+    <category term="编程日志" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
     
-    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
+    <category term="C&amp;C++" scheme="https://chunyujin295.github.io/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
     
     
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
+    <category term="C++" scheme="https://chunyujin295.github.io/tags/C/"/>
     
-    <category term="C++STL" scheme="https://chunyujin.top/tags/C-STL/"/>
+    <category term="C++STL" scheme="https://chunyujin295.github.io/tags/C-STL/"/>
     
   </entry>
   

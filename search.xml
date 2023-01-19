@@ -567,11 +567,11 @@
     
     
     <entry>
-      <title>C++_模板</title>
-      <link href="/chunyujin/a0e18b05.html"/>
-      <url>/chunyujin/a0e18b05.html</url>
+      <title>C++_模板不支持分离编译</title>
+      <link href="/chunyujin/ad941677.html"/>
+      <url>/chunyujin/ad941677.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h6 id="x3D-x3D-模板参数分为三类-x3D-x3D"><a href="#x3D-x3D-模板参数分为三类-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数分为三类&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数分为三类</strong>&#x3D;&#x3D;</h6><ol><li>类型参数</li></ol><blockquote><p>通过 关键字 typename 或者 class 引入(两者基本上是等价的)</p></blockquote><ol start="2"><li>非类型参数</li></ol><blockquote><p>模板参数不局限于类型，类型的值也可以作为模板参数，通过 关键字 值的类型 引入</p><p>目前C++只支持 <u>整形</u> &#x2F; <u>枚举类型</u> &#x2F; <u>指针类型</u>(可以是原始数据类型的指针、派生数据类型的指针、对象的指针、对象的成员的指针) &#x2F; <u>引用类型</u>(可以是原始数据类型的引用、派生数据类型的引用、对象的引用)</p></blockquote><ol start="3"><li>模板型模板参数</li></ol><h6 id="x3D-x3D-模板参数支持缺省-x3D-x3D"><a href="#x3D-x3D-模板参数支持缺省-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数支持缺省&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数支持缺省</strong>&#x3D;&#x3D;</h6><blockquote><p>但是要注意的是，缺省参数的使用不要忘了按照规范形式，比如在类或函数声明时加了缺省值，在实现时就不要加了</p><p>(缺省值在声明时添加，在实现时就不添加了)</p><p>还有，缺省要从右往左缺省</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212031014022.png" alt="截屏2022-12-03 10.14.22"></p></blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221202104949903.png" alt="image-20221202104949903"></p><p><a href="https://blog.csdn.net/zhizhengguan/article/details/115869685">https://blog.csdn.net/zhizhengguan/article/details/115869685</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="C-模板不支持分离编译！！"><a href="#C-模板不支持分离编译！！" class="headerlink" title="C++模板不支持分离编译！！"></a>C++模板不支持分离编译！！</h3><p>一般情况下，自定义变量和函数的时候，在头文件中声明，在源文件中实现，在链接过程中会将分离开的声明和实现进行链接起来</p><p>但是&#x3D;&#x3D;<strong>模板变量和函数是不支持分离编译，也就是说模板的定义(声明+实现)必须在同一个文件里</strong>&#x3D;&#x3D;(一般建议在声明模板的地方定义模板，也就是头文件中)</p><p>模板是不支持声明和定义放到两个文件中的</p><blockquote><p>这就是为什么当模版是分离编译的时候，在main文件中包含模版的头文件的时候，编译时会报错：函数为定义。因为无法将模版的声明和实现进行链接</p></blockquote>]]></content>
       
       
       <categories>
@@ -594,11 +594,11 @@
     
     
     <entry>
-      <title>C++_模板不支持分离编译</title>
-      <link href="/chunyujin/ad941677.html"/>
-      <url>/chunyujin/ad941677.html</url>
+      <title>C++_模板</title>
+      <link href="/chunyujin/a0e18b05.html"/>
+      <url>/chunyujin/a0e18b05.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="C-模板不支持分离编译！！"><a href="#C-模板不支持分离编译！！" class="headerlink" title="C++模板不支持分离编译！！"></a>C++模板不支持分离编译！！</h3><p>一般情况下，自定义变量和函数的时候，在头文件中声明，在源文件中实现，在链接过程中会将分离开的声明和实现进行链接起来</p><p>但是&#x3D;&#x3D;<strong>模板变量和函数是不支持分离编译，也就是说模板的定义(声明+实现)必须在同一个文件里</strong>&#x3D;&#x3D;(一般建议在声明模板的地方定义模板，也就是头文件中)</p><p>模板是不支持声明和定义放到两个文件中的</p><blockquote><p>这就是为什么当模版是分离编译的时候，在main文件中包含模版的头文件的时候，编译时会报错：函数为定义。因为无法将模版的声明和实现进行链接</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h6 id="x3D-x3D-模板参数分为三类-x3D-x3D"><a href="#x3D-x3D-模板参数分为三类-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数分为三类&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数分为三类</strong>&#x3D;&#x3D;</h6><ol><li>类型参数</li></ol><blockquote><p>通过 关键字 typename 或者 class 引入(两者基本上是等价的)</p></blockquote><ol start="2"><li>非类型参数</li></ol><blockquote><p>模板参数不局限于类型，类型的值也可以作为模板参数，通过 关键字 值的类型 引入</p><p>目前C++只支持 <u>整形</u> &#x2F; <u>枚举类型</u> &#x2F; <u>指针类型</u>(可以是原始数据类型的指针、派生数据类型的指针、对象的指针、对象的成员的指针) &#x2F; <u>引用类型</u>(可以是原始数据类型的引用、派生数据类型的引用、对象的引用)</p></blockquote><ol start="3"><li>模板型模板参数</li></ol><h6 id="x3D-x3D-模板参数支持缺省-x3D-x3D"><a href="#x3D-x3D-模板参数支持缺省-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数支持缺省&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数支持缺省</strong>&#x3D;&#x3D;</h6><blockquote><p>但是要注意的是，缺省参数的使用不要忘了按照规范形式，比如在类或函数声明时加了缺省值，在实现时就不要加了</p><p>(缺省值在声明时添加，在实现时就不添加了)</p><p>还有，缺省要从右往左缺省</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212031014022.png" alt="截屏2022-12-03 10.14.22"></p></blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221202104949903.png" alt="image-20221202104949903"></p><p><a href="https://blog.csdn.net/zhizhengguan/article/details/115869685">https://blog.csdn.net/zhizhengguan/article/details/115869685</a></p>]]></content>
       
       
       <categories>
@@ -1243,9 +1243,9 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> C </tag>
+            
+            <tag> 数据结构 </tag>
             
         </tags>
       

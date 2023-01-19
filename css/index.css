@@ -4584,6 +4584,29 @@ span.mathjax-overflow {
 .snackbar-css {
   border-radius: 5px !important;
 }
+[data-theme="dark"] #web_bg {
+  background: url(https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301191632612.jpg);
+  background-attachment: local;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 800px) {
+  #web_bg {
+    background: url(https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301191519524.jpg) !important;
+    background-attachment: local !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  [data-theme="dark"] #web_bg {
+    background: url(https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301191632612.jpg) !important;
+    background-attachment: local !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}
 #article-container .btn-center {
   margin: 0 0 20px;
   text-align: center;

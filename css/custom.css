@@ -1,13 +1,17 @@
-/*更改字体，教程地址 https://www.fomal.cc/posts/eec9786.html */
-@font-face {
-    /* 为载入的字体取名字(随意) */
-    font-family: 'YSHST';	
-    /* 字体文件地址(相对或者绝对路径都可以) */
-    src: url(/font/方正苏新诗柳楷简体.TTF);
-    /* 定义加粗样式(加粗多少) */
-    font-weight: normal;
-    /* 定义字体样式(斜体/非斜体) */
-    font-style: normal;
-    /* 定义显示样式 */
-    font-display: block;
+/* 雪花特效 */
+[data-theme="light"] #snow{
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 4;
   }
+  
+  /* 雪花黑夜模式不显示 */
+  /* [data-theme="dark"] #snow{
+    display: none;
+  }
+   */

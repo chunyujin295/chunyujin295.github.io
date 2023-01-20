@@ -1,7 +1,7 @@
 /* 页面样式，诸如模糊效果、边框透明度等 */
 :root {
     --trans-light: rgba(255, 255, 255, 0.6);  /* 白色模式下的主页面状态，前三个数值是页面卡片底色，最后一个数值是卡片的透明度，0-1之间，值越小越透明 */
-    --trans-dark: rgba(25, 25, 25, 0.6);  /* 深色模式下 */
+    --trans-dark: rgba(25, 25, 25, 0.7);  /* 深色模式下 */
     --border-style: 0px solid rgb(0, 0, 0); /* 边框样式，1px solid rgb(169, 169, 169)指宽度为1px的灰色实体边框,也可以是0px */
     --backdrop-filter: blur(5px) saturate(150%); /* 背景过滤器，如blur(5px) saturate(150%)表示饱和度为150%的、高斯模糊半径为5px的过滤器，这是亚克力效果的一种实现方法 */
   }
@@ -26,7 +26,7 @@
   div#post,
   div#page,
   div#archive {
-    background: var(--trans-light);
+    background: rgba(255, 255, 255, 0.95); /*原来是 var(--trans-light) 意思也就是使用最上面预定的格式 ，但是透明效果下文字太不明显了，我降低了透明度*/
     backdrop-filter: var(--backdrop-filter);
     border: var(--border-style);
     border-radius: 20px;
@@ -48,7 +48,7 @@
   [data-theme="dark"] div#post,
   [data-theme="dark"] div#archive,
   [data-theme="dark"] div#page {
-    background: var(--trans-dark);
+    background: var(--trans-dark); /* 原来是 var(--trans-dark) 意思也就是使用最上面预定的格式，但是文字效果太不明显了，我降低了透明度*/
   }
   
   

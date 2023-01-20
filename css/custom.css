@@ -26,7 +26,7 @@
   div#post,
   div#page,
   div#archive {
-    background: rgba(255, 255, 255, 0.95); /*原来是 var(--trans-light) 意思也就是使用最上面预定的格式 ，但是透明效果下文字太不明显了，我降低了透明度*/
+    background: rgba(255, 255, 255, 0.9); /*原来是 var(--trans-light) 意思也就是使用最上面预定的格式 ，但是透明效果下文字太不明显了，我降低了透明度*/
     backdrop-filter: var(--backdrop-filter);
     border: var(--border-style);
     border-radius: 20px;
@@ -48,7 +48,7 @@
   [data-theme="dark"] div#post,
   [data-theme="dark"] div#archive,
   [data-theme="dark"] div#page {
-    background: var(--trans-dark); /* 原来是 var(--trans-dark) 意思也就是使用最上面预定的格式，但是文字效果太不明显了，我降低了透明度*/
+    background: var(--trans-dark);
   }
   
   

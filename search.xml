@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>开启页面模糊效果下修改深色模式下页头页脚亮度</title>
+      <link href="/chunyujin/1cfcafc1.html"/>
+      <url>/chunyujin/1cfcafc1.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="开启页面模糊效果下修改深色模式下页头页脚亮度"><a href="#开启页面模糊效果下修改深色模式下页头页脚亮度" class="headerlink" title="开启页面模糊效果下修改深色模式下页头页脚亮度"></a>开启页面模糊效果下修改深色模式下页头页脚亮度</h1><p>如果魔改了主页面，开启了模糊效果，那么在修改深色模式下主页封面和页脚就不能只靠修改&#x2F;themes&#x2F;sourcs&#x2F;css&#x2F;_mode&#x2F;darkmode.styl的信息来实现了</p><p>因为在darkmode.styl中，页头页脚和背景，同属于background，也就是说修改的时候这三者是一起修改的，但是由于魔改模糊效果之后，对于背景的设置(准确来说是页头页脚的设置)会覆盖掉darkmode.styl中的效果，所以在darkmode.styl中修改background的时候，只能影响到深色模式下背景图片的深度，而无法影响页头页脚</p><blockquote><p>如何修改主页和文章页面的页头页脚的深度：</p><p>在魔改页面模糊效果之后往往在主题配置文件themes&#x2F;butterfly&#x2F;_config.yml的inject的head处会有引用，我们找到这处引用，看到引用的文件，我的是&#x2F;css&#x2F;custom.css，我们打开这个文件即可</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301212254550.png" alt="截屏2023-01-21 22.47.28"></p><p>在themes&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;custom.css中，找到此处(只管未注释的内容，注释是笔者自己家加的)</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301212256703.png" alt="截屏2023-01-21 22.47.11"></p><p>修改为以下内容</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[data-theme=&quot;dark&quot;] #footer::before &#123; /* footer也就是页脚 */</span><br><span class="line">  background:  rgba(0, 0, 0, 0.3); /* 原来是此处transparent !important，也就是纯透明，不暗化；</span><br><span class="line">  现在被改成了自定义的；当然也可以用*var(--trans-dark)，也就是跟上面一样，用上面预设好的*/</span><br><span class="line">&#125;</span><br><span class="line">[data-theme=&quot;dark&quot;] #page-header::before &#123; /* pafe-header也就是页头 */</span><br><span class="line">  background:  rgba(0, 0, 0, 0.4); /* 原来是此处transparent !important，也就是纯透明，不暗化；</span><br><span class="line">  现在被改成了自定义的；当然也可以用*var(--trans-dark)，也就是跟上面一样，用上面预设好的*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>其中raga中的前三个值是遮罩的颜色，深色模式一般就用黑色，第四个值代表的是遮罩的深度，取值范围为0~1，值越大深度越大，读者可以自己更改</p></blockquote><p>效果：</p><p>修改前：</p><p>页头页脚过亮，看不清文字</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301212304897.jpg" alt="截屏2023-01-21 23.01.41"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301212304882.jpg" alt="截屏2023-01-21 23.01.49"></p><p>修改后：</p><p>亮度适中</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301212305510.jpg" alt="截屏2023-01-21 23.01.56"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301212305351.jpg" alt="截屏2023-01-21 23.02.02"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Skill </category>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git！从零开始连接远程仓库</title>
       <link href="/chunyujin/b51810cf.html"/>
       <url>/chunyujin/b51810cf.html</url>
@@ -108,38 +135,11 @@
     
     
     <entry>
-      <title>解决butterfly在黑色模式下主页和顶部封面过暗</title>
+      <title>解决butterfly在深色模式下页头页脚封面过暗</title>
       <link href="/chunyujin/dffbd9e1.html"/>
       <url>/chunyujin/dffbd9e1.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解决黑色模式下主页和顶部封面过暗:</p><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061849015.png" alt="截屏2023-01-06 18.47.52"></p><p>调整第48行括号里的小数点后的数值，默认是.9，数值越大越暗</p><h5 id="before"><a href="#before" class="headerlink" title="before:"></a>before:</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061850337.png"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061848023.png" alt="截屏2023-01-06 18.48.21"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061848940.png" alt="截屏2023-01-06 18.48.32"></p><h5 id="after："><a href="#after：" class="headerlink" title="after："></a>after：</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061850100.png" alt="截屏2023-01-06 18.50.37"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061851886.png" alt="截屏2023-01-06 18.51.00"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061851284.png" alt="截屏2023-01-06 18.51.22"></p><p><a href="http://chunyujin.top/chunyujin/5b04b880.html">相关问题链接：解决黑色模式下文章预览封面及内部图片过暗</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Skill </category>
-          
-          <category> Hexo </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>解决黑色模式下文章预览封面及内部图片过暗</title>
-      <link href="/chunyujin/5b04b880.html"/>
-      <url>/chunyujin/5b04b880.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解决黑色模式下文章预览封面及内部图片过暗</p><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061854032.png" alt="截屏2023-01-06 18.54.56"></p><p>106、108行brightness括号里的值，brightness范围0~1，值越小，图片越暗</p><h5 id="before："><a href="#before：" class="headerlink" title="before："></a>before：</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858116.png" alt="截屏2023-01-06 18.57.57"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858319.png" alt="截屏2023-01-06 18.56.21"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858195.png" alt="截屏2023-01-06 18.56.29"></p><h5 id="after："><a href="#after：" class="headerlink" title="after："></a>after：</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858048.png" alt="截屏2023-01-06 18.56.47"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858987.png" alt="截屏2023-01-06 18.57.03"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061858832.png" alt="截屏2023-01-06 18.57.10"></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>本方法适用于未进行页面魔改的，如果进行了页面魔改，<a href="http://chunyujin.top/chunyujin/1cfcafc1.html">请跳转到此处</a></p></blockquote><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p>调整第48行括号里的小数点后的数值，默认是.9，数值越大越暗</p><h5 id="before"><a href="#before" class="headerlink" title="before:"></a>before:</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061850337.png"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061848023.png" alt="截屏2023-01-06 18.48.21"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061848940.png" alt="截屏2023-01-06 18.48.32"></p><h5 id="after："><a href="#after：" class="headerlink" title="after："></a>after：</h5><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301212314224.png" alt="截屏2023-01-21 22.54.11"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061851886.png" alt="截屏2023-01-06 18.51.00"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301061851284.png" alt="截屏2023-01-06 18.51.22"></p><p><a href="http://chunyujin.top/chunyujin/5b04b880.html">相关问题链接：解决黑色模式下文章预览封面及内部图片过暗</a></p>]]></content>
       
       
       <categories>

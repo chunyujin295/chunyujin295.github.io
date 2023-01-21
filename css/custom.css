@@ -1,7 +1,7 @@
 /* 页面样式，诸如模糊效果、边框透明度等 */
 :root {
     --trans-light: rgba(255, 255, 255, 0.6);  /* 白色模式下的主页面状态，前三个数值是页面卡片底色，最后一个数值是卡片的透明度，0-1之间，值越小越透明 */
-    --trans-dark: rgba(25, 25, 25, 0.7);  /* 深色模式下 */
+    --trans-dark: rgba(0, 0, 0, 0.5);  /* 深色模式下 */
     --border-style: 0px solid rgb(0, 0, 0); /* 边框样式，1px solid rgb(169, 169, 169)指宽度为1px的灰色实体边框,也可以是0px */
     --backdrop-filter: blur(5px) saturate(150%); /* 背景过滤器，如blur(5px) saturate(150%)表示饱和度为150%的、高斯模糊半径为5px的过滤器，这是亚克力效果的一种实现方法 */
   }
@@ -52,12 +52,19 @@
   }
   
   
-  /* 夜间模式页脚页头遮罩透明 */
+  /* 夜间模式页脚页头遮罩 */
+  /* 
+  当开启了这种自定义页面样式之后，在css/_mode/darkmode.styl中的对于主页封面和页脚的修改就不起作用了，在darkmode.styl中
+  都属于background，而因为此处的自定义页头页脚会覆盖darkmode.styl中的background中的页头页脚，所以要修改这里的
+  修改darkmode.styl中的background影响的就只变成了背景黑度
+  */
   [data-theme="dark"] #footer::before {
-    background: transparent !important;
+    background:  rgba(0, 0, 0, 0.3); /* 原来是此处transparent !important，也就是纯透明，不暗化；
+    现在被改成了自定义的；当然也可以用*var(--trans-dark)，也就是跟上面一样，用上面预设好的*/
   }
   [data-theme="dark"] #page-header::before {
-    background: transparent !important;
+    background:  rgba(0, 0, 0, 0.4); /* 原来是此处transparent !important，也就是纯透明，不暗化；
+    现在被改成了自定义的；当然也可以用*var(--trans-dark)，也就是跟上面一样，用上面预设好的*/
   }
   
   /* 阅读模式 */

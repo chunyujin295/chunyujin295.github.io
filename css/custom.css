@@ -58,11 +58,11 @@
   都属于background，而因为此处的自定义页头页脚会覆盖darkmode.styl中的background中的页头页脚，所以要修改这里的
   修改darkmode.styl中的background影响的就只变成了背景黑度
   */
-  [data-theme="dark"] #footer::before {
+  [data-theme="dark"] #footer::before { /* footer也就是页脚 */
     background:  rgba(0, 0, 0, 0.3); /* 原来是此处transparent !important，也就是纯透明，不暗化；
     现在被改成了自定义的；当然也可以用*var(--trans-dark)，也就是跟上面一样，用上面预设好的*/
   }
-  [data-theme="dark"] #page-header::before {
+  [data-theme="dark"] #page-header::before { /* pafe-header也就是页头 */
     background:  rgba(0, 0, 0, 0.4); /* 原来是此处transparent !important，也就是纯透明，不暗化；
     现在被改成了自定义的；当然也可以用*var(--trans-dark)，也就是跟上面一样，用上面预设好的*/
   }

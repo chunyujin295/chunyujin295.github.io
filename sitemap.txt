@@ -1,3 +1,4 @@
+https://chunyujin.top/block/index.html
 https://chunyujin.top/chunyujin/1c776eb1.html
 https://chunyujin.top/chunyujin/c2a9db75.html
 https://chunyujin.top/link/index.html
@@ -9,10 +10,8 @@ https://chunyujin.top/chunyujin/b51810cf.html
 https://chunyujin.top/chunyujin/d25e6d9b.html
 https://chunyujin.top/chunyujin/8566742c.html
 https://chunyujin.top/tags/index.html
-https://chunyujin.top/chunyujin/17e3ae31.html
 https://chunyujin.top/messageboard/index.html
 https://chunyujin.top/chunyujin/f07d859c.html
-https://chunyujin.top/English/index.html
 https://chunyujin.top/chunyujin/e0e64692.html
 https://chunyujin.top/chunyujin/3fe5c396.html
 https://chunyujin.top/chunyujin/c1238877.html
@@ -77,7 +76,6 @@ https://chunyujin.top/
 https://chunyujin.top/tags/%E8%B5%84%E6%BA%90/
 https://chunyujin.top/tags/%E5%81%A5%E5%BA%B7/
 https://chunyujin.top/tags/C/
-https://chunyujin.top/tags/English/
 https://chunyujin.top/tags/Linux/
 https://chunyujin.top/tags/Git/
 https://chunyujin.top/tags/Hexo/
@@ -94,7 +92,6 @@ https://chunyujin.top/tags/Vim/
 https://chunyujin.top/categories/%E5%9B%BE%E9%9B%86/
 https://chunyujin.top/categories/%E5%81%A5%E5%BA%B7/
 https://chunyujin.top/categories/C/
-https://chunyujin.top/categories/English/
 https://chunyujin.top/categories/Linux/
 https://chunyujin.top/categories/Skill/
 https://chunyujin.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/

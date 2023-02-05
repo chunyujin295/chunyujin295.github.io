@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chunyujin.top/block/index.html</loc>
+    
+    <lastmod>2023-02-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chunyujin.top/chunyujin/1c776eb1.html</loc>
     
     <lastmod>2023-02-05</lastmod>
@@ -101,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://chunyujin.top/chunyujin/17e3ae31.html</loc>
-    
-    <lastmod>2023-01-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://chunyujin.top/messageboard/index.html</loc>
     
     <lastmod>2023-01-09</lastmod>
@@ -122,15 +122,6 @@
     <loc>https://chunyujin.top/chunyujin/f07d859c.html</loc>
     
     <lastmod>2023-01-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chunyujin.top/English/index.html</loc>
-    
-    <lastmod>2023-01-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -707,13 +698,6 @@
   </url>
   
   <url>
-    <loc>https://chunyujin.top/tags/English/</loc>
-    <lastmod>2023-02-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://chunyujin.top/tags/Linux/</loc>
     <lastmod>2023-02-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -822,13 +806,6 @@
   
   <url>
     <loc>https://chunyujin.top/categories/C/</loc>
-    <lastmod>2023-02-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://chunyujin.top/categories/English/</loc>
     <lastmod>2023-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-02-19T10:08:35.488Z</updated>
+  <updated>2023-02-19T10:08:55.880Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://chunyujin.top/chunyujin/f75eee43.html"/>
     <id>https://chunyujin.top/chunyujin/f75eee43.html</id>
     <published>2023-02-19T10:52:00.000Z</published>
-    <updated>2023-02-19T10:08:35.488Z</updated>
+    <updated>2023-02-19T10:08:55.880Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>打开文件themes&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;footer.styl</p><p>在大约第7行开始</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191803441.png" alt="截屏2023-02-19 18.03.19"></p><p>在“background-color”这一行中可以调整小数值的大小，来控制页脚图片颜色深度，小数值越大，颜色越深</p><p>修改前：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191804884.png" alt="截屏2023-02-19 18.03.19"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191805179.jpg" alt="截屏2023-02-19 18.04.46"></p><p>修改后：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191805674.png" alt="截屏2023-02-19 18.04.22"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191806534.jpg" alt="截屏2023-02-19 18.05.47"></p>]]></content>
     

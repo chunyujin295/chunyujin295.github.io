@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-01-21T15:14:50.019Z</updated>
+  <updated>2023-02-19T10:08:35.488Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>butterfly修改白天模式下页脚图片亮暗程度</title>
+    <link href="https://chunyujin.top/chunyujin/f75eee43.html"/>
+    <id>https://chunyujin.top/chunyujin/f75eee43.html</id>
+    <published>2023-02-19T10:52:00.000Z</published>
+    <updated>2023-02-19T10:08:35.488Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>打开文件themes&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;footer.styl</p><p>在大约第7行开始</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191803441.png" alt="截屏2023-02-19 18.03.19"></p><p>在“background-color”这一行中可以调整小数值的大小，来控制页脚图片颜色深度，小数值越大，颜色越深</p><p>修改前：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191804884.png" alt="截屏2023-02-19 18.03.19"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191805179.jpg" alt="截屏2023-02-19 18.04.46"></p><p>修改后：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191805674.png" alt="截屏2023-02-19 18.04.22"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191806534.jpg" alt="截屏2023-02-19 18.05.47"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Hexo" scheme="https://chunyujin.top/categories/Skill/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>开启页面模糊效果下修改深色模式下页头页脚亮度</title>
@@ -507,32 +533,6 @@
     <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
     
     <category term="C++STL" scheme="https://chunyujin.top/tags/C-STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++_模板</title>
-    <link href="https://chunyujin.top/chunyujin/a0e18b05.html"/>
-    <id>https://chunyujin.top/chunyujin/a0e18b05.html</id>
-    <published>2022-12-03T08:36:00.000Z</published>
-    <updated>2023-01-02T04:45:23.927Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h6 id="x3D-x3D-模板参数分为三类-x3D-x3D"><a href="#x3D-x3D-模板参数分为三类-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数分为三类&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数分为三类</strong>&#x3D;&#x3D;</h6><ol><li>类型参数</li></ol><blockquote><p>通过 关键字 typename 或者 class 引入(两者基本上是等价的)</p></blockquote><ol start="2"><li>非类型参数</li></ol><blockquote><p>模板参数不局限于类型，类型的值也可以作为模板参数，通过 关键字 值的类型 引入</p><p>目前C++只支持 <u>整形</u> &#x2F; <u>枚举类型</u> &#x2F; <u>指针类型</u>(可以是原始数据类型的指针、派生数据类型的指针、对象的指针、对象的成员的指针) &#x2F; <u>引用类型</u>(可以是原始数据类型的引用、派生数据类型的引用、对象的引用)</p></blockquote><ol start="3"><li>模板型模板参数</li></ol><h6 id="x3D-x3D-模板参数支持缺省-x3D-x3D"><a href="#x3D-x3D-模板参数支持缺省-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数支持缺省&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数支持缺省</strong>&#x3D;&#x3D;</h6><blockquote><p>但是要注意的是，缺省参数的使用不要忘了按照规范形式，比如在类或函数声明时加了缺省值，在实现时就不要加了</p><p>(缺省值在声明时添加，在实现时就不添加了)</p><p>还有，缺省要从右往左缺省</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212031014022.png" alt="截屏2022-12-03 10.14.22"></p></blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221202104949903.png" alt="image-20221202104949903"></p><p><a href="https://blog.csdn.net/zhizhengguan/article/details/115869685">https://blog.csdn.net/zhizhengguan/article/details/115869685</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
-    
-    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
-    
-    
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
     
   </entry>
   

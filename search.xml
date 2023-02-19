@@ -544,11 +544,11 @@
     
     
     <entry>
-      <title>C++_模板</title>
-      <link href="/chunyujin/a0e18b05.html"/>
-      <url>/chunyujin/a0e18b05.html</url>
+      <title>C++_模板不支持分离编译</title>
+      <link href="/chunyujin/ad941677.html"/>
+      <url>/chunyujin/ad941677.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h6 id="x3D-x3D-模板参数分为三类-x3D-x3D"><a href="#x3D-x3D-模板参数分为三类-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数分为三类&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数分为三类</strong>&#x3D;&#x3D;</h6><ol><li>类型参数</li></ol><blockquote><p>通过 关键字 typename 或者 class 引入(两者基本上是等价的)</p></blockquote><ol start="2"><li>非类型参数</li></ol><blockquote><p>模板参数不局限于类型，类型的值也可以作为模板参数，通过 关键字 值的类型 引入</p><p>目前C++只支持 <u>整形</u> &#x2F; <u>枚举类型</u> &#x2F; <u>指针类型</u>(可以是原始数据类型的指针、派生数据类型的指针、对象的指针、对象的成员的指针) &#x2F; <u>引用类型</u>(可以是原始数据类型的引用、派生数据类型的引用、对象的引用)</p></blockquote><ol start="3"><li>模板型模板参数</li></ol><h6 id="x3D-x3D-模板参数支持缺省-x3D-x3D"><a href="#x3D-x3D-模板参数支持缺省-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数支持缺省&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数支持缺省</strong>&#x3D;&#x3D;</h6><blockquote><p>但是要注意的是，缺省参数的使用不要忘了按照规范形式，比如在类或函数声明时加了缺省值，在实现时就不要加了</p><p>(缺省值在声明时添加，在实现时就不添加了)</p><p>还有，缺省要从右往左缺省</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212031014022.png" alt="截屏2022-12-03 10.14.22"></p></blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221202104949903.png" alt="image-20221202104949903"></p><p><a href="https://blog.csdn.net/zhizhengguan/article/details/115869685">https://blog.csdn.net/zhizhengguan/article/details/115869685</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="C-模板不支持分离编译！！"><a href="#C-模板不支持分离编译！！" class="headerlink" title="C++模板不支持分离编译！！"></a>C++模板不支持分离编译！！</h3><p>一般情况下，自定义变量和函数的时候，在头文件中声明，在源文件中实现，在链接过程中会将分离开的声明和实现进行链接起来</p><p>但是&#x3D;&#x3D;<strong>模板变量和函数是不支持分离编译，也就是说模板的定义(声明+实现)必须在同一个文件里</strong>&#x3D;&#x3D;(一般建议在声明模板的地方定义模板，也就是头文件中)</p><p>模板是不支持声明和定义放到两个文件中的</p><blockquote><p>这就是为什么当模版是分离编译的时候，在main文件中包含模版的头文件的时候，编译时会报错：函数为定义。因为无法将模版的声明和实现进行链接</p></blockquote>]]></content>
       
       
       <categories>
@@ -571,11 +571,11 @@
     
     
     <entry>
-      <title>C++_模板不支持分离编译</title>
-      <link href="/chunyujin/ad941677.html"/>
-      <url>/chunyujin/ad941677.html</url>
+      <title>C++_模板</title>
+      <link href="/chunyujin/a0e18b05.html"/>
+      <url>/chunyujin/a0e18b05.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="C-模板不支持分离编译！！"><a href="#C-模板不支持分离编译！！" class="headerlink" title="C++模板不支持分离编译！！"></a>C++模板不支持分离编译！！</h3><p>一般情况下，自定义变量和函数的时候，在头文件中声明，在源文件中实现，在链接过程中会将分离开的声明和实现进行链接起来</p><p>但是&#x3D;&#x3D;<strong>模板变量和函数是不支持分离编译，也就是说模板的定义(声明+实现)必须在同一个文件里</strong>&#x3D;&#x3D;(一般建议在声明模板的地方定义模板，也就是头文件中)</p><p>模板是不支持声明和定义放到两个文件中的</p><blockquote><p>这就是为什么当模版是分离编译的时候，在main文件中包含模版的头文件的时候，编译时会报错：函数为定义。因为无法将模版的声明和实现进行链接</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h6 id="x3D-x3D-模板参数分为三类-x3D-x3D"><a href="#x3D-x3D-模板参数分为三类-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数分为三类&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数分为三类</strong>&#x3D;&#x3D;</h6><ol><li>类型参数</li></ol><blockquote><p>通过 关键字 typename 或者 class 引入(两者基本上是等价的)</p></blockquote><ol start="2"><li>非类型参数</li></ol><blockquote><p>模板参数不局限于类型，类型的值也可以作为模板参数，通过 关键字 值的类型 引入</p><p>目前C++只支持 <u>整形</u> &#x2F; <u>枚举类型</u> &#x2F; <u>指针类型</u>(可以是原始数据类型的指针、派生数据类型的指针、对象的指针、对象的成员的指针) &#x2F; <u>引用类型</u>(可以是原始数据类型的引用、派生数据类型的引用、对象的引用)</p></blockquote><ol start="3"><li>模板型模板参数</li></ol><h6 id="x3D-x3D-模板参数支持缺省-x3D-x3D"><a href="#x3D-x3D-模板参数支持缺省-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;模板参数支持缺省&#x3D;&#x3D;"></a>&#x3D;&#x3D;<strong>模板参数支持缺省</strong>&#x3D;&#x3D;</h6><blockquote><p>但是要注意的是，缺省参数的使用不要忘了按照规范形式，比如在类或函数声明时加了缺省值，在实现时就不要加了</p><p>(缺省值在声明时添加，在实现时就不添加了)</p><p>还有，缺省要从右往左缺省</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212031014022.png" alt="截屏2022-12-03 10.14.22"></p></blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221202104949903.png" alt="image-20221202104949903"></p><p><a href="https://blog.csdn.net/zhizhengguan/article/details/115869685">https://blog.csdn.net/zhizhengguan/article/details/115869685</a></p>]]></content>
       
       
       <categories>
@@ -820,11 +820,11 @@
     
     
     <entry>
-      <title>节点和结点</title>
-      <link href="/chunyujin/624685c8.html"/>
-      <url>/chunyujin/624685c8.html</url>
+      <title>C++_类型&amp;变量&amp;类和对象</title>
+      <link href="/chunyujin/a5010295.html"/>
+      <url>/chunyujin/a5010295.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="节点和结点"><a href="#节点和结点" class="headerlink" title="节点和结点"></a>节点和结点</h3><blockquote><p>节点和结点的区别有：</p><p>节点是一个实体具有处理的能力；而结点是一个交叉点，是一个标记</p><p>一般算法中的点都称为&#x3D;&#x3D;结点&#x3D;&#x3D;</p><p>节点被认为是一个实体，有处理能力，比如网络上的一台计算机；而结点则只是一个交叉点，像”结绳记事”，打个结，做个标记，仅此而已</p><p>还有就是，要记住：一般算法中点的都是&#x3D;&#x3D;结点&#x3D;&#x3D;。</p><p> 我们在数据结构的图形表示中，对于数据集合中的每一个数据元素用中间标有元素值的方框表示，一般称它为数据结点，简称结点</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="数据类型-type"><a href="#数据类型-type" class="headerlink" title="数据类型(type)"></a>数据类型(type)</h3><p>简称类型</p><p>是具有相同特征的数据的集合，是一个抽象<strong>概念</strong></p><blockquote><p>C++的数据类型主要分为三种：</p><p><strong>原始数据类型</strong>：内置或预定义的数据类型，用户可以直接使用它们声明变量。例如：int，char，float，bool等</p><blockquote><p>整数、字符、布尔型、浮点、双浮点数、void、宽字符 等</p></blockquote><p><strong>派生数据类型</strong>：从原始或内置数据类型派生的数据类型</p><blockquote><p>函数</p><p>数组</p><p>指针</p><p>引用</p></blockquote><p><strong>用户自定义类型</strong>：这些数据类型由用户自己定义</p><blockquote><p>类</p><p>结构体</p><p>union：在并集中，所有成员共享相同的内存位置</p><p>枚举类型</p><p>typedef：为 复杂的声明 定义 简单的别名</p></blockquote><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/20200401135258635.png" alt="20200401135258635" style="zoom:67%;" /></blockquote><h3 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h3><blockquote><p>变量：数据保存在计算机中，是存储在内存中的某一块空间上，这块用来存储数据的空间就是变量，给这块空间命的名就是变量名</p><blockquote><p>变量其实只不过是程序可操作的存储区的名称。C 中每个变量都有特定的类型，类型决定了变量存储的大小和布局，该范围内的值都可以存储在内存中，运算符可应用于变量上。<a href="https://www.runoob.com/cprogramming/c-variables.html">C变量</a></p></blockquote></blockquote><p>变量类型就是存储在变量中的数据的数据类型</p><p>变量的值就是变量这块空间中存储的数据的值</p><h3 id="变量的定义"><a href="#变量的定义" class="headerlink" title="变量的定义"></a>变量的定义</h3><blockquote><p>变量的定义，告知编译器 在内存申请一块空间 用来存储数据，数据类型是什么，空间名(即变量) 叫什么，数据的值 是什么</p><p>变量的声明，只告知编译器 在内存申请一块空间 用来存储数据，数据类型是什么，空间名(即变量) 叫什么，关于数据的值，则没有说明</p></blockquote><blockquote><p>变量的定义和声明都会在内存中申请出一块空间，区别在于是否赋予变量(中的数据)具体的值</p></blockquote><blockquote><p>无论是声明还是定义，都要指定 变量的类型，因为要按照数据类型在内存中申请对应的具体大小的空间</p></blockquote><h3 id="用户自定义类型的定义"><a href="#用户自定义类型的定义" class="headerlink" title="用户自定义类型的定义"></a>用户自定义类型的定义</h3><h4 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h4><blockquote><p>函数的定义，告知编译器 函数的返回值类型、函数名、参数、函数的实现</p><p>函数的声明，只告知编译器 函数的返回值类型、函数名、参数，不进行函数的实现</p></blockquote><p>函数的定义 &#x3D; 函数的声明 + 函数的实现</p><h4 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h4><blockquote><p>类的定义，告知编译器 类的名称、类的私有成员、类的公有成员、类的成员变量的声明、类的成员函数的定义</p><p>类的声明，告知编译器 类的名称、类的私有成员、类的公有成员、类的成员变量的声明、类的成员函数的声明，不进行类的成员函数的实现</p><p>类的实现，就是类的成员函数的实现</p></blockquote><p>类的定义 &#x3D; 类的声明 + 类的(成员函数)的实现</p><blockquote><p>类和函数，有声明但没有实现，则是未定义，编译器会报错类或函数未定义(undefined)</p><p>没有声明，则编译器会报错未声明(unclear)</p></blockquote><p><strong>一般来说，在定义函数和类时，在头文件中声明，在源文件中实现</strong></p><blockquote><p>不过模版类不支持分离编译(见另一篇日记)，因此要在同一个文件中(一般是头文件)完成定义</p></blockquote><h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><blockquote><p> 类是一种用户自定义类型</p><p>STL是一个 标准 模板类 库</p></blockquote><p>类是一个数据类型，是一个抽象的概念</p><p>对象是类的实例化，对象是变量</p><blockquote><p>类是封装对象的属性和行为的载体，而对象的属性以成员变量的形式存在。对象的方法以成员方法的形式存在，在成员方法内定义的变量为局部变量</p></blockquote>]]></content>
       
       
       <categories>
@@ -847,11 +847,11 @@
     
     
     <entry>
-      <title>C++_类型&amp;变量&amp;类和对象</title>
-      <link href="/chunyujin/a5010295.html"/>
-      <url>/chunyujin/a5010295.html</url>
+      <title>节点和结点</title>
+      <link href="/chunyujin/624685c8.html"/>
+      <url>/chunyujin/624685c8.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="数据类型-type"><a href="#数据类型-type" class="headerlink" title="数据类型(type)"></a>数据类型(type)</h3><p>简称类型</p><p>是具有相同特征的数据的集合，是一个抽象<strong>概念</strong></p><blockquote><p>C++的数据类型主要分为三种：</p><p><strong>原始数据类型</strong>：内置或预定义的数据类型，用户可以直接使用它们声明变量。例如：int，char，float，bool等</p><blockquote><p>整数、字符、布尔型、浮点、双浮点数、void、宽字符 等</p></blockquote><p><strong>派生数据类型</strong>：从原始或内置数据类型派生的数据类型</p><blockquote><p>函数</p><p>数组</p><p>指针</p><p>引用</p></blockquote><p><strong>用户自定义类型</strong>：这些数据类型由用户自己定义</p><blockquote><p>类</p><p>结构体</p><p>union：在并集中，所有成员共享相同的内存位置</p><p>枚举类型</p><p>typedef：为 复杂的声明 定义 简单的别名</p></blockquote><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/20200401135258635.png" alt="20200401135258635" style="zoom:67%;" /></blockquote><h3 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h3><blockquote><p>变量：数据保存在计算机中，是存储在内存中的某一块空间上，这块用来存储数据的空间就是变量，给这块空间命的名就是变量名</p><blockquote><p>变量其实只不过是程序可操作的存储区的名称。C 中每个变量都有特定的类型，类型决定了变量存储的大小和布局，该范围内的值都可以存储在内存中，运算符可应用于变量上。<a href="https://www.runoob.com/cprogramming/c-variables.html">C变量</a></p></blockquote></blockquote><p>变量类型就是存储在变量中的数据的数据类型</p><p>变量的值就是变量这块空间中存储的数据的值</p><h3 id="变量的定义"><a href="#变量的定义" class="headerlink" title="变量的定义"></a>变量的定义</h3><blockquote><p>变量的定义，告知编译器 在内存申请一块空间 用来存储数据，数据类型是什么，空间名(即变量) 叫什么，数据的值 是什么</p><p>变量的声明，只告知编译器 在内存申请一块空间 用来存储数据，数据类型是什么，空间名(即变量) 叫什么，关于数据的值，则没有说明</p></blockquote><blockquote><p>变量的定义和声明都会在内存中申请出一块空间，区别在于是否赋予变量(中的数据)具体的值</p></blockquote><blockquote><p>无论是声明还是定义，都要指定 变量的类型，因为要按照数据类型在内存中申请对应的具体大小的空间</p></blockquote><h3 id="用户自定义类型的定义"><a href="#用户自定义类型的定义" class="headerlink" title="用户自定义类型的定义"></a>用户自定义类型的定义</h3><h4 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h4><blockquote><p>函数的定义，告知编译器 函数的返回值类型、函数名、参数、函数的实现</p><p>函数的声明，只告知编译器 函数的返回值类型、函数名、参数，不进行函数的实现</p></blockquote><p>函数的定义 &#x3D; 函数的声明 + 函数的实现</p><h4 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h4><blockquote><p>类的定义，告知编译器 类的名称、类的私有成员、类的公有成员、类的成员变量的声明、类的成员函数的定义</p><p>类的声明，告知编译器 类的名称、类的私有成员、类的公有成员、类的成员变量的声明、类的成员函数的声明，不进行类的成员函数的实现</p><p>类的实现，就是类的成员函数的实现</p></blockquote><p>类的定义 &#x3D; 类的声明 + 类的(成员函数)的实现</p><blockquote><p>类和函数，有声明但没有实现，则是未定义，编译器会报错类或函数未定义(undefined)</p><p>没有声明，则编译器会报错未声明(unclear)</p></blockquote><p><strong>一般来说，在定义函数和类时，在头文件中声明，在源文件中实现</strong></p><blockquote><p>不过模版类不支持分离编译(见另一篇日记)，因此要在同一个文件中(一般是头文件)完成定义</p></blockquote><h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><blockquote><p> 类是一种用户自定义类型</p><p>STL是一个 标准 模板类 库</p></blockquote><p>类是一个数据类型，是一个抽象的概念</p><p>对象是类的实例化，对象是变量</p><blockquote><p>类是封装对象的属性和行为的载体，而对象的属性以成员变量的形式存在。对象的方法以成员方法的形式存在，在成员方法内定义的变量为局部变量</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="节点和结点"><a href="#节点和结点" class="headerlink" title="节点和结点"></a>节点和结点</h3><blockquote><p>节点和结点的区别有：</p><p>节点是一个实体具有处理的能力；而结点是一个交叉点，是一个标记</p><p>一般算法中的点都称为&#x3D;&#x3D;结点&#x3D;&#x3D;</p><p>节点被认为是一个实体，有处理能力，比如网络上的一台计算机；而结点则只是一个交叉点，像”结绳记事”，打个结，做个标记，仅此而已</p><p>还有就是，要记住：一般算法中点的都是&#x3D;&#x3D;结点&#x3D;&#x3D;。</p><p> 我们在数据结构的图形表示中，对于数据集合中的每一个数据元素用中间标有元素值的方框表示，一般称它为数据结点，简称结点</p></blockquote>]]></content>
       
       
       <categories>

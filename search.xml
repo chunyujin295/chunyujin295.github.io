@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>网址不支持某些字符</title>
+      <link href="/chunyujin/8e17ffd9.html"/>
+      <url>/chunyujin/8e17ffd9.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>网址不支持一些特殊字符，比如+ &amp;等</p><p>如果在分类或者标签中添加了这类字符，在网址中是无法显示字符的，只会显示可以显示的字符</p><p>比如有一个标签是C，一个标签是C++，网址无法识别++，会把++略去，点击C++的时候打开的路径就变成了C的<img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302210924416.gif" alt="Feb-21-2023 09-22-50"></p><p>但只是网址不支持，不涉及网址的地方是没问题的</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Skill </category>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据结构_链表</title>
       <link href="/chunyujin/6ea91e98.html"/>
       <url>/chunyujin/6ea91e98.html</url>

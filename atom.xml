@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-03-05T14:13:37.074Z</updated>
+  <updated>2023-03-07T04:23:42.430Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深色模式下文章图片过暗</title>
+    <link href="https://chunyujin.top/chunyujin/ec9b450a.html"/>
+    <id>https://chunyujin.top/chunyujin/ec9b450a.html</id>
+    <published>2023-03-07T04:23:00.000Z</published>
+    <updated>2023-03-07T04:23:42.430Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p>大约104行左右</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071221998.png" alt="截屏2023-03-07 12.18.35"></p><p>修改关于第106行brightness的值</p><p>修改前值为0.5，效果：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071222747.png" alt="202301061858195"></p><p>修改之后值为1，效果：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071223543.png" alt="202301061858832"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Hexo" scheme="https://chunyujin.top/categories/Skill/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图片资源压缩指南</title>
+    <link href="https://chunyujin.top/chunyujin/7001a035.html"/>
+    <id>https://chunyujin.top/chunyujin/7001a035.html</id>
+    <published>2023-03-07T02:41:00.000Z</published>
+    <updated>2023-03-07T02:41:31.298Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="图片资源压缩指南"><a href="#图片资源压缩指南" class="headerlink" title="图片资源压缩指南"></a>图片资源压缩指南</h2><p>在p站等图片网站下载的原图作为网站背景文件太大，动辄十几mb，加载很慢</p><ul><li><p>先本地图片编辑，将图片尺寸缩小(一般1080p～2k大小作为背景就很够用了)，实现第一步减小体积</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071025058.png" alt="截屏2023-03-07 10.24.38" style="zoom: 33%;" /></li><li><p>使用图片压缩网站或者软件进行进一步压缩，这里有两个网站</p><p>压缩图片分为有损压缩和无损压缩。无损压缩推荐<a href="https://tinypng.com/">Tinypng</a>，有损压缩推荐<a href="https://github.com/meowtec/Imagine/releases">imagine</a>。</p><table><thead><tr><th align="left"></th><th align="left">TinyPNG</th><th align="left">Imagine</th></tr></thead><tbody><tr><td align="left">特点</td><td align="left">无损压缩</td><td align="left">有损压缩，以牺牲图像质量， 降低图像色彩来达到缩减图像大小的目的。</td></tr><tr><td align="left">优点</td><td align="left">能够完全保留图像色彩，不损伤图像质量</td><td align="left">1. 压缩程度高，支持转<code>png</code>为<code>jpg</code>或<code>webp</code>，进一步减少图片大小 2. 软件支持一次处理多张图片，无上限，处理完成支持直接批量覆盖原文件或重命名</td></tr><tr><td align="left">缺点</td><td align="left">单次仅能上传20张图片，每张限制大小为5MB，无法处理更大图片。</td><td align="left">PNG转其他格式为不可逆操作（指覆盖保存后），且可能反而会增加图片大小。</td></tr></tbody></table><p>个人比较推荐无损压缩的网站</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Hexo" scheme="https://chunyujin.top/categories/Skill/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Java_抽象类_接口</title>
@@ -513,60 +565,6 @@
     <category term="数据结构" scheme="https://chunyujin.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="C" scheme="https://chunyujin.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构_线性表应用_稀疏矩阵</title>
-    <link href="https://chunyujin.top/chunyujin/cbfc2a79.html"/>
-    <id>https://chunyujin.top/chunyujin/cbfc2a79.html</id>
-    <published>2023-02-21T00:47:00.000Z</published>
-    <updated>2023-02-21T01:20:34.293Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="数据结构-线性表应用-稀疏矩阵"><a href="#数据结构-线性表应用-稀疏矩阵" class="headerlink" title="数据结构_线性表应用 _稀疏矩阵"></a>数据结构_线性表应用 _稀疏矩阵</h3><p>[toc]</p><h4 id="什么是稀疏矩阵"><a href="#什么是稀疏矩阵" class="headerlink" title="什么是稀疏矩阵"></a>什么是稀疏矩阵</h4><blockquote><p>如果一个矩阵中，0的数量远大于非0的数量（0超过一半以上），这个矩阵就是稀疏矩阵</p><p>由于全部都是重复的0，这种无用的重复值的存储会占据很多空间，造成浪费</p></blockquote><h4 id="如何简化系数矩阵的表示"><a href="#如何简化系数矩阵的表示" class="headerlink" title="如何简化系数矩阵的表示"></a>如何简化系数矩阵的表示</h4><blockquote><p>只需要存储非零的数据以及它在矩阵中的位置就可以</p><p>比如一个二维矩阵，就可以用一个三元组进行表示，（行，列，数据）</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">triple</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> row,col;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote><p>然后以三元组为基本元素，用顺序表或者链表就可以表示出稀疏矩阵了</p><h4 id="十字链表表示法"><a href="#十字链表表示法" class="headerlink" title="十字链表表示法"></a>十字链表表示法</h4><blockquote><p>由于用顺序表或者一般的链表，在表示稀疏矩阵的时候，不便于进行计算的操作</p><p>这里采用<font color=Red>十字链表</font>来表示</p><p>十字链表包括 数据域（data）、同列的下一个结点（down）、同行的下一个结点（right）</p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/EE11C79765A37CD3D79BEF5E1B7B6E73.png" alt="img" style="zoom:25%;" /><p>用来表示稀疏矩阵的时候，data就是三元组</p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/ED4E7F71E975295E0EC543183F2FE45D.png" alt="img" style="zoom:25%;" /><p>如果同列&#x2F;行中没有了下一个（非零）结点，那down&#x2F;right就指向NULL</p><p>画个图表示一下</p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/CA0CE6F2CF4E36FA28F891988C384829.png" alt="img" style="zoom: 33%;" /></blockquote><h4 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h4><p>That’s all, thanks for reading!💐</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="数据结构" scheme="https://chunyujin.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="Cpp" scheme="https://chunyujin.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/Cpp/"/>
-    
-    
-    <category term="Cpp" scheme="https://chunyujin.top/tags/Cpp/"/>
-    
-    <category term="数据结构" scheme="https://chunyujin.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>butterfly修改白天模式下页脚图片亮暗程度</title>
-    <link href="https://chunyujin.top/chunyujin/f75eee43.html"/>
-    <id>https://chunyujin.top/chunyujin/f75eee43.html</id>
-    <published>2023-02-19T10:52:00.000Z</published>
-    <updated>2023-02-19T10:08:55.880Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>打开文件themes&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;footer.styl</p><p>在大约第7行开始</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191803441.png" alt="截屏2023-02-19 18.03.19"></p><p>在“background-color”这一行中可以调整小数值的大小，来控制页脚图片颜色深度，小数值越大，颜色越深</p><p>修改前：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191804884.png" alt="截屏2023-02-19 18.03.19"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191805179.jpg" alt="截屏2023-02-19 18.04.46"></p><p>修改后：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191805674.png" alt="截屏2023-02-19 18.04.22"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302191806534.jpg" alt="截屏2023-02-19 18.05.47"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Hexo" scheme="https://chunyujin.top/categories/Skill/Hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
     
   </entry>
   

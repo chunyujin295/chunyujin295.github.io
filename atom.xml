@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-03-07T04:23:42.430Z</updated>
+  <updated>2023-03-07T04:38:42.105Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://chunyujin.top/chunyujin/ec9b450a.html"/>
     <id>https://chunyujin.top/chunyujin/ec9b450a.html</id>
     <published>2023-03-07T04:23:00.000Z</published>
-    <updated>2023-03-07T04:23:42.430Z</updated>
+    <updated>2023-03-07T04:38:42.105Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在<code>/themes/butterfly/source/css/_mode/darkmode.styl </code></p><p>大约104行左右</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071221998.png" alt="截屏2023-03-07 12.18.35"></p><p>修改关于第106行brightness的值</p><p>修改前值为0.5，效果：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071222747.png" alt="202301061858195"></p><p>修改之后值为1，效果：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071223543.png" alt="202301061858832"></p>]]></content>
     
@@ -47,7 +47,7 @@
     <link href="https://chunyujin.top/chunyujin/7001a035.html"/>
     <id>https://chunyujin.top/chunyujin/7001a035.html</id>
     <published>2023-03-07T02:41:00.000Z</published>
-    <updated>2023-03-07T02:41:31.298Z</updated>
+    <updated>2023-03-07T04:38:42.104Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="图片资源压缩指南"><a href="#图片资源压缩指南" class="headerlink" title="图片资源压缩指南"></a>图片资源压缩指南</h2><p>在p站等图片网站下载的原图作为网站背景文件太大，动辄十几mb，加载很慢</p><ul><li><p>先本地图片编辑，将图片尺寸缩小(一般1080p～2k大小作为背景就很够用了)，实现第一步减小体积</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071025058.png" alt="截屏2023-03-07 10.24.38" style="zoom: 33%;" /></li><li><p>使用图片压缩网站或者软件进行进一步压缩，这里有两个网站</p><p>压缩图片分为有损压缩和无损压缩。无损压缩推荐<a href="https://tinypng.com/">Tinypng</a>，有损压缩推荐<a href="https://github.com/meowtec/Imagine/releases">imagine</a>。</p><table><thead><tr><th align="left"></th><th align="left">TinyPNG</th><th align="left">Imagine</th></tr></thead><tbody><tr><td align="left">特点</td><td align="left">无损压缩</td><td align="left">有损压缩，以牺牲图像质量， 降低图像色彩来达到缩减图像大小的目的。</td></tr><tr><td align="left">优点</td><td align="left">能够完全保留图像色彩，不损伤图像质量</td><td align="left">1. 压缩程度高，支持转<code>png</code>为<code>jpg</code>或<code>webp</code>，进一步减少图片大小 2. 软件支持一次处理多张图片，无上限，处理完成支持直接批量覆盖原文件或重命名</td></tr><tr><td align="left">缺点</td><td align="left">单次仅能上传20张图片，每张限制大小为5MB，无法处理更大图片。</td><td align="left">PNG转其他格式为不可逆操作（指覆盖保存后），且可能反而会增加图片大小。</td></tr></tbody></table><p>个人比较推荐无损压缩的网站</p></li></ul>]]></content>
     

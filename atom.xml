@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-04-11T13:18:44.671Z</updated>
+  <updated>2023-04-11T13:32:16.497Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
     <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:18:44.671Z</updated>
+    <updated>2023-04-11T13:32:16.497Z</updated>
     
     <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
     
@@ -44,38 +44,11 @@
   </entry>
   
   <entry>
-    <title>插入图片</title>
-    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
-    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
-    <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:18:30.065Z</updated>
-    
-    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
-    
-    
-    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
     <title>文字颜色</title>
     <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
     <id>https://chunyujin.top/chunyujin/26659f59.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:17:15.206Z</updated>
+    <updated>2023-04-11T13:32:16.499Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
     
@@ -98,11 +71,38 @@
   </entry>
   
   <entry>
+    <title>插入图片</title>
+    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
+    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
+    <published>2023-04-11T13:17:00.000Z</published>
+    <updated>2023-04-11T13:32:16.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
+    
+    
+    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文字高亮</title>
     <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
     <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:17:43.196Z</updated>
+    <updated>2023-04-11T13:32:16.499Z</updated>
     
     <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
     
@@ -129,7 +129,7 @@
     <link href="https://chunyujin.top/chunyujin/ac21c363.html"/>
     <id>https://chunyujin.top/chunyujin/ac21c363.html</id>
     <published>2023-04-11T13:16:00.000Z</published>
-    <updated>2023-04-11T13:31:13.860Z</updated>
+    <updated>2023-04-11T13:32:16.494Z</updated>
     
     <content type="html"><![CDATA[<p>等待更新中….</p>]]></content>
     
@@ -152,11 +152,35 @@
   </entry>
   
   <entry>
+    <title>摩尔投票法_多数元素(绝对众数)</title>
+    <link href="https://chunyujin.top/chunyujin/4eceace9.html"/>
+    <id>https://chunyujin.top/chunyujin/4eceace9.html</id>
+    <published>2023-04-11T13:13:00.000Z</published>
+    <updated>2023-04-11T13:32:16.494Z</updated>
+    
+    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/">408 时间复杂度为 O(n)、空间复杂度为 O(1) - 多数元素 - 力扣（LeetCode）</a>)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230404232915115.png" alt="image-20230404232915115" style="zoom: 80%;" /><p>一般有以下三种思路：</p><ol><li><p>暴力求解，从第一个元素开始记录，遇到与第一个元素值相同的元素就计数+1，当某个元素的个数大于等于n&#x2F;2的时候，说明就是这个元素最多</p></li><li><p>先排序，后返回容器中第n&#x2F;2个元素</p></li><li><p>摩尔投票法：</p><blockquote><p>解决的问题是如何在任意多的候选人（选票无序），选出获得票数最多的那个。</p><p>（解决绝对众数的问题：如果一个元素出现的次数大于等于其他所有数出现的次数之和，那么这个数就是绝对众数，也就是说如n个数里如果有一个数的数量大于等于n&#x2F;2，这个数就是绝对众数）</p><p>形象化描述：</p><blockquote><p>想象着这样一个画面：</p><p>会议大厅站满了投票代表，每个都有一个牌子上面写着自己所选的候选人的名字。然后选举意见不合的（所选的候选人不同）两个人，会打一架，并且会同时击倒对方。显而易见，如果一个人拥有的选票比其它所有人加起来的选票还要多的话，这个候选人将会赢得这场“战争”，当混乱结束，最后剩下的那个代表（可能会有多个）将会来自多数人所站的阵营。</p><p>但是如果所有参加候选人的选票都不是大多数（选票都未超过一半），那么最后站在那的代表（一个人）并不能代表所有的选票的大多数。因此，当某人站到最后时，需要统计他所选的候选人的选票是否超过一半（包括倒下的），来判断选票结果是否有效。</p></blockquote><p>在本题中，显然是一定有一个候选人的选票达到大半的</p><p>算法的描述：</p><blockquote><p>我们维护一个 x ，表示当前的候选人，然后维护一个 num，用来表示当前候选人的选票数 。对于每一张新的选票，如果它投给了当前的候选人，就把 num 加1，否则就把 num 减1（也许你可以想象成，B的一个狂热支持者去把A的一个支持者揍了一顿，然后两个人都没法投票）。特别地，计票过程中如果 num&#x3D;0 ，我们可以认为目前谁都没有优势，所以新的选票投给谁，谁就成为新的候选人。</p><blockquote><p>如果我们要求的是众数，这样的做法并不能给出正确答案，但如果要求的是绝对众数（<strong>且绝对众数确实存在</strong>），那么 n 一定是正确的。</p><p>这是因为，在最后计票时，我们知道有 num 张票投给了 x ，假如绝对众数另有其人，那么一定是剩下的票投出来的。但剩下的 x− num 张票都是在“捉对厮杀”的过程中被抵消掉的，每一对被抵消的票都来自不同的候选人，所以一个候选人最多在这里拿到 n−num&#x2F;2 票，这不可能大于 n&#x2F;2 。但绝对众数确实存在，所以这个绝对众数就一定是 m 。</p><p>如果绝对众数不存在，摩尔投票会给出一个错误的解，所以一定要记得验证答案。</p></blockquote></blockquote><p>算法的实现</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">0</span>, num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(num = <span class="number">0</span>)</span><br><span class="line">        x = A[i];</span><br><span class="line">    <span class="keyword">if</span>(A[i] == x)</span><br><span class="line">        num++;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        num--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果实际情况下绝对众数本身就是不存在的，那么会得到一个错误的解，此时需要进行一下验证</span></span><br></pre></td></tr></table></figure></blockquote><p>摩尔投票法的进阶：</p><p>简单的摩尔投票法只是能找到一个选票最多的。但是如果要求选出N个人，这个N个人只要满足票数大于1&#x2F;(N+1)就可以，也是可以摩尔投票法的思想，只是需要进行一下修改</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x[N], num[N];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> e : nums) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="built_in">find</span>(x, x + N, e) - x;</span><br><span class="line">    <span class="keyword">if</span> (i != N) &#123; <span class="comment">// 如果当前票投给了候选人之一</span></span><br><span class="line">        num[i]++;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> j = <span class="built_in">find</span>(num, num + N, <span class="number">0</span>) - num;</span><br><span class="line">    <span class="keyword">if</span> (j != N) &#123; <span class="comment">// 如果当前存在一个位置&quot;虚位以待&quot;</span></span><br><span class="line">        x[j] = e;</span><br><span class="line">        num[j] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : num)</span><br><span class="line">        c--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最后需要验证答案是否符合要求</span></span><br></pre></td></tr></table></figure><blockquote><p>原理是一样的。最后我们可以把票分为2个部分：投给了最多 N 个候选人的一部分，和被抵消的一部分。后者可以划分为若干个 N+1 元组，每个元组内的票都来自不同的候选人。因此，只有那些属于第一部分的人的票数可能超过总数的 1&#x2F;(N+1) 。</p></blockquote></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/&quot;&gt;408 时间复杂度为 O(n)、空间</summary>
+      
+    
+    
+    
+    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
+    
+    
+    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>建立字符表_有效的字母异位词</title>
     <link href="https://chunyujin.top/chunyujin/a309d3c0.html"/>
     <id>https://chunyujin.top/chunyujin/a309d3c0.html</id>
     <published>2023-04-11T13:13:00.000Z</published>
-    <updated>2023-04-11T13:13:54.375Z</updated>
+    <updated>2023-04-11T13:32:16.491Z</updated>
     
     <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/valid-anagram/comments/">242. 有效的字母异位词 - 力扣（LeetCode）</a>)</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230405230509034.png" alt="image-20230405230509034"></p><p>常规的方法：对于两个字符串进行排序，然后判断两个字符串是否相等(可以直接判断字符串是否相等，if s&#x3D;&#x3D;t return true)</p><p>一种奇妙的思路：建立字符表</p><blockquote><p>两个字符串中的字符无非就是26个字母。建立一个容量为26的数组，内容全部初始化为0.如果s中存在某一字母，就在相应的位置上+1，如果t中存在某一字母，就在相应的位置上-1，最后如果数组中还是全为0，说明s和t中的内容正好相互抵消，否则说明s和t不是有效的字母异位词。（感觉有点像摩尔投票法中的支持者打架）</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isAnagram</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> num[<span class="number">26</span>]=&#123;<span class="number">0</span>&#125;; </span><br><span class="line">        <span class="keyword">if</span>(s.<span class="built_in">length</span>()!=t.<span class="built_in">length</span>())</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;s[i]!=<span class="string">&#x27;\0&#x27;</span>;i++)&#123;</span><br><span class="line">            num[s[i]-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">            num[t[i]-<span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">26</span>;i++)</span><br><span class="line">            <span class="keyword">if</span>(num[i]!=<span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote><blockquote><p>弊端：必须面对已知的字符，建立完整的字符表，比如已知含有的字符无非是26个字母。如果按照题目的进阶，unicode字符量很大，且不知道所有的字符是什么，无法建立字符表。</p></blockquote>]]></content>
     
@@ -177,35 +201,11 @@
   </entry>
   
   <entry>
-    <title>摩尔投票法_多数元素(绝对众数)</title>
-    <link href="https://chunyujin.top/chunyujin/4eceace9.html"/>
-    <id>https://chunyujin.top/chunyujin/4eceace9.html</id>
-    <published>2023-04-11T13:13:00.000Z</published>
-    <updated>2023-04-11T13:14:33.702Z</updated>
-    
-    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/">408 时间复杂度为 O(n)、空间复杂度为 O(1) - 多数元素 - 力扣（LeetCode）</a>)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230404232915115.png" alt="image-20230404232915115" style="zoom: 80%;" /><p>一般有以下三种思路：</p><ol><li><p>暴力求解，从第一个元素开始记录，遇到与第一个元素值相同的元素就计数+1，当某个元素的个数大于等于n&#x2F;2的时候，说明就是这个元素最多</p></li><li><p>先排序，后返回容器中第n&#x2F;2个元素</p></li><li><p>摩尔投票法：</p><blockquote><p>解决的问题是如何在任意多的候选人（选票无序），选出获得票数最多的那个。</p><p>（解决绝对众数的问题：如果一个元素出现的次数大于等于其他所有数出现的次数之和，那么这个数就是绝对众数，也就是说如n个数里如果有一个数的数量大于等于n&#x2F;2，这个数就是绝对众数）</p><p>形象化描述：</p><blockquote><p>想象着这样一个画面：</p><p>会议大厅站满了投票代表，每个都有一个牌子上面写着自己所选的候选人的名字。然后选举意见不合的（所选的候选人不同）两个人，会打一架，并且会同时击倒对方。显而易见，如果一个人拥有的选票比其它所有人加起来的选票还要多的话，这个候选人将会赢得这场“战争”，当混乱结束，最后剩下的那个代表（可能会有多个）将会来自多数人所站的阵营。</p><p>但是如果所有参加候选人的选票都不是大多数（选票都未超过一半），那么最后站在那的代表（一个人）并不能代表所有的选票的大多数。因此，当某人站到最后时，需要统计他所选的候选人的选票是否超过一半（包括倒下的），来判断选票结果是否有效。</p></blockquote><p>在本题中，显然是一定有一个候选人的选票达到大半的</p><p>算法的描述：</p><blockquote><p>我们维护一个 x ，表示当前的候选人，然后维护一个 num，用来表示当前候选人的选票数 。对于每一张新的选票，如果它投给了当前的候选人，就把 num 加1，否则就把 num 减1（也许你可以想象成，B的一个狂热支持者去把A的一个支持者揍了一顿，然后两个人都没法投票）。特别地，计票过程中如果 num&#x3D;0 ，我们可以认为目前谁都没有优势，所以新的选票投给谁，谁就成为新的候选人。</p><blockquote><p>如果我们要求的是众数，这样的做法并不能给出正确答案，但如果要求的是绝对众数（<strong>且绝对众数确实存在</strong>），那么 n 一定是正确的。</p><p>这是因为，在最后计票时，我们知道有 num 张票投给了 x ，假如绝对众数另有其人，那么一定是剩下的票投出来的。但剩下的 x− num 张票都是在“捉对厮杀”的过程中被抵消掉的，每一对被抵消的票都来自不同的候选人，所以一个候选人最多在这里拿到 n−num&#x2F;2 票，这不可能大于 n&#x2F;2 。但绝对众数确实存在，所以这个绝对众数就一定是 m 。</p><p>如果绝对众数不存在，摩尔投票会给出一个错误的解，所以一定要记得验证答案。</p></blockquote></blockquote><p>算法的实现</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">0</span>, num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(num = <span class="number">0</span>)</span><br><span class="line">        x = A[i];</span><br><span class="line">    <span class="keyword">if</span>(A[i] == x)</span><br><span class="line">        num++;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        num--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果实际情况下绝对众数本身就是不存在的，那么会得到一个错误的解，此时需要进行一下验证</span></span><br></pre></td></tr></table></figure></blockquote><p>摩尔投票法的进阶：</p><p>简单的摩尔投票法只是能找到一个选票最多的。但是如果要求选出N个人，这个N个人只要满足票数大于1&#x2F;(N+1)就可以，也是可以摩尔投票法的思想，只是需要进行一下修改</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x[N], num[N];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> e : nums) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="built_in">find</span>(x, x + N, e) - x;</span><br><span class="line">    <span class="keyword">if</span> (i != N) &#123; <span class="comment">// 如果当前票投给了候选人之一</span></span><br><span class="line">        num[i]++;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> j = <span class="built_in">find</span>(num, num + N, <span class="number">0</span>) - num;</span><br><span class="line">    <span class="keyword">if</span> (j != N) &#123; <span class="comment">// 如果当前存在一个位置&quot;虚位以待&quot;</span></span><br><span class="line">        x[j] = e;</span><br><span class="line">        num[j] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : num)</span><br><span class="line">        c--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最后需要验证答案是否符合要求</span></span><br></pre></td></tr></table></figure><blockquote><p>原理是一样的。最后我们可以把票分为2个部分：投给了最多 N 个候选人的一部分，和被抵消的一部分。后者可以划分为若干个 N+1 元组，每个元组内的票都来自不同的候选人。因此，只有那些属于第一部分的人的票数可能超过总数的 1&#x2F;(N+1) 。</p></blockquote></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/&quot;&gt;408 时间复杂度为 O(n)、空间</summary>
-      
-    
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-  </entry>
-  
-  <entry>
     <title>EVA资源获取及使用</title>
     <link href="https://chunyujin.top/chunyujin/96ce1217.html"/>
     <id>https://chunyujin.top/chunyujin/96ce1217.html</id>
     <published>2023-04-11T13:13:00.000Z</published>
-    <updated>2023-04-11T13:27:31.165Z</updated>
+    <updated>2023-04-11T13:32:16.495Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://dc.btfan.cc/hash/bd798afb2ef464d2f527f01d8e814368e73be6b0">搜番 (btfan.cc)：eva全部资源磁力链接</a></p><p><a href="https://dc.btfan.cc/">搜番 (btfan.cc)</a></p><p><a href="https://cilitiantang.one/sites/39.html">磁力天堂 (cilitiantang.one)</a></p><p><a href="https://www.bilibili.com/read/cv9456438/">分享【全套】新世纪福音战士TV 26话+新老剧场版字幕包 EVA-FANS&amp; 白月字幕组 - 哔哩哔哩 (bilibili.com)</a></p><blockquote><p>字幕推荐这一版，很细节</p></blockquote><p>持续更新中……</p>]]></content>
     
@@ -232,7 +232,7 @@
     <link href="https://chunyujin.top/chunyujin/87a30441.html"/>
     <id>https://chunyujin.top/chunyujin/87a30441.html</id>
     <published>2023-04-11T13:11:00.000Z</published>
-    <updated>2023-04-11T13:12:09.024Z</updated>
+    <updated>2023-04-11T13:32:16.496Z</updated>
     
     <content type="html"><![CDATA[<p>什么是解空间树</p><p>比较权威全面的方法可以参考百度</p><p>形象化描述：</p><p>递归的所有过程都可以通过树形结构来表述，回溯是递归的副产品，所以回溯也可以通过属性结构来表示，而且回溯的结果是树形结构的叶子节点，所以这个这个树形结构就是解空间树</p>]]></content>
     
@@ -261,7 +261,7 @@
     <link href="https://chunyujin.top/chunyujin/19c828d.html"/>
     <id>https://chunyujin.top/chunyujin/19c828d.html</id>
     <published>2023-04-11T13:11:00.000Z</published>
-    <updated>2023-04-11T13:11:08.936Z</updated>
+    <updated>2023-04-11T13:32:16.496Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNjY5NTYxNA==&action=getalbum&album_id=1607983171550167042&scene=173&from_msgid=2247485237&from_itemidx=1&count=3&nolastread=1#wechat_redirect">#回溯算法 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485237&idx=1&sn=1bae4c3d0d3965af44878093a5a49f58&chksm=f9a23464ced5bd72ff9ddcc9c70f69131a9e57e5c1aa674cc62551cd434c64f10a88395dce60&scene=21#wechat_redirect">关于回溯算法，你该了解这些！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485253&idx=1&sn=8332edaabc9bf43e45835bce7964ce88&chksm=f9a23414ced5bd02a80be49c91bb42f286ce1e15bbea77e6570470a4491c9da0f29160eba838&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：求组合问题！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485264&idx=1&sn=860006efeb344db329b555a8b2711769&chksm=f9a23401ced5bd17aa2d374c12c558fd2dcbb57d2aba799dd62e64a27e88027dbfa8677989ae&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：组合问题再剪剪枝 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485277&idx=1&sn=0553db6b5c5952094d536ae2b8c18124&chksm=f9a2340cced5bd1ab3ec69fb1209242081185eb90b1144aa29b5959d31e946237b67a011e3a8&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：求组合总和！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s/FLg8G6EjVcxBjwCbzpACPw">回溯算法：求组合总和（二） (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485360&idx=1&sn=2256a0f01a304d82a2b59252327f3edb&chksm=f9a234e1ced5bdf72f4f27d55618fdb185f324260a2776a266b497956b28c9f317a83b1bf36a&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：求组合总和（三）</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485295&idx=1&sn=35bd6c240a5a59d7ea6d9f98c09e7dbd&scene=21#wechat_redirect">回溯算法：电话号码的字母组合 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485372&idx=1&sn=29cc3421fb742faa57824b9a626342ad&scene=21#wechat_redirect">回溯算法：分割回文串</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485402&idx=1&sn=6963af3e2aa8d58e41b71d73d53ea8f6&chksm=f9a2348bced5bd9d50f845b9f2d671f3c1d6d5376e6c7d15f86b0c5a0320f2ae905dea11d082&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：求子集问题！</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485466&idx=1&sn=2b5420bca9b66356d777bc4530a224c5&chksm=f9a23b4bced5b25d254e721f131655fe5889137bf63c182ea0ed4dd6b62515a7798a6a566d8c&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：递增子序列</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485390&idx=1&sn=e95ad5b1c40f06fc18cd3fec54fd1cbc&chksm=f9a2349fced5bd89092073366fa77e0f3949dd75e5a7e3017e3d289551be10bdc6aa745b5f11&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：复原IP地址</a></p><p>还有更多内容</p><blockquote><p><a href="https://mp.weixin.qq.com/s/FLg8G6EjVcxBjwCbzpACPw">回溯算法：求组合总和（二） (qq.com)</a></p><p>这里面的图是有错误的？</p><p>在startIndex访问到后期的时候，数组中startIndex前面的数不会、也不需要被访问到，因为startIndex之前的数一定可以访问后面的，但是之后的数不需要也不能访问之前的，因为会造成结果的重复，只能访问startIndex位置以及之后位置的。并且按照代码流程走下来也确实如此。</p><p>原来的：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304062119069.png" alt="640" style="zoom:80%;" /><p>实际上应该是的：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304062120352.PNG" alt="IMG_1352"></p></blockquote><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485372&idx=1&sn=29cc3421fb742faa57824b9a626342ad&scene=21#wechat_redirect">回溯算法：分割回文串</a></p><p>不需要剪枝，或者说判断回文字符串本身就属于剪枝</p><blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304071014373.jpeg" alt="IMG_1354"></p></blockquote>]]></content>
     
@@ -287,7 +287,7 @@
     <link href="https://chunyujin.top/chunyujin/b67d47f3.html"/>
     <id>https://chunyujin.top/chunyujin/b67d47f3.html</id>
     <published>2023-04-11T13:10:00.000Z</published>
-    <updated>2023-04-11T13:08:17.877Z</updated>
+    <updated>2023-04-11T13:32:16.490Z</updated>
     
     <content type="html"><![CDATA[<p>动态库和静态库的感性认识：</p><h3 id="动态链接："><a href="#动态链接：" class="headerlink" title="动态链接："></a>动态链接：</h3><blockquote><p>学校里不让带电脑，要打游戏，无法自己实现，只能跑到网吧里打</p></blockquote><p>程序执行之前：</p><p>获取动态库的位置，将程序与动态库进行链接</p><blockquote><p>到了学校里，向学长打听好网吧的位置，牢记于心</p></blockquote><p>程序执行时：</p><p>程序运行到某一行，到之前链接的动态库中寻找相应的函数的实现方法</p><blockquote><p>想打游戏的时候，就按照学长给的地址去到网吧，并在里面开一个机子，网管给出机子的号码，在网吧里根据号码找到自己的机子</p></blockquote><blockquote><p>优点：各个程序共享同一个库，可以节省资源，程序的体积相对小</p><p>缺点：必须依赖外部库，如果库缺失，会导致几乎所有的程序失效</p></blockquote><h3 id="静态链接："><a href="#静态链接：" class="headerlink" title="静态链接："></a>静态链接：</h3><blockquote><p>学校里让带电脑，要打游戏的时候，只要自己有电脑，就能打，但是前提是自己把电脑带到了学校里</p></blockquote><p>程序执行之前：</p><p>将库(静态库)中的对应的代码提前拷贝到自己的程序里</p><p>在程序执行时：</p><p>遇到需要的函数的实现时，直接在拷贝好的代码里找就可以了，不依赖库</p><blockquote><p>优点：不依赖外部库，程序可以独立执行</p><p>缺点：浪费资源，程序的体积相对大</p></blockquote>]]></content>
     
@@ -313,7 +313,7 @@
     <link href="https://chunyujin.top/chunyujin/9107dc23.html"/>
     <id>https://chunyujin.top/chunyujin/9107dc23.html</id>
     <published>2023-04-11T13:09:00.000Z</published>
-    <updated>2023-04-11T13:09:28.393Z</updated>
+    <updated>2023-04-11T13:32:16.497Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230331174324280.png" alt="image-20230331174324280"></p>]]></content>
     
@@ -443,30 +443,6 @@
   </entry>
   
   <entry>
-    <title>C++_引用</title>
-    <link href="https://chunyujin.top/chunyujin/9f8ff3a6.html"/>
-    <id>https://chunyujin.top/chunyujin/9f8ff3a6.html</id>
-    <published>2023-03-12T12:31:00.000Z</published>
-    <updated>2023-03-12T12:33:15.397Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h4 id="引用的特性："><a href="#引用的特性：" class="headerlink" title="引用的特性："></a>引用的特性：</h4><ol><li><p>引用在定义时就要初始化</p></li><li><p>一个变量可以被多个引用</p></li><li><p>一个引用只能由一个实体变量，不能引用多个</p></li><li><p>引用不能降低实体的可执行权限，只能提升或者不变</p><blockquote><p>比如在引用常量的时候，常量只有可读权限，没有写权限，因此在定义引用的时候必须要用const来定义出常量引用</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> &amp;b = a;<span class="comment">//错误</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;c = a;<span class="comment">//正确</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> d;</span><br><span class="line"><span class="type">int</span> &amp;e = d;<span class="comment">//正确</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;f = d;<span class="comment">//正确，不能通过引用f来修改d的值</span></span><br><span class="line"></span><br><span class="line"><span class="type">double</span> g;</span><br><span class="line"><span class="type">int</span> &amp;h = g;<span class="comment">//错误，类型不同</span></span><br><span class="line"><span class="type">const</span> <span class="type">double</span> &amp;i = g;<span class="comment">//正确</span></span><br></pre></td></tr></table></figure></blockquote></li></ol><h4 id="引用的两种常用方法："><a href="#引用的两种常用方法：" class="headerlink" title="引用的两种常用方法："></a>引用的两种常用方法：</h4><ul><li>作为参数</li><li>作为函数返回值</li></ul><h5 id="引用作为参数时属于输出型参数"><a href="#引用作为参数时属于输出型参数" class="headerlink" title="引用作为参数时属于输出型参数"></a>引用作为参数时属于<mark style="background-color: pink">输出型参数</mark></h5><blockquote><p>现实编程中有一个函数要返回多个值很普遍</p><p>但是一个函数只有一个返回值(return)，<font color = red>返回值其实只是用来表示函数的执行结果</font></p><p>通常，将引用作为参数时，在函数内的更改直接就影响到了引用的实体，实现了函数向外的输出，实现了”多返回值”</p><p>如果一个参数只是输入到函数，在内部的改变不会影响外部变量的改变的就是输入型参数；一个参数在函数内发生的改变影响函数外变量的改变的就是输出型参数</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> &amp;c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    a += a;</span><br><span class="line">    b += b;</span><br><span class="line">c = a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    a = <span class="number">1</span>;</span><br><span class="line">    b = <span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">Add</span>(x);</span><br><span class="line">    cout &lt;&lt; a &lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt; b &lt;&lt; <span class="string">&quot; &quot;</span>&lt;&lt; x &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//结果是 1 2 6</span></span><br></pre></td></tr></table></figure><h5 id="引用作为函数返回值"><a href="#引用作为函数返回值" class="headerlink" title="引用作为函数返回值"></a>引用作为函数返回值</h5><blockquote><p>此处应复习一下鹏哥讲的栈帧</p></blockquote><p><strong><mark style="background-color:lime">传值返回</mark></strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">A</span> <span class="params">( <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//A的返回值tem是n的拷贝，是一个临时变量</span></span><br></pre></td></tr></table></figure><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/721EF9BBF65C834644F19D25C7DAE74F.png" alt="img" style="zoom: 33%;" /><blockquote><ol><li><p>main函数里调用A函数，将实参x拷贝给b，传入到A中</p></li><li><p>n时局部变量，在A中，且n是返回值return。return作为函数结束标志，此时会产生一个临时变量tem作为n的拷贝，然后将tem传向main</p><p>为何要产生一个临时变量，因为在离开函数A作用域之后n的内存会被释放，无法被访问，因此在此之前要生成临时变量。临时变量存放在在调用函数A之前就开辟好的一块空间里。</p><p>如何证明确实<mark style="background-color:pink">返回值是一个临时变量</mark>？</p><blockquote><p><font color = red>临时变量具有常性</font></p><p>所以如果main中使用一个引用来接收A的返回值，则会报错，如果用const 引用来接收，不会报错</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//报错</span></span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//不报错</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>说明A的返回值是一个具有常性</p><blockquote><p> 在引用的时候权限不能放大，只能缩小或者不变，所以必须声明被a引用时的对象是个常量才可以</p></blockquote><p>为什么使用引用来接收</p><blockquote><p>引用只是取别名，a就是A的返回值n本身</p><p>如果使用值来接收，<code>int a = A(b)</code>，是将A的返回值拷贝赋值给a，不是同一个变量了</p></blockquote></blockquote></li></ol></blockquote><p><strong><mark style="background-color:lime">传引用返回</mark></strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> &amp;<span class="title">A</span> <span class="params">(<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//A的返回值是tem，是n的引用</span></span><br></pre></td></tr></table></figure><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/90228CD120AD756DDC37EB40BF06550F.png" alt="img" style="zoom: 33%;" /><p>返回值类型为引用的时候则不是拷贝一个临时变量，返回的是A中局部变量n的引用tem，引用只是别名，不会占空间</p><blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//不会报错，因为A的返回值不是临时变量</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//返回值tem是n的引用，a就也是n的引用</span></span><br></pre></td></tr></table></figure></blockquote><p>由于离开函数作用域之后局部变量内存会被释放，所以如果变量n是A内部一个局部变量，A的返回值tem是n的引用，则通过返回值访问n的时候就是非法访问</p><blockquote><p> 所以C++的规定是：</p><p><font color = blue>离开函数作用域之后，如果返回值的内存还没有被释放(比如返回值类型是静态变量全局变量之类)，则可以使用引用返回，否则必须使用传值返回。否则会造成非法访问</font></p></blockquote><p>总结：</p><p>传值返回：会有一个拷贝</p><p>传引用返回：没有拷贝，只是返回别名</p><blockquote><p>因此传引用返回的效率要比传值返回高，因为不用拷贝返回值</p></blockquote><h4 id="引用和指针的区别："><a href="#引用和指针的区别：" class="headerlink" title="引用和指针的区别："></a>引用和指针的区别：</h4><ol><li><p>在<strong>语法概念</strong>上引用就是一个别名，没有独立空间，和其引用实体共用同一块空间。</p><p>在<strong>底层实现</strong>上实际是有空间的，因为引用是按照指针方式来实现的。</p></li><li><p><strong>引用</strong>在定义时<strong>必须初始化</strong>，指针没有要求</p></li><li><p><strong>引用</strong>在初始化时引用一个实体后，就不能再引用其他实体，而指针可以在任何时候指向任何一个同类型 实体</p></li><li><p><strong>没有NULL引用</strong>，但有NULL指针</p></li><li><p><strong>在sizeof中含义不同</strong>：引用结果为引用类型的大小，但指针始终是地址空间所占字节个数(32位平台下占 4个字节) </p></li><li><p>引用自加即引用的实体增加1，指针自加即指针向后偏移一个类型的大小</p></li><li><p><strong>有多级指针，但是没有多级引用</strong></p></li><li><p>访问实体方式不同，<strong>指针需要显式解引用，引用编译器自己处理</strong></p></li><li><p><strong>引用比指针使用起来相对更安全</strong></p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;引用&quot;&gt;&lt;a href=&quot;#引用&quot; class=&quot;headerlink&quot; title=&quot;引用&quot;&gt;&lt;/a&gt;引用&lt;/h1&gt;&lt;h4 id=&quot;引用的特性：&quot;&gt;&lt;a href=&quot;#引用的特性：&quot; class=&quot;headerlink&quot; title=&quot;引用的特性：&quot;&gt;&lt;/a&gt;引</summary>
-      
-    
-    
-    
-    <category term="Cpp" scheme="https://chunyujin.top/categories/Cpp/"/>
-    
-    
-    <category term="Cpp" scheme="https://chunyujin.top/tags/Cpp/"/>
-    
-  </entry>
-  
-  <entry>
     <title>C++_内联函数</title>
     <link href="https://chunyujin.top/chunyujin/9b439c80.html"/>
     <id>https://chunyujin.top/chunyujin/9b439c80.html</id>
@@ -480,6 +456,30 @@
       
     <summary type="html">&lt;h4 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;inline修饰的函数叫做&lt;strong&gt;内联函数&lt;/strong&gt;，编译时C++编译器会在调用内联函数的地方展开</summary>
+      
+    
+    
+    
+    <category term="Cpp" scheme="https://chunyujin.top/categories/Cpp/"/>
+    
+    
+    <category term="Cpp" scheme="https://chunyujin.top/tags/Cpp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++_引用</title>
+    <link href="https://chunyujin.top/chunyujin/9f8ff3a6.html"/>
+    <id>https://chunyujin.top/chunyujin/9f8ff3a6.html</id>
+    <published>2023-03-12T12:31:00.000Z</published>
+    <updated>2023-03-12T12:33:15.397Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h4 id="引用的特性："><a href="#引用的特性：" class="headerlink" title="引用的特性："></a>引用的特性：</h4><ol><li><p>引用在定义时就要初始化</p></li><li><p>一个变量可以被多个引用</p></li><li><p>一个引用只能由一个实体变量，不能引用多个</p></li><li><p>引用不能降低实体的可执行权限，只能提升或者不变</p><blockquote><p>比如在引用常量的时候，常量只有可读权限，没有写权限，因此在定义引用的时候必须要用const来定义出常量引用</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> &amp;b = a;<span class="comment">//错误</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;c = a;<span class="comment">//正确</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> d;</span><br><span class="line"><span class="type">int</span> &amp;e = d;<span class="comment">//正确</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;f = d;<span class="comment">//正确，不能通过引用f来修改d的值</span></span><br><span class="line"></span><br><span class="line"><span class="type">double</span> g;</span><br><span class="line"><span class="type">int</span> &amp;h = g;<span class="comment">//错误，类型不同</span></span><br><span class="line"><span class="type">const</span> <span class="type">double</span> &amp;i = g;<span class="comment">//正确</span></span><br></pre></td></tr></table></figure></blockquote></li></ol><h4 id="引用的两种常用方法："><a href="#引用的两种常用方法：" class="headerlink" title="引用的两种常用方法："></a>引用的两种常用方法：</h4><ul><li>作为参数</li><li>作为函数返回值</li></ul><h5 id="引用作为参数时属于输出型参数"><a href="#引用作为参数时属于输出型参数" class="headerlink" title="引用作为参数时属于输出型参数"></a>引用作为参数时属于<mark style="background-color: pink">输出型参数</mark></h5><blockquote><p>现实编程中有一个函数要返回多个值很普遍</p><p>但是一个函数只有一个返回值(return)，<font color = red>返回值其实只是用来表示函数的执行结果</font></p><p>通常，将引用作为参数时，在函数内的更改直接就影响到了引用的实体，实现了函数向外的输出，实现了”多返回值”</p><p>如果一个参数只是输入到函数，在内部的改变不会影响外部变量的改变的就是输入型参数；一个参数在函数内发生的改变影响函数外变量的改变的就是输出型参数</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> &amp;c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    a += a;</span><br><span class="line">    b += b;</span><br><span class="line">c = a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    a = <span class="number">1</span>;</span><br><span class="line">    b = <span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">Add</span>(x);</span><br><span class="line">    cout &lt;&lt; a &lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt; b &lt;&lt; <span class="string">&quot; &quot;</span>&lt;&lt; x &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//结果是 1 2 6</span></span><br></pre></td></tr></table></figure><h5 id="引用作为函数返回值"><a href="#引用作为函数返回值" class="headerlink" title="引用作为函数返回值"></a>引用作为函数返回值</h5><blockquote><p>此处应复习一下鹏哥讲的栈帧</p></blockquote><p><strong><mark style="background-color:lime">传值返回</mark></strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">A</span> <span class="params">( <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//A的返回值tem是n的拷贝，是一个临时变量</span></span><br></pre></td></tr></table></figure><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/721EF9BBF65C834644F19D25C7DAE74F.png" alt="img" style="zoom: 33%;" /><blockquote><ol><li><p>main函数里调用A函数，将实参x拷贝给b，传入到A中</p></li><li><p>n时局部变量，在A中，且n是返回值return。return作为函数结束标志，此时会产生一个临时变量tem作为n的拷贝，然后将tem传向main</p><p>为何要产生一个临时变量，因为在离开函数A作用域之后n的内存会被释放，无法被访问，因此在此之前要生成临时变量。临时变量存放在在调用函数A之前就开辟好的一块空间里。</p><p>如何证明确实<mark style="background-color:pink">返回值是一个临时变量</mark>？</p><blockquote><p><font color = red>临时变量具有常性</font></p><p>所以如果main中使用一个引用来接收A的返回值，则会报错，如果用const 引用来接收，不会报错</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//报错</span></span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//不报错</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>说明A的返回值是一个具有常性</p><blockquote><p> 在引用的时候权限不能放大，只能缩小或者不变，所以必须声明被a引用时的对象是个常量才可以</p></blockquote><p>为什么使用引用来接收</p><blockquote><p>引用只是取别名，a就是A的返回值n本身</p><p>如果使用值来接收，<code>int a = A(b)</code>，是将A的返回值拷贝赋值给a，不是同一个变量了</p></blockquote></blockquote></li></ol></blockquote><p><strong><mark style="background-color:lime">传引用返回</mark></strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> &amp;<span class="title">A</span> <span class="params">(<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//A的返回值是tem，是n的引用</span></span><br></pre></td></tr></table></figure><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/90228CD120AD756DDC37EB40BF06550F.png" alt="img" style="zoom: 33%;" /><p>返回值类型为引用的时候则不是拷贝一个临时变量，返回的是A中局部变量n的引用tem，引用只是别名，不会占空间</p><blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//不会报错，因为A的返回值不是临时变量</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//返回值tem是n的引用，a就也是n的引用</span></span><br></pre></td></tr></table></figure></blockquote><p>由于离开函数作用域之后局部变量内存会被释放，所以如果变量n是A内部一个局部变量，A的返回值tem是n的引用，则通过返回值访问n的时候就是非法访问</p><blockquote><p> 所以C++的规定是：</p><p><font color = blue>离开函数作用域之后，如果返回值的内存还没有被释放(比如返回值类型是静态变量全局变量之类)，则可以使用引用返回，否则必须使用传值返回。否则会造成非法访问</font></p></blockquote><p>总结：</p><p>传值返回：会有一个拷贝</p><p>传引用返回：没有拷贝，只是返回别名</p><blockquote><p>因此传引用返回的效率要比传值返回高，因为不用拷贝返回值</p></blockquote><h4 id="引用和指针的区别："><a href="#引用和指针的区别：" class="headerlink" title="引用和指针的区别："></a>引用和指针的区别：</h4><ol><li><p>在<strong>语法概念</strong>上引用就是一个别名，没有独立空间，和其引用实体共用同一块空间。</p><p>在<strong>底层实现</strong>上实际是有空间的，因为引用是按照指针方式来实现的。</p></li><li><p><strong>引用</strong>在定义时<strong>必须初始化</strong>，指针没有要求</p></li><li><p><strong>引用</strong>在初始化时引用一个实体后，就不能再引用其他实体，而指针可以在任何时候指向任何一个同类型 实体</p></li><li><p><strong>没有NULL引用</strong>，但有NULL指针</p></li><li><p><strong>在sizeof中含义不同</strong>：引用结果为引用类型的大小，但指针始终是地址空间所占字节个数(32位平台下占 4个字节) </p></li><li><p>引用自加即引用的实体增加1，指针自加即指针向后偏移一个类型的大小</p></li><li><p><strong>有多级指针，但是没有多级引用</strong></p></li><li><p>访问实体方式不同，<strong>指针需要显式解引用，引用编译器自己处理</strong></p></li><li><p><strong>引用比指针使用起来相对更安全</strong></p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;引用&quot;&gt;&lt;a href=&quot;#引用&quot; class=&quot;headerlink&quot; title=&quot;引用&quot;&gt;&lt;/a&gt;引用&lt;/h1&gt;&lt;h4 id=&quot;引用的特性：&quot;&gt;&lt;a href=&quot;#引用的特性：&quot; class=&quot;headerlink&quot; title=&quot;引用的特性：&quot;&gt;&lt;/a&gt;引</summary>
       
     
     

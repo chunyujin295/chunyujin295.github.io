@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-04-11T13:32:16.497Z</updated>
+  <updated>2023-04-11T13:32:16.499Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>主题设置</title>
-    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
-    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
-    <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.497Z</updated>
-    
-    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
-    
-    
-    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
-    
-  </entry>
   
   <entry>
     <title>文字颜色</title>
@@ -111,6 +84,33 @@
       
     <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
+    
+    
+    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>主题设置</title>
+    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
+    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
+    <published>2023-04-11T13:17:00.000Z</published>
+    <updated>2023-04-11T13:32:16.497Z</updated>
+    
+    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
       
     
     
@@ -287,9 +287,9 @@
     <link href="https://chunyujin.top/chunyujin/b67d47f3.html"/>
     <id>https://chunyujin.top/chunyujin/b67d47f3.html</id>
     <published>2023-04-11T13:10:00.000Z</published>
-    <updated>2023-04-11T13:32:16.490Z</updated>
+    <updated>2023-04-11T13:59:57.792Z</updated>
     
-    <content type="html"><![CDATA[<p>动态库和静态库的感性认识：</p><h3 id="动态链接："><a href="#动态链接：" class="headerlink" title="动态链接："></a>动态链接：</h3><blockquote><p>学校里不让带电脑，要打游戏，无法自己实现，只能跑到网吧里打</p></blockquote><p>程序执行之前：</p><p>获取动态库的位置，将程序与动态库进行链接</p><blockquote><p>到了学校里，向学长打听好网吧的位置，牢记于心</p></blockquote><p>程序执行时：</p><p>程序运行到某一行，到之前链接的动态库中寻找相应的函数的实现方法</p><blockquote><p>想打游戏的时候，就按照学长给的地址去到网吧，并在里面开一个机子，网管给出机子的号码，在网吧里根据号码找到自己的机子</p></blockquote><blockquote><p>优点：各个程序共享同一个库，可以节省资源，程序的体积相对小</p><p>缺点：必须依赖外部库，如果库缺失，会导致几乎所有的程序失效</p></blockquote><h3 id="静态链接："><a href="#静态链接：" class="headerlink" title="静态链接："></a>静态链接：</h3><blockquote><p>学校里让带电脑，要打游戏的时候，只要自己有电脑，就能打，但是前提是自己把电脑带到了学校里</p></blockquote><p>程序执行之前：</p><p>将库(静态库)中的对应的代码提前拷贝到自己的程序里</p><p>在程序执行时：</p><p>遇到需要的函数的实现时，直接在拷贝好的代码里找就可以了，不依赖库</p><blockquote><p>优点：不依赖外部库，程序可以独立执行</p><p>缺点：浪费资源，程序的体积相对大</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>动态库和静态库的感性认识：</p><h3 id="动态链接："><a href="#动态链接：" class="headerlink" title="动态链接："></a>动态链接：</h3><blockquote><p>学校里不让带电脑，要打游戏，无法自己实现，只能跑到网吧里打</p></blockquote><p>程序执行之前：</p><p>获取动态库的位置，将程序与动态库进行链接</p><blockquote><p>到了学校里，向学长打听好网吧的位置，牢记于心</p></blockquote><p>程序执行时：</p><p>程序运行到某一行，到之前链接的动态库中寻找相应的函数的实现方法</p><blockquote><p>想打游戏的时候，就按照学长给的地址去到网吧，并在里面开一个机子，网管给出机子的号码，在网吧里根据号码找到自己的机子</p></blockquote><blockquote><p>优点：各个程序共享同一个库，可以节省资源，程序的体积相对小</p><p>缺点：必须依赖外部库，如果库缺失，会导致几乎所有的程序失效</p></blockquote><h3 id="静态链接："><a href="#静态链接：" class="headerlink" title="静态链接："></a>静态链接：</h3><blockquote><p>学校里让带电脑，要打游戏的时候，只要自己有电脑，就能打，但是前提是自己把电脑带到了学校里</p></blockquote><p>程序执行之前：</p><p>将库(静态库)中的对应的代码提前拷贝到自己的程序里</p><p>在程序执行时：</p><p>遇到需要的函数的实现时，直接在拷贝好的代码里找就可以了，不依赖库</p><blockquote><p>优点：不依赖外部库，程序可以独立执行</p><p>缺点：浪费资源，程序的体积相对大</p></blockquote><p>Linux默认进行动态链接</p><p>如果要进行静态链接，要在指令后加<code>-static</code></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304112158098.png" alt="CT-20230411135740 Redacted"></p><blockquote><p><code>mytest</code>可执行程序是通过动态链接生成的，<code>mytest2</code>是通过静态链接生成的，可见二者相差100倍的大小，而且两者的功能还只是输出一句”hello world”</p></blockquote>]]></content>
     
     
       

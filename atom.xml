@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-04-11T13:32:16.497Z</updated>
+  <updated>2023-04-11T13:32:16.499Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -17,46 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>主题设置</title>
-    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
-    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
-    <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.497Z</updated>
-    
-    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
-    
-    
-    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文字高亮</title>
-    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
-    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
+    <title>文字颜色</title>
+    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
+    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
     <updated>2023-04-11T13:32:16.499Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
+</summary>
       
     
     
@@ -98,19 +71,46 @@
   </entry>
   
   <entry>
-    <title>文字颜色</title>
-    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
-    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
+    <title>文字高亮</title>
+    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
+    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
     <updated>2023-04-11T13:32:16.499Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
+    
+    
+    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>主题设置</title>
+    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
+    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
+    <published>2023-04-11T13:17:00.000Z</published>
+    <updated>2023-04-11T13:32:16.497Z</updated>
+    
+    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
       
     
     
@@ -148,6 +148,31 @@
     
     
     <category term="磁力链接" scheme="https://chunyujin.top/tags/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>建立字符表_有效的字母异位词</title>
+    <link href="https://chunyujin.top/chunyujin/a309d3c0.html"/>
+    <id>https://chunyujin.top/chunyujin/a309d3c0.html</id>
+    <published>2023-04-11T13:13:00.000Z</published>
+    <updated>2023-04-11T13:32:16.491Z</updated>
+    
+    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/valid-anagram/comments/">242. 有效的字母异位词 - 力扣（LeetCode）</a>)</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230405230509034.png" alt="image-20230405230509034"></p><p>常规的方法：对于两个字符串进行排序，然后判断两个字符串是否相等(可以直接判断字符串是否相等，if s&#x3D;&#x3D;t return true)</p><p>一种奇妙的思路：建立字符表</p><blockquote><p>两个字符串中的字符无非就是26个字母。建立一个容量为26的数组，内容全部初始化为0.如果s中存在某一字母，就在相应的位置上+1，如果t中存在某一字母，就在相应的位置上-1，最后如果数组中还是全为0，说明s和t中的内容正好相互抵消，否则说明s和t不是有效的字母异位词。（感觉有点像摩尔投票法中的支持者打架）</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isAnagram</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> num[<span class="number">26</span>]=&#123;<span class="number">0</span>&#125;; </span><br><span class="line">        <span class="keyword">if</span>(s.<span class="built_in">length</span>()!=t.<span class="built_in">length</span>())</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;s[i]!=<span class="string">&#x27;\0&#x27;</span>;i++)&#123;</span><br><span class="line">            num[s[i]-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">            num[t[i]-<span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">26</span>;i++)</span><br><span class="line">            <span class="keyword">if</span>(num[i]!=<span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote><blockquote><p>弊端：必须面对已知的字符，建立完整的字符表，比如已知含有的字符无非是26个字母。如果按照题目的进阶，unicode字符量很大，且不知道所有的字符是什么，无法建立字符表。</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/valid-anagram/comments/&quot;&gt;242. 有效的字母异位词 - 力扣（LeetCode）&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--dep</summary>
+      
+    
+    
+    
+    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
+    
+    
+    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
     
   </entry>
   
@@ -199,31 +224,6 @@
     
     
     <category term="磁力链接" scheme="https://chunyujin.top/tags/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>建立字符表_有效的字母异位词</title>
-    <link href="https://chunyujin.top/chunyujin/a309d3c0.html"/>
-    <id>https://chunyujin.top/chunyujin/a309d3c0.html</id>
-    <published>2023-04-11T13:13:00.000Z</published>
-    <updated>2023-04-11T13:32:16.491Z</updated>
-    
-    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/valid-anagram/comments/">242. 有效的字母异位词 - 力扣（LeetCode）</a>)</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230405230509034.png" alt="image-20230405230509034"></p><p>常规的方法：对于两个字符串进行排序，然后判断两个字符串是否相等(可以直接判断字符串是否相等，if s&#x3D;&#x3D;t return true)</p><p>一种奇妙的思路：建立字符表</p><blockquote><p>两个字符串中的字符无非就是26个字母。建立一个容量为26的数组，内容全部初始化为0.如果s中存在某一字母，就在相应的位置上+1，如果t中存在某一字母，就在相应的位置上-1，最后如果数组中还是全为0，说明s和t中的内容正好相互抵消，否则说明s和t不是有效的字母异位词。（感觉有点像摩尔投票法中的支持者打架）</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isAnagram</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> num[<span class="number">26</span>]=&#123;<span class="number">0</span>&#125;; </span><br><span class="line">        <span class="keyword">if</span>(s.<span class="built_in">length</span>()!=t.<span class="built_in">length</span>())</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;s[i]!=<span class="string">&#x27;\0&#x27;</span>;i++)&#123;</span><br><span class="line">            num[s[i]-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">            num[t[i]-<span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">26</span>;i++)</span><br><span class="line">            <span class="keyword">if</span>(num[i]!=<span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote><blockquote><p>弊端：必须面对已知的字符，建立完整的字符表，比如已知含有的字符无非是26个字母。如果按照题目的进阶，unicode字符量很大，且不知道所有的字符是什么，无法建立字符表。</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/valid-anagram/comments/&quot;&gt;242. 有效的字母异位词 - 力扣（LeetCode）&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--dep</summary>
-      
-    
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
     
   </entry>
   

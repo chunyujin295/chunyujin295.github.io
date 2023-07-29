@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-07-29T06:23:14.248Z</updated>
+  <updated>2023-07-29T06:27:29.045Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -21,15 +21,69 @@
     <link href="https://chunyujin.top/chunyujin/44d47125.html"/>
     <id>https://chunyujin.top/chunyujin/44d47125.html</id>
     <published>2023-07-29T06:23:00.000Z</published>
-    <updated>2023-07-29T06:23:14.248Z</updated>
+    <updated>2023-07-29T06:27:29.045Z</updated>
     
-    <content type="html"><![CDATA[<p>在b站视频点击分享，获取“嵌入代码”</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202307291412908.png" alt="截屏2023-07-29 14.12.17" style="zoom:50%;" /><p>如上图，获取的嵌入代码为：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=247120140&amp;bvid=BV1Av411a7bt&amp;cid=307398204&amp;page=1&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>设置一下视频的长度和宽度，使得视频播放按照合适的尺寸，并且关闭自动播放如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=247120140&amp;bvid=BV1Av411a7bt&amp;cid=307398204&amp;page=1&amp;high_quality=1&amp;danmaku=0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;allowfullscreen&quot;</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;500&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">sandbox</span>=<span class="string">&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="代码讲解"><a href="#代码讲解" class="headerlink" title="代码讲解"></a>代码讲解</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">BILIBILI</span> 地址<span class="variable constant_">PC</span>端参数</span><br><span class="line">    &amp;high_quality=<span class="number">1</span>   (<span class="number">1</span>=最高画质 <span class="number">0</span>=最低画质)</span><br><span class="line">    &amp;danmaku=<span class="number">0</span>   (<span class="number">1</span>=打开弹幕 <span class="number">0</span>=关闭弹幕)</span><br><span class="line">iframe 参数</span><br><span class="line">    allowfullscreen=<span class="string">&quot;allowfullscreen&quot;</span> #移动端全屏</span><br><span class="line">    sandbox=<span class="string">&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;</span> #禁止弹出网页</span><br></pre></td></tr></table></figure><table><thead><tr><th align="left">属性</th><th align="left">值</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">align</td><td align="left">left right top middle bottom</td><td align="left">不赞成使用。请使用样式代替。规定如何根据周围的元素来对齐此框架。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">frameborder</td><td align="left">10</td><td align="left">规定是否显示框架周围的边框。</td></tr><tr><td align="left">height</td><td align="left">pixels%</td><td align="left">规定 iframe 的高度。</td></tr><tr><td align="left">longdesc</td><td align="left">URL</td><td align="left">规定一个页面，该页面包含了有关iframe 的较长描述。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">marginheight</td><td align="left">pixels</td><td align="left">定义 iframe的顶部和底部的边距。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">marginwidth</td><td align="left">pixels</td><td align="left">定义 iframe的左侧和右侧的边距。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">name</td><td align="left">frame_name</td><td align="left">规定 iframe 的名称。</td></tr><tr><td align="left">sandbox</td><td align="left">“”allow-formsallow-same-originallow-scriptsallow-top-navigation</td><td align="left">启用一系列对 &lt;_iframe&gt; 中内容的额外限制。</td></tr><tr><td align="left">scrolling</td><td align="left">yesnoauto</td><td align="left">规定是否在 iframe中显示滚动条。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">seamless</td><td align="left">seamless</td><td align="left">规定 &lt;_iframe&gt; 看上去像是包含文档的一部分。</td></tr><tr><td align="left">src</td><td align="left">URL</td><td align="left">规定在 iframe中显示的文档的 URL。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">srcdoc</td><td align="left">HTML_code</td><td align="left">规定在 &lt;_iframe&gt; 中显示的页面的 HTML 内容。</td></tr><tr><td align="left">width</td><td align="left">pixels%</td><td align="left">定义 iframe 的宽度。</td></tr></tbody></table><p>效果展示：</p><iframe src="//player.bilibili.com/player.html?aid=247120140&bvid=BV1Av411a7bt&cid=307398204&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>]]></content>
+    <content type="html"><![CDATA[<p>在b站视频点击分享，获取“嵌入代码”</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202307291412908.png" alt="截屏2023-07-29 14.12.17" style="zoom:50%;" /><p>如上图，获取的嵌入代码为：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=247120140&amp;bvid=BV1Av411a7bt&amp;cid=307398204&amp;page=1&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>设置一下视频的长度、宽度、画质、弹幕开关、填充情况，并且关闭自动播放，如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=247120140&amp;bvid=BV1Av411a7bt&amp;cid=307398204&amp;page=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;allowfullscreen&quot;</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;500&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">sandbox</span>=<span class="string">&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="代码讲解"><a href="#代码讲解" class="headerlink" title="代码讲解"></a>代码讲解</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">BILIBILI</span> 地址<span class="variable constant_">PC</span>端参数</span><br><span class="line">    &amp;high_quality=<span class="number">1</span>   (<span class="number">1</span>=最高画质 <span class="number">0</span>=最低画质)</span><br><span class="line">    &amp;danmaku=<span class="number">0</span>   (<span class="number">1</span>=打开弹幕 <span class="number">0</span>=关闭弹幕)</span><br><span class="line">iframe 参数</span><br><span class="line">    allowfullscreen=<span class="string">&quot;allowfullscreen&quot;</span> #移动端全屏</span><br><span class="line">    sandbox=<span class="string">&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;</span> #禁止弹出网页</span><br></pre></td></tr></table></figure><table><thead><tr><th align="left">属性</th><th align="left">值</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">align</td><td align="left">left right top middle bottom</td><td align="left">不赞成使用。请使用样式代替。规定如何根据周围的元素来对齐此框架。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">frameborder</td><td align="left">10</td><td align="left">规定是否显示框架周围的边框。</td></tr><tr><td align="left">height</td><td align="left">pixels%</td><td align="left">规定 iframe 的高度。</td></tr><tr><td align="left">longdesc</td><td align="left">URL</td><td align="left">规定一个页面，该页面包含了有关iframe 的较长描述。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">marginheight</td><td align="left">pixels</td><td align="left">定义 iframe的顶部和底部的边距。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">marginwidth</td><td align="left">pixels</td><td align="left">定义 iframe的左侧和右侧的边距。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">name</td><td align="left">frame_name</td><td align="left">规定 iframe 的名称。</td></tr><tr><td align="left">sandbox</td><td align="left">“”allow-formsallow-same-originallow-scriptsallow-top-navigation</td><td align="left">启用一系列对 &lt;_iframe&gt; 中内容的额外限制。</td></tr><tr><td align="left">scrolling</td><td align="left">yesnoauto</td><td align="left">规定是否在 iframe中显示滚动条。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">seamless</td><td align="left">seamless</td><td align="left">规定 &lt;_iframe&gt; 看上去像是包含文档的一部分。</td></tr><tr><td align="left">src</td><td align="left">URL</td><td align="left">规定在 iframe中显示的文档的 URL。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">srcdoc</td><td align="left">HTML_code</td><td align="left">规定在 &lt;_iframe&gt; 中显示的页面的 HTML 内容。</td></tr><tr><td align="left">width</td><td align="left">pixels%</td><td align="left">定义 iframe 的宽度。</td></tr></tbody></table><p>效果展示：</p><iframe src="//player.bilibili.com/player.html?aid=247120140&bvid=BV1Av411a7bt&cid=307398204&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;在b站视频点击分享，获取“嵌入代码”&lt;/p&gt;
 &lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202307291412908.png&quot; alt=&quot;截屏2023-07-29 14.12.17&quot; s</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
+    
+    
+    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>插入图片</title>
+    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
+    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
+    <published>2023-04-11T13:17:00.000Z</published>
+    <updated>2023-04-11T13:32:16.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
+    
+    
+    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文字颜色</title>
+    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
+    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
+    <published>2023-04-11T13:17:00.000Z</published>
+    <updated>2023-04-11T13:32:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
+</summary>
       
     
     
@@ -71,33 +125,6 @@
   </entry>
   
   <entry>
-    <title>文字颜色</title>
-    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
-    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
-    <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.499Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
-    
-    
-    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
     <title>文字高亮</title>
     <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
     <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
@@ -111,33 +138,6 @@
       
     <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
-    
-    
-    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>插入图片</title>
-    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
-    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
-    <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.498Z</updated>
-    
-    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
       
     
     
@@ -470,6 +470,30 @@
   </entry>
   
   <entry>
+    <title>C++_引用</title>
+    <link href="https://chunyujin.top/chunyujin/9f8ff3a6.html"/>
+    <id>https://chunyujin.top/chunyujin/9f8ff3a6.html</id>
+    <published>2023-03-12T12:31:00.000Z</published>
+    <updated>2023-03-12T12:33:15.397Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h4 id="引用的特性："><a href="#引用的特性：" class="headerlink" title="引用的特性："></a>引用的特性：</h4><ol><li><p>引用在定义时就要初始化</p></li><li><p>一个变量可以被多个引用</p></li><li><p>一个引用只能由一个实体变量，不能引用多个</p></li><li><p>引用不能降低实体的可执行权限，只能提升或者不变</p><blockquote><p>比如在引用常量的时候，常量只有可读权限，没有写权限，因此在定义引用的时候必须要用const来定义出常量引用</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> &amp;b = a;<span class="comment">//错误</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;c = a;<span class="comment">//正确</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> d;</span><br><span class="line"><span class="type">int</span> &amp;e = d;<span class="comment">//正确</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;f = d;<span class="comment">//正确，不能通过引用f来修改d的值</span></span><br><span class="line"></span><br><span class="line"><span class="type">double</span> g;</span><br><span class="line"><span class="type">int</span> &amp;h = g;<span class="comment">//错误，类型不同</span></span><br><span class="line"><span class="type">const</span> <span class="type">double</span> &amp;i = g;<span class="comment">//正确</span></span><br></pre></td></tr></table></figure></blockquote></li></ol><h4 id="引用的两种常用方法："><a href="#引用的两种常用方法：" class="headerlink" title="引用的两种常用方法："></a>引用的两种常用方法：</h4><ul><li>作为参数</li><li>作为函数返回值</li></ul><h5 id="引用作为参数时属于输出型参数"><a href="#引用作为参数时属于输出型参数" class="headerlink" title="引用作为参数时属于输出型参数"></a>引用作为参数时属于<mark style="background-color: pink">输出型参数</mark></h5><blockquote><p>现实编程中有一个函数要返回多个值很普遍</p><p>但是一个函数只有一个返回值(return)，<font color = red>返回值其实只是用来表示函数的执行结果</font></p><p>通常，将引用作为参数时，在函数内的更改直接就影响到了引用的实体，实现了函数向外的输出，实现了”多返回值”</p><p>如果一个参数只是输入到函数，在内部的改变不会影响外部变量的改变的就是输入型参数；一个参数在函数内发生的改变影响函数外变量的改变的就是输出型参数</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> &amp;c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    a += a;</span><br><span class="line">    b += b;</span><br><span class="line">c = a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    a = <span class="number">1</span>;</span><br><span class="line">    b = <span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">Add</span>(x);</span><br><span class="line">    cout &lt;&lt; a &lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt; b &lt;&lt; <span class="string">&quot; &quot;</span>&lt;&lt; x &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//结果是 1 2 6</span></span><br></pre></td></tr></table></figure><h5 id="引用作为函数返回值"><a href="#引用作为函数返回值" class="headerlink" title="引用作为函数返回值"></a>引用作为函数返回值</h5><blockquote><p>此处应复习一下鹏哥讲的栈帧</p></blockquote><p><strong><mark style="background-color:lime">传值返回</mark></strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">A</span> <span class="params">( <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//A的返回值tem是n的拷贝，是一个临时变量</span></span><br></pre></td></tr></table></figure><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/721EF9BBF65C834644F19D25C7DAE74F.png" alt="img" style="zoom: 33%;" /><blockquote><ol><li><p>main函数里调用A函数，将实参x拷贝给b，传入到A中</p></li><li><p>n时局部变量，在A中，且n是返回值return。return作为函数结束标志，此时会产生一个临时变量tem作为n的拷贝，然后将tem传向main</p><p>为何要产生一个临时变量，因为在离开函数A作用域之后n的内存会被释放，无法被访问，因此在此之前要生成临时变量。临时变量存放在在调用函数A之前就开辟好的一块空间里。</p><p>如何证明确实<mark style="background-color:pink">返回值是一个临时变量</mark>？</p><blockquote><p><font color = red>临时变量具有常性</font></p><p>所以如果main中使用一个引用来接收A的返回值，则会报错，如果用const 引用来接收，不会报错</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//报错</span></span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//不报错</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>说明A的返回值是一个具有常性</p><blockquote><p> 在引用的时候权限不能放大，只能缩小或者不变，所以必须声明被a引用时的对象是个常量才可以</p></blockquote><p>为什么使用引用来接收</p><blockquote><p>引用只是取别名，a就是A的返回值n本身</p><p>如果使用值来接收，<code>int a = A(b)</code>，是将A的返回值拷贝赋值给a，不是同一个变量了</p></blockquote></blockquote></li></ol></blockquote><p><strong><mark style="background-color:lime">传引用返回</mark></strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> &amp;<span class="title">A</span> <span class="params">(<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//A的返回值是tem，是n的引用</span></span><br></pre></td></tr></table></figure><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/90228CD120AD756DDC37EB40BF06550F.png" alt="img" style="zoom: 33%;" /><p>返回值类型为引用的时候则不是拷贝一个临时变量，返回的是A中局部变量n的引用tem，引用只是别名，不会占空间</p><blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//不会报错，因为A的返回值不是临时变量</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//返回值tem是n的引用，a就也是n的引用</span></span><br></pre></td></tr></table></figure></blockquote><p>由于离开函数作用域之后局部变量内存会被释放，所以如果变量n是A内部一个局部变量，A的返回值tem是n的引用，则通过返回值访问n的时候就是非法访问</p><blockquote><p> 所以C++的规定是：</p><p><font color = blue>离开函数作用域之后，如果返回值的内存还没有被释放(比如返回值类型是静态变量全局变量之类)，则可以使用引用返回，否则必须使用传值返回。否则会造成非法访问</font></p></blockquote><p>总结：</p><p>传值返回：会有一个拷贝</p><p>传引用返回：没有拷贝，只是返回别名</p><blockquote><p>因此传引用返回的效率要比传值返回高，因为不用拷贝返回值</p></blockquote><h4 id="引用和指针的区别："><a href="#引用和指针的区别：" class="headerlink" title="引用和指针的区别："></a>引用和指针的区别：</h4><ol><li><p>在<strong>语法概念</strong>上引用就是一个别名，没有独立空间，和其引用实体共用同一块空间。</p><p>在<strong>底层实现</strong>上实际是有空间的，因为引用是按照指针方式来实现的。</p></li><li><p><strong>引用</strong>在定义时<strong>必须初始化</strong>，指针没有要求</p></li><li><p><strong>引用</strong>在初始化时引用一个实体后，就不能再引用其他实体，而指针可以在任何时候指向任何一个同类型 实体</p></li><li><p><strong>没有NULL引用</strong>，但有NULL指针</p></li><li><p><strong>在sizeof中含义不同</strong>：引用结果为引用类型的大小，但指针始终是地址空间所占字节个数(32位平台下占 4个字节) </p></li><li><p>引用自加即引用的实体增加1，指针自加即指针向后偏移一个类型的大小</p></li><li><p><strong>有多级指针，但是没有多级引用</strong></p></li><li><p>访问实体方式不同，<strong>指针需要显式解引用，引用编译器自己处理</strong></p></li><li><p><strong>引用比指针使用起来相对更安全</strong></p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;引用&quot;&gt;&lt;a href=&quot;#引用&quot; class=&quot;headerlink&quot; title=&quot;引用&quot;&gt;&lt;/a&gt;引用&lt;/h1&gt;&lt;h4 id=&quot;引用的特性：&quot;&gt;&lt;a href=&quot;#引用的特性：&quot; class=&quot;headerlink&quot; title=&quot;引用的特性：&quot;&gt;&lt;/a&gt;引</summary>
+      
+    
+    
+    
+    <category term="Cpp" scheme="https://chunyujin.top/categories/Cpp/"/>
+    
+    
+    <category term="Cpp" scheme="https://chunyujin.top/tags/Cpp/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C++_内联函数</title>
     <link href="https://chunyujin.top/chunyujin/9b439c80.html"/>
     <id>https://chunyujin.top/chunyujin/9b439c80.html</id>
@@ -483,30 +507,6 @@
       
     <summary type="html">&lt;h4 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;inline修饰的函数叫做&lt;strong&gt;内联函数&lt;/strong&gt;，编译时C++编译器会在调用内联函数的地方展开</summary>
-      
-    
-    
-    
-    <category term="Cpp" scheme="https://chunyujin.top/categories/Cpp/"/>
-    
-    
-    <category term="Cpp" scheme="https://chunyujin.top/tags/Cpp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++_引用</title>
-    <link href="https://chunyujin.top/chunyujin/9f8ff3a6.html"/>
-    <id>https://chunyujin.top/chunyujin/9f8ff3a6.html</id>
-    <published>2023-03-12T12:31:00.000Z</published>
-    <updated>2023-03-12T12:33:15.397Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h4 id="引用的特性："><a href="#引用的特性：" class="headerlink" title="引用的特性："></a>引用的特性：</h4><ol><li><p>引用在定义时就要初始化</p></li><li><p>一个变量可以被多个引用</p></li><li><p>一个引用只能由一个实体变量，不能引用多个</p></li><li><p>引用不能降低实体的可执行权限，只能提升或者不变</p><blockquote><p>比如在引用常量的时候，常量只有可读权限，没有写权限，因此在定义引用的时候必须要用const来定义出常量引用</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> &amp;b = a;<span class="comment">//错误</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;c = a;<span class="comment">//正确</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> d;</span><br><span class="line"><span class="type">int</span> &amp;e = d;<span class="comment">//正确</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;f = d;<span class="comment">//正确，不能通过引用f来修改d的值</span></span><br><span class="line"></span><br><span class="line"><span class="type">double</span> g;</span><br><span class="line"><span class="type">int</span> &amp;h = g;<span class="comment">//错误，类型不同</span></span><br><span class="line"><span class="type">const</span> <span class="type">double</span> &amp;i = g;<span class="comment">//正确</span></span><br></pre></td></tr></table></figure></blockquote></li></ol><h4 id="引用的两种常用方法："><a href="#引用的两种常用方法：" class="headerlink" title="引用的两种常用方法："></a>引用的两种常用方法：</h4><ul><li>作为参数</li><li>作为函数返回值</li></ul><h5 id="引用作为参数时属于输出型参数"><a href="#引用作为参数时属于输出型参数" class="headerlink" title="引用作为参数时属于输出型参数"></a>引用作为参数时属于<mark style="background-color: pink">输出型参数</mark></h5><blockquote><p>现实编程中有一个函数要返回多个值很普遍</p><p>但是一个函数只有一个返回值(return)，<font color = red>返回值其实只是用来表示函数的执行结果</font></p><p>通常，将引用作为参数时，在函数内的更改直接就影响到了引用的实体，实现了函数向外的输出，实现了”多返回值”</p><p>如果一个参数只是输入到函数，在内部的改变不会影响外部变量的改变的就是输入型参数；一个参数在函数内发生的改变影响函数外变量的改变的就是输出型参数</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> &amp;c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    a += a;</span><br><span class="line">    b += b;</span><br><span class="line">c = a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    a = <span class="number">1</span>;</span><br><span class="line">    b = <span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">Add</span>(x);</span><br><span class="line">    cout &lt;&lt; a &lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt; b &lt;&lt; <span class="string">&quot; &quot;</span>&lt;&lt; x &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//结果是 1 2 6</span></span><br></pre></td></tr></table></figure><h5 id="引用作为函数返回值"><a href="#引用作为函数返回值" class="headerlink" title="引用作为函数返回值"></a>引用作为函数返回值</h5><blockquote><p>此处应复习一下鹏哥讲的栈帧</p></blockquote><p><strong><mark style="background-color:lime">传值返回</mark></strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">A</span> <span class="params">( <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//A的返回值tem是n的拷贝，是一个临时变量</span></span><br></pre></td></tr></table></figure><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/721EF9BBF65C834644F19D25C7DAE74F.png" alt="img" style="zoom: 33%;" /><blockquote><ol><li><p>main函数里调用A函数，将实参x拷贝给b，传入到A中</p></li><li><p>n时局部变量，在A中，且n是返回值return。return作为函数结束标志，此时会产生一个临时变量tem作为n的拷贝，然后将tem传向main</p><p>为何要产生一个临时变量，因为在离开函数A作用域之后n的内存会被释放，无法被访问，因此在此之前要生成临时变量。临时变量存放在在调用函数A之前就开辟好的一块空间里。</p><p>如何证明确实<mark style="background-color:pink">返回值是一个临时变量</mark>？</p><blockquote><p><font color = red>临时变量具有常性</font></p><p>所以如果main中使用一个引用来接收A的返回值，则会报错，如果用const 引用来接收，不会报错</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//报错</span></span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//不报错</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>说明A的返回值是一个具有常性</p><blockquote><p> 在引用的时候权限不能放大，只能缩小或者不变，所以必须声明被a引用时的对象是个常量才可以</p></blockquote><p>为什么使用引用来接收</p><blockquote><p>引用只是取别名，a就是A的返回值n本身</p><p>如果使用值来接收，<code>int a = A(b)</code>，是将A的返回值拷贝赋值给a，不是同一个变量了</p></blockquote></blockquote></li></ol></blockquote><p><strong><mark style="background-color:lime">传引用返回</mark></strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> &amp;<span class="title">A</span> <span class="params">(<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//A的返回值是tem，是n的引用</span></span><br></pre></td></tr></table></figure><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/90228CD120AD756DDC37EB40BF06550F.png" alt="img" style="zoom: 33%;" /><p>返回值类型为引用的时候则不是拷贝一个临时变量，返回的是A中局部变量n的引用tem，引用只是别名，不会占空间</p><blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> &amp;a = <span class="built_in">A</span>(x); <span class="comment">//不会报错，因为A的返回值不是临时变量</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//返回值tem是n的引用，a就也是n的引用</span></span><br></pre></td></tr></table></figure></blockquote><p>由于离开函数作用域之后局部变量内存会被释放，所以如果变量n是A内部一个局部变量，A的返回值tem是n的引用，则通过返回值访问n的时候就是非法访问</p><blockquote><p> 所以C++的规定是：</p><p><font color = blue>离开函数作用域之后，如果返回值的内存还没有被释放(比如返回值类型是静态变量全局变量之类)，则可以使用引用返回，否则必须使用传值返回。否则会造成非法访问</font></p></blockquote><p>总结：</p><p>传值返回：会有一个拷贝</p><p>传引用返回：没有拷贝，只是返回别名</p><blockquote><p>因此传引用返回的效率要比传值返回高，因为不用拷贝返回值</p></blockquote><h4 id="引用和指针的区别："><a href="#引用和指针的区别：" class="headerlink" title="引用和指针的区别："></a>引用和指针的区别：</h4><ol><li><p>在<strong>语法概念</strong>上引用就是一个别名，没有独立空间，和其引用实体共用同一块空间。</p><p>在<strong>底层实现</strong>上实际是有空间的，因为引用是按照指针方式来实现的。</p></li><li><p><strong>引用</strong>在定义时<strong>必须初始化</strong>，指针没有要求</p></li><li><p><strong>引用</strong>在初始化时引用一个实体后，就不能再引用其他实体，而指针可以在任何时候指向任何一个同类型 实体</p></li><li><p><strong>没有NULL引用</strong>，但有NULL指针</p></li><li><p><strong>在sizeof中含义不同</strong>：引用结果为引用类型的大小，但指针始终是地址空间所占字节个数(32位平台下占 4个字节) </p></li><li><p>引用自加即引用的实体增加1，指针自加即指针向后偏移一个类型的大小</p></li><li><p><strong>有多级指针，但是没有多级引用</strong></p></li><li><p>访问实体方式不同，<strong>指针需要显式解引用，引用编译器自己处理</strong></p></li><li><p><strong>引用比指针使用起来相对更安全</strong></p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;引用&quot;&gt;&lt;a href=&quot;#引用&quot; class=&quot;headerlink&quot; title=&quot;引用&quot;&gt;&lt;/a&gt;引用&lt;/h1&gt;&lt;h4 id=&quot;引用的特性：&quot;&gt;&lt;a href=&quot;#引用的特性：&quot; class=&quot;headerlink&quot; title=&quot;引用的特性：&quot;&gt;&lt;/a&gt;引</summary>
       
     
     

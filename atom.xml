@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-07-25T04:19:58.514Z</updated>
+  <updated>2023-07-29T06:14:44.524Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://chunyujin.top/chunyujin/de183b5e.html"/>
     <id>https://chunyujin.top/chunyujin/de183b5e.html</id>
     <published>2023-07-25T04:19:00.000Z</published>
-    <updated>2023-07-25T04:19:58.514Z</updated>
+    <updated>2023-07-29T06:14:44.524Z</updated>
     
-    <content type="html"><![CDATA[<p>在b站视频点击分享，获取“嵌入代码”</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202307251214128.png" alt="截屏2023-07-25 12.13.07" style="zoom: 33%;" /><p>如上图，获取的嵌入代码为：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=247120140&amp;bvid=BV1Av411a7bt&amp;cid=307398204&amp;page=1&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>设置一下视频的长度和宽度，使得视频播放按照合适的尺寸，如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span> = <span class="string">&quot;600&quot;</span> <span class="attr">height</span> = <span class="string">&quot;400&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=247120140&amp;bvid=BV1Av411a7bt&amp;cid=307398204&amp;page=1&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>效果展示：</p><iframe width = "600" height = "400" src="//player.bilibili.com/player.html?aid=247120140&bvid=BV1Av411a7bt&cid=307398204&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
+    <content type="html"><![CDATA[<p>在b站视频点击分享，获取“嵌入代码”</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202307291413857.png" alt="截屏2023-07-29 14.12.17" style="zoom:50%;" /><p>如上图，获取的嵌入代码为：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=247120140&amp;bvid=BV1Av411a7bt&amp;cid=307398204&amp;page=1&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>设置一下视频的长度和宽度，使得视频播放按照合适的尺寸，并且关闭自动播放如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span> = <span class="string">&quot;1920&quot;</span> <span class="attr">height</span> = <span class="string">&quot;1080&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=247120140&amp;bvid=BV1Av411a7bt&amp;cid=307398204&amp;page=1&amp;autoplay=0&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>效果展示：</p><iframe width = "1920" height = "1080" src="//player.bilibili.com/player.html?aid=247120140&bvid=BV1Av411a7bt&cid=307398204&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;在b站视频点击分享，获取“嵌入代码”&lt;/p&gt;
-&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202307251214128.png&quot; alt=&quot;截屏2023-07-25 12.13.07&quot; s</summary>
+&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202307291413857.png&quot; alt=&quot;截屏2023-07-29 14.12.17&quot; s</summary>
       
     
     
@@ -98,19 +98,19 @@
   </entry>
   
   <entry>
-    <title>文字高亮</title>
-    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
-    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
+    <title>文字颜色</title>
+    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
+    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
     <updated>2023-04-11T13:32:16.499Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
+</summary>
       
     
     
@@ -125,19 +125,19 @@
   </entry>
   
   <entry>
-    <title>文字颜色</title>
-    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
-    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
+    <title>文字高亮</title>
+    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
+    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
     <updated>2023-04-11T13:32:16.499Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
       
     
     
@@ -255,6 +255,32 @@
   </entry>
   
   <entry>
+    <title>回溯法_资源</title>
+    <link href="https://chunyujin.top/chunyujin/19c828d.html"/>
+    <id>https://chunyujin.top/chunyujin/19c828d.html</id>
+    <published>2023-04-11T13:11:00.000Z</published>
+    <updated>2023-04-11T13:32:16.496Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNjY5NTYxNA==&action=getalbum&album_id=1607983171550167042&scene=173&from_msgid=2247485237&from_itemidx=1&count=3&nolastread=1#wechat_redirect">#回溯算法 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485237&idx=1&sn=1bae4c3d0d3965af44878093a5a49f58&chksm=f9a23464ced5bd72ff9ddcc9c70f69131a9e57e5c1aa674cc62551cd434c64f10a88395dce60&scene=21#wechat_redirect">关于回溯算法，你该了解这些！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485253&idx=1&sn=8332edaabc9bf43e45835bce7964ce88&chksm=f9a23414ced5bd02a80be49c91bb42f286ce1e15bbea77e6570470a4491c9da0f29160eba838&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：求组合问题！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485264&idx=1&sn=860006efeb344db329b555a8b2711769&chksm=f9a23401ced5bd17aa2d374c12c558fd2dcbb57d2aba799dd62e64a27e88027dbfa8677989ae&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：组合问题再剪剪枝 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485277&idx=1&sn=0553db6b5c5952094d536ae2b8c18124&chksm=f9a2340cced5bd1ab3ec69fb1209242081185eb90b1144aa29b5959d31e946237b67a011e3a8&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：求组合总和！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s/FLg8G6EjVcxBjwCbzpACPw">回溯算法：求组合总和（二） (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485360&idx=1&sn=2256a0f01a304d82a2b59252327f3edb&chksm=f9a234e1ced5bdf72f4f27d55618fdb185f324260a2776a266b497956b28c9f317a83b1bf36a&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：求组合总和（三）</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485295&idx=1&sn=35bd6c240a5a59d7ea6d9f98c09e7dbd&scene=21#wechat_redirect">回溯算法：电话号码的字母组合 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485372&idx=1&sn=29cc3421fb742faa57824b9a626342ad&scene=21#wechat_redirect">回溯算法：分割回文串</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485402&idx=1&sn=6963af3e2aa8d58e41b71d73d53ea8f6&chksm=f9a2348bced5bd9d50f845b9f2d671f3c1d6d5376e6c7d15f86b0c5a0320f2ae905dea11d082&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：求子集问题！</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485466&idx=1&sn=2b5420bca9b66356d777bc4530a224c5&chksm=f9a23b4bced5b25d254e721f131655fe5889137bf63c182ea0ed4dd6b62515a7798a6a566d8c&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：递增子序列</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485390&idx=1&sn=e95ad5b1c40f06fc18cd3fec54fd1cbc&chksm=f9a2349fced5bd89092073366fa77e0f3949dd75e5a7e3017e3d289551be10bdc6aa745b5f11&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：复原IP地址</a></p><p>还有更多内容</p><blockquote><p><a href="https://mp.weixin.qq.com/s/FLg8G6EjVcxBjwCbzpACPw">回溯算法：求组合总和（二） (qq.com)</a></p><p>这里面的图是有错误的？</p><p>在startIndex访问到后期的时候，数组中startIndex前面的数不会、也不需要被访问到，因为startIndex之前的数一定可以访问后面的，但是之后的数不需要也不能访问之前的，因为会造成结果的重复，只能访问startIndex位置以及之后位置的。并且按照代码流程走下来也确实如此。</p><p>原来的：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304062119069.png" alt="640" style="zoom:80%;" /><p>实际上应该是的：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304062120352.PNG" alt="IMG_1352"></p></blockquote><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485372&idx=1&sn=29cc3421fb742faa57824b9a626342ad&scene=21#wechat_redirect">回溯算法：分割回文串</a></p><p>不需要剪枝，或者说判断回文字符串本身就属于剪枝</p><blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304071014373.jpeg" alt="IMG_1354"></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNjY5NTYxNA==&amp;action=getalbum&amp;album_id=1607983171550167042&amp;scene=173&amp;from_msgid</summary>
+      
+    
+    
+    
+    <category term="算法分析与设计" scheme="https://chunyujin.top/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="回溯法" scheme="https://chunyujin.top/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/%E5%9B%9E%E6%BA%AF%E6%B3%95/"/>
+    
+    
+    <category term="算法分析与设计" scheme="https://chunyujin.top/tags/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>什么是解空间树</title>
     <link href="https://chunyujin.top/chunyujin/87a30441.html"/>
     <id>https://chunyujin.top/chunyujin/87a30441.html</id>
@@ -270,32 +296,6 @@
 &lt;p&gt;比较权威全面的方法可以参考百度&lt;/p&gt;
 &lt;p&gt;形象化描述：&lt;/p&gt;
 &lt;p&gt;递归的所有过程都可以通过树形结构来表述，回溯是递归的副产品，所以回溯也可以通过属性结构来表示，而且回溯的结果是树形结构的叶子节点，所以这个这个树形结构就是解空间树&lt;/p&gt;</summary>
-      
-    
-    
-    
-    <category term="算法分析与设计" scheme="https://chunyujin.top/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="回溯法" scheme="https://chunyujin.top/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/%E5%9B%9E%E6%BA%AF%E6%B3%95/"/>
-    
-    
-    <category term="算法分析与设计" scheme="https://chunyujin.top/tags/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>回溯法_资源</title>
-    <link href="https://chunyujin.top/chunyujin/19c828d.html"/>
-    <id>https://chunyujin.top/chunyujin/19c828d.html</id>
-    <published>2023-04-11T13:11:00.000Z</published>
-    <updated>2023-04-11T13:32:16.496Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNjY5NTYxNA==&action=getalbum&album_id=1607983171550167042&scene=173&from_msgid=2247485237&from_itemidx=1&count=3&nolastread=1#wechat_redirect">#回溯算法 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485237&idx=1&sn=1bae4c3d0d3965af44878093a5a49f58&chksm=f9a23464ced5bd72ff9ddcc9c70f69131a9e57e5c1aa674cc62551cd434c64f10a88395dce60&scene=21#wechat_redirect">关于回溯算法，你该了解这些！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485253&idx=1&sn=8332edaabc9bf43e45835bce7964ce88&chksm=f9a23414ced5bd02a80be49c91bb42f286ce1e15bbea77e6570470a4491c9da0f29160eba838&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：求组合问题！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485264&idx=1&sn=860006efeb344db329b555a8b2711769&chksm=f9a23401ced5bd17aa2d374c12c558fd2dcbb57d2aba799dd62e64a27e88027dbfa8677989ae&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：组合问题再剪剪枝 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485277&idx=1&sn=0553db6b5c5952094d536ae2b8c18124&chksm=f9a2340cced5bd1ab3ec69fb1209242081185eb90b1144aa29b5959d31e946237b67a011e3a8&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：求组合总和！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s/FLg8G6EjVcxBjwCbzpACPw">回溯算法：求组合总和（二） (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485360&idx=1&sn=2256a0f01a304d82a2b59252327f3edb&chksm=f9a234e1ced5bdf72f4f27d55618fdb185f324260a2776a266b497956b28c9f317a83b1bf36a&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：求组合总和（三）</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485295&idx=1&sn=35bd6c240a5a59d7ea6d9f98c09e7dbd&scene=21#wechat_redirect">回溯算法：电话号码的字母组合 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485372&idx=1&sn=29cc3421fb742faa57824b9a626342ad&scene=21#wechat_redirect">回溯算法：分割回文串</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485402&idx=1&sn=6963af3e2aa8d58e41b71d73d53ea8f6&chksm=f9a2348bced5bd9d50f845b9f2d671f3c1d6d5376e6c7d15f86b0c5a0320f2ae905dea11d082&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：求子集问题！</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485466&idx=1&sn=2b5420bca9b66356d777bc4530a224c5&chksm=f9a23b4bced5b25d254e721f131655fe5889137bf63c182ea0ed4dd6b62515a7798a6a566d8c&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：递增子序列</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485390&idx=1&sn=e95ad5b1c40f06fc18cd3fec54fd1cbc&chksm=f9a2349fced5bd89092073366fa77e0f3949dd75e5a7e3017e3d289551be10bdc6aa745b5f11&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：复原IP地址</a></p><p>还有更多内容</p><blockquote><p><a href="https://mp.weixin.qq.com/s/FLg8G6EjVcxBjwCbzpACPw">回溯算法：求组合总和（二） (qq.com)</a></p><p>这里面的图是有错误的？</p><p>在startIndex访问到后期的时候，数组中startIndex前面的数不会、也不需要被访问到，因为startIndex之前的数一定可以访问后面的，但是之后的数不需要也不能访问之前的，因为会造成结果的重复，只能访问startIndex位置以及之后位置的。并且按照代码流程走下来也确实如此。</p><p>原来的：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304062119069.png" alt="640" style="zoom:80%;" /><p>实际上应该是的：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304062120352.PNG" alt="IMG_1352"></p></blockquote><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485372&idx=1&sn=29cc3421fb742faa57824b9a626342ad&scene=21#wechat_redirect">回溯算法：分割回文串</a></p><p>不需要剪枝，或者说判断回文字符串本身就属于剪枝</p><blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304071014373.jpeg" alt="IMG_1354"></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNjY5NTYxNA==&amp;action=getalbum&amp;album_id=1607983171550167042&amp;scene=173&amp;from_msgid</summary>
       
     
     

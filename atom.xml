@@ -48,7 +48,7 @@
     <link href="https://chunyujin.top/chunyujin/44d47125.html"/>
     <id>https://chunyujin.top/chunyujin/44d47125.html</id>
     <published>2023-07-29T06:23:00.000Z</published>
-    <updated>2023-07-29T06:57:25.774Z</updated>
+    <updated>2023-07-29T06:57:25.000Z</updated>
     
     <content type="html"><![CDATA[<p>在b站视频点击分享，获取“嵌入代码”</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202307291412908.png" alt="截屏2023-07-29 14.12.17" style="zoom:50%;" /><p>如上图，获取的嵌入代码为：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=247120140&amp;bvid=BV1Av411a7bt&amp;cid=307398204&amp;page=1&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>设置一下视频的长度、宽度、画质、弹幕开关、填充情况，并且关闭自动播放，如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=247120140&amp;bvid=BV1Av411a7bt&amp;cid=307398204&amp;page=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;allowfullscreen&quot;</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;500&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">sandbox</span>=<span class="string">&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="代码讲解"><a href="#代码讲解" class="headerlink" title="代码讲解"></a>代码讲解</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">BILIBILI</span> 地址<span class="variable constant_">PC</span>端参数</span><br><span class="line">    &amp;high_quality=<span class="number">1</span>   (<span class="number">1</span>=最高画质 <span class="number">0</span>=最低画质)</span><br><span class="line">    &amp;danmaku=<span class="number">0</span>   (<span class="number">1</span>=打开弹幕 <span class="number">0</span>=关闭弹幕)</span><br><span class="line">iframe 参数</span><br><span class="line">    allowfullscreen=<span class="string">&quot;allowfullscreen&quot;</span> #移动端全屏</span><br><span class="line">    sandbox=<span class="string">&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;</span> #禁止弹出网页</span><br></pre></td></tr></table></figure><table><thead><tr><th align="left">属性</th><th align="left">值</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">align</td><td align="left">left right top middle bottom</td><td align="left">不赞成使用。请使用样式代替。规定如何根据周围的元素来对齐此框架。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">frameborder</td><td align="left">10</td><td align="left">规定是否显示框架周围的边框。</td></tr><tr><td align="left">height</td><td align="left">pixels%</td><td align="left">规定 iframe 的高度。</td></tr><tr><td align="left">longdesc</td><td align="left">URL</td><td align="left">规定一个页面，该页面包含了有关iframe 的较长描述。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">marginheight</td><td align="left">pixels</td><td align="left">定义 iframe的顶部和底部的边距。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">marginwidth</td><td align="left">pixels</td><td align="left">定义 iframe的左侧和右侧的边距。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">name</td><td align="left">frame_name</td><td align="left">规定 iframe 的名称。</td></tr><tr><td align="left">sandbox</td><td align="left">“”allow-formsallow-same-originallow-scriptsallow-top-navigation</td><td align="left">启用一系列对 &lt;_iframe&gt; 中内容的额外限制。</td></tr><tr><td align="left">scrolling</td><td align="left">yesnoauto</td><td align="left">规定是否在 iframe中显示滚动条。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">seamless</td><td align="left">seamless</td><td align="left">规定 &lt;_iframe&gt; 看上去像是包含文档的一部分。</td></tr><tr><td align="left">src</td><td align="left">URL</td><td align="left">规定在 iframe中显示的文档的 URL。</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">srcdoc</td><td align="left">HTML_code</td><td align="left">规定在 &lt;_iframe&gt; 中显示的页面的 HTML 内容。</td></tr><tr><td align="left">width</td><td align="left">pixels%</td><td align="left">定义 iframe 的宽度。</td></tr></tbody></table><p>效果展示：</p><iframe src="//player.bilibili.com/player.html?aid=247120140&bvid=BV1Av411a7bt&cid=307398204&page=1&high_quality=1&danmaku=0&autoplay=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>]]></content>
     
@@ -472,31 +472,6 @@
   </entry>
   
   <entry>
-    <title>C++_内联函数</title>
-    <link href="https://chunyujin.top/chunyujin/9b439c80.html"/>
-    <id>https://chunyujin.top/chunyujin/9b439c80.html</id>
-    <published>2023-03-12T12:31:00.000Z</published>
-    <updated>2023-03-12T12:33:15.396Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><blockquote><p>inline修饰的函数叫做<strong>内联函数</strong>，编译时C++编译器会在调用内联函数的地方展开，没有函数调用建立栈帧 的开销，内联函数提升程序运行的效率。</p></blockquote><p>适用于定义频繁使用的短小函数</p><blockquote><p>C++中如何实现处理的：</p><blockquote><p>用宏定义函数</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function">returen x+y</span>;</span><br></pre></td></tr></table></figure><p>宏定义为：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> ADD(x,b) ((x) + (y))</span></span><br></pre></td></tr></table></figure><p>宏定义的本质就是替换</p></blockquote><p>宏的语法机制不好，容易出错，不支持调试，没有类型安全检查</p><p>于是C++有了内联函数</p><p><strong>内联函数的本质也是替换</strong></p><ol><li><p>debug可以打断点调试 (因为内联函数在debug时不会进行替换，所以可以进行调试)</p></li><li><p>不容易出错，写法和普通函数一样</p></li></ol><h4 id="特性："><a href="#特性：" class="headerlink" title="特性："></a>特性：</h4><ol><li>inline是一种以空间换时间的做法，如果编译器将函数当成内联函数处理，在编译阶段，会用函数体替 换函数调用，缺陷：可能会使目标文件变大，优势：少了调用开销，提高程序运行效率。</li><li>inline对于编译器而言只是一个建议，不同编译器关于inline实现机制可能不同，一般建议：将函数规 模较小(即函数不是很长，具体没有准确的说法，取决于编译器内部实现)、不是递归、频繁调用的函数 采用inline修饰，否则编译器会忽略inline特性。</li><li>inline不建议声明和定义分离，分离会导致链接错误。因为inline被展开，就没有函数地址了，链接就会在符号表里找不到函数。</li></ol><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>内联函数的关键子inline、缺省函数的缺省参数等，在函数声明或实现中只能出现一次，一般建议出现在声明中，实现中只是对于函数进行实现，声明是对外的接口，更能体现封装性</p><h4 id="【面试题】宏的优缺点"><a href="#【面试题】宏的优缺点" class="headerlink" title="【面试题】宏的优缺点"></a>【面试题】宏的优缺点</h4><p>宏的优点：</p><ol><li>增强代码的复用性</li><li>提高性能</li></ol><p>宏的缺点：</p><ol><li>不方便调试宏。（因为预编译阶段进行了替换）</li><li>导致代码可读性差，可维护性差，容易误用。</li><li>没有类型安全的检查</li></ol><p>C++中用什么方法代替宏？</p><ol><li>常量定义 换用const enum</li><li>短小函数定义 换用内联函数</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h4 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;inline修饰的函数叫做&lt;strong&gt;内联函数&lt;/strong&gt;，编译时C++编译器会在调用内联函数的地方展开</summary>
-      
-    
-    
-    
-    <category term="Cpp" scheme="https://chunyujin.top/categories/Cpp/"/>
-    
-    
-    <category term="Cpp" scheme="https://chunyujin.top/tags/Cpp/"/>
-    
-  </entry>
-  
-  <entry>
     <title>C++_前言</title>
     <link href="https://chunyujin.top/chunyujin/2ef92d18.html"/>
     <id>https://chunyujin.top/chunyujin/2ef92d18.html</id>
@@ -510,6 +485,31 @@
       
     <summary type="html">&lt;p&gt;此部分笔记只是对于课件的补充，具体应结合课件和板书来看&lt;/p&gt;
 </summary>
+      
+    
+    
+    
+    <category term="Cpp" scheme="https://chunyujin.top/categories/Cpp/"/>
+    
+    
+    <category term="Cpp" scheme="https://chunyujin.top/tags/Cpp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++_内联函数</title>
+    <link href="https://chunyujin.top/chunyujin/9b439c80.html"/>
+    <id>https://chunyujin.top/chunyujin/9b439c80.html</id>
+    <published>2023-03-12T12:31:00.000Z</published>
+    <updated>2023-03-12T12:33:15.396Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><blockquote><p>inline修饰的函数叫做<strong>内联函数</strong>，编译时C++编译器会在调用内联函数的地方展开，没有函数调用建立栈帧 的开销，内联函数提升程序运行的效率。</p></blockquote><p>适用于定义频繁使用的短小函数</p><blockquote><p>C++中如何实现处理的：</p><blockquote><p>用宏定义函数</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function">returen x+y</span>;</span><br></pre></td></tr></table></figure><p>宏定义为：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> ADD(x,b) ((x) + (y))</span></span><br></pre></td></tr></table></figure><p>宏定义的本质就是替换</p></blockquote><p>宏的语法机制不好，容易出错，不支持调试，没有类型安全检查</p><p>于是C++有了内联函数</p><p><strong>内联函数的本质也是替换</strong></p><ol><li><p>debug可以打断点调试 (因为内联函数在debug时不会进行替换，所以可以进行调试)</p></li><li><p>不容易出错，写法和普通函数一样</p></li></ol><h4 id="特性："><a href="#特性：" class="headerlink" title="特性："></a>特性：</h4><ol><li>inline是一种以空间换时间的做法，如果编译器将函数当成内联函数处理，在编译阶段，会用函数体替 换函数调用，缺陷：可能会使目标文件变大，优势：少了调用开销，提高程序运行效率。</li><li>inline对于编译器而言只是一个建议，不同编译器关于inline实现机制可能不同，一般建议：将函数规 模较小(即函数不是很长，具体没有准确的说法，取决于编译器内部实现)、不是递归、频繁调用的函数 采用inline修饰，否则编译器会忽略inline特性。</li><li>inline不建议声明和定义分离，分离会导致链接错误。因为inline被展开，就没有函数地址了，链接就会在符号表里找不到函数。</li></ol><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>内联函数的关键子inline、缺省函数的缺省参数等，在函数声明或实现中只能出现一次，一般建议出现在声明中，实现中只是对于函数进行实现，声明是对外的接口，更能体现封装性</p><h4 id="【面试题】宏的优缺点"><a href="#【面试题】宏的优缺点" class="headerlink" title="【面试题】宏的优缺点"></a>【面试题】宏的优缺点</h4><p>宏的优点：</p><ol><li>增强代码的复用性</li><li>提高性能</li></ol><p>宏的缺点：</p><ol><li>不方便调试宏。（因为预编译阶段进行了替换）</li><li>导致代码可读性差，可维护性差，容易误用。</li><li>没有类型安全的检查</li></ol><p>C++中用什么方法代替宏？</p><ol><li>常量定义 换用const enum</li><li>短小函数定义 换用内联函数</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;inline修饰的函数叫做&lt;strong&gt;内联函数&lt;/strong&gt;，编译时C++编译器会在调用内联函数的地方展开</summary>
       
     
     

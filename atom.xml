@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-08-02T03:15:01.294Z</updated>
+  <updated>2023-08-31T03:32:18.884Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS &amp; macOS终端配置</title>
+    <link href="https://chunyujin.top/chunyujin/6e2ea259.html"/>
+    <id>https://chunyujin.top/chunyujin/6e2ea259.html</id>
+    <published>2023-08-31T03:29:00.000Z</published>
+    <updated>2023-08-31T03:32:18.884Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CentOS-amp-macOS终端配置"><a href="#CentOS-amp-macOS终端配置" class="headerlink" title="CentOS &amp; macOS终端配置"></a>CentOS &amp; macOS终端配置</h1><h2 id="终端美化（两系统通用）"><a href="#终端美化（两系统通用）" class="headerlink" title="终端美化（两系统通用）"></a>终端美化（两系统通用）</h2><h3 id="1-设置默认-shell-为-zsh"><a href="#1-设置默认-shell-为-zsh" class="headerlink" title="1.设置默认 shell 为 zsh"></a>1.设置默认 shell 为 zsh</h3><p>查看系统所有的 shell 列表</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure><p>设置默认 shell 为 zsh，它功能比较多，会好使一些。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure><h3 id="2-安装-oh-my-zsh"><a href="#2-安装-oh-my-zsh" class="headerlink" title="2.安装 oh-my-zsh"></a>2.安装 oh-my-zsh</h3><p>oh-my-zsh 是一款社区驱动的命令行工具，它基于 zsh 命令行，提供了主题配置，插件机制，大大提高了可玩（用）性。它的 Github 地址为：<a href="https://github.com/robbyrussell/oh-my-zsh">https://github.com/robbyrussell/oh-my-zsh</a></p><p>我们可以使用 curl 安装：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure><p>上面地址不行的话，可以尝试下面这个：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure><h3 id="3-配置命令自动提示、语法高亮"><a href="#3-配置命令自动提示、语法高亮" class="headerlink" title="3.配置命令自动提示、语法高亮"></a>3.配置命令自动提示、语法高亮</h3><h4 id="1⃣️命令自动提示："><a href="#1⃣️命令自动提示：" class="headerlink" title="1⃣️命令自动提示："></a>1⃣️命令自动提示：</h4><p>这里我们用到 zsh-autosuggestions 插件，它可以让终端提示我们接下来可能要输入的命令，按右键即可补齐，提高我们工作的效率。</p><p>首先，我们先将仓库克隆到 ～&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins 目录下</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH/custom/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure><h4 id="2⃣️语法高亮："><a href="#2⃣️语法高亮：" class="headerlink" title="2⃣️语法高亮："></a>2⃣️语法高亮：</h4><p>zsh-syntax-highlighting 语法高亮插件，作用：命令错误显示红色，直到你输入正确才会变绿色</p><p>安装如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure><h4 id="3⃣️配置文件内容，使上面功能被添加："><a href="#3⃣️配置文件内容，使上面功能被添加：" class="headerlink" title="3⃣️配置文件内容，使上面功能被添加："></a>3⃣️配置文件内容，使上面功能被添加：</h4><p>使用<code>vim ~/.zshrc</code>打开文件，找到其中的插件设置，默认是<code>plugins=(git)</code>，我们将其修改为：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Add wisely, as too many plugins slow down shell startup.</span></span><br><span class="line">plugins=(</span><br><span class="line">  git</span><br><span class="line">  zsh-autosuggestions</span><br><span class="line">  zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line">[ -f /usr/local/etc/profile.d/autojump.sh ] &amp;&amp; . /usr/local/etc/profile.d/autojump.sh</span><br><span class="line">source $ZSH/oh-my-zsh.sh</span><br></pre></td></tr></table></figure><blockquote><p>如果未安装vim，见下方vim安装教程</p></blockquote><h3 id="4-设置-zsh-主题"><a href="#4-设置-zsh-主题" class="headerlink" title="4.设置 zsh 主题"></a>4.设置 zsh 主题</h3><p>我们可以通过<code> vim ~/.zshrc</code> 命令打开 zsh 的配置文件，修改其中的<code> ZSH_THEME</code> 字段的值，进行主题的修改。</p><p>大家可以在 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/themes">https://github.com/ohmyzsh/ohmyzsh/wiki/themes</a> 链接中，选择自己喜欢的主题。</p><p>我选择的主题的是 crcandy，因为它选择的信息比较全，而且它不依赖其他的特殊字体，可以在不同的终端下正常显示。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=&quot;crcandy&quot;</span><br></pre></td></tr></table></figure><h2 id="CentOS配置"><a href="#CentOS配置" class="headerlink" title="CentOS配置"></a>CentOS配置</h2><h3 id="1-vim安装"><a href="#1-vim安装" class="headerlink" title="1.vim安装"></a>1.vim安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y vim</span><br></pre></td></tr></table></figure><h3 id="2-安装VimForCpp"><a href="#2-安装VimForCpp" class="headerlink" title="2.安装VimForCpp"></a>2.安装VimForCpp</h3><p>VimForCpp是由比特教育汤众老师开发的一款软件，帮助对vim配置方法不熟悉的新手封装的一键式vim环境安装包. 主要针对终端vim用户, 适合远程ssh连接Linux服务器进行开发的场景，将vim打造成一个cpp开发IDE</p><p>教程：<a href="https://gitee.com/c-yujin/vimforcpp">https://gitee.com/c-yujin/vimforcpp</a></p><h3 id="经常遇到的问题："><a href="#经常遇到的问题：" class="headerlink" title="经常遇到的问题："></a>经常遇到的问题：</h3><h4 id="1⃣️VimForCpp图标问题"><a href="#1⃣️VimForCpp图标问题" class="headerlink" title="1⃣️VimForCpp图标问题"></a>1⃣️VimForCpp图标问题</h4><p>有些shell下，VimForCpp可能会遇到图标无法正常显示的情况，可以按照原链接最下面的教程进行解决，如果无法解决，可以尝试以下方式，关闭图标显示：<br>使用<code>sudo vim ~./vimrc</code>进入配置文件，将<code>Plug &#39;ryanoasis/vim-devicons&#39;</code>注释掉即可</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202308311108325.png" alt="截屏2023-08-31 11.08.20" style="zoom:50%;" /><h4 id="2⃣️使用vim打开文件时，显示YouCompleteMe插件不支持此低版本vim"><a href="#2⃣️使用vim打开文件时，显示YouCompleteMe插件不支持此低版本vim" class="headerlink" title="2⃣️使用vim打开文件时，显示YouCompleteMe插件不支持此低版本vim"></a>2⃣️使用vim打开文件时，显示YouCompleteMe插件不支持此低版本vim</h4><p>由于VimForCpp使用了YouCompleteMe这款插件，若插件版本过高，vim版本低，就会出现此错误</p><p>解决方法：降级YouCompleteMe插件，或升级vim版本</p><h5 id="升级vim版本："><a href="#升级vim版本：" class="headerlink" title="升级vim版本："></a>升级vim版本：</h5><p>第一步，下载源码<br>到Vim官方Github仓库下载目前最新的Vim Release版本</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://codeload.github.com/vim/vim/tar.gz/v8.2.1258</span><br></pre></td></tr></table></figure><p>第二步，解压</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv v8.2.1258  vim-v8.2.1258.tar.gz</span><br><span class="line">tar -xvzf vim-v8.2.1258.tar.gz</span><br></pre></td></tr></table></figure><p>第三步，编译安装</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd vim-8.2.1258/</span><br><span class="line">./configure --prefix=$HOME/.local --enable-python3interp=yes &amp;&amp; make &amp;&amp; make install</span><br></pre></td></tr></table></figure><blockquote><p> 这里注意一下我们需要用configure配置一下安装的路径，将Vim8安装到自己账户的目录下，避免干扰到系统上的其他用户<br>–enable-python3interp&#x3D;yes 添加 python3 支持</p></blockquote><p>在这里可能会遇到 no terminal library found 错误：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">no terminal library found</span><br><span class="line">checking for tgetent()… configure: error: NOT FOUND!</span><br><span class="line">      You need to install a terminal library; for example ncurses.</span><br><span class="line">      Or specify the name of the library with –with-tlib.</span><br></pre></td></tr></table></figure><p>解决方法：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Ubuntu下解决方法：</span></span><br><span class="line"></span><br><span class="line">sudo apt install libncurses5-dev</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">CentOS 下</span></span><br><span class="line"></span><br><span class="line">yum install ncurses-devel.x86_64</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">完成后从头开始升级中的第一步</span></span><br></pre></td></tr></table></figure><p>第四步，链接<br>利用alias将vim指令定向到刚刚安装的vim8，同时修改.bashrc确保之后一直能生效</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias vim=&#x27;~/.local/bin/vim&#x27;</span><br><span class="line">echo &quot;alias vim=&#x27;~/.local/bin/vim&#x27;&quot; &gt;&gt; ~/.bashrc</span><br></pre></td></tr></table></figure><p>第五步，检查</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim --version</span><br></pre></td></tr></table></figure><p>参考文献：</p><p><a href="https://blog.csdn.net/songtianlun/article/details/107613659">Vim 版本升级（Vim8）</a></p><p><a href="https://blog.csdn.net/cuijianzhi/article/details/78652745">CentOS编译vim no terminal library found</a></p><h4 id="3⃣️使用vim打开一些文件时，使用键盘上下左右键变成了在文件中输入内容"><a href="#3⃣️使用vim打开一些文件时，使用键盘上下左右键变成了在文件中输入内容" class="headerlink" title="3⃣️使用vim打开一些文件时，使用键盘上下左右键变成了在文件中输入内容"></a>3⃣️使用vim打开一些文件时，使用键盘上下左右键变成了在文件中输入内容</h4><p>此情况多见于普通用户打开一些root权限文件，也可能是由于YouCompleteMe插件产生的bug</p><p>如下图，在正常模式下，使用键盘上下左右键翻页，变成了进入到插入模式下的输入字母”B”</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202308311126771.gif" alt="Aug-31-2023 11-25-58"></p><p>解决方法1:</p><p>使用hjkl移动光标，不使用键盘上下左右键</p><p>解决方法2:</p><p>在root权限下打开，即<code>sudo vim 文件</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;CentOS-amp-macOS终端配置&quot;&gt;&lt;a href=&quot;#CentOS-amp-macOS终端配置&quot; class=&quot;headerlink&quot; title=&quot;CentOS &amp;amp; macOS终端配置&quot;&gt;&lt;/a&gt;CentOS &amp;amp; macOS终端配置&lt;/</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Linux" scheme="https://chunyujin.top/categories/Skill/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
+    
+    <category term="CentOS" scheme="https://chunyujin.top/tags/CentOS/"/>
+    
+  </entry>
   
   <entry>
     <title>【怪物猎人冰原】武器介绍_片手</title>
@@ -71,19 +99,19 @@
   </entry>
   
   <entry>
-    <title>主题设置</title>
-    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
-    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
+    <title>文字颜色</title>
+    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
+    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.497Z</updated>
+    <updated>2023-04-11T13:32:16.000Z</updated>
     
-    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
+</summary>
       
     
     
@@ -98,19 +126,19 @@
   </entry>
   
   <entry>
-    <title>插入图片</title>
-    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
-    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
+    <title>主题设置</title>
+    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
+    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.498Z</updated>
+    <updated>2023-04-11T13:32:16.497Z</updated>
     
-    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
+    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
+    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
       
     
     
@@ -152,19 +180,19 @@
   </entry>
   
   <entry>
-    <title>文字颜色</title>
-    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
-    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
+    <title>插入图片</title>
+    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
+    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.000Z</updated>
+    <updated>2023-04-11T13:32:16.498Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
+    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
       
     
     
@@ -468,31 +496,6 @@
     
     
     <category term="MinGW" scheme="https://chunyujin.top/tags/MinGW/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++_前言</title>
-    <link href="https://chunyujin.top/chunyujin/2ef92d18.html"/>
-    <id>https://chunyujin.top/chunyujin/2ef92d18.html</id>
-    <published>2023-03-12T12:31:00.000Z</published>
-    <updated>2023-03-12T12:33:15.395Z</updated>
-    
-    <content type="html"><![CDATA[<p>此部分笔记只是对于课件的补充，具体应结合课件和板书来看</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;此部分笔记只是对于课件的补充，具体应结合课件和板书来看&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Cpp" scheme="https://chunyujin.top/categories/Cpp/"/>
-    
-    
-    <category term="Cpp" scheme="https://chunyujin.top/tags/Cpp/"/>
     
   </entry>
   

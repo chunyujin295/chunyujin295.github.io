@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-09-07T04:16:01.428Z</updated>
+  <updated>2023-09-07T04:21:35.672Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://chunyujin.top/chunyujin/dbf58e01.html"/>
     <id>https://chunyujin.top/chunyujin/dbf58e01.html</id>
     <published>2023-09-07T04:00:00.000Z</published>
-    <updated>2023-09-07T04:16:01.428Z</updated>
+    <updated>2023-09-07T04:21:35.672Z</updated>
     
-    <content type="html"><![CDATA[<p>test.h</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//函数的声明</span></span><br><span class="line"><span class="keyword">extern</span> <span class="type">void</span> <span class="title function_">show</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure><p>test.c</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;test.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">show</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>main.c</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;test.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">show();</span><br><span class="line">  </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>形成main.c的可执行程序hello：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o hello main.c test.c</span><br></pre></td></tr></table></figure><blockquote><p>注意：</p><ol><li>-o选项后面紧跟着的名称为可执行程序的名称，-o + ”可执行程序名称“可以出现在依赖对象的前面，也可以在后面。比如<code>gcc main.c test.c -o hello</code>也是可以的</li><li>gcc指令用于编译形成.c文件的可执行程序。g++指令用于编译形成.cpp或者.c文件的可执行程序。g++向下兼容，但是gcc只能编译.c文件。g++的大部分指令与gcc一致</li></ol></blockquote><p>这里可能会产生疑问：test.h里包含了show方法的声明，为什么不依赖这个头文件呢</p><p>因为头文件在预处理阶段已经在main.c 和test.c 里面展开了</p><p>makefile写法：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">makefile</span></span><br><span class="line">hello:main.c test.c </span><br><span class="line">gcc main.c test.c -o hello #此处开头一定是缩进</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">rm -f hello</span><br></pre></td></tr></table></figure><blockquote><ol><li>makefile文件是自顶向下执行的，只执行第一个行程目标文件的依赖方法</li><li>在makefile中，hello是目标文件，第一行的main.c 和test.c 为目标文件的依赖文件（依赖对象），<code>hello:main.c test.c </code>为二者的依赖关系，<code>gcc main.c test.c -o hello</code>为依赖方法</li><li>倒数第二行中，<code>clean:</code>也为一个依赖关系，依赖关系是可以没有依赖对象的，这个就没有。<code>.PHONY</code>为makefile里的一个关键字，作用是使后面的方法“总是被执行”<ol><li>每个文件都有三个时间：ACM时间<ol><li>A(ACCESS)：访问时间（读取时间）。在文件的操作中，读取是最频繁的（文件夹也属于文件），在Linux内核2.6、2.7之前，文件的每次访问都会刷新ACCESS时间，因此每次会消耗大量资源来复写文件ACCESS时间，效率极低。在更新之后，文件访问次数每次累计到一定值才会更新ACCESS时间为最后一次访问时间。</li><li>C(CHANGE)：改动时间。文件内容被修改的最后一次时间。</li><li>M(MODIFY)：更改时间。文件属性被修改的最后一次时间。文件大小、名称、权限等等都属于文件属性，所以文件内容的修改有时候也会影响文件属性，比如文件内容增多文件大小变大。</li></ol></li><li>一定是源文件先存在，然后通过编译，形成可执行程序，因此源文件M时间一定早于可执行程序M时间。如果源文件M时间早于可执行程序M时间，此时再进行编译，是不会产生新的可执行程序覆盖原可执行程序的，因为认为源文件没有改动，没必要重新生成可执行程序。当源文件更改之后，M时间会更新，肯定比原可执行程序新，此时再次进行编译，系统比对两者M时间之后发现源文件更新，因此会生成新的可执行程序覆盖原可执行程序。</li><li>“总是被执行”的意义就在于，无论依赖对象的M时间是否早于目标文件，都会执行依赖方法。因此<code>.PHONY:clean</code>作用就是无论可执行程序hello的新旧、是否存在，总是会执行<code>rm -f hello</code>来删除掉hello</li></ol></li><li>指令<code>make</code>来执行makefile里的生成可执行程序的依赖方法。指令<code>make clean</code>来执行makefile里面删除hello的方法</li></ol></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>test.h</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//函数的声明</span></span><br><span class="line"><span class="keyword">extern</span> <span class="type">void</span> <span class="title function_">show</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure><p>test.c</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;test.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">show</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>main.c</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;test.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">show();</span><br><span class="line">  </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>形成main.c的可执行程序hello：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o hello main.c test.c</span><br></pre></td></tr></table></figure><blockquote><p>注意：</p><ol><li>-o选项后面紧跟着的名称为可执行程序的名称，-o + ”可执行程序名称“可以出现在依赖对象的前面，也可以在后面。比如<code>gcc main.c test.c -o hello</code>也是可以的</li><li>gcc指令用于编译形成.c文件的可执行程序。g++指令用于编译形成.cpp或者.c文件的可执行程序。g++向下兼容，但是gcc只能编译.c文件。g++的大部分指令与gcc一致</li></ol></blockquote><p>这里可能会产生疑问：test.h里包含了show方法的声明，为什么不依赖这个头文件呢</p><p>因为头文件在预处理阶段已经在main.c 和test.c 里面展开了</p><p>makefile写法：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">makefile</span></span><br><span class="line">hello:main.c test.c </span><br><span class="line">gcc main.c test.c -o hello #此处开头一定是缩进</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">rm -f hello</span><br></pre></td></tr></table></figure><blockquote><ol><li>makefile文件是自顶向下执行的，只执行第一个行程目标文件的依赖方法</li><li>在makefile中，hello是目标文件，第一行的main.c 和test.c 为目标文件的依赖文件（依赖对象），<code>hello:main.c test.c </code>为二者的依赖关系，<code>gcc main.c test.c -o hello</code>为依赖方法</li><li>倒数第二行中，<code>clean:</code>也为一个依赖关系，依赖关系是可以没有依赖对象的，这个就没有。<code>.PHONY</code>为makefile里的一个关键字，作用是使后面的方法“总是被执行”<ol><li>每个文件都有三个时间：ACM时间<ol><li><p>A(ACCESS)：访问时间（读取时间）。在文件的操作中，读取是最频繁的（文件夹也属于文件），在Linux内核2.6、2.7之前，文件的每次访问都会刷新ACCESS时间，因此每次会消耗大量资源来复写文件ACCESS时间，效率极低。在更新之后，文件访问次数每次累计到一定值才会更新ACCESS时间为最后一次访问时间。</p></li><li><p>C(CHANGE)：改动时间。文件内容被修改的最后一次时间。</p></li><li><p>M(MODIFY)：更改时间。文件属性被修改的最后一次时间。文件大小、名称、权限等等都属于文件属性，所以文件内容的修改有时候也会影响文件属性，比如文件内容增多文件大小变大。</p></li><li><p>三个时间在系统下的显示顺序是A、M、C，指令<code>stat 文件</code>查看文件信息：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309071221082.png" alt="截屏2023-09-07 12.20.28" style="zoom:50%;" /></li></ol></li><li>一定是源文件先存在，然后通过编译，形成可执行程序，因此源文件M时间一定早于可执行程序M时间。如果源文件M时间早于可执行程序M时间，此时再进行编译，是不会产生新的可执行程序覆盖原可执行程序的，因为认为源文件没有改动，没必要重新生成可执行程序。当源文件更改之后，M时间会更新，肯定比原可执行程序新，此时再次进行编译，系统比对两者M时间之后发现源文件更新，因此会生成新的可执行程序覆盖原可执行程序。</li><li>“总是被执行”的意义就在于，无论依赖对象的M时间是否早于目标文件，都会执行依赖方法。因此<code>.PHONY:clean</code>作用就是无论可执行程序hello的新旧、是否存在，总是会执行<code>rm -f hello</code>来删除掉hello</li></ol></li><li>指令<code>make</code>来执行makefile里的生成可执行程序的依赖方法。指令<code>make clean</code>来执行makefile里面删除hello的方法</li></ol></blockquote>]]></content>
     
     
       
@@ -173,33 +173,6 @@
   </entry>
   
   <entry>
-    <title>主题设置</title>
-    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
-    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
-    <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.497Z</updated>
-    
-    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
-    
-    
-    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
     <title>插入图片</title>
     <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
     <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
@@ -227,19 +200,19 @@
   </entry>
   
   <entry>
-    <title>文字高亮</title>
-    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
-    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
+    <title>主题设置</title>
+    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
+    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.499Z</updated>
+    <updated>2023-04-11T13:32:16.497Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
+    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
+    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
       
     
     
@@ -267,6 +240,33 @@
       
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
 </summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
+    
+    
+    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文字高亮</title>
+    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
+    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
+    <published>2023-04-11T13:17:00.000Z</published>
+    <updated>2023-04-11T13:32:16.499Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
       
     
     

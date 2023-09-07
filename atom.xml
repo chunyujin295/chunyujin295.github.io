@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-09-06T08:38:13.215Z</updated>
+  <updated>2023-09-07T04:16:01.428Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个例子简单学习gcc和makefile</title>
+    <link href="https://chunyujin.top/chunyujin/dbf58e01.html"/>
+    <id>https://chunyujin.top/chunyujin/dbf58e01.html</id>
+    <published>2023-09-07T04:00:00.000Z</published>
+    <updated>2023-09-07T04:16:01.428Z</updated>
+    
+    <content type="html"><![CDATA[<p>test.h</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//函数的声明</span></span><br><span class="line"><span class="keyword">extern</span> <span class="type">void</span> <span class="title function_">show</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure><p>test.c</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;test.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">show</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>main.c</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;test.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">show();</span><br><span class="line">  </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>形成main.c的可执行程序hello：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o hello main.c test.c</span><br></pre></td></tr></table></figure><blockquote><p>注意：</p><ol><li>-o选项后面紧跟着的名称为可执行程序的名称，-o + ”可执行程序名称“可以出现在依赖对象的前面，也可以在后面。比如<code>gcc main.c test.c -o hello</code>也是可以的</li><li>gcc指令用于编译形成.c文件的可执行程序。g++指令用于编译形成.cpp或者.c文件的可执行程序。g++向下兼容，但是gcc只能编译.c文件。g++的大部分指令与gcc一致</li></ol></blockquote><p>这里可能会产生疑问：test.h里包含了show方法的声明，为什么不依赖这个头文件呢</p><p>因为头文件在预处理阶段已经在main.c 和test.c 里面展开了</p><p>makefile写法：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">makefile</span></span><br><span class="line">hello:main.c test.c </span><br><span class="line">gcc main.c test.c -o hello #此处开头一定是缩进</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">rm -f hello</span><br></pre></td></tr></table></figure><blockquote><ol><li>makefile文件是自顶向下执行的，只执行第一个行程目标文件的依赖方法</li><li>在makefile中，hello是目标文件，第一行的main.c 和test.c 为目标文件的依赖文件（依赖对象），<code>hello:main.c test.c </code>为二者的依赖关系，<code>gcc main.c test.c -o hello</code>为依赖方法</li><li>倒数第二行中，<code>clean:</code>也为一个依赖关系，依赖关系是可以没有依赖对象的，这个就没有。<code>.PHONY</code>为makefile里的一个关键字，作用是使后面的方法“总是被执行”<ol><li>每个文件都有三个时间：ACM时间<ol><li>A(ACCESS)：访问时间（读取时间）。在文件的操作中，读取是最频繁的（文件夹也属于文件），在Linux内核2.6、2.7之前，文件的每次访问都会刷新ACCESS时间，因此每次会消耗大量资源来复写文件ACCESS时间，效率极低。在更新之后，文件访问次数每次累计到一定值才会更新ACCESS时间为最后一次访问时间。</li><li>C(CHANGE)：改动时间。文件内容被修改的最后一次时间。</li><li>M(MODIFY)：更改时间。文件属性被修改的最后一次时间。文件大小、名称、权限等等都属于文件属性，所以文件内容的修改有时候也会影响文件属性，比如文件内容增多文件大小变大。</li></ol></li><li>一定是源文件先存在，然后通过编译，形成可执行程序，因此源文件M时间一定早于可执行程序M时间。如果源文件M时间早于可执行程序M时间，此时再进行编译，是不会产生新的可执行程序覆盖原可执行程序的，因为认为源文件没有改动，没必要重新生成可执行程序。当源文件更改之后，M时间会更新，肯定比原可执行程序新，此时再次进行编译，系统比对两者M时间之后发现源文件更新，因此会生成新的可执行程序覆盖原可执行程序。</li><li>“总是被执行”的意义就在于，无论依赖对象的M时间是否早于目标文件，都会执行依赖方法。因此<code>.PHONY:clean</code>作用就是无论可执行程序hello的新旧、是否存在，总是会执行<code>rm -f hello</code>来删除掉hello</li></ol></li><li>指令<code>make</code>来执行makefile里的生成可执行程序的依赖方法。指令<code>make clean</code>来执行makefile里面删除hello的方法</li></ol></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;test.h&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统作业：各大系统的区别</title>
@@ -359,32 +384,6 @@
   </entry>
   
   <entry>
-    <title>回溯法_资源</title>
-    <link href="https://chunyujin.top/chunyujin/19c828d.html"/>
-    <id>https://chunyujin.top/chunyujin/19c828d.html</id>
-    <published>2023-04-11T13:11:00.000Z</published>
-    <updated>2023-04-11T13:32:16.496Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNjY5NTYxNA==&action=getalbum&album_id=1607983171550167042&scene=173&from_msgid=2247485237&from_itemidx=1&count=3&nolastread=1#wechat_redirect">#回溯算法 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485237&idx=1&sn=1bae4c3d0d3965af44878093a5a49f58&chksm=f9a23464ced5bd72ff9ddcc9c70f69131a9e57e5c1aa674cc62551cd434c64f10a88395dce60&scene=21#wechat_redirect">关于回溯算法，你该了解这些！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485253&idx=1&sn=8332edaabc9bf43e45835bce7964ce88&chksm=f9a23414ced5bd02a80be49c91bb42f286ce1e15bbea77e6570470a4491c9da0f29160eba838&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：求组合问题！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485264&idx=1&sn=860006efeb344db329b555a8b2711769&chksm=f9a23401ced5bd17aa2d374c12c558fd2dcbb57d2aba799dd62e64a27e88027dbfa8677989ae&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：组合问题再剪剪枝 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485277&idx=1&sn=0553db6b5c5952094d536ae2b8c18124&chksm=f9a2340cced5bd1ab3ec69fb1209242081185eb90b1144aa29b5959d31e946237b67a011e3a8&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：求组合总和！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s/FLg8G6EjVcxBjwCbzpACPw">回溯算法：求组合总和（二） (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485360&idx=1&sn=2256a0f01a304d82a2b59252327f3edb&chksm=f9a234e1ced5bdf72f4f27d55618fdb185f324260a2776a266b497956b28c9f317a83b1bf36a&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：求组合总和（三）</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485295&idx=1&sn=35bd6c240a5a59d7ea6d9f98c09e7dbd&scene=21#wechat_redirect">回溯算法：电话号码的字母组合 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485372&idx=1&sn=29cc3421fb742faa57824b9a626342ad&scene=21#wechat_redirect">回溯算法：分割回文串</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485402&idx=1&sn=6963af3e2aa8d58e41b71d73d53ea8f6&chksm=f9a2348bced5bd9d50f845b9f2d671f3c1d6d5376e6c7d15f86b0c5a0320f2ae905dea11d082&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：求子集问题！</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485466&idx=1&sn=2b5420bca9b66356d777bc4530a224c5&chksm=f9a23b4bced5b25d254e721f131655fe5889137bf63c182ea0ed4dd6b62515a7798a6a566d8c&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：递增子序列</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485390&idx=1&sn=e95ad5b1c40f06fc18cd3fec54fd1cbc&chksm=f9a2349fced5bd89092073366fa77e0f3949dd75e5a7e3017e3d289551be10bdc6aa745b5f11&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：复原IP地址</a></p><p>还有更多内容</p><blockquote><p><a href="https://mp.weixin.qq.com/s/FLg8G6EjVcxBjwCbzpACPw">回溯算法：求组合总和（二） (qq.com)</a></p><p>这里面的图是有错误的？</p><p>在startIndex访问到后期的时候，数组中startIndex前面的数不会、也不需要被访问到，因为startIndex之前的数一定可以访问后面的，但是之后的数不需要也不能访问之前的，因为会造成结果的重复，只能访问startIndex位置以及之后位置的。并且按照代码流程走下来也确实如此。</p><p>原来的：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304062119069.png" alt="640" style="zoom:80%;" /><p>实际上应该是的：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304062120352.PNG" alt="IMG_1352"></p></blockquote><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485372&idx=1&sn=29cc3421fb742faa57824b9a626342ad&scene=21#wechat_redirect">回溯算法：分割回文串</a></p><p>不需要剪枝，或者说判断回文字符串本身就属于剪枝</p><blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304071014373.jpeg" alt="IMG_1354"></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNjY5NTYxNA==&amp;action=getalbum&amp;album_id=1607983171550167042&amp;scene=173&amp;from_msgid</summary>
-      
-    
-    
-    
-    <category term="算法分析与设计" scheme="https://chunyujin.top/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="回溯法" scheme="https://chunyujin.top/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/%E5%9B%9E%E6%BA%AF%E6%B3%95/"/>
-    
-    
-    <category term="算法分析与设计" scheme="https://chunyujin.top/tags/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>什么是解空间树</title>
     <link href="https://chunyujin.top/chunyujin/87a30441.html"/>
     <id>https://chunyujin.top/chunyujin/87a30441.html</id>
@@ -400,6 +399,32 @@
 &lt;p&gt;比较权威全面的方法可以参考百度&lt;/p&gt;
 &lt;p&gt;形象化描述：&lt;/p&gt;
 &lt;p&gt;递归的所有过程都可以通过树形结构来表述，回溯是递归的副产品，所以回溯也可以通过属性结构来表示，而且回溯的结果是树形结构的叶子节点，所以这个这个树形结构就是解空间树&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="算法分析与设计" scheme="https://chunyujin.top/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="回溯法" scheme="https://chunyujin.top/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/%E5%9B%9E%E6%BA%AF%E6%B3%95/"/>
+    
+    
+    <category term="算法分析与设计" scheme="https://chunyujin.top/tags/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>回溯法_资源</title>
+    <link href="https://chunyujin.top/chunyujin/19c828d.html"/>
+    <id>https://chunyujin.top/chunyujin/19c828d.html</id>
+    <published>2023-04-11T13:11:00.000Z</published>
+    <updated>2023-04-11T13:32:16.496Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNjY5NTYxNA==&action=getalbum&album_id=1607983171550167042&scene=173&from_msgid=2247485237&from_itemidx=1&count=3&nolastread=1#wechat_redirect">#回溯算法 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485237&idx=1&sn=1bae4c3d0d3965af44878093a5a49f58&chksm=f9a23464ced5bd72ff9ddcc9c70f69131a9e57e5c1aa674cc62551cd434c64f10a88395dce60&scene=21#wechat_redirect">关于回溯算法，你该了解这些！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485253&idx=1&sn=8332edaabc9bf43e45835bce7964ce88&chksm=f9a23414ced5bd02a80be49c91bb42f286ce1e15bbea77e6570470a4491c9da0f29160eba838&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：求组合问题！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485264&idx=1&sn=860006efeb344db329b555a8b2711769&chksm=f9a23401ced5bd17aa2d374c12c558fd2dcbb57d2aba799dd62e64a27e88027dbfa8677989ae&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：组合问题再剪剪枝 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485277&idx=1&sn=0553db6b5c5952094d536ae2b8c18124&chksm=f9a2340cced5bd1ab3ec69fb1209242081185eb90b1144aa29b5959d31e946237b67a011e3a8&cur_album_id=1485825793120387074&scene=189#wechat_redirect">回溯算法：求组合总和！ (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s/FLg8G6EjVcxBjwCbzpACPw">回溯算法：求组合总和（二） (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485360&idx=1&sn=2256a0f01a304d82a2b59252327f3edb&chksm=f9a234e1ced5bdf72f4f27d55618fdb185f324260a2776a266b497956b28c9f317a83b1bf36a&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：求组合总和（三）</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485295&idx=1&sn=35bd6c240a5a59d7ea6d9f98c09e7dbd&scene=21#wechat_redirect">回溯算法：电话号码的字母组合 (qq.com)</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485372&idx=1&sn=29cc3421fb742faa57824b9a626342ad&scene=21#wechat_redirect">回溯算法：分割回文串</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485402&idx=1&sn=6963af3e2aa8d58e41b71d73d53ea8f6&chksm=f9a2348bced5bd9d50f845b9f2d671f3c1d6d5376e6c7d15f86b0c5a0320f2ae905dea11d082&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：求子集问题！</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485466&idx=1&sn=2b5420bca9b66356d777bc4530a224c5&chksm=f9a23b4bced5b25d254e721f131655fe5889137bf63c182ea0ed4dd6b62515a7798a6a566d8c&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：递增子序列</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485390&idx=1&sn=e95ad5b1c40f06fc18cd3fec54fd1cbc&chksm=f9a2349fced5bd89092073366fa77e0f3949dd75e5a7e3017e3d289551be10bdc6aa745b5f11&scene=178&cur_album_id=1607983171550167042#rd">回溯算法：复原IP地址</a></p><p>还有更多内容</p><blockquote><p><a href="https://mp.weixin.qq.com/s/FLg8G6EjVcxBjwCbzpACPw">回溯算法：求组合总和（二） (qq.com)</a></p><p>这里面的图是有错误的？</p><p>在startIndex访问到后期的时候，数组中startIndex前面的数不会、也不需要被访问到，因为startIndex之前的数一定可以访问后面的，但是之后的数不需要也不能访问之前的，因为会造成结果的重复，只能访问startIndex位置以及之后位置的。并且按照代码流程走下来也确实如此。</p><p>原来的：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304062119069.png" alt="640" style="zoom:80%;" /><p>实际上应该是的：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304062120352.PNG" alt="IMG_1352"></p></blockquote><p><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247485372&idx=1&sn=29cc3421fb742faa57824b9a626342ad&scene=21#wechat_redirect">回溯算法：分割回文串</a></p><p>不需要剪枝，或者说判断回文字符串本身就属于剪枝</p><blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202304071014373.jpeg" alt="IMG_1354"></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNjY5NTYxNA==&amp;action=getalbum&amp;album_id=1607983171550167042&amp;scene=173&amp;from_msgid</summary>
       
     
     
@@ -519,32 +544,6 @@
     
     
     <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MinGW配置</title>
-    <link href="https://chunyujin.top/chunyujin/91f40f34.html"/>
-    <id>https://chunyujin.top/chunyujin/91f40f34.html</id>
-    <published>2023-03-17T12:48:00.000Z</published>
-    <updated>2023-03-17T12:57:05.660Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="安装MinGW"><a href="#安装MinGW" class="headerlink" title="安装MinGW"></a>安装MinGW</h4><p>相比在 Linux 平台上安装 GCC 编译环境，在 Windows 平台上安装 MinGW 是比较简单的，只需经历以下几个过程。</p><ol><li><p>打开 <a href="https://osdn.net/projects/mingw/">MinGW 官网</a>（点击即可进入官网），下载 MinGW 安装包。</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215731250.png" alt="image-20221215215731250" style="zoom:67%;" /></li><li><p>下载完成后，会得到一个名为 mingw-get-setup.exe 的安装包，双击打开它，可以看到如下的对话框：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215752602.png" alt="image-20221215215752602" style="zoom:67%;" /></li><li><p>直接点击“Install”，进入下面的对话框，自定义安装位置，然后选择continue</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215808186.png" alt="image-20221215215808186" style="zoom:67%;" /></li><li><p>进入安装 MinGW 配置器的界面。安装完成之后，得到一个名为 “MinGW Installer Manager” 的软件，借助它，可以随时根据需要修改 GCC 编译器的配置。点击“continue”,会自动弹出配置界面，如下所示：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215823311.png" alt="image-20221215215823311" style="zoom:67%;" /></li><li><p>为使 GCC 同时支持编译 C 语言和 C++，需勾选图中标注的 2 项。我们知道，GCC 还支持其它编程语言，读者可借助此配置器，随时实际需要安装自己需要的编译环境。勾选完成后，在菜单栏中选择<code>Installation -&gt; Apply Changes</code>，弹出如下对话框：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215215851706.png" alt="image-20221215215851706" style="zoom:67%;" /></li></ol><p>选择“Apply”。然后耐心等待，直至安装成功，即可关闭此界面。注意，整个安装过程中可能会提示某些组件下载失败，但没关系，后续需要时，可以通过 MinGw Installer（图 4 所示）安装界面中的 “All Packages”选项中，手动选择指定的安装包进行安装。</p><h4 id="添加到环境变量"><a href="#添加到环境变量" class="headerlink" title="添加到环境变量"></a>添加到环境变量</h4><p>打开<code>我的电脑</code>-&gt;<code>属性</code>-&gt;<code>高级系统设置</code>-&gt;<code>“高级”中的环境变量</code></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213001922.png" alt="image-20221215213001922" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213141396.png" alt="image-20221215213141396" style="zoom: 67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213248912.png" alt="image-20221215213248912" style="zoom:67%;" /><p>在上方的“用户变量”的Path变量中添加MinGW的bin的位置</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213407962.png" alt="image-20221215213407962" style="zoom:67%;" /><blockquote><p>也可以在下方的“系统变量”的Path中添加MinGW的bin的位置</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215213829809.png" alt="image-20221215213829809" style="zoom:67%;" /><p>环境变量、系统变量、用户变量的关系：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021" style="zoom: 50%;" /><p>环境变量只是一个总称，代表了系统变量和用户变量，因此我们说环境变量都是指的系统变量和用户变量。系统变量就是系统级别的变量，用户需要使用系统变量。如果系统变量被修改了，而任何系统用户都在用系统变量，因此每个系统用户都将受到影响。用户变量运行在系统变量之上的，每个用户拥有不同的用户变量，不同用户的用户变量之间是并列的，也是互不干扰的。</p></blockquote><h4 id="检验配置完成"><a href="#检验配置完成" class="headerlink" title="检验配置完成"></a>检验配置完成</h4><p>打开命令行提示符，输入<code>gcc -v</code>或者<code>g++ -v</code></p><p>出现下面则说明成功</p><img src = "https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" style="zoom: 67%;" >]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h4 id=&quot;安装MinGW&quot;&gt;&lt;a href=&quot;#安装MinGW&quot; class=&quot;headerlink&quot; title=&quot;安装MinGW&quot;&gt;&lt;/a&gt;安装MinGW&lt;/h4&gt;&lt;p&gt;相比在 Linux 平台上安装 GCC 编译环境，在 Windows 平台上安装 MinGW 是比较</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="IDE" scheme="https://chunyujin.top/categories/Skill/IDE/"/>
-    
-    
-    <category term="MinGW" scheme="https://chunyujin.top/tags/MinGW/"/>
     
   </entry>
   

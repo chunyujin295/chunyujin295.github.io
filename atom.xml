@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-09-07T04:21:35.672Z</updated>
+  <updated>2023-09-07T04:57:31.219Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一个例子简单学习gcc和makefile</title>
+    <title>一个例子简单学习gcc、makefile、程序执行过程</title>
     <link href="https://chunyujin.top/chunyujin/dbf58e01.html"/>
     <id>https://chunyujin.top/chunyujin/dbf58e01.html</id>
     <published>2023-09-07T04:00:00.000Z</published>
-    <updated>2023-09-07T04:21:35.672Z</updated>
+    <updated>2023-09-07T04:57:31.219Z</updated>
     
-    <content type="html"><![CDATA[<p>test.h</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//函数的声明</span></span><br><span class="line"><span class="keyword">extern</span> <span class="type">void</span> <span class="title function_">show</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure><p>test.c</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;test.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">show</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>main.c</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;test.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">show();</span><br><span class="line">  </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>形成main.c的可执行程序hello：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o hello main.c test.c</span><br></pre></td></tr></table></figure><blockquote><p>注意：</p><ol><li>-o选项后面紧跟着的名称为可执行程序的名称，-o + ”可执行程序名称“可以出现在依赖对象的前面，也可以在后面。比如<code>gcc main.c test.c -o hello</code>也是可以的</li><li>gcc指令用于编译形成.c文件的可执行程序。g++指令用于编译形成.cpp或者.c文件的可执行程序。g++向下兼容，但是gcc只能编译.c文件。g++的大部分指令与gcc一致</li></ol></blockquote><p>这里可能会产生疑问：test.h里包含了show方法的声明，为什么不依赖这个头文件呢</p><p>因为头文件在预处理阶段已经在main.c 和test.c 里面展开了</p><p>makefile写法：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">makefile</span></span><br><span class="line">hello:main.c test.c </span><br><span class="line">gcc main.c test.c -o hello #此处开头一定是缩进</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">rm -f hello</span><br></pre></td></tr></table></figure><blockquote><ol><li>makefile文件是自顶向下执行的，只执行第一个行程目标文件的依赖方法</li><li>在makefile中，hello是目标文件，第一行的main.c 和test.c 为目标文件的依赖文件（依赖对象），<code>hello:main.c test.c </code>为二者的依赖关系，<code>gcc main.c test.c -o hello</code>为依赖方法</li><li>倒数第二行中，<code>clean:</code>也为一个依赖关系，依赖关系是可以没有依赖对象的，这个就没有。<code>.PHONY</code>为makefile里的一个关键字，作用是使后面的方法“总是被执行”<ol><li>每个文件都有三个时间：ACM时间<ol><li><p>A(ACCESS)：访问时间（读取时间）。在文件的操作中，读取是最频繁的（文件夹也属于文件），在Linux内核2.6、2.7之前，文件的每次访问都会刷新ACCESS时间，因此每次会消耗大量资源来复写文件ACCESS时间，效率极低。在更新之后，文件访问次数每次累计到一定值才会更新ACCESS时间为最后一次访问时间。</p></li><li><p>C(CHANGE)：改动时间。文件内容被修改的最后一次时间。</p></li><li><p>M(MODIFY)：更改时间。文件属性被修改的最后一次时间。文件大小、名称、权限等等都属于文件属性，所以文件内容的修改有时候也会影响文件属性，比如文件内容增多文件大小变大。</p></li><li><p>三个时间在系统下的显示顺序是A、M、C，指令<code>stat 文件</code>查看文件信息：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309071221082.png" alt="截屏2023-09-07 12.20.28" style="zoom:50%;" /></li></ol></li><li>一定是源文件先存在，然后通过编译，形成可执行程序，因此源文件M时间一定早于可执行程序M时间。如果源文件M时间早于可执行程序M时间，此时再进行编译，是不会产生新的可执行程序覆盖原可执行程序的，因为认为源文件没有改动，没必要重新生成可执行程序。当源文件更改之后，M时间会更新，肯定比原可执行程序新，此时再次进行编译，系统比对两者M时间之后发现源文件更新，因此会生成新的可执行程序覆盖原可执行程序。</li><li>“总是被执行”的意义就在于，无论依赖对象的M时间是否早于目标文件，都会执行依赖方法。因此<code>.PHONY:clean</code>作用就是无论可执行程序hello的新旧、是否存在，总是会执行<code>rm -f hello</code>来删除掉hello</li></ol></li><li>指令<code>make</code>来执行makefile里的生成可执行程序的依赖方法。指令<code>make clean</code>来执行makefile里面删除hello的方法</li></ol></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>test.h</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//函数的声明</span></span><br><span class="line"><span class="keyword">extern</span> <span class="type">void</span> <span class="title function_">show</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure><p>test.c</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;test.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">show</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>main.c</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;test.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">show();</span><br><span class="line">  </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>形成main.c的可执行程序hello：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o hello main.c test.c</span><br></pre></td></tr></table></figure><blockquote><p>注意：</p><ol><li>-o选项后面紧跟着的名称为可执行程序的名称，-o + ”可执行程序名称“可以出现在依赖对象的前面，也可以在后面。比如<code>gcc main.c test.c -o hello</code>也是可以的</li><li>gcc指令用于编译形成.c文件的可执行程序。g++指令用于编译形成.cpp或者.c文件的可执行程序。g++向下兼容，但是gcc只能编译.c文件。g++的大部分指令与gcc一致</li></ol></blockquote><p>这里可能会产生疑问：test.h里包含了show方法的声明，为什么不依赖这个头文件呢</p><p>因为头文件在预处理阶段已经在main.c 和test.c 里面展开了</p><p>makefile写法：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">makefile</span></span><br><span class="line">hello:main.c test.c </span><br><span class="line">gcc main.c test.c -o hello #此处开头一定是缩进</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">rm -f hello</span><br></pre></td></tr></table></figure><blockquote><ol><li>makefile文件是自顶向下执行的，只执行第一个行程目标文件的依赖方法</li><li>在makefile中，hello是目标文件，第一行的main.c 和test.c 为目标文件的依赖文件（依赖对象），<code>hello:main.c test.c </code>为二者的依赖关系，<code>gcc main.c test.c -o hello</code>为依赖方法</li><li>倒数第二行中，<code>clean:</code>也为一个依赖关系，依赖关系是可以没有依赖对象的，这个就没有。<code>.PHONY</code>为makefile里的一个关键字，作用是使后面的方法“总是被执行”<ol><li>每个文件都有三个时间：ACM时间<ol><li><p>A(ACCESS)：访问时间（读取时间）。在文件的操作中，读取是最频繁的（文件夹也属于文件），在Linux内核2.6、2.7之前，文件的每次访问都会刷新ACCESS时间，因此每次会消耗大量资源来复写文件ACCESS时间，效率极低。在更新之后，文件访问次数每次累计到一定值才会更新ACCESS时间为最后一次访问时间。</p></li><li><p>C(CHANGE)：改动时间。文件内容被修改的最后一次时间。</p></li><li><p>M(MODIFY)：更改时间。文件属性被修改的最后一次时间。文件大小、名称、权限等等都属于文件属性，所以文件内容的修改有时候也会影响文件属性，比如文件内容增多文件大小变大。</p></li><li><p>三个时间在系统下的显示顺序是A、M、C，指令<code>stat 文件</code>查看文件信息：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309071221082.png" alt="截屏2023-09-07 12.20.28" style="zoom:50%;" /></li></ol></li><li>一定是源文件先存在，然后通过编译，形成可执行程序，因此源文件M时间一定早于可执行程序M时间。如果源文件M时间早于可执行程序M时间，此时再进行编译，是不会产生新的可执行程序覆盖原可执行程序的，因为认为源文件没有改动，没必要重新生成可执行程序。当源文件更改之后，M时间会更新，肯定比原可执行程序新，此时再次进行编译，系统比对两者M时间之后发现源文件更新，因此会生成新的可执行程序覆盖原可执行程序。</li><li>“总是被执行”的意义就在于，无论依赖对象的M时间是否早于目标文件，都会执行依赖方法。因此<code>.PHONY:clean</code>作用就是无论可执行程序hello的新旧、是否存在，总是会执行<code>rm -f hello</code>来删除掉hello</li></ol></li><li>指令<code>make</code>来执行makefile里的生成可执行程序的依赖方法。指令<code>make clean</code>来执行makefile里面删除hello的方法</li></ol></blockquote><p>c、cpp程序执行过程：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309071236125.png" alt="截屏2023-09-07 12.35.10" style="zoom: 33%;" /><p>.c .h <strong>预处理</strong>（头文件展开等） 形成.i  </p><blockquote><p>gcc指令为<code>gcc -E test.h test.c</code>，可以加-o选项指定生成的名称，默认名称跟.c文件的名称一样，下同</p></blockquote><p><strong>编译</strong>形成 .s汇编文件</p><blockquote><p>gcc指令为<code>gcc -S test.i</code></p></blockquote><p><strong>汇编</strong>形成 .o二进制文件（目标文件）</p><blockquote><p>gcc指令为<code>gcc -c test.s</code></p><p>此处“目标文件”含义和上面makefile中的“目标文件”含义不同，makefile中的含义是目标要形成的文件，而此处的名字就叫做”目标文件“</p></blockquote><p>（与库文件）<strong>链接</strong>形成 -out可执行程序</p><blockquote><p>gcc指令为<code>gcc test.s</code>，默认生成文件名称为a.out，可以加-o选项指定名称，名称可不加.out后缀</p></blockquote><blockquote><p>文件后缀的记忆方法：iso </p><p>gcc指令的记忆方法：ESc，c是小写</p></blockquote><p>注意，gcc指令是的含义是”进行到这一步为止“，因此每步的gcc指令并不依赖上一步的生成的文件</p><p>比如可以直接令.c文件进行到汇编结束，生成.o文件<code>gcc -c test.c</code></p><p>或者直接.c文件生成可执行程序<code>gcc test.c</code></p><p>在一般的编译器下，会保留生成.o目标文件，然后将目标文件统一链接形成可执行文件</p><p>几个.c源文件就会生成几个.o目标文件</p><p>如果想要在makefile中，先形成.o目标文件，然后再链接形成可执行文件，写法为：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">hello:test.o main.o</span><br><span class="line">gcc test.o main.o -o hello</span><br><span class="line">test.o:test.c</span><br><span class="line">gcc -c test.c</span><br><span class="line">main.o:main.c</span><br><span class="line">gcc -c main.c</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">rm -f *.o hello</span><br></pre></td></tr></table></figure><blockquote><ol><li>makefile自顶向下执行，在执行第一条的时候，找不到依赖的.o文件，会向下执行和寻找</li><li>clean此处使用了通配符*，删除当前目录下所有.o结尾的文件</li></ol></blockquote><p>更多内容查看<a href="https://chunyujin.top/chunyujin/81144cba">“Makefile初学指南”</a></p>]]></content>
     
     
       
@@ -173,33 +173,6 @@
   </entry>
   
   <entry>
-    <title>插入图片</title>
-    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
-    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
-    <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.498Z</updated>
-    
-    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
-    
-    
-    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
     <title>主题设置</title>
     <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
     <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
@@ -227,19 +200,19 @@
   </entry>
   
   <entry>
-    <title>文字颜色</title>
-    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
-    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
+    <title>插入图片</title>
+    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
+    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.000Z</updated>
+    <updated>2023-04-11T13:32:16.498Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
+    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
       
     
     
@@ -281,6 +254,33 @@
   </entry>
   
   <entry>
+    <title>文字颜色</title>
+    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
+    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
+    <published>2023-04-11T13:17:00.000Z</published>
+    <updated>2023-04-11T13:32:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
+    
+    
+    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何使用磁力链接</title>
     <link href="https://chunyujin.top/chunyujin/ac21c363.html"/>
     <id>https://chunyujin.top/chunyujin/ac21c363.html</id>
@@ -308,6 +308,30 @@
   </entry>
   
   <entry>
+    <title>摩尔投票法_多数元素(绝对众数)</title>
+    <link href="https://chunyujin.top/chunyujin/4eceace9.html"/>
+    <id>https://chunyujin.top/chunyujin/4eceace9.html</id>
+    <published>2023-04-11T13:13:00.000Z</published>
+    <updated>2023-04-11T13:32:16.494Z</updated>
+    
+    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/">408 时间复杂度为 O(n)、空间复杂度为 O(1) - 多数元素 - 力扣（LeetCode）</a>)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230404232915115.png" alt="image-20230404232915115" style="zoom: 80%;" /><p>一般有以下三种思路：</p><ol><li><p>暴力求解，从第一个元素开始记录，遇到与第一个元素值相同的元素就计数+1，当某个元素的个数大于等于n&#x2F;2的时候，说明就是这个元素最多</p></li><li><p>先排序，后返回容器中第n&#x2F;2个元素</p></li><li><p>摩尔投票法：</p><blockquote><p>解决的问题是如何在任意多的候选人（选票无序），选出获得票数最多的那个。</p><p>（解决绝对众数的问题：如果一个元素出现的次数大于等于其他所有数出现的次数之和，那么这个数就是绝对众数，也就是说如n个数里如果有一个数的数量大于等于n&#x2F;2，这个数就是绝对众数）</p><p>形象化描述：</p><blockquote><p>想象着这样一个画面：</p><p>会议大厅站满了投票代表，每个都有一个牌子上面写着自己所选的候选人的名字。然后选举意见不合的（所选的候选人不同）两个人，会打一架，并且会同时击倒对方。显而易见，如果一个人拥有的选票比其它所有人加起来的选票还要多的话，这个候选人将会赢得这场“战争”，当混乱结束，最后剩下的那个代表（可能会有多个）将会来自多数人所站的阵营。</p><p>但是如果所有参加候选人的选票都不是大多数（选票都未超过一半），那么最后站在那的代表（一个人）并不能代表所有的选票的大多数。因此，当某人站到最后时，需要统计他所选的候选人的选票是否超过一半（包括倒下的），来判断选票结果是否有效。</p></blockquote><p>在本题中，显然是一定有一个候选人的选票达到大半的</p><p>算法的描述：</p><blockquote><p>我们维护一个 x ，表示当前的候选人，然后维护一个 num，用来表示当前候选人的选票数 。对于每一张新的选票，如果它投给了当前的候选人，就把 num 加1，否则就把 num 减1（也许你可以想象成，B的一个狂热支持者去把A的一个支持者揍了一顿，然后两个人都没法投票）。特别地，计票过程中如果 num&#x3D;0 ，我们可以认为目前谁都没有优势，所以新的选票投给谁，谁就成为新的候选人。</p><blockquote><p>如果我们要求的是众数，这样的做法并不能给出正确答案，但如果要求的是绝对众数（<strong>且绝对众数确实存在</strong>），那么 n 一定是正确的。</p><p>这是因为，在最后计票时，我们知道有 num 张票投给了 x ，假如绝对众数另有其人，那么一定是剩下的票投出来的。但剩下的 x− num 张票都是在“捉对厮杀”的过程中被抵消掉的，每一对被抵消的票都来自不同的候选人，所以一个候选人最多在这里拿到 n−num&#x2F;2 票，这不可能大于 n&#x2F;2 。但绝对众数确实存在，所以这个绝对众数就一定是 m 。</p><p>如果绝对众数不存在，摩尔投票会给出一个错误的解，所以一定要记得验证答案。</p></blockquote></blockquote><p>算法的实现</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">0</span>, num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(num = <span class="number">0</span>)</span><br><span class="line">        x = A[i];</span><br><span class="line">    <span class="keyword">if</span>(A[i] == x)</span><br><span class="line">        num++;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        num--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果实际情况下绝对众数本身就是不存在的，那么会得到一个错误的解，此时需要进行一下验证</span></span><br></pre></td></tr></table></figure></blockquote><p>摩尔投票法的进阶：</p><p>简单的摩尔投票法只是能找到一个选票最多的。但是如果要求选出N个人，这个N个人只要满足票数大于1&#x2F;(N+1)就可以，也是可以摩尔投票法的思想，只是需要进行一下修改</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x[N], num[N];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> e : nums) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="built_in">find</span>(x, x + N, e) - x;</span><br><span class="line">    <span class="keyword">if</span> (i != N) &#123; <span class="comment">// 如果当前票投给了候选人之一</span></span><br><span class="line">        num[i]++;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> j = <span class="built_in">find</span>(num, num + N, <span class="number">0</span>) - num;</span><br><span class="line">    <span class="keyword">if</span> (j != N) &#123; <span class="comment">// 如果当前存在一个位置&quot;虚位以待&quot;</span></span><br><span class="line">        x[j] = e;</span><br><span class="line">        num[j] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : num)</span><br><span class="line">        c--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最后需要验证答案是否符合要求</span></span><br></pre></td></tr></table></figure><blockquote><p>原理是一样的。最后我们可以把票分为2个部分：投给了最多 N 个候选人的一部分，和被抵消的一部分。后者可以划分为若干个 N+1 元组，每个元组内的票都来自不同的候选人。因此，只有那些属于第一部分的人的票数可能超过总数的 1&#x2F;(N+1) 。</p></blockquote></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/&quot;&gt;408 时间复杂度为 O(n)、空间</summary>
+      
+    
+    
+    
+    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
+    
+    
+    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>建立字符表_有效的字母异位词</title>
     <link href="https://chunyujin.top/chunyujin/a309d3c0.html"/>
     <id>https://chunyujin.top/chunyujin/a309d3c0.html</id>
@@ -321,30 +345,6 @@
       
     <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/valid-anagram/comments/&quot;&gt;242. 有效的字母异位词 - 力扣（LeetCode）&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://map--dep</summary>
-      
-    
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>摩尔投票法_多数元素(绝对众数)</title>
-    <link href="https://chunyujin.top/chunyujin/4eceace9.html"/>
-    <id>https://chunyujin.top/chunyujin/4eceace9.html</id>
-    <published>2023-04-11T13:13:00.000Z</published>
-    <updated>2023-04-11T13:32:16.494Z</updated>
-    
-    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/">408 时间复杂度为 O(n)、空间复杂度为 O(1) - 多数元素 - 力扣（LeetCode）</a>)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230404232915115.png" alt="image-20230404232915115" style="zoom: 80%;" /><p>一般有以下三种思路：</p><ol><li><p>暴力求解，从第一个元素开始记录，遇到与第一个元素值相同的元素就计数+1，当某个元素的个数大于等于n&#x2F;2的时候，说明就是这个元素最多</p></li><li><p>先排序，后返回容器中第n&#x2F;2个元素</p></li><li><p>摩尔投票法：</p><blockquote><p>解决的问题是如何在任意多的候选人（选票无序），选出获得票数最多的那个。</p><p>（解决绝对众数的问题：如果一个元素出现的次数大于等于其他所有数出现的次数之和，那么这个数就是绝对众数，也就是说如n个数里如果有一个数的数量大于等于n&#x2F;2，这个数就是绝对众数）</p><p>形象化描述：</p><blockquote><p>想象着这样一个画面：</p><p>会议大厅站满了投票代表，每个都有一个牌子上面写着自己所选的候选人的名字。然后选举意见不合的（所选的候选人不同）两个人，会打一架，并且会同时击倒对方。显而易见，如果一个人拥有的选票比其它所有人加起来的选票还要多的话，这个候选人将会赢得这场“战争”，当混乱结束，最后剩下的那个代表（可能会有多个）将会来自多数人所站的阵营。</p><p>但是如果所有参加候选人的选票都不是大多数（选票都未超过一半），那么最后站在那的代表（一个人）并不能代表所有的选票的大多数。因此，当某人站到最后时，需要统计他所选的候选人的选票是否超过一半（包括倒下的），来判断选票结果是否有效。</p></blockquote><p>在本题中，显然是一定有一个候选人的选票达到大半的</p><p>算法的描述：</p><blockquote><p>我们维护一个 x ，表示当前的候选人，然后维护一个 num，用来表示当前候选人的选票数 。对于每一张新的选票，如果它投给了当前的候选人，就把 num 加1，否则就把 num 减1（也许你可以想象成，B的一个狂热支持者去把A的一个支持者揍了一顿，然后两个人都没法投票）。特别地，计票过程中如果 num&#x3D;0 ，我们可以认为目前谁都没有优势，所以新的选票投给谁，谁就成为新的候选人。</p><blockquote><p>如果我们要求的是众数，这样的做法并不能给出正确答案，但如果要求的是绝对众数（<strong>且绝对众数确实存在</strong>），那么 n 一定是正确的。</p><p>这是因为，在最后计票时，我们知道有 num 张票投给了 x ，假如绝对众数另有其人，那么一定是剩下的票投出来的。但剩下的 x− num 张票都是在“捉对厮杀”的过程中被抵消掉的，每一对被抵消的票都来自不同的候选人，所以一个候选人最多在这里拿到 n−num&#x2F;2 票，这不可能大于 n&#x2F;2 。但绝对众数确实存在，所以这个绝对众数就一定是 m 。</p><p>如果绝对众数不存在，摩尔投票会给出一个错误的解，所以一定要记得验证答案。</p></blockquote></blockquote><p>算法的实现</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">0</span>, num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(num = <span class="number">0</span>)</span><br><span class="line">        x = A[i];</span><br><span class="line">    <span class="keyword">if</span>(A[i] == x)</span><br><span class="line">        num++;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        num--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果实际情况下绝对众数本身就是不存在的，那么会得到一个错误的解，此时需要进行一下验证</span></span><br></pre></td></tr></table></figure></blockquote><p>摩尔投票法的进阶：</p><p>简单的摩尔投票法只是能找到一个选票最多的。但是如果要求选出N个人，这个N个人只要满足票数大于1&#x2F;(N+1)就可以，也是可以摩尔投票法的思想，只是需要进行一下修改</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x[N], num[N];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> e : nums) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="built_in">find</span>(x, x + N, e) - x;</span><br><span class="line">    <span class="keyword">if</span> (i != N) &#123; <span class="comment">// 如果当前票投给了候选人之一</span></span><br><span class="line">        num[i]++;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> j = <span class="built_in">find</span>(num, num + N, <span class="number">0</span>) - num;</span><br><span class="line">    <span class="keyword">if</span> (j != N) &#123; <span class="comment">// 如果当前存在一个位置&quot;虚位以待&quot;</span></span><br><span class="line">        x[j] = e;</span><br><span class="line">        num[j] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : num)</span><br><span class="line">        c--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最后需要验证答案是否符合要求</span></span><br></pre></td></tr></table></figure><blockquote><p>原理是一样的。最后我们可以把票分为2个部分：投给了最多 N 个候选人的一部分，和被抵消的一部分。后者可以划分为若干个 N+1 元组，每个元组内的票都来自不同的候选人。因此，只有那些属于第一部分的人的票数可能超过总数的 1&#x2F;(N+1) 。</p></blockquote></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/&quot;&gt;408 时间复杂度为 O(n)、空间</summary>
       
     
     

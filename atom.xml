@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-09-07T04:57:31.219Z</updated>
+  <updated>2023-09-09T03:25:07.830Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>回车vs换行</title>
+    <link href="https://chunyujin.top/chunyujin/70e96f28.html"/>
+    <id>https://chunyujin.top/chunyujin/70e96f28.html</id>
+    <published>2023-09-07T09:00:00.000Z</published>
+    <updated>2023-09-09T03:25:07.830Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="回车vs换行"><a href="#回车vs换行" class="headerlink" title="回车vs换行"></a>回车vs换行</h1><p>回车和换行都只是一个单纯的动作</p><p>回车：光标移动到当前行的最开始 \r</p><p>换行：光标保持当前位置，仅向下平移一行 \n</p><blockquote><p>回车：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309071656179.gif" alt="Sep-07-2023 16-55-14"></p><p>换行：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309071656462.gif" alt="Sep-07-2023 16-55-51"></p></blockquote><p>我们平时说的“回车”或者“换行”，以及C语言中的换行符“\n”，其实是 回车+换行   \r+\n</p><p>就是先回车后换行：先移动到当前行的最开始，再移动到下一行</p><p>或者先换行后回车：先移动到下一行，再移动到最开始</p><blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309071658062.gif" alt="Sep-07-2023 16-58-34"></p></blockquote><p>C语言中\n会清空缓冲区</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;回车vs换行&quot;&gt;&lt;a href=&quot;#回车vs换行&quot; class=&quot;headerlink&quot; title=&quot;回车vs换行&quot;&gt;&lt;/a&gt;回车vs换行&lt;/h1&gt;&lt;p&gt;回车和换行都只是一个单纯的动作&lt;/p&gt;
+&lt;p&gt;回车：光标移动到当前行的最开始 \r&lt;/p&gt;
+&lt;p&gt;换行：光标</summary>
+      
+    
+    
+    
+    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
+    
+    <category term="Linux" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>一个例子简单学习gcc、makefile、程序执行过程</title>
@@ -200,33 +228,6 @@
   </entry>
   
   <entry>
-    <title>插入图片</title>
-    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
-    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
-    <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.498Z</updated>
-    
-    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
-    
-    
-    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
     <title>文字高亮</title>
     <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
     <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
@@ -281,6 +282,33 @@
   </entry>
   
   <entry>
+    <title>插入图片</title>
+    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
+    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
+    <published>2023-04-11T13:17:00.000Z</published>
+    <updated>2023-04-11T13:32:16.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
+    
+    
+    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何使用磁力链接</title>
     <link href="https://chunyujin.top/chunyujin/ac21c363.html"/>
     <id>https://chunyujin.top/chunyujin/ac21c363.html</id>
@@ -308,30 +336,6 @@
   </entry>
   
   <entry>
-    <title>摩尔投票法_多数元素(绝对众数)</title>
-    <link href="https://chunyujin.top/chunyujin/4eceace9.html"/>
-    <id>https://chunyujin.top/chunyujin/4eceace9.html</id>
-    <published>2023-04-11T13:13:00.000Z</published>
-    <updated>2023-04-11T13:32:16.494Z</updated>
-    
-    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/">408 时间复杂度为 O(n)、空间复杂度为 O(1) - 多数元素 - 力扣（LeetCode）</a>)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230404232915115.png" alt="image-20230404232915115" style="zoom: 80%;" /><p>一般有以下三种思路：</p><ol><li><p>暴力求解，从第一个元素开始记录，遇到与第一个元素值相同的元素就计数+1，当某个元素的个数大于等于n&#x2F;2的时候，说明就是这个元素最多</p></li><li><p>先排序，后返回容器中第n&#x2F;2个元素</p></li><li><p>摩尔投票法：</p><blockquote><p>解决的问题是如何在任意多的候选人（选票无序），选出获得票数最多的那个。</p><p>（解决绝对众数的问题：如果一个元素出现的次数大于等于其他所有数出现的次数之和，那么这个数就是绝对众数，也就是说如n个数里如果有一个数的数量大于等于n&#x2F;2，这个数就是绝对众数）</p><p>形象化描述：</p><blockquote><p>想象着这样一个画面：</p><p>会议大厅站满了投票代表，每个都有一个牌子上面写着自己所选的候选人的名字。然后选举意见不合的（所选的候选人不同）两个人，会打一架，并且会同时击倒对方。显而易见，如果一个人拥有的选票比其它所有人加起来的选票还要多的话，这个候选人将会赢得这场“战争”，当混乱结束，最后剩下的那个代表（可能会有多个）将会来自多数人所站的阵营。</p><p>但是如果所有参加候选人的选票都不是大多数（选票都未超过一半），那么最后站在那的代表（一个人）并不能代表所有的选票的大多数。因此，当某人站到最后时，需要统计他所选的候选人的选票是否超过一半（包括倒下的），来判断选票结果是否有效。</p></blockquote><p>在本题中，显然是一定有一个候选人的选票达到大半的</p><p>算法的描述：</p><blockquote><p>我们维护一个 x ，表示当前的候选人，然后维护一个 num，用来表示当前候选人的选票数 。对于每一张新的选票，如果它投给了当前的候选人，就把 num 加1，否则就把 num 减1（也许你可以想象成，B的一个狂热支持者去把A的一个支持者揍了一顿，然后两个人都没法投票）。特别地，计票过程中如果 num&#x3D;0 ，我们可以认为目前谁都没有优势，所以新的选票投给谁，谁就成为新的候选人。</p><blockquote><p>如果我们要求的是众数，这样的做法并不能给出正确答案，但如果要求的是绝对众数（<strong>且绝对众数确实存在</strong>），那么 n 一定是正确的。</p><p>这是因为，在最后计票时，我们知道有 num 张票投给了 x ，假如绝对众数另有其人，那么一定是剩下的票投出来的。但剩下的 x− num 张票都是在“捉对厮杀”的过程中被抵消掉的，每一对被抵消的票都来自不同的候选人，所以一个候选人最多在这里拿到 n−num&#x2F;2 票，这不可能大于 n&#x2F;2 。但绝对众数确实存在，所以这个绝对众数就一定是 m 。</p><p>如果绝对众数不存在，摩尔投票会给出一个错误的解，所以一定要记得验证答案。</p></blockquote></blockquote><p>算法的实现</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">0</span>, num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(num = <span class="number">0</span>)</span><br><span class="line">        x = A[i];</span><br><span class="line">    <span class="keyword">if</span>(A[i] == x)</span><br><span class="line">        num++;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        num--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果实际情况下绝对众数本身就是不存在的，那么会得到一个错误的解，此时需要进行一下验证</span></span><br></pre></td></tr></table></figure></blockquote><p>摩尔投票法的进阶：</p><p>简单的摩尔投票法只是能找到一个选票最多的。但是如果要求选出N个人，这个N个人只要满足票数大于1&#x2F;(N+1)就可以，也是可以摩尔投票法的思想，只是需要进行一下修改</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x[N], num[N];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> e : nums) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="built_in">find</span>(x, x + N, e) - x;</span><br><span class="line">    <span class="keyword">if</span> (i != N) &#123; <span class="comment">// 如果当前票投给了候选人之一</span></span><br><span class="line">        num[i]++;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> j = <span class="built_in">find</span>(num, num + N, <span class="number">0</span>) - num;</span><br><span class="line">    <span class="keyword">if</span> (j != N) &#123; <span class="comment">// 如果当前存在一个位置&quot;虚位以待&quot;</span></span><br><span class="line">        x[j] = e;</span><br><span class="line">        num[j] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : num)</span><br><span class="line">        c--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最后需要验证答案是否符合要求</span></span><br></pre></td></tr></table></figure><blockquote><p>原理是一样的。最后我们可以把票分为2个部分：投给了最多 N 个候选人的一部分，和被抵消的一部分。后者可以划分为若干个 N+1 元组，每个元组内的票都来自不同的候选人。因此，只有那些属于第一部分的人的票数可能超过总数的 1&#x2F;(N+1) 。</p></blockquote></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/&quot;&gt;408 时间复杂度为 O(n)、空间</summary>
-      
-    
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-  </entry>
-  
-  <entry>
     <title>建立字符表_有效的字母异位词</title>
     <link href="https://chunyujin.top/chunyujin/a309d3c0.html"/>
     <id>https://chunyujin.top/chunyujin/a309d3c0.html</id>
@@ -345,6 +349,30 @@
       
     <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/valid-anagram/comments/&quot;&gt;242. 有效的字母异位词 - 力扣（LeetCode）&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://map--dep</summary>
+      
+    
+    
+    
+    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
+    
+    
+    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>摩尔投票法_多数元素(绝对众数)</title>
+    <link href="https://chunyujin.top/chunyujin/4eceace9.html"/>
+    <id>https://chunyujin.top/chunyujin/4eceace9.html</id>
+    <published>2023-04-11T13:13:00.000Z</published>
+    <updated>2023-04-11T13:32:16.494Z</updated>
+    
+    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/">408 时间复杂度为 O(n)、空间复杂度为 O(1) - 多数元素 - 力扣（LeetCode）</a>)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230404232915115.png" alt="image-20230404232915115" style="zoom: 80%;" /><p>一般有以下三种思路：</p><ol><li><p>暴力求解，从第一个元素开始记录，遇到与第一个元素值相同的元素就计数+1，当某个元素的个数大于等于n&#x2F;2的时候，说明就是这个元素最多</p></li><li><p>先排序，后返回容器中第n&#x2F;2个元素</p></li><li><p>摩尔投票法：</p><blockquote><p>解决的问题是如何在任意多的候选人（选票无序），选出获得票数最多的那个。</p><p>（解决绝对众数的问题：如果一个元素出现的次数大于等于其他所有数出现的次数之和，那么这个数就是绝对众数，也就是说如n个数里如果有一个数的数量大于等于n&#x2F;2，这个数就是绝对众数）</p><p>形象化描述：</p><blockquote><p>想象着这样一个画面：</p><p>会议大厅站满了投票代表，每个都有一个牌子上面写着自己所选的候选人的名字。然后选举意见不合的（所选的候选人不同）两个人，会打一架，并且会同时击倒对方。显而易见，如果一个人拥有的选票比其它所有人加起来的选票还要多的话，这个候选人将会赢得这场“战争”，当混乱结束，最后剩下的那个代表（可能会有多个）将会来自多数人所站的阵营。</p><p>但是如果所有参加候选人的选票都不是大多数（选票都未超过一半），那么最后站在那的代表（一个人）并不能代表所有的选票的大多数。因此，当某人站到最后时，需要统计他所选的候选人的选票是否超过一半（包括倒下的），来判断选票结果是否有效。</p></blockquote><p>在本题中，显然是一定有一个候选人的选票达到大半的</p><p>算法的描述：</p><blockquote><p>我们维护一个 x ，表示当前的候选人，然后维护一个 num，用来表示当前候选人的选票数 。对于每一张新的选票，如果它投给了当前的候选人，就把 num 加1，否则就把 num 减1（也许你可以想象成，B的一个狂热支持者去把A的一个支持者揍了一顿，然后两个人都没法投票）。特别地，计票过程中如果 num&#x3D;0 ，我们可以认为目前谁都没有优势，所以新的选票投给谁，谁就成为新的候选人。</p><blockquote><p>如果我们要求的是众数，这样的做法并不能给出正确答案，但如果要求的是绝对众数（<strong>且绝对众数确实存在</strong>），那么 n 一定是正确的。</p><p>这是因为，在最后计票时，我们知道有 num 张票投给了 x ，假如绝对众数另有其人，那么一定是剩下的票投出来的。但剩下的 x− num 张票都是在“捉对厮杀”的过程中被抵消掉的，每一对被抵消的票都来自不同的候选人，所以一个候选人最多在这里拿到 n−num&#x2F;2 票，这不可能大于 n&#x2F;2 。但绝对众数确实存在，所以这个绝对众数就一定是 m 。</p><p>如果绝对众数不存在，摩尔投票会给出一个错误的解，所以一定要记得验证答案。</p></blockquote></blockquote><p>算法的实现</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">0</span>, num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(num = <span class="number">0</span>)</span><br><span class="line">        x = A[i];</span><br><span class="line">    <span class="keyword">if</span>(A[i] == x)</span><br><span class="line">        num++;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        num--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果实际情况下绝对众数本身就是不存在的，那么会得到一个错误的解，此时需要进行一下验证</span></span><br></pre></td></tr></table></figure></blockquote><p>摩尔投票法的进阶：</p><p>简单的摩尔投票法只是能找到一个选票最多的。但是如果要求选出N个人，这个N个人只要满足票数大于1&#x2F;(N+1)就可以，也是可以摩尔投票法的思想，只是需要进行一下修改</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x[N], num[N];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> e : nums) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="built_in">find</span>(x, x + N, e) - x;</span><br><span class="line">    <span class="keyword">if</span> (i != N) &#123; <span class="comment">// 如果当前票投给了候选人之一</span></span><br><span class="line">        num[i]++;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> j = <span class="built_in">find</span>(num, num + N, <span class="number">0</span>) - num;</span><br><span class="line">    <span class="keyword">if</span> (j != N) &#123; <span class="comment">// 如果当前存在一个位置&quot;虚位以待&quot;</span></span><br><span class="line">        x[j] = e;</span><br><span class="line">        num[j] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : num)</span><br><span class="line">        c--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最后需要验证答案是否符合要求</span></span><br></pre></td></tr></table></figure><blockquote><p>原理是一样的。最后我们可以把票分为2个部分：投给了最多 N 个候选人的一部分，和被抵消的一部分。后者可以划分为若干个 N+1 元组，每个元组内的票都来自不同的候选人。因此，只有那些属于第一部分的人的票数可能超过总数的 1&#x2F;(N+1) 。</p></blockquote></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/&quot;&gt;408 时间复杂度为 O(n)、空间</summary>
       
     
     
@@ -515,35 +543,6 @@
     
     
     <category term="Java" scheme="https://chunyujin.top/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++_输入</title>
-    <link href="https://chunyujin.top/chunyujin/52566707.html"/>
-    <id>https://chunyujin.top/chunyujin/52566707.html</id>
-    <published>2023-03-17T12:55:00.000Z</published>
-    <updated>2023-03-17T12:57:05.661Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="C-中的输入"><a href="#C-中的输入" class="headerlink" title="C++中的输入"></a>C++中的输入</h1><ul><li>C++中使用<code>cin</code>对象来获取用户的输入</li></ul><p><code>cin</code>是一个标准输入流对象，即是<code>istream</code>类的对象</p><p><code>cin</code>是全局变量</p><p><code>cin</code>对象”连接”到标准输入设备(一般是用户的键盘)，用来存储IO流中的输入的数据(保存在<code>cin</code>的输入流缓冲区中)</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line">cin &gt;&gt; i;</span><br></pre></td></tr></table></figure><p><code>cin &gt;&gt; i</code>在执行时</p><ul><li><p>系统从cin的输入流缓冲区中获取数据</p><ul><li><p>如果cin的输入流缓冲区中没有数据，则等待用户在控制台输入数据，然后<mark style="background-color:pink">按下回车，将数据送入<code>cin</code>的输入流缓冲区</mark></p><blockquote><p>输入的数据只有在缓冲区才能被读取</p><p>空格、tab、换行符，也都是数据，分别是<code>&#39; &#39;</code>  <code>&#39;\t&#39;</code> <code>&#39;\n&#39;</code>  </p><p>键盘上的回车键对应的是输入<code>&#39;\r&#39;</code>，输入后，会将数据送入缓冲区，并且<code>&#39;\r&#39;</code>变成<code>&#39;\n&#39;</code>保存在缓冲区数据的最后面，作为分隔符</p></blockquote></li></ul></li><li><p>然后将<code>cin</code>输入流缓冲区的数据赋值给<code>i</code></p></li></ul><p><font color = red><code>cin</code>输入流缓冲区保存数据的形式本质上是二进制，根据上下文(被赋值对象的类型)，将数据以被赋值对象的类型赋值给被赋值对象</font></p><p>比如</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> a;</span><br><span class="line">cin &gt;&gt; a;</span><br></pre></td></tr></table></figure><p>如果在控制台中输入<code>65</code>，<code>cin</code>输入流缓冲区的数据赋值给<code>a</code>的时候，按照<code>a</code>的类型<code>char</code>，赋值给<code>a</code>的数据是<code>&#39;A&#39;</code></p><p>这跟从控制台中输入<code>A</code>的作用是一样的，因为它们的数据一样，只是上下文不同，含义不同</p><blockquote><p>”流“</p><p>像是一个管道，或者说队列</p><p>先流入的先流出，后流入的后流出</p><p>在向输入流输入数据的时候，数据流入到输入流，先输入的在前面，后输入的在后面</p><p>在向输入流获取数据的时候，数据流出输入流，先获取前面的数据，再获取后面的数据</p></blockquote><blockquote><p>cin的输入流缓冲区中保存用户输入的所有数据，根据指令将数据从前向后依次赋值给对象，若缓冲区为空，则从控制台中获取新输入的数据到输入流缓冲区</p><blockquote><p>所以并不是需要输入一个数据的时候输入一个数据，而是可以一次性将多个数据输入，在需要的时候从缓冲区取</p></blockquote></blockquote><blockquote><p>根据被赋值对象类型的不同、操作方式不同，cin从缓冲区读取数据的方式也不同</p><p>比如：</p><p>在控制台输入<code>1 2 3 4 5 6 7 </code>，每个数字之间有空格</p><p>输入之后要按下回车，将数据送入到标准输入缓冲区，cin的输入缓冲区变成了<code>1 2 3 4 5 6 7&#39;\n&#39;</code></p><p>如果执行</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line">cin &gt;&gt; i；</span><br></pre></td></tr></table></figure><p>因为<code>i</code>是一个整形，则系统会将<code>cin</code>输入流<code>1 2 3 4 5 6 7&#39;\n&#39;</code>中分隔符之前的数据作为整形赋值给<code>i</code></p><blockquote><p><font color=blue>正如上面所说，数据并不是按照整形或者字符存储在缓冲区的，而是二进制，这里这样表示是为了直观</font></p></blockquote><p>此时以空格<code>&#39; &#39;</code>、tab<code>&#39;\t&#39;</code>和换行符<code>&#39;\n&#39;</code>作为分隔符，遇到分隔符就停止获取，此时是将<code>1</code>赋值给<code>i</code>，<code>cin</code>输入流缓冲区中剩下的数据是<code>2 3 4 5 6 7\n</code></p><blockquote><p><mark style="background-color">此时<code>cin</code>的输入流缓冲区在获取数据的时候，空格<code>&#39; &#39;</code>、tab<code>&#39;\t&#39;</code>、换行符<code>&#39;\n&#39;</code>等是作为分隔符的。</mark></p><blockquote><p><mark style="background-color">并且此时如果分隔符在有效数据之前，会自动将分隔符忽略掉，直到获取的数据是有效数据而不是分隔符</mark></p><p>比如</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> a;</span><br><span class="line">cin &gt;&gt; a;</span><br></pre></td></tr></table></figure><p>如果输入<code>&quot;               A&quot;</code>(A之前很多空格)，<code>A</code>是才有效数据，<code>A</code>之前的空格是分隔符，在从<code>cin</code>的输入流缓冲区获取数据的时候，会自动忽略<code>A</code>之前的分隔符空格，只获取有效数据<code>A</code></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303151642907.png" alt="截屏2023-03-15 16.41.29" style="zoom:50%;" /></blockquote><p>书接上回，如果再执行</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string a;</span><br><span class="line">cin &gt;&gt; a;</span><br></pre></td></tr></table></figure><p><code>a</code>中只会获取<code>&quot;2&quot;</code>，因为2后面的空格是分隔符</p><p>我们下面不用这个方式进行演示，假设上面这行代码没有写入</p></blockquote><p>如果此时再向控制台输入<code>hello world</code>并按下回车，输入的数据会送入到cin的输入流缓冲区，现在cin的输入流缓冲区的数据是<code>2 3 4 5 6 7&#39;\n&#39;hello world\n&#39;</code></p><p>如果再执行</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string x;</span><br><span class="line"><span class="built_in">getline</span>(cin,x);</span><br><span class="line"><span class="comment">//getline是C++标准库函数，分为两种形式(重载)，只知道此处的作用是可以获取cin缓冲区中一行数据(字符串)赋值给字符串x，也就是可以获取换行符之前的所以数据，包括空格</span></span><br><span class="line"><span class="comment">//getline是从cin缓冲区中获取制定类型的数据，类似的还有getchar,getchar等，这样就好理解了</span></span><br></pre></td></tr></table></figure><p><mark style="background-color">此时空格<code>&#39; &#39;</code>就不作为分隔符了，因为空格在这里作为一个字符<code>&#39; &#39;</code>，分隔符是换行符<code>&#39;\n&#39;</code></mark>，指令<code>getline(cin,x)</code>会将cin输入流缓冲区中分隔符之前的所有数据赋值给x，x中的数据是<code>&quot;2 3 4 5 6 7&quot;</code></p><p><code>cin</code>输入流缓冲区剩下的是<code>hello world\n&#39;</code></p><p>如果再执行</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string y;</span><br><span class="line"><span class="built_in">getline</span>(cin,y);</span><br></pre></td></tr></table></figure><p>则<code>y</code>中的数据是<code>hello world</code>，<code>cin</code>输入数据流中没有数据了</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;C-中的输入&quot;&gt;&lt;a href=&quot;#C-中的输入&quot; class=&quot;headerlink&quot; title=&quot;C++中的输入&quot;&gt;&lt;/a&gt;C++中的输入&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;C++中使用&lt;code&gt;cin&lt;/code&gt;对象来获取用户的输入&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
-    
-    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
-    
-    
-    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
     
   </entry>
   

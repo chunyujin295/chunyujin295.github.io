@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-09-24T08:00:55.002Z</updated>
+  <updated>2023-09-24T08:03:16.818Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://chunyujin.top/chunyujin/174f5f3e.html"/>
     <id>https://chunyujin.top/chunyujin/174f5f3e.html</id>
     <published>2023-09-24T08:00:00.000Z</published>
-    <updated>2023-09-24T08:00:55.002Z</updated>
+    <updated>2023-09-24T08:03:16.818Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Linux下gdb使用gdb命令时显示找不到文件"><a href="#Linux下gdb使用gdb命令时显示找不到文件" class="headerlink" title="Linux下gdb使用gdb命令时显示找不到文件"></a>Linux下gdb使用gdb命令时显示找不到文件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">报错信息如下：</span><br><span class="line">No symbol table is loaded.  Use the &quot;file&quot; command.</span><br></pre></td></tr></table></figure><p>原因：在编译时没有使用对应选项生成可调试文件</p><p>解决方法：在编译时，在依赖文件前加入 -g选项</p><p>更改前makefile的部分内容：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">process: process.c</span><br><span class="line">gcc -o process process.c</span><br></pre></td></tr></table></figure><p>更改后：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">process: process.c</span><br><span class="line">gcc -g process.c -o process</span><br></pre></td></tr></table></figure><blockquote><p>注意事项，关于 gcc 命令后面文件的顺序问题</p><ol><li>-o 选项没有明确要求依赖文件和目标文件的前后顺序，因为在第一行中已经指出了依赖文件和目标文件。所以-o、目标文件、依赖文件三者何种顺序都可以</li><li>-g 选项唯一要求就是后面紧跟依赖文件，其他无要求</li></ol></blockquote>]]></content>
     
@@ -229,19 +229,19 @@
   </entry>
   
   <entry>
-    <title>插入图片</title>
-    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
-    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
+    <title>主题设置</title>
+    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
+    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.498Z</updated>
+    <updated>2023-04-11T13:32:16.497Z</updated>
     
-    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
+    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
+    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
       
     
     
@@ -283,19 +283,19 @@
   </entry>
   
   <entry>
-    <title>文字高亮</title>
-    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
-    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
+    <title>插入图片</title>
+    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
+    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.499Z</updated>
+    <updated>2023-04-11T13:32:16.498Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
+    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
+    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
       
     
     
@@ -310,19 +310,19 @@
   </entry>
   
   <entry>
-    <title>主题设置</title>
-    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
-    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
+    <title>文字高亮</title>
+    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
+    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.497Z</updated>
+    <updated>2023-04-11T13:32:16.499Z</updated>
     
-    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
+    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
       
     
     
@@ -364,6 +364,30 @@
   </entry>
   
   <entry>
+    <title>摩尔投票法_多数元素(绝对众数)</title>
+    <link href="https://chunyujin.top/chunyujin/4eceace9.html"/>
+    <id>https://chunyujin.top/chunyujin/4eceace9.html</id>
+    <published>2023-04-11T13:13:00.000Z</published>
+    <updated>2023-04-11T13:32:16.494Z</updated>
+    
+    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/">408 时间复杂度为 O(n)、空间复杂度为 O(1) - 多数元素 - 力扣（LeetCode）</a>)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230404232915115.png" alt="image-20230404232915115" style="zoom: 80%;" /><p>一般有以下三种思路：</p><ol><li><p>暴力求解，从第一个元素开始记录，遇到与第一个元素值相同的元素就计数+1，当某个元素的个数大于等于n&#x2F;2的时候，说明就是这个元素最多</p></li><li><p>先排序，后返回容器中第n&#x2F;2个元素</p></li><li><p>摩尔投票法：</p><blockquote><p>解决的问题是如何在任意多的候选人（选票无序），选出获得票数最多的那个。</p><p>（解决绝对众数的问题：如果一个元素出现的次数大于等于其他所有数出现的次数之和，那么这个数就是绝对众数，也就是说如n个数里如果有一个数的数量大于等于n&#x2F;2，这个数就是绝对众数）</p><p>形象化描述：</p><blockquote><p>想象着这样一个画面：</p><p>会议大厅站满了投票代表，每个都有一个牌子上面写着自己所选的候选人的名字。然后选举意见不合的（所选的候选人不同）两个人，会打一架，并且会同时击倒对方。显而易见，如果一个人拥有的选票比其它所有人加起来的选票还要多的话，这个候选人将会赢得这场“战争”，当混乱结束，最后剩下的那个代表（可能会有多个）将会来自多数人所站的阵营。</p><p>但是如果所有参加候选人的选票都不是大多数（选票都未超过一半），那么最后站在那的代表（一个人）并不能代表所有的选票的大多数。因此，当某人站到最后时，需要统计他所选的候选人的选票是否超过一半（包括倒下的），来判断选票结果是否有效。</p></blockquote><p>在本题中，显然是一定有一个候选人的选票达到大半的</p><p>算法的描述：</p><blockquote><p>我们维护一个 x ，表示当前的候选人，然后维护一个 num，用来表示当前候选人的选票数 。对于每一张新的选票，如果它投给了当前的候选人，就把 num 加1，否则就把 num 减1（也许你可以想象成，B的一个狂热支持者去把A的一个支持者揍了一顿，然后两个人都没法投票）。特别地，计票过程中如果 num&#x3D;0 ，我们可以认为目前谁都没有优势，所以新的选票投给谁，谁就成为新的候选人。</p><blockquote><p>如果我们要求的是众数，这样的做法并不能给出正确答案，但如果要求的是绝对众数（<strong>且绝对众数确实存在</strong>），那么 n 一定是正确的。</p><p>这是因为，在最后计票时，我们知道有 num 张票投给了 x ，假如绝对众数另有其人，那么一定是剩下的票投出来的。但剩下的 x− num 张票都是在“捉对厮杀”的过程中被抵消掉的，每一对被抵消的票都来自不同的候选人，所以一个候选人最多在这里拿到 n−num&#x2F;2 票，这不可能大于 n&#x2F;2 。但绝对众数确实存在，所以这个绝对众数就一定是 m 。</p><p>如果绝对众数不存在，摩尔投票会给出一个错误的解，所以一定要记得验证答案。</p></blockquote></blockquote><p>算法的实现</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">0</span>, num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(num = <span class="number">0</span>)</span><br><span class="line">        x = A[i];</span><br><span class="line">    <span class="keyword">if</span>(A[i] == x)</span><br><span class="line">        num++;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        num--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果实际情况下绝对众数本身就是不存在的，那么会得到一个错误的解，此时需要进行一下验证</span></span><br></pre></td></tr></table></figure></blockquote><p>摩尔投票法的进阶：</p><p>简单的摩尔投票法只是能找到一个选票最多的。但是如果要求选出N个人，这个N个人只要满足票数大于1&#x2F;(N+1)就可以，也是可以摩尔投票法的思想，只是需要进行一下修改</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x[N], num[N];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> e : nums) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="built_in">find</span>(x, x + N, e) - x;</span><br><span class="line">    <span class="keyword">if</span> (i != N) &#123; <span class="comment">// 如果当前票投给了候选人之一</span></span><br><span class="line">        num[i]++;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> j = <span class="built_in">find</span>(num, num + N, <span class="number">0</span>) - num;</span><br><span class="line">    <span class="keyword">if</span> (j != N) &#123; <span class="comment">// 如果当前存在一个位置&quot;虚位以待&quot;</span></span><br><span class="line">        x[j] = e;</span><br><span class="line">        num[j] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : num)</span><br><span class="line">        c--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最后需要验证答案是否符合要求</span></span><br></pre></td></tr></table></figure><blockquote><p>原理是一样的。最后我们可以把票分为2个部分：投给了最多 N 个候选人的一部分，和被抵消的一部分。后者可以划分为若干个 N+1 元组，每个元组内的票都来自不同的候选人。因此，只有那些属于第一部分的人的票数可能超过总数的 1&#x2F;(N+1) 。</p></blockquote></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/&quot;&gt;408 时间复杂度为 O(n)、空间</summary>
+      
+    
+    
+    
+    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
+    
+    
+    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>建立字符表_有效的字母异位词</title>
     <link href="https://chunyujin.top/chunyujin/a309d3c0.html"/>
     <id>https://chunyujin.top/chunyujin/a309d3c0.html</id>
@@ -377,30 +401,6 @@
       
     <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/valid-anagram/comments/&quot;&gt;242. 有效的字母异位词 - 力扣（LeetCode）&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://map--dep</summary>
-      
-    
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>摩尔投票法_多数元素(绝对众数)</title>
-    <link href="https://chunyujin.top/chunyujin/4eceace9.html"/>
-    <id>https://chunyujin.top/chunyujin/4eceace9.html</id>
-    <published>2023-04-11T13:13:00.000Z</published>
-    <updated>2023-04-11T13:32:16.494Z</updated>
-    
-    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/">408 时间复杂度为 O(n)、空间复杂度为 O(1) - 多数元素 - 力扣（LeetCode）</a>)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230404232915115.png" alt="image-20230404232915115" style="zoom: 80%;" /><p>一般有以下三种思路：</p><ol><li><p>暴力求解，从第一个元素开始记录，遇到与第一个元素值相同的元素就计数+1，当某个元素的个数大于等于n&#x2F;2的时候，说明就是这个元素最多</p></li><li><p>先排序，后返回容器中第n&#x2F;2个元素</p></li><li><p>摩尔投票法：</p><blockquote><p>解决的问题是如何在任意多的候选人（选票无序），选出获得票数最多的那个。</p><p>（解决绝对众数的问题：如果一个元素出现的次数大于等于其他所有数出现的次数之和，那么这个数就是绝对众数，也就是说如n个数里如果有一个数的数量大于等于n&#x2F;2，这个数就是绝对众数）</p><p>形象化描述：</p><blockquote><p>想象着这样一个画面：</p><p>会议大厅站满了投票代表，每个都有一个牌子上面写着自己所选的候选人的名字。然后选举意见不合的（所选的候选人不同）两个人，会打一架，并且会同时击倒对方。显而易见，如果一个人拥有的选票比其它所有人加起来的选票还要多的话，这个候选人将会赢得这场“战争”，当混乱结束，最后剩下的那个代表（可能会有多个）将会来自多数人所站的阵营。</p><p>但是如果所有参加候选人的选票都不是大多数（选票都未超过一半），那么最后站在那的代表（一个人）并不能代表所有的选票的大多数。因此，当某人站到最后时，需要统计他所选的候选人的选票是否超过一半（包括倒下的），来判断选票结果是否有效。</p></blockquote><p>在本题中，显然是一定有一个候选人的选票达到大半的</p><p>算法的描述：</p><blockquote><p>我们维护一个 x ，表示当前的候选人，然后维护一个 num，用来表示当前候选人的选票数 。对于每一张新的选票，如果它投给了当前的候选人，就把 num 加1，否则就把 num 减1（也许你可以想象成，B的一个狂热支持者去把A的一个支持者揍了一顿，然后两个人都没法投票）。特别地，计票过程中如果 num&#x3D;0 ，我们可以认为目前谁都没有优势，所以新的选票投给谁，谁就成为新的候选人。</p><blockquote><p>如果我们要求的是众数，这样的做法并不能给出正确答案，但如果要求的是绝对众数（<strong>且绝对众数确实存在</strong>），那么 n 一定是正确的。</p><p>这是因为，在最后计票时，我们知道有 num 张票投给了 x ，假如绝对众数另有其人，那么一定是剩下的票投出来的。但剩下的 x− num 张票都是在“捉对厮杀”的过程中被抵消掉的，每一对被抵消的票都来自不同的候选人，所以一个候选人最多在这里拿到 n−num&#x2F;2 票，这不可能大于 n&#x2F;2 。但绝对众数确实存在，所以这个绝对众数就一定是 m 。</p><p>如果绝对众数不存在，摩尔投票会给出一个错误的解，所以一定要记得验证答案。</p></blockquote></blockquote><p>算法的实现</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">0</span>, num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(num = <span class="number">0</span>)</span><br><span class="line">        x = A[i];</span><br><span class="line">    <span class="keyword">if</span>(A[i] == x)</span><br><span class="line">        num++;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        num--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果实际情况下绝对众数本身就是不存在的，那么会得到一个错误的解，此时需要进行一下验证</span></span><br></pre></td></tr></table></figure></blockquote><p>摩尔投票法的进阶：</p><p>简单的摩尔投票法只是能找到一个选票最多的。但是如果要求选出N个人，这个N个人只要满足票数大于1&#x2F;(N+1)就可以，也是可以摩尔投票法的思想，只是需要进行一下修改</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x[N], num[N];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> e : nums) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="built_in">find</span>(x, x + N, e) - x;</span><br><span class="line">    <span class="keyword">if</span> (i != N) &#123; <span class="comment">// 如果当前票投给了候选人之一</span></span><br><span class="line">        num[i]++;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> j = <span class="built_in">find</span>(num, num + N, <span class="number">0</span>) - num;</span><br><span class="line">    <span class="keyword">if</span> (j != N) &#123; <span class="comment">// 如果当前存在一个位置&quot;虚位以待&quot;</span></span><br><span class="line">        x[j] = e;</span><br><span class="line">        num[j] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : num)</span><br><span class="line">        c--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最后需要验证答案是否符合要求</span></span><br></pre></td></tr></table></figure><blockquote><p>原理是一样的。最后我们可以把票分为2个部分：投给了最多 N 个候选人的一部分，和被抵消的一部分。后者可以划分为若干个 N+1 元组，每个元组内的票都来自不同的候选人。因此，只有那些属于第一部分的人的票数可能超过总数的 1&#x2F;(N+1) 。</p></blockquote></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/&quot;&gt;408 时间复杂度为 O(n)、空间</summary>
       
     
     

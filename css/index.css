@@ -3288,7 +3288,7 @@ h1.page-title + .tag-cloud-list {
 }
 #page-header #site-title {
   margin: 0;
-  color: var(--white);
+  color: var(--black);
   font-size: 1.85em;
 }
 @media screen and (min-width: 768px) {
@@ -3297,7 +3297,7 @@ h1.page-title + .tag-cloud-list {
   }
 }
 #page-header #site-subtitle {
-  color: var(--light-grey);
+  color: var(--black-grey);
   font-size: 1.15em;
 }
 @media screen and (min-width: 768px) {
@@ -3904,7 +3904,7 @@ h1.page-title + .tag-cloud-list {
 #article-container kbd {
   margin: 0 3px;
   padding: 3px 5px;
-  border: 1px solid #000;
+  border: 1px solid #b4b4b4;
   border-radius: 3px;
   background-color: #f8f8f8;
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), 0 2px 1px 0 rgba(255,255,255,0.6) inset;

@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-09-24T09:21:18.282Z</updated>
+  <updated>2023-09-24T09:21:39.634Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://chunyujin.top/chunyujin/ebc9f1b9.html"/>
     <id>https://chunyujin.top/chunyujin/ebc9f1b9.html</id>
     <published>2023-09-24T09:20:00.000Z</published>
-    <updated>2023-09-24T09:21:18.282Z</updated>
+    <updated>2023-09-24T09:21:39.634Z</updated>
     
     <content type="html"><![CDATA[<h1 id="vim批量注释-x2F-删除注释"><a href="#vim批量注释-x2F-删除注释" class="headerlink" title="vim批量注释&#x2F;删除注释"></a>vim批量注释&#x2F;删除注释</h1><p>注释：</p><ol><li><p>control + v 进入 V-BLOCK模式（可视化块模式）</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309241717010.png" alt="1" style="zoom: 33%;" /></li><li><p>使用上下（k、j）移动选定要注释的行【左右（h、l）则是选择列】</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309241717087.png" alt="2" style="zoom: 33%;" /></li><li><p>shift + i （大写i）进入插入模式</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309241717530.png" alt="3" style="zoom:33%;" /></li><li><p>输入注释符 &#x2F;&#x2F; 或 #</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309241718984.png" alt="4" style="zoom:33%;" /></li><li><p>连续按两次ESC，完成</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309241718806.png" alt="5" style="zoom:33%;" /></li></ol><p>删除注释：</p><ol><li><p>control + v 进入 V-BLOCK模式（可视化块模式）</p></li><li><p>使用上下（k、j）移动选定要注释的行，如果注释为 &#x2F;&#x2F;，则使用左右（h、l）选择两列</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309241718058.png" alt="6" style="zoom:33%;" /></li><li><p>d，删除注释</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202309241718849.png" alt="7" style="zoom:33%;" /></li></ol>]]></content>
     
@@ -50,7 +50,7 @@
     <link href="https://chunyujin.top/chunyujin/174f5f3e.html"/>
     <id>https://chunyujin.top/chunyujin/174f5f3e.html</id>
     <published>2023-09-24T08:00:00.000Z</published>
-    <updated>2023-09-24T08:03:41.281Z</updated>
+    <updated>2023-09-24T08:03:41.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Linux下gdb使用gdb命令时显示找不到文件"><a href="#Linux下gdb使用gdb命令时显示找不到文件" class="headerlink" title="Linux下gdb使用gdb命令时显示找不到文件"></a>Linux下gdb使用gdb命令时显示找不到文件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">报错信息如下：</span><br><span class="line">No symbol table is loaded.  Use the &quot;file&quot; command.</span><br></pre></td></tr></table></figure><p>原因：在编译时没有使用对应选项生成可调试文件</p><p>解决方法：在编译时，在依赖文件前加入 -g选项</p><p>更改前makefile的部分内容：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">process: process.c</span><br><span class="line">gcc -o process process.c</span><br></pre></td></tr></table></figure><p>更改后：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">process: process.c</span><br><span class="line">gcc -g process.c -o process</span><br></pre></td></tr></table></figure><blockquote><p>注意事项，关于 gcc 命令后面文件的顺序问题</p><ol><li>-o 选项没有明确要求依赖文件和目标文件的前后顺序，因为在第一行中已经指出了依赖文件和目标文件。所以-o、目标文件、依赖文件三者何种顺序都可以</li><li>-g 选项唯一要求就是后面紧跟依赖文件，其他无要求</li></ol></blockquote>]]></content>
     
@@ -312,19 +312,19 @@
   </entry>
   
   <entry>
-    <title>文字高亮</title>
-    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
-    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
+    <title>插入图片</title>
+    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
+    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.499Z</updated>
+    <updated>2023-04-11T13:32:16.498Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
+    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
+    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
       
     
     
@@ -339,19 +339,19 @@
   </entry>
   
   <entry>
-    <title>插入图片</title>
-    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
-    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
+    <title>文字高亮</title>
+    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
+    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.498Z</updated>
+    <updated>2023-04-11T13:32:16.499Z</updated>
     
-    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
+    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
       
     
     

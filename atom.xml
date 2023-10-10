@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>🏴‍☠️浴巾的贼船🏴‍☠️</title>
+  <title></title>
   <icon>https://www.gravatar.com/avatar/4693869db7cae9524536dea3133cf541</icon>
   
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
@@ -285,19 +285,19 @@
   </entry>
   
   <entry>
-    <title>文字颜色</title>
-    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
-    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
+    <title>插入图片</title>
+    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
+    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.000Z</updated>
+    <updated>2023-04-11T13:32:16.498Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
+    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
       
     
     
@@ -312,19 +312,19 @@
   </entry>
   
   <entry>
-    <title>插入图片</title>
-    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
-    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
+    <title>文字颜色</title>
+    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
+    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.498Z</updated>
+    <updated>2023-04-11T13:32:16.000Z</updated>
     
-    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
+    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
+</summary>
       
     
     

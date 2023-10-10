@@ -3571,7 +3571,7 @@ h1.page-title + .tag-cloud-list {
   color: var(--white);
 }
 #nav a {
-  color: var(--light-grey);
+  color: var(--black-grey);
 }
 #nav a:hover {
   color: var(--white);

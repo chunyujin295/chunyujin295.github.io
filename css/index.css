@@ -3297,7 +3297,7 @@ h1.page-title + .tag-cloud-list {
   }
 }
 #page-header #site-subtitle {
-  color: var(--white-grey);
+  color: var(--light-grey);
   font-size: 1.15em;
 }
 @media screen and (min-width: 768px) {
@@ -3571,7 +3571,7 @@ h1.page-title + .tag-cloud-list {
   color: var(--white);
 }
 #nav a {
-  color: var(--white-grey);
+  color: var(--light-grey);
 }
 #nav a:hover {
   color: var(--white);

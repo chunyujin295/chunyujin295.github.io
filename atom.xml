@@ -366,19 +366,19 @@
   </entry>
   
   <entry>
-    <title>文字颜色</title>
-    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
-    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
+    <title>文字高亮</title>
+    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
+    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.000Z</updated>
+    <updated>2023-04-11T13:32:16.499Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
       
     
     
@@ -393,19 +393,19 @@
   </entry>
   
   <entry>
-    <title>文字高亮</title>
-    <link href="https://chunyujin.top/chunyujin/4d67aa64.html"/>
-    <id>https://chunyujin.top/chunyujin/4d67aa64.html</id>
+    <title>文字颜色</title>
+    <link href="https://chunyujin.top/chunyujin/26659f59.html"/>
+    <id>https://chunyujin.top/chunyujin/26659f59.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.499Z</updated>
+    <updated>2023-04-11T13:32:16.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h1><p>Typora设置中打开文字高亮</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072259003.png" alt="截屏2023-01-07 22.58.58"></p><p>有两种高亮方式，一是按照markdown语法</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072300282.png" alt="截屏2023-01-07 22.58.36"></p><p>二是按照html语法，在需要高亮的部分加上</p><p> <img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301072301879.png" alt="截屏2023-01-07 22.58.50"></p><p>第一种方式在有些网站比如个人博客上无法识别</p><h1 id="自定义文字高亮颜色"><a href="#自定义文字高亮颜色" class="headerlink" title="自定义文字高亮颜色"></a>自定义文字高亮颜色</h1><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306145123272.png" alt="image-20230306145123272"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png" alt="image-20230306150531038"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;文字高亮&quot;&gt;&lt;a href=&quot;#文字高亮&quot; class=&quot;headerlink&quot; title=&quot;文字高亮&quot;&gt;&lt;/a&gt;文字高亮&lt;/h1&gt;&lt;p&gt;Typora设置中打开文字高亮&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-han</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
+</summary>
       
     
     

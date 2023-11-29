@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-11-08T03:22:05.681Z</updated>
+  <updated>2023-11-29T11:27:45.920Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac上更改鼠标指针外观</title>
+    <link href="https://chunyujin.top/chunyujin/cfd78e0.html"/>
+    <id>https://chunyujin.top/chunyujin/cfd78e0.html</id>
+    <published>2023-11-19T11:25:00.000Z</published>
+    <updated>2023-11-29T11:27:45.920Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Mac上更改鼠标指针外观"><a href="#Mac上更改鼠标指针外观" class="headerlink" title="Mac上更改鼠标指针外观"></a>Mac上更改鼠标指针外观</h1><p>前言：</p><blockquote><p>此教程在Mac上更改鼠标外观，是基于Mac上mousecape软件来进行的</p><p>需要的鼠标外观材料来源于Windows的鼠标指针文件(.ani后缀)，将其先转化成每一帧的gif文件，再借助PS将gif文件拼接成为竖版长png，最后导入mousecape进行设置</p><p>另外，mousecape只能生效更改后的图标，如果一些指针图标并未设置，是不会显示的，这也是本人后期放弃使用的原因（即不实用，我还是老实选择了原生指针，这一点上Windows自定义做的真好）</p></blockquote><p><a href="https://github.com/alexzielenski/Mousecape/releases">mousecape下载地址_GitHub</a></p><h2 id="1-ani文件分帧转化为gif文件"><a href="#1-ani文件分帧转化为gif文件" class="headerlink" title="1.ani文件分帧转化为gif文件"></a>1.ani文件分帧转化为gif文件</h2><p>选择想要更改的鼠标指针文件，此处使用的是<a href="https://www.bilibili.com/video/BV12Q4y1J791/?spm_id_from=333.999.0.0">【无职转生】艾莉丝动态鼠标指针 by:夹心酱のATM_</a>（在此感谢up主，本文章声明不会用于商用）</p><p>下载好之后，解压并打开，里面包含为一些.ani文件和Windows上的指针安装程序，此处我们只需要.ani文件</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291753855.png" alt="截屏2023-11-29 17.53.04" style="zoom:33%;" /><p>进入网站<a href="https://ezgif.com/ani-to-gif">https://ezgif.com/ani-to-gif</a></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291755202.png" alt="截屏2023-11-29 17.55.06" style="zoom:33%;" /><p>点击“选取文件”，选择一个ani文件，然后点击“Upload”</p><blockquote><p>此处注意，Mac上的指针只有部分支持修改外观，具体可以查看Apple官方文档</p><p>此处借助<a href="https://www.cnblogs.com/xuanyu-10-18/p/12901954.html%E7%9A%84%E5%9B%BE%E7%89%87%EF%BC%9A">https://www.cnblogs.com/xuanyu-10-18/p/12901954.html的图片：</a></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291758617.png" alt="截屏2023-11-29 17.57.39" style="zoom:50%;" /></blockquote><p>等待文件上传到网站，完成后如下图所示，点击“Convert to GIF”进行转化：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291800624.png" alt="截屏2023-11-29 17.59.53" style="zoom: 25%;" /><p>完成后可以在下方输出栏中看到，然后选择“split”，将git分帧</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291802083.png" alt="截屏2023-11-29 18.01.50" style="zoom: 25%;" /><p>点击图示选项，下载文件图集压缩包</p><blockquote><p>建议对于压缩包进行重命名，并且命名中包含下图中的“frames”对应的值，此为gif图片原本的帧，也是转化后的git图片的个数，数值需要在后续mousecape中设置使用</p></blockquote><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291803245.png" alt="截屏2023-11-29 18.03.10" style="zoom: 33%;" /><p>按照以上方式，将其余的ani文件转化为gif即可</p><h2 id="2-将gif文件拼接成长png"><a href="#2-将gif文件拼接成长png" class="headerlink" title="2.将gif文件拼接成长png"></a>2.将gif文件拼接成长png</h2><p>选择一个gif系列中的gif文件，选择通过ps打开（此处我是在Windows上操作的，Mac同理）</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291815353.png" alt="屏幕截图 2023-11-29 171625" style="zoom:60%;" /><p>选择右上角的搜索，输入“RGB”，选择“RGB颜色”</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291819008.png" alt="屏幕截图 2023-11-29 171647" style="zoom:60%;" /><p>选择左上角“图像”，更改画布大小，更改纵向的大小，设置为单张gif的长度 ✖️ gif数</p><blockquote><p>注意，由于mousecape软件的问题，不支持帧大于15（否则显示的时候会出现上一帧部分画面保留到下一帧之类的bug），因此在设置gif数的时候要注意抽取出一些不关键的帧，防止超出15帧</p></blockquote><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291832097.png" alt="屏幕截图 2023-11-29 171724" style="zoom:60%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291832280.png" alt="屏幕截图 2023-11-29 171711" style="zoom:60%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291832583.png" alt="屏幕截图 2023-11-29 171746" style="zoom:60%;" /><p>然后开始按照序号从小到大从上到下排列，将gif拖入</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291834941.png" alt="屏幕截图 2023-11-29 171853" style="zoom:50%;" /><p>完成后，点击左上角“文件”，选择“导出”，“快速导出为PNG”</p><h2 id="3-在mousecape中进行设置"><a href="#3-在mousecape中进行设置" class="headerlink" title="3.在mousecape中进行设置"></a>3.在mousecape中进行设置</h2><p>打开mousecape，左上角选择file-&gt;new cape，创建一个新的项目</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291845583.png" alt="截屏2023-11-29 18.45.12" style="zoom:50%;" /><p>右击项目，选择edit</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291907950.png" alt="截屏2023-11-29 19.07.06" style="zoom:50%;" /><p>点击左下角加号，创建新的指针图标</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291908097.png" alt="截屏2023-11-29 19.08.02" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291909454.png" alt="截屏2023-11-29 19.09.01" style="zoom:50%;" /><p>Type为指针类型，在步骤一中给出了mac支持修改的指针类型，选择时只能选择支持修改的类型，否则修改了也不生效</p><p>然后将步骤2中生成的对应的png图像拉入下面1x、2x、5x、10x中的任意一个即可（此处为预览框，预览修改结果）</p><p>然后对于具体内容进行配置：<br>Frames：刷新帧率，即步骤二中合成png使用的gif的数量，要填写一致，比如拖入的png帧为17，此处就为17</p><p>Frame Duration：每帧的更新速度，个人建议设置为0.1～0.2之间体验较好，具体数值依据实际情况修改即可</p><p>Hot Spot：指针的标识点，即有效点击的位置，以png图片最左上角为原点的坐标，此处本人设置为{4,4}，会在预览框中以红点的形式标识出来</p><p>Size：实际大小，即光标的大小，依据实际情况自己修改即可，但要注意Size中的长宽设置一致</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291916693.png" alt="截屏2023-11-29 19.16.38" style="zoom:50%;" /><p>全部设置完成后，右击项目选择“Apply”即可</p><p>项目以“.cape“文件的形式保存，右击项目，选择“show in finder“可查看finder中的cape，可以用来跟别人分享。使用别人分享的cape时，直接打开cape文件即可将项目写入到mousecape。</p><h2 id="4-附上制作完成的无职转生-艾莉丝像素指针文件，以及mousecape软件安装包"><a href="#4-附上制作完成的无职转生-艾莉丝像素指针文件，以及mousecape软件安装包" class="headerlink" title="4.附上制作完成的无职转生-艾莉丝像素指针文件，以及mousecape软件安装包"></a>4.附上制作完成的无职转生-艾莉丝像素指针文件，以及mousecape软件安装包</h2><p>指针文件中包含成品’.cape’文件，和用于制作的png、gif文件，可自定义或直接使用成品</p><p>百度网盘：</p><p>[无职转生-艾莉丝像素指针文件](链接: <a href="https://pan.baidu.com/s/1baDFom6mYrJTTVEYqwjvZg?pwd=wr23">https://pan.baidu.com/s/1baDFom6mYrJTTVEYqwjvZg?pwd=wr23</a> ) ，提取码: wr23</p><p>[mousecape软件](链接: <a href="https://pan.baidu.com/s/1Uj1JcDYjJByna0H-ef-j5g?pwd=eqx2">https://pan.baidu.com/s/1Uj1JcDYjJByna0H-ef-j5g?pwd=eqx2</a> )，提取码: eqx2</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Mac上更改鼠标指针外观&quot;&gt;&lt;a href=&quot;#Mac上更改鼠标指针外观&quot; class=&quot;headerlink&quot; title=&quot;Mac上更改鼠标指针外观&quot;&gt;&lt;/a&gt;Mac上更改鼠标指针外观&lt;/h1&gt;&lt;p&gt;前言：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此教程在Ma</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Mac" scheme="https://chunyujin.top/categories/Skill/Mac/"/>
+    
+    
+    <category term="Mac" scheme="https://chunyujin.top/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>butterfly修改白天模式下主界面字体颜色</title>
@@ -519,35 +547,6 @@
     
     
     <category term="磁力链接" scheme="https://chunyujin.top/tags/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是解空间树</title>
-    <link href="https://chunyujin.top/chunyujin/87a30441.html"/>
-    <id>https://chunyujin.top/chunyujin/87a30441.html</id>
-    <published>2023-04-11T13:11:00.000Z</published>
-    <updated>2023-04-11T13:32:16.496Z</updated>
-    
-    <content type="html"><![CDATA[<p>什么是解空间树</p><p>比较权威全面的方法可以参考百度</p><p>形象化描述：</p><p>递归的所有过程都可以通过树形结构来表述，回溯是递归的副产品，所以回溯也可以通过属性结构来表示，而且回溯的结果是树形结构的叶子节点，所以这个这个树形结构就是解空间树</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;什么是解空间树&lt;/p&gt;
-&lt;p&gt;比较权威全面的方法可以参考百度&lt;/p&gt;
-&lt;p&gt;形象化描述：&lt;/p&gt;
-&lt;p&gt;递归的所有过程都可以通过树形结构来表述，回溯是递归的副产品，所以回溯也可以通过属性结构来表示，而且回溯的结果是树形结构的叶子节点，所以这个这个树形结构就是解空间树&lt;/p&gt;</summary>
-      
-    
-    
-    
-    <category term="算法分析与设计" scheme="https://chunyujin.top/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="回溯法" scheme="https://chunyujin.top/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/%E5%9B%9E%E6%BA%AF%E6%B3%95/"/>
-    
-    
-    <category term="算法分析与设计" scheme="https://chunyujin.top/tags/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   

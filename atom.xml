@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-11-29T11:27:45.920Z</updated>
+  <updated>2023-12-08T04:51:21.100Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -17,11 +17,73 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vscode中设置工作台颜色</title>
+    <link href="https://chunyujin.top/chunyujin/525df755.html"/>
+    <id>https://chunyujin.top/chunyujin/525df755.html</id>
+    <published>2023-12-08T04:51:00.000Z</published>
+    <updated>2023-12-08T04:51:21.100Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>由于远程Linux服务器的oh-my-zsh主体文字颜色在主题中不好更改，此处采用更改vscode本地终端主体文字颜色的方法，实现远程连接Linux时，自定义主体文字颜色</p></blockquote><p>通过将以下内容添加到用户设置中：<br>ctrl + , 并搜索 workbench（工作台)【或者在设置中找到工作台】，进入“外观”，找到“Color Customization”，然后点击「Edit in settings.json」（在settings.json中编辑）</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312080943844.png" alt="截屏2023-12-08 09.43.04" style="zoom:50%;" /><p>在最后加上如下语句:</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//终端颜色配置</span></span><br><span class="line"><span class="attr">&quot;workbench.colorCustomizations&quot;</span> <span class="punctuation">:</span> </span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"><span class="comment">//可以将鼠标放到下面的色号上根据自己的偏好进行选择</span></span><br><span class="line"><span class="attr">&quot;terminal.foreground&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;#37FF13&quot;</span><span class="punctuation">,</span> <span class="comment">//主体文字颜色，此处设置的绿色</span></span><br><span class="line"> <span class="attr">&quot;terminal.background&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;#2b2424&quot;</span> <span class="comment">//背景颜色，可以不设置，保持与主题一致</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>更改前后：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081023546.png" alt="截屏2023-12-08 10.20.07" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081024865.png" alt="截屏2023-12-08 10.20.17" style="zoom:50%;" /><p>另外还可以进行字体以及字体大小修改<br>“terminal.integrated.cursorBlinking”: true,<br>“terminal.integrated.lineHeight”: 1.2,<br>“terminal.integrated.letterSpacing”: 0.1,<br>“terminal.integrated.fontSize”: 15, &#x2F;&#x2F;字体大小设置<br>“terminal.integrated.fontFamily”: “Lucida Console”, &#x2F;&#x2F;字体设置<br>“terminal.integrated.shell.linux”: “&#x2F;bin&#x2F;zsh”,</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;由于远程Linux服务器的oh-my-zsh主体文字颜色在主题中不好更改，此处采用更改vscode本地终端主体文字颜色的方法，实现远程连接Linux时，自定义主体文字颜色&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通过将以下内容添加到用户设置中：&lt;</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Shell" scheme="https://chunyujin.top/categories/Skill/Shell/"/>
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
+    
+    <category term="vscode" scheme="https://chunyujin.top/tags/vscode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>item2更改主体文字颜色</title>
+    <link href="https://chunyujin.top/chunyujin/dfcd45c4.html"/>
+    <id>https://chunyujin.top/chunyujin/dfcd45c4.html</id>
+    <published>2023-12-08T04:50:00.000Z</published>
+    <updated>2023-12-08T04:51:46.977Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>由于远程连接的Linux服务器配置好oh-my-zsh之后，本地的现实也会改变，但是更改主体文字颜色等操作比较繁琐，因此通过更改本地终端，此处是item2，来更改本地的主体文字颜色，更简单</p></blockquote><p>打开设置中的颜色设置</p><p>此处foreground（前景）即为主体文字颜色，默认为白色</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081014893.png" alt="截屏2023-12-08 10.12.01" style="zoom: 50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081015832.png" alt="截屏2023-12-08 10.13.13" style="zoom:50%;" /><p>更改为与右侧表中ansi color的bright green一致</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081015583.png" alt="截屏2023-12-08 10.13.26" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081015237.png" alt="截屏2023-12-08 10.13.30" style="zoom:50%;" />]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;由于远程连接的Linux服务器配置好oh-my-zsh之后，本地的现实也会改变，但是更改主体文字颜色等操作比较繁琐，因此通过更改本地终端，此处是item2，来更改本地的主体文字颜色，更简单&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;打开设置中的颜色</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Shell" scheme="https://chunyujin.top/categories/Skill/Shell/"/>
+    
+    
+    <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
+    
+    <category term="macOS" scheme="https://chunyujin.top/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mac上更改鼠标指针外观</title>
     <link href="https://chunyujin.top/chunyujin/cfd78e0.html"/>
     <id>https://chunyujin.top/chunyujin/cfd78e0.html</id>
     <published>2023-11-19T11:25:00.000Z</published>
-    <updated>2023-11-29T11:27:45.920Z</updated>
+    <updated>2023-11-29T11:28:03.678Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Mac上更改鼠标指针外观"><a href="#Mac上更改鼠标指针外观" class="headerlink" title="Mac上更改鼠标指针外观"></a>Mac上更改鼠标指针外观</h1><p>前言：</p><blockquote><p>此教程在Mac上更改鼠标外观，是基于Mac上mousecape软件来进行的</p><p>需要的鼠标外观材料来源于Windows的鼠标指针文件(.ani后缀)，将其先转化成每一帧的gif文件，再借助PS将gif文件拼接成为竖版长png，最后导入mousecape进行设置</p><p>另外，mousecape只能生效更改后的图标，如果一些指针图标并未设置，是不会显示的，这也是本人后期放弃使用的原因（即不实用，我还是老实选择了原生指针，这一点上Windows自定义做的真好）</p></blockquote><p><a href="https://github.com/alexzielenski/Mousecape/releases">mousecape下载地址_GitHub</a></p><h2 id="1-ani文件分帧转化为gif文件"><a href="#1-ani文件分帧转化为gif文件" class="headerlink" title="1.ani文件分帧转化为gif文件"></a>1.ani文件分帧转化为gif文件</h2><p>选择想要更改的鼠标指针文件，此处使用的是<a href="https://www.bilibili.com/video/BV12Q4y1J791/?spm_id_from=333.999.0.0">【无职转生】艾莉丝动态鼠标指针 by:夹心酱のATM_</a>（在此感谢up主，本文章声明不会用于商用）</p><p>下载好之后，解压并打开，里面包含为一些.ani文件和Windows上的指针安装程序，此处我们只需要.ani文件</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291753855.png" alt="截屏2023-11-29 17.53.04" style="zoom:33%;" /><p>进入网站<a href="https://ezgif.com/ani-to-gif">https://ezgif.com/ani-to-gif</a></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291755202.png" alt="截屏2023-11-29 17.55.06" style="zoom:33%;" /><p>点击“选取文件”，选择一个ani文件，然后点击“Upload”</p><blockquote><p>此处注意，Mac上的指针只有部分支持修改外观，具体可以查看Apple官方文档</p><p>此处借助<a href="https://www.cnblogs.com/xuanyu-10-18/p/12901954.html%E7%9A%84%E5%9B%BE%E7%89%87%EF%BC%9A">https://www.cnblogs.com/xuanyu-10-18/p/12901954.html的图片：</a></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291758617.png" alt="截屏2023-11-29 17.57.39" style="zoom:50%;" /></blockquote><p>等待文件上传到网站，完成后如下图所示，点击“Convert to GIF”进行转化：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291800624.png" alt="截屏2023-11-29 17.59.53" style="zoom: 25%;" /><p>完成后可以在下方输出栏中看到，然后选择“split”，将git分帧</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291802083.png" alt="截屏2023-11-29 18.01.50" style="zoom: 25%;" /><p>点击图示选项，下载文件图集压缩包</p><blockquote><p>建议对于压缩包进行重命名，并且命名中包含下图中的“frames”对应的值，此为gif图片原本的帧，也是转化后的git图片的个数，数值需要在后续mousecape中设置使用</p></blockquote><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291803245.png" alt="截屏2023-11-29 18.03.10" style="zoom: 33%;" /><p>按照以上方式，将其余的ani文件转化为gif即可</p><h2 id="2-将gif文件拼接成长png"><a href="#2-将gif文件拼接成长png" class="headerlink" title="2.将gif文件拼接成长png"></a>2.将gif文件拼接成长png</h2><p>选择一个gif系列中的gif文件，选择通过ps打开（此处我是在Windows上操作的，Mac同理）</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291815353.png" alt="屏幕截图 2023-11-29 171625" style="zoom:60%;" /><p>选择右上角的搜索，输入“RGB”，选择“RGB颜色”</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291819008.png" alt="屏幕截图 2023-11-29 171647" style="zoom:60%;" /><p>选择左上角“图像”，更改画布大小，更改纵向的大小，设置为单张gif的长度 ✖️ gif数</p><blockquote><p>注意，由于mousecape软件的问题，不支持帧大于15（否则显示的时候会出现上一帧部分画面保留到下一帧之类的bug），因此在设置gif数的时候要注意抽取出一些不关键的帧，防止超出15帧</p></blockquote><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291832097.png" alt="屏幕截图 2023-11-29 171724" style="zoom:60%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291832280.png" alt="屏幕截图 2023-11-29 171711" style="zoom:60%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291832583.png" alt="屏幕截图 2023-11-29 171746" style="zoom:60%;" /><p>然后开始按照序号从小到大从上到下排列，将gif拖入</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291834941.png" alt="屏幕截图 2023-11-29 171853" style="zoom:50%;" /><p>完成后，点击左上角“文件”，选择“导出”，“快速导出为PNG”</p><h2 id="3-在mousecape中进行设置"><a href="#3-在mousecape中进行设置" class="headerlink" title="3.在mousecape中进行设置"></a>3.在mousecape中进行设置</h2><p>打开mousecape，左上角选择file-&gt;new cape，创建一个新的项目</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291845583.png" alt="截屏2023-11-29 18.45.12" style="zoom:50%;" /><p>右击项目，选择edit</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291907950.png" alt="截屏2023-11-29 19.07.06" style="zoom:50%;" /><p>点击左下角加号，创建新的指针图标</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291908097.png" alt="截屏2023-11-29 19.08.02" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291909454.png" alt="截屏2023-11-29 19.09.01" style="zoom:50%;" /><p>Type为指针类型，在步骤一中给出了mac支持修改的指针类型，选择时只能选择支持修改的类型，否则修改了也不生效</p><p>然后将步骤2中生成的对应的png图像拉入下面1x、2x、5x、10x中的任意一个即可（此处为预览框，预览修改结果）</p><p>然后对于具体内容进行配置：<br>Frames：刷新帧率，即步骤二中合成png使用的gif的数量，要填写一致，比如拖入的png帧为17，此处就为17</p><p>Frame Duration：每帧的更新速度，个人建议设置为0.1～0.2之间体验较好，具体数值依据实际情况修改即可</p><p>Hot Spot：指针的标识点，即有效点击的位置，以png图片最左上角为原点的坐标，此处本人设置为{4,4}，会在预览框中以红点的形式标识出来</p><p>Size：实际大小，即光标的大小，依据实际情况自己修改即可，但要注意Size中的长宽设置一致</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311291916693.png" alt="截屏2023-11-29 19.16.38" style="zoom:50%;" /><p>全部设置完成后，右击项目选择“Apply”即可</p><p>项目以“.cape“文件的形式保存，右击项目，选择“show in finder“可查看finder中的cape，可以用来跟别人分享。使用别人分享的cape时，直接打开cape文件即可将项目写入到mousecape。</p><h2 id="4-附上制作完成的无职转生-艾莉丝像素指针文件，以及mousecape软件安装包"><a href="#4-附上制作完成的无职转生-艾莉丝像素指针文件，以及mousecape软件安装包" class="headerlink" title="4.附上制作完成的无职转生-艾莉丝像素指针文件，以及mousecape软件安装包"></a>4.附上制作完成的无职转生-艾莉丝像素指针文件，以及mousecape软件安装包</h2><p>指针文件中包含成品’.cape’文件，和用于制作的png、gif文件，可自定义或直接使用成品</p><p>百度网盘：</p><p>[无职转生-艾莉丝像素指针文件](链接: <a href="https://pan.baidu.com/s/1baDFom6mYrJTTVEYqwjvZg?pwd=wr23">https://pan.baidu.com/s/1baDFom6mYrJTTVEYqwjvZg?pwd=wr23</a> ) ，提取码: wr23</p><p>[mousecape软件](链接: <a href="https://pan.baidu.com/s/1Uj1JcDYjJByna0H-ef-j5g?pwd=eqx2">https://pan.baidu.com/s/1Uj1JcDYjJByna0H-ef-j5g?pwd=eqx2</a> )，提取码: eqx2</p>]]></content>
     
@@ -262,7 +324,7 @@
     <link href="https://chunyujin.top/chunyujin/6e2ea259.html"/>
     <id>https://chunyujin.top/chunyujin/6e2ea259.html</id>
     <published>2023-08-31T03:29:00.000Z</published>
-    <updated>2023-09-03T09:19:07.000Z</updated>
+    <updated>2023-12-08T04:51:36.474Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CentOS-amp-macOS终端配置"><a href="#CentOS-amp-macOS终端配置" class="headerlink" title="CentOS &amp; macOS终端配置"></a>CentOS &amp; macOS终端配置</h1><h2 id="终端美化（两系统通用）"><a href="#终端美化（两系统通用）" class="headerlink" title="终端美化（两系统通用）"></a>终端美化（两系统通用）</h2><h3 id="1-设置默认-shell-为-zsh"><a href="#1-设置默认-shell-为-zsh" class="headerlink" title="1.设置默认 shell 为 zsh"></a>1.设置默认 shell 为 zsh</h3><p>查看系统所有的 shell 列表</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure><p>设置默认 shell 为 zsh，它功能比较多，会好使一些。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure><h3 id="2-安装-oh-my-zsh"><a href="#2-安装-oh-my-zsh" class="headerlink" title="2.安装 oh-my-zsh"></a>2.安装 oh-my-zsh</h3><p>oh-my-zsh 是一款社区驱动的命令行工具，它基于 zsh 命令行，提供了主题配置，插件机制，大大提高了可玩（用）性。它的 Github 地址为：<a href="https://github.com/robbyrussell/oh-my-zsh">https://github.com/robbyrussell/oh-my-zsh</a></p><p>我们可以使用 curl 安装：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure><p>上面地址不行的话，可以尝试下面这个：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure><h3 id="3-配置命令自动提示、语法高亮"><a href="#3-配置命令自动提示、语法高亮" class="headerlink" title="3.配置命令自动提示、语法高亮"></a>3.配置命令自动提示、语法高亮</h3><h4 id="1⃣️命令自动提示："><a href="#1⃣️命令自动提示：" class="headerlink" title="1⃣️命令自动提示："></a>1⃣️命令自动提示：</h4><p>这里我们用到 zsh-autosuggestions 插件，它可以让终端提示我们接下来可能要输入的命令，按右键即可补齐，提高我们工作的效率。</p><p>首先，我们先将仓库克隆到 ～&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins 目录下</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH/custom/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure><h4 id="2⃣️语法高亮："><a href="#2⃣️语法高亮：" class="headerlink" title="2⃣️语法高亮："></a>2⃣️语法高亮：</h4><p>zsh-syntax-highlighting 语法高亮插件，作用：命令错误显示红色，直到你输入正确才会变绿色</p><p>安装如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure><h4 id="3⃣️配置文件内容，使上面功能被添加："><a href="#3⃣️配置文件内容，使上面功能被添加：" class="headerlink" title="3⃣️配置文件内容，使上面功能被添加："></a>3⃣️配置文件内容，使上面功能被添加：</h4><p>使用<code>vim ~/.zshrc</code>打开文件，找到其中的插件设置，默认是<code>plugins=(git)</code>，我们将其修改为：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Add wisely, as too many plugins slow down shell startup.</span></span><br><span class="line">plugins=(</span><br><span class="line">  git</span><br><span class="line">  zsh-autosuggestions</span><br><span class="line">  zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line">[ -f /usr/local/etc/profile.d/autojump.sh ] &amp;&amp; . /usr/local/etc/profile.d/autojump.sh</span><br><span class="line">source $ZSH/oh-my-zsh.sh</span><br></pre></td></tr></table></figure><p>退出文件后，输入<code>source ~/.zshrc</code>，或者重启中断，应用设置</p><blockquote><p>如果未安装vim，见下方vim安装教程</p></blockquote><h3 id="4-设置-zsh-主题"><a href="#4-设置-zsh-主题" class="headerlink" title="4.设置 zsh 主题"></a>4.设置 zsh 主题</h3><p>我们可以通过<code> vim ~/.zshrc</code> 命令打开 zsh 的配置文件，修改其中的<code> ZSH_THEME</code> 字段的值，进行主题的修改。</p><p>大家可以在 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/themes">https://github.com/ohmyzsh/ohmyzsh/wiki/themes</a> 链接中，选择自己喜欢的主题。</p><p>我选择的主题的是 crcandy，因为它选择的信息比较全，而且它不依赖其他的特殊字体，可以在不同的终端下正常显示。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=&quot;crcandy&quot;</span><br></pre></td></tr></table></figure><p>退出文件后，输入<code>source ~/.zshrc</code>，或者重启中断，应用设置</p><h2 id="CentOS配置"><a href="#CentOS配置" class="headerlink" title="CentOS配置"></a>CentOS配置</h2><h3 id="1-vim安装"><a href="#1-vim安装" class="headerlink" title="1.vim安装"></a>1.vim安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y vim</span><br></pre></td></tr></table></figure><h3 id="2-安装VimForCpp"><a href="#2-安装VimForCpp" class="headerlink" title="2.安装VimForCpp"></a>2.安装VimForCpp</h3><p>VimForCpp是由比特教育汤众老师开发的一款软件，帮助对vim配置方法不熟悉的新手封装的一键式vim环境安装包. 主要针对终端vim用户, 适合远程ssh连接Linux服务器进行开发的场景，将vim打造成一个cpp开发IDE</p><p>教程：<a href="https://gitee.com/c-yujin/vimforcpp">https://gitee.com/c-yujin/vimforcpp</a></p><h3 id="经常遇到的问题："><a href="#经常遇到的问题：" class="headerlink" title="经常遇到的问题："></a>经常遇到的问题：</h3><h4 id="1⃣️VimForCpp图标问题"><a href="#1⃣️VimForCpp图标问题" class="headerlink" title="1⃣️VimForCpp图标问题"></a>1⃣️VimForCpp图标问题</h4><p>有些shell下，VimForCpp可能会遇到图标无法正常显示的情况，可以按照原链接最下面的教程进行解决，如果无法解决，可以尝试以下方式，关闭图标显示：<br>使用<code>sudo vim ~./vimrc</code>进入配置文件，将<code>Plug &#39;ryanoasis/vim-devicons&#39;</code>注释掉即可</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202308311108325.png" alt="截屏2023-08-31 11.08.20" style="zoom:50%;" /><h4 id="2⃣️使用vim打开文件时，显示YouCompleteMe插件不支持此低版本vim"><a href="#2⃣️使用vim打开文件时，显示YouCompleteMe插件不支持此低版本vim" class="headerlink" title="2⃣️使用vim打开文件时，显示YouCompleteMe插件不支持此低版本vim"></a>2⃣️使用vim打开文件时，显示YouCompleteMe插件不支持此低版本vim</h4><p>由于VimForCpp使用了YouCompleteMe这款插件，若插件版本过高，vim版本低，就会出现此错误</p><p>解决方法：降级YouCompleteMe插件，或升级vim版本</p><h5 id="在服务器上升级vim到最新版本："><a href="#在服务器上升级vim到最新版本：" class="headerlink" title="在服务器上升级vim到最新版本："></a>在服务器上升级vim到最新版本：</h5><ol><li>通过yum安装Python3</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y git gcc-c++ ncurses-devel python-devel cmake wget make</span><br><span class="line">sudo yum install -y python36 python36-devel</span><br></pre></td></tr></table></figure><ol start="2"><li>克隆Github的vim项目</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 克隆项目到本地</span><br><span class="line">// 假定是在~目录下克隆，实际可变更位置。</span><br><span class="line">cd ~</span><br><span class="line">git clone https://github.com/vim/vim.git</span><br></pre></td></tr></table></figure><ol start="3"><li>配置并编译Vim</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 进入项目</span><br><span class="line"><span class="built_in">cd</span> vim</span><br><span class="line"></span><br><span class="line">// 配置参数</span><br><span class="line">./configure --prefix=/usr/local/vim  --enable-pythoninterp=<span class="built_in">yes</span> --enable-python3interp=<span class="built_in">yes</span> --with-python-command=python --with-python3-command=python36</span><br><span class="line"></span><br><span class="line">// 编译文件，可能需要使用sudo权限</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br><span class="line"></span><br><span class="line">// 编译成功后，vim/src/目录下，会有 vim 文件，后面会用到</span><br><span class="line"><span class="built_in">ls</span> ~/vim/src -al</span><br></pre></td></tr></table></figure><ol start="4"><li>复制Vim到系统配置，并修改Profile</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 复制前可以备份一下</span><br><span class="line">sudo <span class="built_in">cp</span> /usr/bin/vim /usr/bin/vim.backup</span><br><span class="line"></span><br><span class="line">// 复制前面编译的vim到系统配置</span><br><span class="line"><span class="built_in">cd</span> ~/vim/src</span><br><span class="line">sudo <span class="built_in">cp</span> vim /usr/bin</span><br><span class="line"></span><br><span class="line">// 修改系统的Profile, 如果sudo权限不够，则可以尝试使用root用户，我是用的root用户。</span><br><span class="line">su  // 输入root密码，如果还没有设置，则输入 `sudo passwd` 设置root密码。</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;PATH=\$PATH:/usr/local/vim/bin&quot;</span> &gt;&gt; /etc/profile</span><br><span class="line"></span><br><span class="line">// 运行刚修改的配置。</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line"></span><br><span class="line">// 最后，check version</span><br><span class="line">vim --version</span><br><span class="line">// 同时，也能看到它支持Python3了。(7.4是不支持的。)</span><br></pre></td></tr></table></figure><blockquote><p>作者：神执念浅言多行<br>链接：<a href="https://www.jianshu.com/p/b44d568aef9f">https://www.jianshu.com/p/b44d568aef9f</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p></blockquote><h4 id="3⃣️使用vim打开一些文件时，使用键盘上下左右键变成了在文件中输入内容"><a href="#3⃣️使用vim打开一些文件时，使用键盘上下左右键变成了在文件中输入内容" class="headerlink" title="3⃣️使用vim打开一些文件时，使用键盘上下左右键变成了在文件中输入内容"></a>3⃣️使用vim打开一些文件时，使用键盘上下左右键变成了在文件中输入内容</h4><p>此情况多见于普通用户打开一些root权限文件，也可能是由于YouCompleteMe插件产生的bug</p><p>如下图，在正常模式下，使用键盘上下左右键翻页，变成了进入到插入模式下的输入字母”B”</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202308311126771.gif" alt="Aug-31-2023 11-25-58"></p><p>解决方法1:</p><p>使用hjkl移动光标，不使用键盘上下左右键</p><p>解决方法2:</p><p>在root权限下打开，即<code>sudo vim 文件</code></p>]]></content>
     
@@ -276,12 +338,14 @@
     
     <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
     
-    <category term="Linux" scheme="https://chunyujin.top/categories/Skill/Linux/"/>
+    <category term="Shell" scheme="https://chunyujin.top/categories/Skill/Shell/"/>
     
     
     <category term="Linux" scheme="https://chunyujin.top/tags/Linux/"/>
     
     <category term="CentOS" scheme="https://chunyujin.top/tags/CentOS/"/>
+    
+    <category term="macOS" scheme="https://chunyujin.top/tags/macOS/"/>
     
   </entry>
   
@@ -340,19 +404,19 @@
   </entry>
   
   <entry>
-    <title>主题设置</title>
-    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
-    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
+    <title>插入图片</title>
+    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
+    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.497Z</updated>
+    <updated>2023-04-11T13:32:16.498Z</updated>
     
-    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
+    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
       
     
     
@@ -367,19 +431,19 @@
   </entry>
   
   <entry>
-    <title>插入图片</title>
-    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
-    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
+    <title>主题设置</title>
+    <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
+    <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
     <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.498Z</updated>
+    <updated>2023-04-11T13:32:16.497Z</updated>
     
-    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
+    <content type="html"><![CDATA[<p>在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225506602.png" alt="image-20230402225506602"></p><p>打开typora的设置，转到外观，如果对于初始的几种主题不满意可以选择获取主题，不过在此之前先点击”打开主题文件夹“，进入到主题文件夹中</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225649847.png" alt="image-20230402225649847" style="zoom:67%;" /><p>这几个后缀为.css的文件即是主题文件</p><blockquote><p>windows中会自动匹配类型，我的电脑上给.css文件匹配的类型是typora类型，但是本质上是.css</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402231520351.png" alt="image-20230402231520351" style="zoom:67%;" /></blockquote><p>回到设置中来，打开”获取主题“，进入到官方主题网站（可能需要科学上网）</p><p>选择喜欢的主题进行下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225830308.png" alt="image-20230402225830308" style="zoom:67%;" /><p>此处以第一个”GitHub Dark Themes“为例，进入之后点击下载</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402225952296.png" alt="image-20230402225952296" style="zoom:67%;" /><p>之后将下载好的压缩文件进行解压，将文件夹复制到之前打开的本地主题文件夹里theme里</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230219321.png" alt="image-20230402230219321" style="zoom:67%;" /><p>然后将这个主题文件夹Typora-GitHub-Themes-main里面后缀为.css的文件(或者显示为typora类型的文件)复制或者拖拽到theme文件夹中，这个文件即是主题文件，并且已经可以在Typora中应用了</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230555379.png" alt="image-20230402230555379" style="zoom:67%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230625707.png" alt="image-20230402230625707" style="zoom:67%;" /><blockquote><p>有时候一个主题也有不同的风格，比如这个主题就有三种风格</p><p>可以选择自己喜欢的放入theme文件夹，也可以全部放入</p></blockquote><p>重启typora，在设置-外观中即可选用，或者直接点击页面上方的“主题”，即可应用新增的主题</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230402230802457.png" alt="image-20230402230802457" style="zoom:67%;" /><blockquote><p>个人推荐：</p><p>浅色模式的主题使用Typora自带的Github主题，简约，字体舒适，并且对于文档和代码段的处理、表示都很明显舒适</p><p>深色模式使用”<a href="https://theme.typora.io/theme/Aspartate/">Aspartate</a>“，颜色不是纯黑，有一点点发灰，接近windows系统的主题黑，颜色比较柔和(纯黑比较费眼睛)，并且格式布局、字体等与Typora自己的Github比较接近，对于代码段的处理也比较好</p></blockquote>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
+    <summary type="html">&lt;p&gt;在晚上码字的时候如果使用白色的主题背景会感觉对眼睛不是很友好，因此可以选择一些暗黑风格的主题来达到更舒适的效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-2023</summary>
       
     
     
@@ -496,57 +560,6 @@
     
     
     <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>摩尔投票法_多数元素(绝对众数)</title>
-    <link href="https://chunyujin.top/chunyujin/4eceace9.html"/>
-    <id>https://chunyujin.top/chunyujin/4eceace9.html</id>
-    <published>2023-04-11T13:13:00.000Z</published>
-    <updated>2023-04-11T13:32:16.494Z</updated>
-    
-    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/">408 时间复杂度为 O(n)、空间复杂度为 O(1) - 多数元素 - 力扣（LeetCode）</a>)</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230404232915115.png" alt="image-20230404232915115" style="zoom: 80%;" /><p>一般有以下三种思路：</p><ol><li><p>暴力求解，从第一个元素开始记录，遇到与第一个元素值相同的元素就计数+1，当某个元素的个数大于等于n&#x2F;2的时候，说明就是这个元素最多</p></li><li><p>先排序，后返回容器中第n&#x2F;2个元素</p></li><li><p>摩尔投票法：</p><blockquote><p>解决的问题是如何在任意多的候选人（选票无序），选出获得票数最多的那个。</p><p>（解决绝对众数的问题：如果一个元素出现的次数大于等于其他所有数出现的次数之和，那么这个数就是绝对众数，也就是说如n个数里如果有一个数的数量大于等于n&#x2F;2，这个数就是绝对众数）</p><p>形象化描述：</p><blockquote><p>想象着这样一个画面：</p><p>会议大厅站满了投票代表，每个都有一个牌子上面写着自己所选的候选人的名字。然后选举意见不合的（所选的候选人不同）两个人，会打一架，并且会同时击倒对方。显而易见，如果一个人拥有的选票比其它所有人加起来的选票还要多的话，这个候选人将会赢得这场“战争”，当混乱结束，最后剩下的那个代表（可能会有多个）将会来自多数人所站的阵营。</p><p>但是如果所有参加候选人的选票都不是大多数（选票都未超过一半），那么最后站在那的代表（一个人）并不能代表所有的选票的大多数。因此，当某人站到最后时，需要统计他所选的候选人的选票是否超过一半（包括倒下的），来判断选票结果是否有效。</p></blockquote><p>在本题中，显然是一定有一个候选人的选票达到大半的</p><p>算法的描述：</p><blockquote><p>我们维护一个 x ，表示当前的候选人，然后维护一个 num，用来表示当前候选人的选票数 。对于每一张新的选票，如果它投给了当前的候选人，就把 num 加1，否则就把 num 减1（也许你可以想象成，B的一个狂热支持者去把A的一个支持者揍了一顿，然后两个人都没法投票）。特别地，计票过程中如果 num&#x3D;0 ，我们可以认为目前谁都没有优势，所以新的选票投给谁，谁就成为新的候选人。</p><blockquote><p>如果我们要求的是众数，这样的做法并不能给出正确答案，但如果要求的是绝对众数（<strong>且绝对众数确实存在</strong>），那么 n 一定是正确的。</p><p>这是因为，在最后计票时，我们知道有 num 张票投给了 x ，假如绝对众数另有其人，那么一定是剩下的票投出来的。但剩下的 x− num 张票都是在“捉对厮杀”的过程中被抵消掉的，每一对被抵消的票都来自不同的候选人，所以一个候选人最多在这里拿到 n−num&#x2F;2 票，这不可能大于 n&#x2F;2 。但绝对众数确实存在，所以这个绝对众数就一定是 m 。</p><p>如果绝对众数不存在，摩尔投票会给出一个错误的解，所以一定要记得验证答案。</p></blockquote></blockquote><p>算法的实现</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">0</span>, num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(num = <span class="number">0</span>)</span><br><span class="line">        x = A[i];</span><br><span class="line">    <span class="keyword">if</span>(A[i] == x)</span><br><span class="line">        num++;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        num--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果实际情况下绝对众数本身就是不存在的，那么会得到一个错误的解，此时需要进行一下验证</span></span><br></pre></td></tr></table></figure></blockquote><p>摩尔投票法的进阶：</p><p>简单的摩尔投票法只是能找到一个选票最多的。但是如果要求选出N个人，这个N个人只要满足票数大于1&#x2F;(N+1)就可以，也是可以摩尔投票法的思想，只是需要进行一下修改</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x[N], num[N];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> e : nums) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="built_in">find</span>(x, x + N, e) - x;</span><br><span class="line">    <span class="keyword">if</span> (i != N) &#123; <span class="comment">// 如果当前票投给了候选人之一</span></span><br><span class="line">        num[i]++;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> j = <span class="built_in">find</span>(num, num + N, <span class="number">0</span>) - num;</span><br><span class="line">    <span class="keyword">if</span> (j != N) &#123; <span class="comment">// 如果当前存在一个位置&quot;虚位以待&quot;</span></span><br><span class="line">        x[j] = e;</span><br><span class="line">        num[j] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : num)</span><br><span class="line">        c--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最后需要验证答案是否符合要求</span></span><br></pre></td></tr></table></figure><blockquote><p>原理是一样的。最后我们可以把票分为2个部分：投给了最多 N 个候选人的一部分，和被抵消的一部分。后者可以划分为若干个 N+1 元组，每个元组内的票都来自不同的候选人。因此，只有那些属于第一部分的人的票数可能超过总数的 1&#x2F;(N+1) 。</p></blockquote></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/majority-element/solution/408-shi-jian-fu-za-du-wei-on-kong-jian-f-xyf1/&quot;&gt;408 时间复杂度为 O(n)、空间</summary>
-      
-    
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EVA资源获取及使用</title>
-    <link href="https://chunyujin.top/chunyujin/96ce1217.html"/>
-    <id>https://chunyujin.top/chunyujin/96ce1217.html</id>
-    <published>2023-04-11T13:13:00.000Z</published>
-    <updated>2023-04-11T13:32:16.495Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://dc.btfan.cc/hash/bd798afb2ef464d2f527f01d8e814368e73be6b0">搜番 (btfan.cc)：eva全部资源磁力链接</a></p><p><a href="https://dc.btfan.cc/">搜番 (btfan.cc)</a></p><p><a href="https://cilitiantang.one/sites/39.html">磁力天堂 (cilitiantang.one)</a></p><p><a href="https://www.bilibili.com/read/cv9456438/">分享【全套】新世纪福音战士TV 26话+新老剧场版字幕包 EVA-FANS&amp; 白月字幕组 - 哔哩哔哩 (bilibili.com)</a></p><blockquote><p>字幕推荐这一版，很细节</p></blockquote><p>持续更新中……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://dc.btfan.cc/hash/bd798afb2ef464d2f527f01d8e814368e73be6b0&quot;&gt;搜番 (btfan.cc)：eva全部资源磁力链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://dc.btfa</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="磁力链接" scheme="https://chunyujin.top/categories/Skill/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5/"/>
-    
-    
-    <category term="磁力链接" scheme="https://chunyujin.top/tags/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5/"/>
     
   </entry>
   

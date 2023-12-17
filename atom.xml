@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2023-12-08T04:51:21.100Z</updated>
+  <updated>2023-12-17T01:42:12.703Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo提交三板斧</title>
+    <link href="https://chunyujin.top/chunyujin/49b78e.html"/>
+    <id>https://chunyujin.top/chunyujin/49b78e.html</id>
+    <published>2023-12-17T01:23:00.000Z</published>
+    <updated>2023-12-17T01:42:12.703Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">gulp  #进行css压缩</span><br><span class="line">hexo deploy 或 hexo server</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Hexo" scheme="https://chunyujin.top/categories/Skill/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vscode中设置工作台颜色</title>
     <link href="https://chunyujin.top/chunyujin/525df755.html"/>
     <id>https://chunyujin.top/chunyujin/525df755.html</id>
     <published>2023-12-08T04:51:00.000Z</published>
-    <updated>2023-12-08T04:51:21.100Z</updated>
+    <updated>2023-12-08T04:52:25.659Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>由于远程Linux服务器的oh-my-zsh主体文字颜色在主题中不好更改，此处采用更改vscode本地终端主体文字颜色的方法，实现远程连接Linux时，自定义主体文字颜色</p></blockquote><p>通过将以下内容添加到用户设置中：<br>ctrl + , 并搜索 workbench（工作台)【或者在设置中找到工作台】，进入“外观”，找到“Color Customization”，然后点击「Edit in settings.json」（在settings.json中编辑）</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312080943844.png" alt="截屏2023-12-08 09.43.04" style="zoom:50%;" /><p>在最后加上如下语句:</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//终端颜色配置</span></span><br><span class="line"><span class="attr">&quot;workbench.colorCustomizations&quot;</span> <span class="punctuation">:</span> </span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"><span class="comment">//可以将鼠标放到下面的色号上根据自己的偏好进行选择</span></span><br><span class="line"><span class="attr">&quot;terminal.foreground&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;#37FF13&quot;</span><span class="punctuation">,</span> <span class="comment">//主体文字颜色，此处设置的绿色</span></span><br><span class="line"> <span class="attr">&quot;terminal.background&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;#2b2424&quot;</span> <span class="comment">//背景颜色，可以不设置，保持与主题一致</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>更改前后：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081023546.png" alt="截屏2023-12-08 10.20.07" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081024865.png" alt="截屏2023-12-08 10.20.17" style="zoom:50%;" /><p>另外还可以进行字体以及字体大小修改<br>“terminal.integrated.cursorBlinking”: true,<br>“terminal.integrated.lineHeight”: 1.2,<br>“terminal.integrated.letterSpacing”: 0.1,<br>“terminal.integrated.fontSize”: 15, &#x2F;&#x2F;字体大小设置<br>“terminal.integrated.fontFamily”: “Lucida Console”, &#x2F;&#x2F;字体设置<br>“terminal.integrated.shell.linux”: “&#x2F;bin&#x2F;zsh”,</p>]]></content>
     
@@ -52,7 +78,7 @@
     <link href="https://chunyujin.top/chunyujin/dfcd45c4.html"/>
     <id>https://chunyujin.top/chunyujin/dfcd45c4.html</id>
     <published>2023-12-08T04:50:00.000Z</published>
-    <updated>2023-12-08T04:51:46.977Z</updated>
+    <updated>2023-12-08T04:52:25.660Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>由于远程连接的Linux服务器配置好oh-my-zsh之后，本地的现实也会改变，但是更改主体文字颜色等操作比较繁琐，因此通过更改本地终端，此处是item2，来更改本地的主体文字颜色，更简单</p></blockquote><p>打开设置中的颜色设置</p><p>此处foreground（前景）即为主体文字颜色，默认为白色</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081014893.png" alt="截屏2023-12-08 10.12.01" style="zoom: 50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081015832.png" alt="截屏2023-12-08 10.13.13" style="zoom:50%;" /><p>更改为与右侧表中ansi color的bright green一致</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081015583.png" alt="截屏2023-12-08 10.13.26" style="zoom:50%;" /><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202312081015237.png" alt="截屏2023-12-08 10.13.30" style="zoom:50%;" />]]></content>
     
@@ -404,33 +430,6 @@
   </entry>
   
   <entry>
-    <title>插入图片</title>
-    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
-    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
-    <published>2023-04-11T13:17:00.000Z</published>
-    <updated>2023-04-11T13:32:16.498Z</updated>
-    
-    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
-    
-    
-    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
     <title>主题设置</title>
     <link href="https://chunyujin.top/chunyujin/5c7e764.html"/>
     <id>https://chunyujin.top/chunyujin/5c7e764.html</id>
@@ -471,6 +470,33 @@
       
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230306150531038.png&quot; alt=&quot;image-20230306150531038&quot;&gt;&lt;/p&gt;
 </summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="Typora" scheme="https://chunyujin.top/categories/Skill/Typora/"/>
+    
+    
+    <category term="Typora" scheme="https://chunyujin.top/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>插入图片</title>
+    <link href="https://chunyujin.top/chunyujin/ab111c04.html"/>
+    <id>https://chunyujin.top/chunyujin/ab111c04.html</id>
+    <published>2023-04-11T13:17:00.000Z</published>
+    <updated>2023-04-11T13:32:16.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![连接文本](图片路径)</span><br></pre></td></tr></table></figure><p>比如:</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-15%20220238.png" alt="这是一个参考文本和一个示例图片"></p><p>也可以直接将图片复制或者拖拽进来，配合上传到图床的功能，直接在图床中生成链接</p><p>比如:</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20221215214853021.png" alt="image-20221215214853021"  />]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;插入图像与插入链接的语法基本一样，就是在最前面加了一个!字符&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
       
     
     
@@ -535,31 +561,6 @@
     
     
     <category term="磁力链接" scheme="https://chunyujin.top/tags/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>建立字符表_有效的字母异位词</title>
-    <link href="https://chunyujin.top/chunyujin/a309d3c0.html"/>
-    <id>https://chunyujin.top/chunyujin/a309d3c0.html</id>
-    <published>2023-04-11T13:13:00.000Z</published>
-    <updated>2023-04-11T13:32:16.491Z</updated>
-    
-    <content type="html"><![CDATA[<p>[题目来源](<a href="https://leetcode.cn/problems/valid-anagram/comments/">242. 有效的字母异位词 - 力扣（LeetCode）</a>)</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20230405230509034.png" alt="image-20230405230509034"></p><p>常规的方法：对于两个字符串进行排序，然后判断两个字符串是否相等(可以直接判断字符串是否相等，if s&#x3D;&#x3D;t return true)</p><p>一种奇妙的思路：建立字符表</p><blockquote><p>两个字符串中的字符无非就是26个字母。建立一个容量为26的数组，内容全部初始化为0.如果s中存在某一字母，就在相应的位置上+1，如果t中存在某一字母，就在相应的位置上-1，最后如果数组中还是全为0，说明s和t中的内容正好相互抵消，否则说明s和t不是有效的字母异位词。（感觉有点像摩尔投票法中的支持者打架）</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isAnagram</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> num[<span class="number">26</span>]=&#123;<span class="number">0</span>&#125;; </span><br><span class="line">        <span class="keyword">if</span>(s.<span class="built_in">length</span>()!=t.<span class="built_in">length</span>())</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;s[i]!=<span class="string">&#x27;\0&#x27;</span>;i++)&#123;</span><br><span class="line">            num[s[i]-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">            num[t[i]-<span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">26</span>;i++)</span><br><span class="line">            <span class="keyword">if</span>(num[i]!=<span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote><blockquote><p>弊端：必须面对已知的字符，建立完整的字符表，比如已知含有的字符无非是26个字母。如果按照题目的进阶，unicode字符量很大，且不知道所有的字符是什么，无法建立字符表。</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[题目来源](&lt;a href=&quot;https://leetcode.cn/problems/valid-anagram/comments/&quot;&gt;242. 有效的字母异位词 - 力扣（LeetCode）&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--dep</summary>
-      
-    
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/categories/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
-    
-    
-    <category term="刷题日志" scheme="https://chunyujin.top/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/"/>
     
   </entry>
   

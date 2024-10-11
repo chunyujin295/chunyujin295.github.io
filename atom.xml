@@ -6,7 +6,7 @@
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
   
   <link href="https://chunyujin.top/"/>
-  <updated>2024-10-11T07:27:05.082Z</updated>
+  <updated>2024-10-11T07:53:55.325Z</updated>
   <id>https://chunyujin.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>static放置的位置</title>
+    <link href="https://chunyujin.top/chunyujin/5583cd64.html"/>
+    <id>https://chunyujin.top/chunyujin/5583cd64.html</id>
+    <published>2024-10-11T07:53:00.000Z</published>
+    <updated>2024-10-11T07:53:55.325Z</updated>
+    
+    <content type="html"><![CDATA[<p>在声明函数时，如果需要用静态关键字static，应该放到函数类型前面还是后面？</p><blockquote><p>通义千问的回答：<strong>建议放到返回类型的前面</strong><br>在C++中，<code>static</code>关键字可以用于多种上下文，包括函数声明。当用于类的成员函数时，<code>static</code>的位置（放在返回类型前面还是后面）并不会改变其语义，但通常有约定俗成的放置位置。</p><h3 id="放置位置"><a href="#放置位置" class="headerlink" title="放置位置"></a>放置位置</h3><ul><li><p><strong>放在返回类型前面</strong>：这是最常见的用法，也是推荐的做法。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">myStaticFunction</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li><li><p><strong>放在返回类型后面</strong>：虽然语法上是允许的，但这样做并不常见，并且可能会降低代码的可读性。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="type">static</span> <span class="title">myStaticFunction</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li></ul><h3 id="语义上的区别"><a href="#语义上的区别" class="headerlink" title="语义上的区别"></a>语义上的区别</h3><p>无论<code>static</code>放在哪里，它都表示该成员函数属于类本身而不是类的任何特定对象。这意味着：</p><ul><li>你不需要创建类的实例就可以调用静态成员函数。</li><li>静态成员函数不能访问非静态成员变量或非静态成员函数，因为它没有隐式的<code>this</code>指针。</li><li>静态成员函数只能访问静态成员变量和其他静态成员函数。</li></ul><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>尽管从技术角度来看，<code>static</code>关键字放在返回类型前面或后面都不会影响编译器对其的理解，但从编码风格和可读性的角度来看，通常建议将<code>static</code>放在返回类型之前。这符合大多数C++程序员的习惯，也使得代码更加清晰易懂。</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在声明函数时，如果需要用静态关键字static，应该放到函数类型前面还是后面？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通义千问的回答：&lt;strong&gt;建议放到返回类型的前面&lt;/strong&gt;&lt;br&gt;在C++中，&lt;code&gt;static&lt;/code&gt;关键字可以用于多种上下文</summary>
+      
+    
+    
+    
+    <category term="编程日志" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/"/>
+    
+    <category term="C&amp;C++" scheme="https://chunyujin.top/categories/%E7%BC%96%E7%A8%8B%E6%97%A5%E5%BF%97/C-C/"/>
+    
+    
+    <category term="C++" scheme="https://chunyujin.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>QString与QByteArray的区别与用途</title>
     <link href="https://chunyujin.top/chunyujin/3167b709.html"/>
     <id>https://chunyujin.top/chunyujin/3167b709.html</id>
     <published>2024-10-11T07:26:00.000Z</published>
-    <updated>2024-10-11T07:27:05.082Z</updated>
+    <updated>2024-10-11T07:35:51.488Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>通义千问的回答：</p><p><code>QByteArray</code> 和 <code>QString</code> 都是 Qt 框架中用于处理文本和二进制数据的类，但它们的设计目的和服务的场景有所不同。</p><h3 id="QByteArray"><a href="#QByteArray" class="headerlink" title="QByteArray"></a>QByteArray</h3><ul><li><strong>类型</strong>：<code>QByteArray</code> 用来存储原始字节（raw bytes），可以包含任意二进制数据。</li><li><strong>编码</strong>：它不假定任何特定的字符编码。你可以使用它来处理任何类型的二进制数据，包括图像、音频文件或网络协议中的数据包等。</li><li><strong>性能</strong>：由于直接操作内存中的字节，对于需要高效处理的数据，<code>QByteArray</code> 提供了较高的性能。</li><li><strong>API</strong>：提供了许多与 C 字符串兼容的方法，比如 <code>data()</code> 返回一个指向内部数组的指针，使得它可以方便地与其他C API进行交互。</li><li><strong>用途</strong>：适合于网络编程、文件I&#x2F;O、图像处理等需要处理非文本数据的情况。</li></ul><h3 id="QString"><a href="#QString" class="headerlink" title="QString"></a>QString</h3><ul><li><strong>类型</strong>：<code>QString</code> 是专门设计来处理文本字符串的类。</li><li><strong>编码</strong>：默认情况下，<code>QString</code> 使用 UTF-16 编码（在某些平台上可能使用 UTF-8）来存储文本，这意味着它可以有效地处理 Unicode 文本，支持多种语言和特殊符号。</li><li><strong>功能</strong>：提供了丰富的字符串操作方法，如搜索、替换、分割、连接等。</li><li><strong>国际化</strong>：非常适合于构建国际化的应用程序，因为它能够很好地处理多语言环境下的文本。</li><li><strong>内存管理</strong>：自动处理内存分配和释放，避免了常见的内存泄漏问题。</li><li><strong>安全性</strong>：提供了一些安全特性，例如防止缓冲区溢出。</li><li><strong>用途</strong>：主要用于用户界面元素的标签、消息框的内容、配置文件的读写等涉及文本的地方。</li></ul><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul><li>当你需要处理的是纯文本，尤其是当文本包含多语言字符时，应该使用 <code>QString</code>。</li><li>如果你正在处理二进制数据或者需要直接控制底层数据表示，那么 <code>QByteArray</code> 会是更好的选择。</li><li>在某些情况下，你可能需要在这两者之间进行转换。例如，从网络接收的数据可能是 <code>QByteArray</code> 形式，但在显示给用户之前，你可能需要将其转换为 <code>QString</code> 来正确显示文本内容。Qt 提供了便捷的方法来进行这种转换，如 <code>QString::fromUtf8(const QByteArray &amp;)</code> 和 <code>QByteArray::fromRawData(const char *unicode, int size)</code>、<code>QByteArray::fromStdString(const QString &amp;)</code> 等。</li></ul></blockquote><p>后需要补充的内容：在des加密算法中对于QString和QByteArray的应用说明</p>]]></content>
     
@@ -505,34 +533,6 @@
     
     
     <category term="MySQL" scheme="https://chunyujin.top/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>友链位置</title>
-    <link href="https://chunyujin.top/chunyujin/a0d6528f.html"/>
-    <id>https://chunyujin.top/chunyujin/a0d6528f.html</id>
-    <published>2024-05-19T09:43:00.000Z</published>
-    <updated>2024-10-10T10:23:05.460Z</updated>
-    
-    <content type="html"><![CDATA[<p>友链位置</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202405191740206.png" alt="截屏2024-05-19 17.39.46"></p><p>友链界面</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202405191743202.png" alt="截屏2024-05-19 17.43.15"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;友链位置&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202405191740206.png&quot; alt=&quot;截屏2024-05-19 17.39.46&quot;&gt;&lt;/p&gt;
-&lt;p&gt;友链界面</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="Hexo" scheme="https://chunyujin.top/categories/Skill/Hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://chunyujin.top/tags/Hexo/"/>
     
   </entry>
   

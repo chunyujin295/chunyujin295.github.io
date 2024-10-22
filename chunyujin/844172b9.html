@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><script>((function() {var callbacks = [],timeLimit = 50,open = false;setInterval(loop, 1);return {addListener: function(fn) {callbacks.push(fn);},cancleListenr: function(fn) {callbacks = callbacks.filter(function(v) {return v !== fn;});}}
+function loop() {var startTime = new Date();debugger;if (new Date() - startTime > timeLimit) {if (!open) {callbacks.forEach(function(fn) {fn.call(null);});}open = true;window.stop();alert('你真坏，请关闭控制台！');document.body.innerHTML = "";} else {open = false;}}})()).addListener(function() {window.location.reload();});</script><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Java_内存分配 | 浴巾的贼船</title><meta name="author" content="浴巾,3029795434@qq.com"><meta name="copyright" content="浴巾"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="Java内存分配主要包括以下几个区域:  寄存器：我们在程序中无法控制 栈：存放基本类型的数据和对象的引用，但对象本身不存放在栈中，而是存放在堆中 堆：存放用new产生的数据 静态域：存放在对象中用static定义的静态成员 常量池：存放常量 非RAM(随机存取存储器)存储：硬盘等永久存储空间   前瞻： new出的空间都是作为动态内存在堆中分配的，比如new出的对象的成员属性、使用new开辟的数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java_内存分配">
+<meta property="og:url" content="https://chunyujin.top/chunyujin/844172b9.html">
+<meta property="og:site_name" content="浴巾的贼船">
+<meta property="og:description" content="Java内存分配主要包括以下几个区域:  寄存器：我们在程序中无法控制 栈：存放基本类型的数据和对象的引用，但对象本身不存放在栈中，而是存放在堆中 堆：存放用new产生的数据 静态域：存放在对象中用static定义的静态成员 常量池：存放常量 非RAM(随机存取存储器)存储：硬盘等永久存储空间   前瞻： new出的空间都是作为动态内存在堆中分配的，比如new出的对象的成员属性、使用new开辟的数">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071113259.gif">
+<meta property="article:published_time" content="2023-03-08T10:17:00.000Z">
+<meta property="article:modified_time" content="2024-10-22T07:34:35.272Z">
+<meta property="article:author" content="浴巾">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071113259.gif"><link rel="shortcut icon" href="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202311081041412.png"><link rel="canonical" href="https://chunyujin.top/chunyujin/844172b9"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 浴巾","link":"链接: ","source":"来源: 浴巾的贼船","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java_内存分配',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-22 15:34:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mouse.css"><link rel="stypesheet" href="/css/loading.css?1"><link rel="stylesheet" href="/css/readPercent.css"><link rel="stylesheet" href="/css/custom.css"><span id="fps"></span><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="浴巾的贼船" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071113259.gif" onerror="onerror=null;src='https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302121138445.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">134</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">35</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa-solid fa-clock"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa-solid fa-pen-nib"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-mug-hot"></i><span> 喝杯茶</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa-brands fa-bilibili"></i><span> 追番</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fa-solid fa-clapperboard"></i><span> 影片</span></a></li><li><a class="site-page child" href="/book/"><i class="fa-fw fa-solid fa-book-skull"></i><span> 读书</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fa-solid fa-gamepad"></i><span> 游戏墙</span></a></li><li><a class="site-page child" href="/air-conditioner/"><i class="fa-fw fa-solid fa-snowflake"></i><span> 乘凉</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-desktop"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fa-solid fa-hand-holding-heart"></i><span> 友链</span></a></li><li><a class="site-page child" href="/website/"><i class="fa-fw fa-solid fa-globe"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-jet-fighter"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301010017530.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">浴巾的贼船</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa-solid fa-clock"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa-solid fa-pen-nib"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-mug-hot"></i><span> 喝杯茶</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa-brands fa-bilibili"></i><span> 追番</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fa-solid fa-clapperboard"></i><span> 影片</span></a></li><li><a class="site-page child" href="/book/"><i class="fa-fw fa-solid fa-book-skull"></i><span> 读书</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fa-solid fa-gamepad"></i><span> 游戏墙</span></a></li><li><a class="site-page child" href="/air-conditioner/"><i class="fa-fw fa-solid fa-snowflake"></i><span> 乘凉</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-desktop"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fa-solid fa-hand-holding-heart"></i><span> 友链</span></a></li><li><a class="site-page child" href="/website/"><i class="fa-fw fa-solid fa-globe"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-jet-fighter"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java_内存分配</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-08T10:17:00.000Z" title="发表于 2023-03-08 18:17:00">2023-03-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-22T07:34:35.272Z" title="更新于 2024-10-22 15:34:35">2024-10-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java/">Java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java_内存分配"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="Java内存分配"><a href="#Java内存分配" class="headerlink" title="Java内存分配"></a>Java内存分配</h3><p>主要包括以下几个区域:</p>
+<ol>
+<li>寄存器：我们在程序中无法控制</li>
+<li>栈：存放基本类型的数据和对象的引用，但对象本身不存放在栈中，而是存放在堆中</li>
+<li>堆：存放用new产生的数据</li>
+<li>静态域：存放在对象中用static定义的静态成员</li>
+<li>常量池：存放常量</li>
+<li>非RAM(随机存取存储器)存储：硬盘等永久存储空间</li>
+</ol>
+<hr>
+<p>前瞻：</p>
+<p>new出的空间都是作为动态内存在<strong>堆</strong>中分配的，比如new出的对象的成员属性、使用new开辟的数组中的各个元素、使用new创建的基本数据类型等</p>
+<p>局部变量在<strong>栈</strong>中分配，通常情况下，基本数据类型、对象名（对象的引用）存储在栈中</p>
+<blockquote>
+<p>注意是通常情况下。</p>
+<p>比如对象类型的数组，对象(的引用)是作为数组元素存储在堆中的，而不是栈:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span>()&#123;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="type">int</span> y;</span><br><span class="line">    Point(<span class="type">int</span> a ,<span class="type">int</span> b)&#123;</span><br><span class="line">    	<span class="built_in">this</span>.x = a;</span><br><span class="line">        <span class="built_in">this</span>.y = b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">main</span>()&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(string[] args)</span>&#123;</span><br><span class="line">        <span class="type">Point</span> <span class="variable">hh</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Point</span>(<span class="number">55</span>,<span class="number">66</span>);</span><br><span class="line">        <span class="type">int</span>[] num = &#123;<span class="keyword">new</span> <span class="title class_">Point</span>(<span class="number">1</span>,<span class="number">4</span>),<span class="keyword">new</span> <span class="title class_">Point</span>(<span class="number">10</span>,<span class="number">20</span>),<span class="keyword">new</span> <span class="title class_">Point</span>(<span class="number">33</span>,<span class="number">44</span>)&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>hh是new出来的一个Point类的对象，它的对象实体(成员属性)存储在堆区，而对象(名)保存在栈区，是对堆区的成员属性的引用</p>
+<p>num是new出来的一个数组，它的数据元素存储在堆区，而数组(名)保存在栈区，是对堆区的数据元素的引用，数据元素又是Point的对象，是堆区的成员属性的引用</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/2C3EC5646817F65A5A5A21CC14DA01E0.png" alt="2C3EC5646817F65A5A5A21CC14DA01E0" style="zoom: 25%;" />
+</blockquote>
+<p>常量存储在<strong>常量池</strong></p>
+<hr>
+<h5 id="Java内存分配中的栈"><a href="#Java内存分配中的栈" class="headerlink" title="Java内存分配中的栈"></a><font color=red>Java内存分配中的栈</font></h5><p>　　在函数中定义的一些<mark>基本类型的变量数据</mark>和<mark>对象的引用变量</mark>都在函数的栈内存中分配。当在一段代码块定义一个变量时，Java就在栈中为这个变量分配内存空间，当该变量退出该作用域后，Java会自动释放掉为该变量所分配的内存空间，该内存空间可以立即被另作他用。 </p>
+<h5 id="Java内存分配中的堆"><a href="#Java内存分配中的堆" class="headerlink" title="Java内存分配中的堆"></a><font color=red>Java内存分配中的堆</font></h5><p>　　堆内存用来存放由<mark>new创建的对象和数组</mark>。 在堆中分配的内存，由Java虚拟机的自动垃圾回收器来管理。</p>
+<p> 　在堆中产生了一个数组或对象后，还可以 在栈中定义一个特殊的变量，让栈中这个变量的取值等于数组或对象在堆内存中的首地址，栈中的这个变量就成了数组或对象的引用变量。引用变量就相当于是为数组或对象起的一个名称，以后就可以在程序中使用栈中的引用变量来访问堆中的数组或对象。引用变量就相当于是为数组或者对象起的一个名称。</p>
+<p>　　引用变量是普通的变量，定义时在栈中分配，引用变量在程序运行到其作用域之外后被释放。而数组和对象本身在堆中分配，即使程序运行到使用 new 产生数组或者对象的语句所在的代码块之外，数组和对象本身占据的内存不会被释放，数组和对象在没有引用变量指向它的时候，才变为垃圾，不能在被使用，但仍 然占据内存空间不放，在随后的一个不确定的时间被垃圾回收器收走（释放掉）。这也是 Java 比较占内存的原因。 </p>
+<p>　　<mark style="background-color: pink">实际上，栈中的变量指向堆内存中的变量，这就是Java中的指针！ </mark></p>
+<h5 id="常量池-constant-pool"><a href="#常量池-constant-pool" class="headerlink" title="常量池 (constant pool)"></a><font color=red>常量池 (constant pool)</font></h5><p>　　常量池指的是在编译期被确定，并被保存在已编译的.class文件中的一些数据。除了包含代码中所定义的各种基本类型（如int、long等等）和对象型（如String及数组）的常量值(final)还包含一些以文本形式出现的符号引用，比如： </p>
+<ol>
+<li>类和接口的全限定名；</li>
+<li>字段的名称和描述符； </li>
+<li>方法和名称和描述符。</li>
+</ol>
+<p>　　虚拟机必须为每个被装载的类型维护一个常量池。常量池就是该类型所用到常量的一个有序集和，包括直接常量（string,integer和 floating point常量）和对其他类型，字段和方法的符号引用。</p>
+<p>　　对于String常量，它的值是在常量池中的。而JVM中的常量池在内存当中是以表的形式存在的， 对于String类型，有一张固定长度的CONSTANT_String_info表用来存储文字字符串值，注意：该表只存储文字字符串值，不存储符号引 用。说到这里，对常量池中的字符串值的存储位置应该有一个比较明了的理解了。</p>
+<p>　　在程序执行的时候,常量池会储存在Method Area,而不是堆中。</p>
+<h5 id="堆与栈"><a href="#堆与栈" class="headerlink" title="堆与栈"></a><font color=red>堆与栈</font></h5><p>　　Java的堆是一个运行时数据区,类的(对象从中分配空间。这些对象通过new、newarray、 anewarray和multianewarray等指令建立，它们不需要程序代码来显式的释放。堆是由垃圾回收来负责的，堆的优势是可以动态地分配内存大小，生存期也不必事先告诉编译器，因为它是在运行时动态分配内存的，Java的垃圾收集器会自动收走这些不再使用的数据。但缺点是，由于要在运行时动态 分配内存，存取速度较慢。 </p>
+<p>　　栈的优势是，存取速度比堆要快，仅次于寄存器，栈数据可以共享。但缺点是，存在栈中的数据大小与生存期必须是确定的，缺乏灵活性。栈中主要存放一些基本类型的变量数据（int, short, long, byte, float, double, boolean, char）和对象句柄(引用)。</p>
+<p>　　这里我们主要关心栈，堆和常量池，对于栈和常量池中的对象可以共享，对于堆中的对象不可以共享。栈中的数据大小和生命周期是可以确定的，当没有引用指向数据时，这个数据就会消失。堆中的对象的由垃圾回收器负责回收，因此大小和生命周期不需要确定，具有很大的灵活性。</p>
+<h5 id="字符串内存分配-gt"><a href="#字符串内存分配-gt" class="headerlink" title="字符串内存分配&gt;"></a><font color = red>字符串内存分配</font>&gt;</h5><p>　　对于字符串，其对象的引用都是存储在栈中的，如果是编译期已经创建好(直接用双引号定义的)的就存储在常量池中，如果是运行期（new出来的）才能确定的就存储在堆中。对于equals相等的字符串，在常量池中永远只有一份，在堆中有多份。 </p>
+<p>如以下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="string">&quot;china&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="string">&quot;china&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> <span class="string">&quot;china&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">ss1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;china&quot;</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">ss2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;china&quot;</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">ss3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;china&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://images2015.cnblogs.com/blog/908514/201607/908514-20160720101024841-238269977.jpg" alt="	"></p>
+<p>　　这里解释一下黄色这3个箭头，对于通过new产生一个字符串（假设为“china”）时，会先去常量池中查找是否已经有了“china”对象，如果没有则在常量池中创建一个此字符串对象，然后堆中再创建一个常量池中此”china”对象的拷贝对象。</p>
+<p>　　这也就是有道面试题：Strings&#x3D;newString(“xyz”);产生几个对象？一个或两个，如果常量池中原来没有”xyz”,就是两个。</p>
+<p>　　存在于.class文件中的常量池，在运行期被JVM装载，并且可以扩充。String的 intern()方法就是扩充常量池的 一个方法；当一个String实例str调用intern()方法时，Java 查找常量池中是否有相同Unicode的字符串常量，如果有，则返回其的引用，如果没有，则在常量池中增加一个Unicode等于str的字符串并返回它的引用</p>
+<p>如下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String s0= <span class="string">&quot;kvill&quot;</span>;   </span><br><span class="line">String s1=<span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;kvill&quot;</span>);   </span><br><span class="line">String s2=<span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;kvill&quot;</span>);   </span><br><span class="line">System.out.println( s0==s1 );     </span><br><span class="line">s1.intern();   </span><br><span class="line">s2=s2.intern(); <span class="comment">//把常量池中&quot;kvill&quot;的引用赋给s2   </span></span><br><span class="line">System.out.println( s0==s1);   </span><br><span class="line">System.out.println( s0==s1.intern() );   </span><br><span class="line">System.out.println( s0==s2 ); </span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<p>false<br>false<br>true<br>true</p>
+<p>String常量池问题的几个例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">【<span class="number">1</span>】</span><br><span class="line"><span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;ab&quot;</span>;   </span><br><span class="line"><span class="type">String</span> <span class="variable">bb</span> <span class="operator">=</span> <span class="string">&quot;b&quot;</span>;   </span><br><span class="line"><span class="type">String</span> <span class="variable">b</span> <span class="operator">=</span> <span class="string">&quot;a&quot;</span> + bb;   </span><br><span class="line">System.out.println((a == b)); <span class="comment">//result = false </span></span><br><span class="line"></span><br><span class="line">【<span class="number">2</span>】</span><br><span class="line"><span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;ab&quot;</span>;   </span><br><span class="line"><span class="keyword">final</span> <span class="type">String</span> <span class="variable">bb</span> <span class="operator">=</span> <span class="string">&quot;b&quot;</span>;   </span><br><span class="line"><span class="type">String</span> <span class="variable">b</span> <span class="operator">=</span> <span class="string">&quot;a&quot;</span> + bb;   </span><br><span class="line">System.out.println((a == b)); <span class="comment">//result = true </span></span><br><span class="line"></span><br><span class="line">【<span class="number">3</span>】</span><br><span class="line"><span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;ab&quot;</span>;   </span><br><span class="line"><span class="keyword">final</span> <span class="type">String</span> <span class="variable">bb</span> <span class="operator">=</span> getBB();   </span><br><span class="line"><span class="type">String</span> <span class="variable">b</span> <span class="operator">=</span> <span class="string">&quot;a&quot;</span> + bb;   </span><br><span class="line">System.out.println((a == b)); <span class="comment">//result = false   </span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title function_">getBB</span><span class="params">()</span> &#123;  </span><br><span class="line"><span class="keyword">return</span> <span class="string">&quot;b&quot;</span>;   </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>分析：</p>
+<p>　　【1】中，JVM对于字符串引用，由于在字符串的”+”连接中，有字符串引用存在，而引用的值在程序编译期是无法确定的，即”a” + bb无法被编译器优化，只有在程序运行期来动态分配并将连接后的新地址赋给b。所以上面程序的结果也就为false。</p>
+<p>　　【2】和【1】中唯一不同的是bb字符串加了final修饰，对于final修饰的变量，它在编译时被解析为常量值的一个本地拷贝存储到自己的常量池中或嵌入到它的字节码流中。所以此时的”a” + bb和”a” + “b”效果是一样的。故上面程序的结果为true。</p>
+<p>　　【3】JVM对于字符串引用bb，它的值在编译期无法确定，只有在程序运行期调用方法后，将方法的返回值和”a”来动态连接并分配地址为b，故上面程序的结果为false。</p>
+<p>结论：</p>
+<p>　　字符串是一个特殊包装类,其引用是存放在栈里的,而对象内容必须根据创建方式不同定(常量池和堆).有的是编译期就已经创建好，存放在字符串常 量池中，而有的是运行时才被创建.使用new关键字，存放在堆中。</p>
+<h5 id="基础类型的变量和常量在内存中的分配"><a href="#基础类型的变量和常量在内存中的分配" class="headerlink" title="基础类型的变量和常量在内存中的分配"></a>基础类型的变量和常量在内存中的分配</h5><p>　　对于基础类型的变量和常量，变量和引用存储在栈中，常量存储在常量池中。</p>
+<p>如以下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">i1</span> <span class="operator">=</span> <span class="number">9</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">i2</span> <span class="operator">=</span> <span class="number">9</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">i3</span> <span class="operator">=</span> <span class="number">9</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">final</span> <span class="type">int</span> <span class="variable">INT1</span> <span class="operator">=</span> <span class="number">9</span>;</span><br><span class="line"><span class="keyword">final</span> <span class="type">int</span> <span class="variable">INT2</span> <span class="operator">=</span> <span class="number">9</span>;</span><br><span class="line"><span class="keyword">final</span> <span class="type">int</span> <span class="variable">INT3</span> <span class="operator">=</span> <span class="number">9</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://images2015.cnblogs.com/blog/908514/201607/908514-20160720152401622-482243128.jpg" alt="img"></p>
+<p>　　编译器先处理int i1 &#x3D; 9；首先它会在栈中创建一个变量为i1的引用，然后查找栈中是否有9这个值，如果没找到，就将9存放进来，然后将i1指向9。接着处理int i2 &#x3D; 9；在创建完i2的引用变量后，因为在栈中已经有9这个值，便将i2直接指向9。这样，就出现了i1与i2同时均指向9的情况。最后i3也指向这个9。</p>
+<h5 id="成员变量和局部变量在内存中的分配"><a href="#成员变量和局部变量在内存中的分配" class="headerlink" title="成员变量和局部变量在内存中的分配"></a>成员变量和局部变量在内存中的分配</h5><p>　　对于成员变量和局部变量：成员变量就是方法外部，类的内部定义的变量；局部变量就是方法或语句块内部定义的变量。局部变量必须初始化。 形式参数是局部变量，局部变量的数据存在于栈内存中。栈内存中的局部变量随着方法的消失而消失。 成员变量存储在堆中的对象里面，由垃圾回收器负责回收。  如以下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">BirthDate</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> day;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> month;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> year;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">BirthDate</span><span class="params">(<span class="type">int</span> d, <span class="type">int</span> m, <span class="type">int</span> y)</span> &#123;</span><br><span class="line">        day = d;</span><br><span class="line">        month = m;</span><br><span class="line">        year = y;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 省略get,set方法………</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String args[])</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">date</span> <span class="operator">=</span> <span class="number">9</span>;</span><br><span class="line">        <span class="type">Test</span> <span class="variable">test</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Test</span>();</span><br><span class="line">        test.change(date);</span><br><span class="line">        <span class="type">BirthDate</span> <span class="variable">d1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BirthDate</span>(<span class="number">7</span>, <span class="number">7</span>, <span class="number">1970</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">change</span><span class="params">(<span class="type">int</span> i)</span> &#123;</span><br><span class="line">        i = <span class="number">1234</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://images2015.cnblogs.com/blog/908514/201607/908514-20160720153756247-1230687149.jpg" alt="img"></p>
+<p>　　对于以上这段代码，date为局部变量，i,d,m,y都是形参为局部变量，day，month，year为成员变量。下面分析一下代码执行时候的变化：   </p>
+<ol>
+<li>main方法开始执行：int date &#x3D; 9; date局部变量，基础类型，引用和值都存在栈中。</li>
+<li>Test test &#x3D; new Test();test为对象引用，存在栈中，对象(new Test())存在堆中。 </li>
+<li>test.change(date); i为局部变量，引用和值存在栈中。当方法change执行完成后，i就会从栈中消失。</li>
+<li>BirthDate d1&#x3D; new BirthDate(7,7,1970); d1为对象引用，存在栈中，对象(new BirthDate())存在堆中，其中d，m，y为局部变量存储在栈中，且它们的类型为基础类型，因此它们的数据也存储在栈中。day,month,year为成员变量，它们存储在堆中(new BirthDate()里面)。当BirthDate构造方法执行完之后，d,m,y将从栈中消失。 </li>
+<li>main方法执行完之后，date变量，test，d1引用将从栈中消失，new Test(), new BirthDate()将等待垃圾回收。</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://chunyujin.top">浴巾</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://chunyujin.top/chunyujin/844172b9.html">https://chunyujin.top/chunyujin/844172b9.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://chunyujin.top" target="_blank">浴巾的贼船</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a></div><div class="post_share"><div class="social-share" data-image="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071113259.gif" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/reward_wechat.JPG" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/reward_wechat.JPG" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/chunyujin/bd13564e.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301010017530.jpg" onerror="onerror=null;src='https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212300157190.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">动态开辟二维数组</div></div></a></div><div class="next-post pull-right"><a href="/chunyujin/c8c5b94d.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301010017530.jpg" onerror="onerror=null;src='https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212300157190.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Java_抽象类_接口</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/chunyujin/c8c5b94d.html" title="Java_抽象类_接口"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301010017530.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-08</div><div class="title">Java_抽象类_接口</div></div></a></div><div><a href="/chunyujin/9772543a.html" title="Java_基本概念"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301010017530.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-08</div><div class="title">Java_基本概念</div></div></a></div><div><a href="/chunyujin/9e54541f.html" title="Java_输入"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301010017530.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-17</div><div class="title">Java_输入</div></div></a></div><div><a href="/chunyujin/9107dc23.html" title="父类是非抽象类子类能是抽象类"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202301010017530.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-11</div><div class="title">父类是非抽象类子类能是抽象类</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="author_top is-center"> <div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202303071113259.gif" onerror="this.onerror=null;this.src='https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202302121138445.gif'" alt="avatar"/></div><div class="author-info__name">浴巾</div><div class="author-info__description">水可载舟，亦可赛艇🚤</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">134</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">35</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/chunyujin295"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/chunyujin295" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:3029795434@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/433907522" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="/qq_add/" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a><a class="social-icon" href="/wechat_add/" target="_blank" title="WeChat"><i class="fa-brands fa-weixin"></i></a><a class="social-icon" href="/reward/" target="_blank" title="Reward"><i class="fa-solid fa-sack-dollar"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">🥦点击上方图标可添加好友🥦<br>🌝主题深浅模式跟随系统🌝<br>🌚系统无深浅则默认为深色模式🌚<br>🪐深色模式下可以看到星空背景🪐<br>🪂右下角可手动更改深浅模式🪂<br>🎊鼠标放在上方头像周围有惊喜🎊<br>--------------------------<br></div><div id="welcome-info"> </div></div><div class="xpand" style="height:200px;"><canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas></div><script src="https://npm.elemecdn.com/ethan4116-blog/lib/js/other/two-people/twopeople1.js"></script><script src="https://npm.elemecdn.com/ethan4116-blog/lib/js/other/two-people/zdog.dist.js"></script><script id="rendered-js" src="https://npm.elemecdn.com/ethan4116-blog/lib/js/other/two-people/twopeople.js"></script><style>.card-widget.card-announcement {
+margin: 0;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+canvas {
+display: block;
+margin: 0 auto;
+cursor: move;
+}</style><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="toc-number">1.</span> <span class="toc-text">Java内存分配</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%AD%E7%9A%84%E6%A0%88"><span class="toc-number">1.0.1.</span> <span class="toc-text">Java内存分配中的栈</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%AD%E7%9A%84%E5%A0%86"><span class="toc-number">1.0.2.</span> <span class="toc-text">Java内存分配中的堆</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E6%B1%A0-constant-pool"><span class="toc-number">1.0.3.</span> <span class="toc-text">常量池 (constant pool)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A0%86%E4%B8%8E%E6%A0%88"><span class="toc-number">1.0.4.</span> <span class="toc-text">堆与栈</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D-gt"><span class="toc-number">1.0.5.</span> <span class="toc-text">字符串内存分配&gt;</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E5%88%86%E9%85%8D"><span class="toc-number">1.0.6.</span> <span class="toc-text">基础类型的变量和常量在内存中的分配</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E5%88%86%E9%85%8D"><span class="toc-number">1.0.7.</span> <span class="toc-text">成员变量和局部变量在内存中的分配</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/chunyujin/874d4093.html" title="C++_迭代器&amp;范围for的本质">C++_迭代器&amp;范围for的本质</a><time datetime="2024-10-14T05:27:00.000Z" title="发表于 2024-10-14 13:27:00">2024-10-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/chunyujin/5583cd64.html" title="static放置的位置">static放置的位置</a><time datetime="2024-10-11T07:53:00.000Z" title="发表于 2024-10-11 15:53:00">2024-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/chunyujin/3167b709.html" title="QString与QByteArray的区别与用途"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202408041153746.png" onerror="this.onerror=null;this.src='https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212300157190.jpg'" alt="QString与QByteArray的区别与用途"/></a><div class="content"><a class="title" href="/chunyujin/3167b709.html" title="QString与QByteArray的区别与用途">QString与QByteArray的区别与用途</a><time datetime="2024-10-11T07:26:00.000Z" title="发表于 2024-10-11 15:26:00">2024-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/chunyujin/e9887bd.html" title="Typora+PicGo图床+阿里云OSS配置"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/PixPin_2024-10-10_21-01-52.png" onerror="this.onerror=null;this.src='https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202212300157190.jpg'" alt="Typora+PicGo图床+阿里云OSS配置"/></a><div class="content"><a class="title" href="/chunyujin/e9887bd.html" title="Typora+PicGo图床+阿里云OSS配置">Typora+PicGo图床+阿里云OSS配置</a><time datetime="2024-10-10T13:01:00.000Z" title="发表于 2024-10-10 21:01:00">2024-10-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/chunyujin/49b78e.html" title="Hexo自动化提交-gulp压缩静态资源">Hexo自动化提交-gulp压缩静态资源</a><time datetime="2024-10-10T11:22:00.000Z" title="发表于 2024-10-10 19:22:00">2024-10-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/202305251742881.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024  <i id="heartbeat" class="fa fas fa-heartbeat"></i> 浴巾</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">感谢莅临</div><br>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.beian.gov.cn/img/new/gongan.png">
+<a href="https://beian.miit.gov.cn/"  style="color:#f72b07" target="_blank">鲁ICP备2023001670号</a></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"> <svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up">  </i><span id="percent">0 <span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.chunyujin.top/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.chunyujin.top/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="/js/sun_moon.js" async></script><script defer data-pjax src="/js/readPercent.js"></script><script async src="/js/title.js"></script><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async data-pjax src="/js/txmap.js"></script><script async src="/js/fps.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = '5ab96380a1af43cc9cc08bce197ae671';
+  var gaud_map_key = 'e700312c741348cdfba1c9b1277b8179';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.982279,28.19409';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><!-- hexo injector body_end end --></body></html>

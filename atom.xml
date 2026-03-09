@@ -183,9 +183,9 @@
     
     <category term="Ubuntu" scheme="https://chunyujin.top/tags/Ubuntu/"/>
     
-    <category term="远程ssh" scheme="https://chunyujin.top/tags/%E8%BF%9C%E7%A8%8Bssh/"/>
-    
     <category term="frp" scheme="https://chunyujin.top/tags/frp/"/>
+    
+    <category term="远程ssh" scheme="https://chunyujin.top/tags/%E8%BF%9C%E7%A8%8Bssh/"/>
     
   </entry>
   
@@ -338,20 +338,19 @@
   </entry>
   
   <entry>
-    <title>vim学习资料推荐</title>
-    <link href="https://chunyujin.top/chunyujin/feaee67e.html"/>
-    <id>https://chunyujin.top/chunyujin/feaee67e.html</id>
+    <title>vim中调出终端的几种方法</title>
+    <link href="https://chunyujin.top/chunyujin/8babbc76.html"/>
+    <id>https://chunyujin.top/chunyujin/8babbc76.html</id>
     <published>2025-06-02T03:11:00.000Z</published>
-    <updated>2026-01-12T02:43:02.859Z</updated>
+    <updated>2026-01-12T02:43:02.858Z</updated>
     
-    <content type="html"><![CDATA[<ol><li><p>首推vim内置交互式学习教程，命令行输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vimtutor</span><br></pre></td></tr></table></figure><p>即可打开</p></li><li><p>游戏式vim教程：<a href="https://github.com/chunyujin295/vim-adventure">vim-adventure</a></p><p>里面包含了中文的部署教程，这里再列一个补充教程<a href="https://www.bilibili.com/opus/954236485052137495">免费畅玩VIM Adventures（VIM大冒险）</a></p></li><li><p>一些网站：</p><p>由浅入深学习：</p><ul><li><a href="https://wsdjeg.net/vim-galore-zh-cn/#vim-%E5%93%B2%E5%AD%A6">vim从入门到精通</a></li><li><a href="https://zhuanlan.zhihu.com/p/96801314">精通vim你应该理解的几个名词</a></li><li><a href="https://vim.fandom.com/wiki/Vim_Tips_Wiki">vim_tips_wiki</a></li><li><a href="https://www.runoob.com/linux/linux-vim.html">vim菜鸟教程</a></li></ul><p>速查表&#x2F;技巧教程：</p><ul><li><a href="https://blog.csdn.net/qq_54177358/article/details/130402370">vim常用技巧</a></li><li><a href="https://blog.donothing.site/2019/11/23/vim-skill/">vim使用技巧整理</a></li><li><a href="https://cloud.tencent.com/developer/article/2157419">vim搜索及高亮取消</a></li></ul></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="在vim中打开一个内置终端"><a href="#在vim中打开一个内置终端" class="headerlink" title="在vim中打开一个内置终端"></a>在vim中打开一个内置终端</h1><p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:term</span><br><span class="line">或</span><br><span class="line">:terminal</span><br></pre></td></tr></table></figure><p>用于启动一个内置的终端模拟器，进入到vim的终端模式。这个命令允许用户在 Vim 编辑器中直接运行一个交互式的 shell 或其他终端程序，而无需离开 Vim 环境。这在需要同时编辑文件和运行终端命令时特别有用。</p><h2 id="如何修改终端模拟器"><a href="#如何修改终端模拟器" class="headerlink" title="如何修改终端模拟器"></a>如何修改终端模拟器</h2><p>见vim的简单配置教程</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;首推vim内置交互式学习教程，命令行输入&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre</summary>
+    <summary type="html">&lt;h1 id=&quot;在vim中打开一个内置终端&quot;&gt;&lt;a href=&quot;#在vim中打开一个内置终端&quot; class=&quot;headerlink&quot; title=&quot;在vim中打开一个内置终端&quot;&gt;&lt;/a&gt;在vim中打开一个内置终端&lt;/h1&gt;&lt;p&gt;命令：&lt;/p&gt;
+&lt;figure class=&quot;hig</summary>
       
     
     
@@ -372,19 +371,20 @@
   </entry>
   
   <entry>
-    <title>vim中调出终端的几种方法</title>
-    <link href="https://chunyujin.top/chunyujin/8babbc76.html"/>
-    <id>https://chunyujin.top/chunyujin/8babbc76.html</id>
+    <title>vim学习资料推荐</title>
+    <link href="https://chunyujin.top/chunyujin/feaee67e.html"/>
+    <id>https://chunyujin.top/chunyujin/feaee67e.html</id>
     <published>2025-06-02T03:11:00.000Z</published>
-    <updated>2026-01-12T02:43:02.858Z</updated>
+    <updated>2026-01-12T02:43:02.859Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="在vim中打开一个内置终端"><a href="#在vim中打开一个内置终端" class="headerlink" title="在vim中打开一个内置终端"></a>在vim中打开一个内置终端</h1><p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:term</span><br><span class="line">或</span><br><span class="line">:terminal</span><br></pre></td></tr></table></figure><p>用于启动一个内置的终端模拟器，进入到vim的终端模式。这个命令允许用户在 Vim 编辑器中直接运行一个交互式的 shell 或其他终端程序，而无需离开 Vim 环境。这在需要同时编辑文件和运行终端命令时特别有用。</p><h2 id="如何修改终端模拟器"><a href="#如何修改终端模拟器" class="headerlink" title="如何修改终端模拟器"></a>如何修改终端模拟器</h2><p>见vim的简单配置教程</p>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>首推vim内置交互式学习教程，命令行输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vimtutor</span><br></pre></td></tr></table></figure><p>即可打开</p></li><li><p>游戏式vim教程：<a href="https://github.com/chunyujin295/vim-adventure">vim-adventure</a></p><p>里面包含了中文的部署教程，这里再列一个补充教程<a href="https://www.bilibili.com/opus/954236485052137495">免费畅玩VIM Adventures（VIM大冒险）</a></p></li><li><p>一些网站：</p><p>由浅入深学习：</p><ul><li><a href="https://wsdjeg.net/vim-galore-zh-cn/#vim-%E5%93%B2%E5%AD%A6">vim从入门到精通</a></li><li><a href="https://zhuanlan.zhihu.com/p/96801314">精通vim你应该理解的几个名词</a></li><li><a href="https://vim.fandom.com/wiki/Vim_Tips_Wiki">vim_tips_wiki</a></li><li><a href="https://www.runoob.com/linux/linux-vim.html">vim菜鸟教程</a></li></ul><p>速查表&#x2F;技巧教程：</p><ul><li><a href="https://blog.csdn.net/qq_54177358/article/details/130402370">vim常用技巧</a></li><li><a href="https://blog.donothing.site/2019/11/23/vim-skill/">vim使用技巧整理</a></li><li><a href="https://cloud.tencent.com/developer/article/2157419">vim搜索及高亮取消</a></li></ul></li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;在vim中打开一个内置终端&quot;&gt;&lt;a href=&quot;#在vim中打开一个内置终端&quot; class=&quot;headerlink&quot; title=&quot;在vim中打开一个内置终端&quot;&gt;&lt;/a&gt;在vim中打开一个内置终端&lt;/h1&gt;&lt;p&gt;命令：&lt;/p&gt;
-&lt;figure class=&quot;hig</summary>
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;首推vim内置交互式学习教程，命令行输入&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre</summary>
       
     
     
@@ -562,83 +562,18 @@
   </entry>
   
   <entry>
-    <title>Ubuntu下neovim安装</title>
-    <link href="https://chunyujin.top/chunyujin/86e5a8ba.html"/>
-    <id>https://chunyujin.top/chunyujin/86e5a8ba.html</id>
-    <published>2025-05-31T09:00:00.000Z</published>
-    <updated>2026-01-12T02:43:02.859Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>本教程的安装教程仅提供一种或几种最简单的方案，更多方案可以自行百度</p></blockquote><h1 id="neovim安装"><a href="#neovim安装" class="headerlink" title="neovim安装"></a>neovim安装</h1><h2 id="通过apt安装"><a href="#通过apt安装" class="headerlink" title="通过apt安装"></a>通过apt安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install neovim</span><br></pre></td></tr></table></figure><p>安装完执行<code>nvim</code>即可启动</p><h2 id="去官网下载Release版本"><a href="#去官网下载Release版本" class="headerlink" title="去官网下载Release版本"></a>去官网下载Release版本</h2><p>有时候apt维护的neovim版本很低，甚至达不到lazyvim的最低版本要求，因此我们直接去下载最新的Release版本。</p><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://github.com/neovim/neovim/blob/master/INSTALL.md">neovim&#x2F;INSTALL.md at master · neovim&#x2F;neovim</a></p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208155443844.png" alt="image-20250208155443844" style="zoom:80%;" /><br>选择适合你的版本</center></div><p>或者使用<code>wget</code>或<code>curl</code>命令进行下载</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>解压之后移动到合适的路径</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar xzvf nvim-linux-x86_64.tar.gz</span><br><span class="line">sudo <span class="built_in">mv</span> nvim-linux-x86_64 /usr/local/neovim</span><br><span class="line"><span class="comment"># 路径随便，也可以是~/software啥的，只要确保你不会误删除就行</span></span><br></pre></td></tr></table></figure><h3 id="添加到环境变量"><a href="#添加到环境变量" class="headerlink" title="添加到环境变量"></a>添加到环境变量</h3><p>确保能在全局进行使用</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果你的终端是bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$PATH:/usr/local/neovim/bin&#x27;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc <span class="comment"># 重新运行bash配置文件使配置生效</span></span><br><span class="line"><span class="comment"># 如果你的终端是zsh</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$PATH:/usr/local/neovim/bin&#x27;</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">source</span> ~/.zshrc <span class="comment"># 重新运行zsh配置文件使配置生效</span></span><br></pre></td></tr></table></figure><p>尝试<code>nvim</code>是否生效，从主界面检查一下版本，或者使用<code>nvim --version</code></p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208164233189.png" alt="image-20250208164233189" style="zoom:80%;" /><br>现在就是最新的了，超级新</center></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本教程的安装教程仅提供一种或几种最简单的方案，更多方案可以自行百度&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;neovim安装&quot;&gt;&lt;a href=&quot;#neovim安装&quot; class=&quot;headerlink&quot; title=&quot;neovim安装</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="(˘•ω•˘)" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/"/>
-    
-    <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
-    
-    <category term="安装" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AE%89%E8%A3%85/"/>
-    
-    
-    <category term="neovim" scheme="https://chunyujin.top/tags/neovim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>neovim配置的卸载</title>
-    <link href="https://chunyujin.top/chunyujin/b5d0b033.html"/>
-    <id>https://chunyujin.top/chunyujin/b5d0b033.html</id>
-    <published>2025-05-31T09:00:00.000Z</published>
-    <updated>2026-01-12T02:43:02.868Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果你想清空所有的neovim配置，比如我此前安装了lazyvim配置，但是现在想要清除掉，获取最原始的neovim，并安装ayamir-nvim的配置，你应该查看此教程。</p><p>当然，如果你对原有配置想要备份一下，可以改一下名或者直接使用文件备份</p><h1 id="删除所有配置"><a href="#删除所有配置" class="headerlink" title="删除所有配置"></a>删除所有配置</h1><p>如果你想删除所有的配置，那么：</p><p>删除以下内容：</p><ul><li><code>~/.config/nvim</code>（在 Linux 或 MacOS 上）</li><li><code>~\AppData\local\nvim</code>（在 Windows 上）</li></ul><p>当然，如何你将nvim安装在了其他地方，你需要自己去删除</p><p>为了确保还可以删除以下文件夹：</p><ul><li><code>~/.local/share/nvim</code>（在 Linux 或 MacOS 上）</li><li><code>~\AppData\local\nvim-data</code>（在 Windows 上）</li></ul><p>同样，如果你修改了配置文件的保存位置，也应该去对应位置删除</p><blockquote><p>可以参考<a href="https://chunyujin.top/chunyujin/1036c7b0">《修改nvim安装位置以及Windows下修改配置文件保存位置的方式》</a></p></blockquote><h1 id="删除指定配置"><a href="#删除指定配置" class="headerlink" title="删除指定配置"></a>删除指定配置</h1><p>但是如果仔细观察，可以发现，其实一台机器上可以同时存在多套配置</p><p>例如，根据 <a href="https://github.com/folke/lazy.nvim">lazy vim 自述文件页面</a>，要卸载 lazy.nvim，需要删除以下文件和目录：</p><ul><li><strong>data数据</strong>: <code>~/.local/share/nvim/lazy</code></li><li><strong>state状态</strong>: <code>~/.local/state/nvim/lazy</code></li><li><strong>lockfile锁定文件</strong>: <code>~/.config/nvim/lazy-lock.json</code></li></ul><p>至于关于共存配置的问题，后续我还会再研究，然后在此记录</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;如果你想清空所有的neovim配置，比如我此前安装了lazyvim配置，但是现在想要清除掉，获取最原始的neovim，并安装ayamir-nvim的配置，你应该查看此教程。&lt;/p&gt;
-&lt;p&gt;当然，如果你对原有配置想要备份一下，可以改一下名或者直接使用文件备份&lt;/p&gt;
-&lt;h1 </summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="(˘•ω•˘)" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/"/>
-    
-    <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
-    
-    <category term="配置及使用" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
-    
-    
-    <category term="neovim" scheme="https://chunyujin.top/tags/neovim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows下配置treesitter</title>
-    <link href="https://chunyujin.top/chunyujin/47671080.html"/>
-    <id>https://chunyujin.top/chunyujin/47671080.html</id>
+    <title>lazyvim中blick_cmp_fuzzy无法安装</title>
+    <link href="https://chunyujin.top/chunyujin/6b20be27.html"/>
+    <id>https://chunyujin.top/chunyujin/6b20be27.html</id>
     <published>2025-05-31T09:00:00.000Z</published>
     <updated>2026-01-12T02:43:02.869Z</updated>
     
-    <content type="html"><![CDATA[<p>treesitter是neovim的一个支持编程语言解析的LSP的管理工具，在Linux下支持的很好，但是Windows下如果用它来安装各种语言的LSP，就容易报错，我发现原因是安装某种语言的LSP是通过GitHub进行下载的，然后其中一个语言，lua的lsp安装下来库是.so，Windows下没办法编译。看了看官网的解决方式：<a href="https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support">Windows support · nvim-treesitter&#x2F;nvim-treesitter Wiki</a>，需要Windows上能使用clang或者其他的方式进行编译，比如使用scoop安装zig，然后将其在treesitter相关配置的.lua中设置为编译选项,而不是gcc等。</p><p>下面是一个Windows下从安装clang到配置、再到配置treesitter的一个简单教程<a href="https://takia.dev/nvim-treesitter-windows-11/">如何在 Windows 11 上安装 neovim treesitter — How to install neovim treesitter on Windows 11</a>，结合上面官网给出的解决方案进行处理就行</p><p>但是可能会遇到一些问题，比如里面修改powershel的配置文件，改完之后报错<a href="https://blog.csdn.net/qq_25450733/article/details/83110268">VS2017中“项目无法加载，因为它缺少安装组件”的解决方法_无法加载,因为它缺少安装组件。若要解决此问题,请使用以下选择启动 visual studio-CSDN博客</a>，<a href="https://cloud.tencent.com/developer/ask/sof/1147540">缺少Microsoft.VisualStudio.Component.VC.Tools.x86.x64-腾讯云开发者社区-腾讯云</a>。下面是我实践之后的解决方案：</p><p>首先就是不一定要按照他一样创建一个Powershell.ps1文件，我们使用自己现有的就行，之前配置powershell的oh-my-posh已经创建了一个<code>$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1</code>，我们直接在里面写上就行：</p><blockquote><p>powershell7和powershell5位置不一样，PowerShell文件夹是7的，WindowsPowerShell文件夹是5的，之所以写入配置，是因为安装LSP在编译时调用的cmd命令，而cmd命令无法自己加载VS的clang环境，需要在启动powershell的时候利用powershll的启动配置文件启动，所以在这个powershell下打开nvim，然后nvim在窗口下打开并执行cmd终端运行安装命令，这样cmd就也处于clang环境下了。所以如果你配置nvim，想要在powershell5下安装LSP，就改powershell5的配置，否则改7的。</p></blockquote><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">oh</span><span class="literal">-my-posh</span> init pwsh <span class="literal">--config</span> <span class="string">&#x27;C:\Users\PC\AppData\Local\Programs\oh-my-posh\themes\montys.omp.json&#x27;</span> | <span class="built_in">Invoke-Expression</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="variable">$vsPath</span> = &amp;<span class="string">&quot;<span class="variable">$</span>&#123;env:ProgramFiles(x86)&#125;\Microsoft Visual Studio\Installer\vswhere.exe&quot;</span> <span class="literal">-latest</span> <span class="literal">-products</span> * <span class="literal">-requires</span> Microsoft.VisualStudio.Component.VC.Tools.x86.x64 <span class="literal">-property</span> installationpath</span><br><span class="line"></span><br><span class="line"><span class="built_in">Write-Host</span> <span class="string">&quot;Microsoft Visual Studio path = &#x27;<span class="variable">$vsPath</span>&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Use module `Microsoft.VisualStudio.DevShell.dll`</span></span><br><span class="line"><span class="built_in">Import-Module</span> (<span class="built_in">Get-ChildItem</span> <span class="variable">$vsPath</span> <span class="literal">-Recurse</span> <span class="operator">-File</span> <span class="literal">-Filter</span> Microsoft.VisualStudio.DevShell.dll).FullName</span><br><span class="line"></span><br><span class="line"><span class="built_in">Enter-VsDevShell</span> <span class="literal">-VsInstallPath</span> <span class="variable">$vsPath</span> <span class="literal">-SkipAutomaticLocation</span> <span class="literal">-DevCmdArguments</span> <span class="string">&#x27;-arch=x64&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>VS安装管理器中，左边选C++开发工具包，右边把绿色的选上。</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250213001252144.png" alt="image-20250213001252144"></p><p>这样之前配置的powershell.ps1就能正常运行，打开一个终端显示：成功了</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250213001344991.png" alt="image-20250213001344991"></p><p>之后可以按照教程继续操作了。</p><p>我参考教程及官网，以及之前修改logo的经验，在lua下的config文件夹下新建了一个my-treesitter.lua的文件夹，然后lazyvim官网的配置<a href="https://www.lazyvim.org/plugins/treesitter">LazyVim — TreeSitter | LazyVim</a>拷贝进来，最后在最下面的config &#x3D; function的方法体中加入了上面treesitter官方为支持Windows配置的链接中给出的一些建议，设置treesitter的installer的构建工具：</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">&quot;nvim-treesitter.install&quot;</span>).compilers = &#123; <span class="string">&quot;clang&quot;</span>, <span class="string">&quot;gcc&quot;</span> &#125;</span><br></pre></td></tr></table></figure><blockquote><p>在这里我并没有按照官方的建议禁用掉使用git进行下载，因为我发现禁用了之后我下载语言LSP的时候会报无法连接，请检查网络的错误，不禁用的话则会正常</p></blockquote><p>对了，不要忘了在lazyvim官方给出的配置大括号最前面加上return，至于为什么，<a href="https://kimi.moonshot.cn/chat/cumc3vschmtt26gnf8t0">powershell配置+lua{}报错 - Kimi.ai</a>这里面给出了解释。</p><p>下面是完整的my-tree-sitter.lua的配置内容：</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> &#123;</span><br><span class="line">  <span class="string">&quot;nvim-treesitter/nvim-treesitter&quot;</span>,</span><br><span class="line">  version = <span class="literal">false</span>, <span class="comment">-- last release is way too old and doesn&#x27;t work on Windows</span></span><br><span class="line">  build = <span class="string">&quot;:TSUpdate&quot;</span>,</span><br><span class="line">  event = &#123; <span class="string">&quot;LazyFile&quot;</span>, <span class="string">&quot;VeryLazy&quot;</span> &#125;,</span><br><span class="line">  lazy = vim.fn.argc(<span class="number">-1</span>) == <span class="number">0</span>, <span class="comment">-- load treesitter early when opening a file from the cmdline</span></span><br><span class="line">  init = <span class="function"><span class="keyword">function</span><span class="params">(plugin)</span></span></span><br><span class="line">    <span class="comment">-- PERF: add nvim-treesitter queries to the rtp and it&#x27;s custom query predicates early</span></span><br><span class="line">    <span class="comment">-- This is needed because a bunch of plugins no longer `require(&quot;nvim-treesitter&quot;)`, which</span></span><br><span class="line">    <span class="comment">-- no longer trigger the **nvim-treesitter** module to be loaded in time.</span></span><br><span class="line">    <span class="comment">-- Luckily, the only things that those plugins need are the custom queries, which we make available</span></span><br><span class="line">    <span class="comment">-- during startup.</span></span><br><span class="line">    <span class="built_in">require</span>(<span class="string">&quot;lazy.core.loader&quot;</span>).add_to_rtp(plugin)</span><br><span class="line">    <span class="built_in">require</span>(<span class="string">&quot;nvim-treesitter.query_predicates&quot;</span>)</span><br><span class="line">  <span class="keyword">end</span>,</span><br><span class="line">  cmd = &#123; <span class="string">&quot;TSUpdateSync&quot;</span>, <span class="string">&quot;TSUpdate&quot;</span>, <span class="string">&quot;TSInstall&quot;</span> &#125;,</span><br><span class="line">  keys = &#123;</span><br><span class="line">    &#123; <span class="string">&quot;&lt;c-space&gt;&quot;</span>, desc = <span class="string">&quot;Increment Selection&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;&lt;bs&gt;&quot;</span>, desc = <span class="string">&quot;Decrement Selection&quot;</span>, mode = <span class="string">&quot;x&quot;</span> &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  opts_extend = &#123; <span class="string">&quot;ensure_installed&quot;</span> &#125;,</span><br><span class="line">  <span class="comment">---@type TSConfig</span></span><br><span class="line">  <span class="comment">---@diagnostic disable-next-line: missing-fields</span></span><br><span class="line">  opts = &#123;</span><br><span class="line">    highlight = &#123; enable = <span class="literal">true</span> &#125;,</span><br><span class="line">    indent = &#123; enable = <span class="literal">true</span> &#125;,</span><br><span class="line">    ensure_installed = &#123;</span><br><span class="line">      <span class="string">&quot;bash&quot;</span>,</span><br><span class="line">      <span class="string">&quot;c&quot;</span>,</span><br><span class="line">      <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">      <span class="string">&quot;diff&quot;</span>,</span><br><span class="line">      <span class="string">&quot;html&quot;</span>,</span><br><span class="line">      <span class="string">&quot;javascript&quot;</span>,</span><br><span class="line">      <span class="string">&quot;jsdoc&quot;</span>,</span><br><span class="line">      <span class="string">&quot;json&quot;</span>,</span><br><span class="line">      <span class="string">&quot;jsonc&quot;</span>,</span><br><span class="line">      <span class="string">&quot;lua&quot;</span>,</span><br><span class="line">      <span class="string">&quot;luadoc&quot;</span>,</span><br><span class="line">      <span class="string">&quot;luap&quot;</span>,</span><br><span class="line">      <span class="string">&quot;markdown&quot;</span>,</span><br><span class="line">      <span class="string">&quot;markdown_inline&quot;</span>,</span><br><span class="line">      <span class="string">&quot;printf&quot;</span>,</span><br><span class="line">      <span class="string">&quot;python&quot;</span>,</span><br><span class="line">      <span class="string">&quot;query&quot;</span>,</span><br><span class="line">      <span class="string">&quot;regex&quot;</span>,</span><br><span class="line">      <span class="string">&quot;toml&quot;</span>,</span><br><span class="line">      <span class="string">&quot;tsx&quot;</span>,</span><br><span class="line">      <span class="string">&quot;typescript&quot;</span>,</span><br><span class="line">      <span class="string">&quot;vim&quot;</span>,</span><br><span class="line">      <span class="string">&quot;vimdoc&quot;</span>,</span><br><span class="line">      <span class="string">&quot;xml&quot;</span>,</span><br><span class="line">      <span class="string">&quot;yaml&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    incremental_selection = &#123;</span><br><span class="line">      enable = <span class="literal">true</span>,</span><br><span class="line">      keymaps = &#123;</span><br><span class="line">        init_selection = <span class="string">&quot;&lt;C-space&gt;&quot;</span>,</span><br><span class="line">        node_incremental = <span class="string">&quot;&lt;C-space&gt;&quot;</span>,</span><br><span class="line">        scope_incremental = <span class="literal">false</span>,</span><br><span class="line">        node_decremental = <span class="string">&quot;&lt;bs&gt;&quot;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    textobjects = &#123;</span><br><span class="line">      move = &#123;</span><br><span class="line">        enable = <span class="literal">true</span>,</span><br><span class="line">        goto_next_start = &#123; [<span class="string">&quot;]f&quot;</span>] = <span class="string">&quot;@function.outer&quot;</span>, [<span class="string">&quot;]c&quot;</span>] = <span class="string">&quot;@class.outer&quot;</span>, [<span class="string">&quot;]a&quot;</span>] = <span class="string">&quot;@parameter.inner&quot;</span> &#125;,</span><br><span class="line">        goto_next_end = &#123; [<span class="string">&quot;]F&quot;</span>] = <span class="string">&quot;@function.outer&quot;</span>, [<span class="string">&quot;]C&quot;</span>] = <span class="string">&quot;@class.outer&quot;</span>, [<span class="string">&quot;]A&quot;</span>] = <span class="string">&quot;@parameter.inner&quot;</span> &#125;,</span><br><span class="line">        goto_previous_start = &#123; [<span class="string">&quot;[f&quot;</span>] = <span class="string">&quot;@function.outer&quot;</span>, [<span class="string">&quot;[c&quot;</span>] = <span class="string">&quot;@class.outer&quot;</span>, [<span class="string">&quot;[a&quot;</span>] = <span class="string">&quot;@parameter.inner&quot;</span> &#125;,</span><br><span class="line">        goto_previous_end = &#123; [<span class="string">&quot;[F&quot;</span>] = <span class="string">&quot;@function.outer&quot;</span>, [<span class="string">&quot;[C&quot;</span>] = <span class="string">&quot;@class.outer&quot;</span>, [<span class="string">&quot;[A&quot;</span>] = <span class="string">&quot;@parameter.inner&quot;</span> &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">---@param opts TSConfig</span></span><br><span class="line">  <span class="built_in">config</span> = <span class="function"><span class="keyword">function</span><span class="params">(_, opts)</span></span></span><br><span class="line">    <span class="comment">-- require(&quot;nvim-treesitter.install&quot;).prefer_git = false</span></span><br><span class="line">    <span class="built_in">require</span>(<span class="string">&quot;nvim-treesitter.install&quot;</span>).compilers = &#123; <span class="string">&quot;clang&quot;</span>, <span class="string">&quot;gcc&quot;</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">type</span>(opts.ensure_installed) == <span class="string">&quot;table&quot;</span> <span class="keyword">then</span></span><br><span class="line">      opts.ensure_installed = LazyVim.dedup(opts.ensure_installed)</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="built_in">require</span>(<span class="string">&quot;nvim-treesitter.configs&quot;</span>).setup(opts)</span><br><span class="line">  <span class="keyword">end</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>最后也是配置成功了，因为此前lua的LSP总是安装不出来，现在成功了，也能高亮显示了：<br><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250213003341247.png" alt="image-20250213003341247"></p><h1 id="如果不想要终端打印信息-x2F-终端打开速度太慢："><a href="#如果不想要终端打印信息-x2F-终端打开速度太慢：" class="headerlink" title="如果不想要终端打印信息&#x2F;终端打开速度太慢："></a>如果不想要终端打印信息&#x2F;终端打开速度太慢：</h1><ol><li><p>有种方法，我们改powershel5的启动文件，即<code>C:\Users\你的用户名\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1</code>而不是powershell7的配置文件<code>C:\Users\你的用户名\Documents\PowerShell\Microsoft.PowerShell_profile.ps1</code>。</p><p>然后平时使用nvim的时候使用powershell7，而想要安装或者更新LSP的时候，使用powershell5打开，然后更新nvim的LSP。</p><p>这种方式确实是可以的。</p></li><li><p>终端不想打印启动信息：在启动powershell程序最后加上参数<code>-NoLogo</code></p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250213232736429.png" alt="image-20250213232736429" style="zoom:80%;" /></li></ol>]]></content>
+    <content type="html"><![CDATA[<img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210012646986.png" alt="image-20250210012646986" style="zoom:80%;" /><p>问题讨论：<a href="https://github.com/LazyVim/LazyVim/issues/5483">bug: module ‘blink_cmp_fuzzy’ not found · Issue #5483 · LazyVim&#x2F;LazyVim</a></p><p>这里给出了解决方案：blink_cmp_fuzzy的安装依赖于curl</p><p>安装教程：<a href="https://blog.csdn.net/hadues/article/details/101788327">Curl命令详解-CSDN博客</a></p><p>里面教程图片给错了，curl官网<a href="https://curl.se/download.html">curl - Download</a>找下载的时候，应该往下拉，找二进制包进行安装，不要安装最顶部的源码包，里面没有可执行程序。</p><p>或者直接进这个<a href="https://curl.se/windows/">curl for Windows</a></p><p>之后bin目录添加到环境变量即可。</p><p>检查安装是否成功</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --version</span><br></pre></td></tr></table></figure><p>值得注意的是，power shell对其支持不太好，cmd模式下才生效：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210013747348.png" alt="image-20250210013747348" style="zoom:80%;" /><p><a href="https://www.lazyvim.org/extras/coding/blink"> Blink | LazyVim</a></p><p>之后我在官网上找到了Blink的启用方法，输入<code>: LazyExtras</code>来启用这些额外命令</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210015514875.png" alt="image-20250210015514875"></p><p>你会进入到启动额外插件的界面，界面提示你按下x键就可以启用下面的未启用的插件，我发现blick相关插件没有启动，另外在上面GitHub讨论上说了cmp相关也需要安装。</p><p>于是我就将这些加进去了，并且也加了一些其他的插件。然后回到lazy中update了。之后重启nvim，再update。</p><p>最后<code>:LazyHealth</code>一下，检查lazyvim的健康。</p><p>发现插件装多了确实卡。。。</p><p>但是总之算是知道了lazyvim的插件使用流程了，直接去官网查看各种插件，然后回头想用的时候直接<code>:LazyExtras</code>下新增，或者进lazy的update进行新增，该安装就去install安装。想配置就按官网去写.lua</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;treesitter是neovim的一个支持编程语言解析的LSP的管理工具，在Linux下支持的很好，但是Windows下如果用它来安装各种语言的LSP，就容易报错，我发现原因是安装某种语言的LSP是通过GitHub进行下载的，然后其中一个语言，lua的lsp安装下来库是.</summary>
+    <summary type="html">&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210012646986.png&quot; alt=&quot;image-20250210012646986&quot; style=&quot;zoom:80%;&quot;</summary>
       
     
     
@@ -649,7 +584,68 @@
     
     <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
     
-    <category term="配置及使用" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
+    <category term="问题解决" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    
+    <category term="neovim" scheme="https://chunyujin.top/tags/neovim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lazyvim安装了但是不生效</title>
+    <link href="https://chunyujin.top/chunyujin/9a70019a.html"/>
+    <id>https://chunyujin.top/chunyujin/9a70019a.html</id>
+    <published>2025-05-31T09:00:00.000Z</published>
+    <updated>2026-01-12T02:43:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>参考教程：<a href="https://docs.yuzaicn.com/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Vim%E9%85%8D%E7%BD%AE/nvim/neovim-linux">linux下使用neovim但是出现版本过低的问题无法使用lazyvim | Yuzai Blog</a></p><p>如果你确实安装了lazyvim，并在.config下添加了nvim文件夹，但是启动nvim的时候发现lazyvim并没有开始配置。</p><p>或许是因为你的nvim版本太老了，你可以使用<code>nvim --version</code>查看自己的版本，或者干脆直接<code>nvim</code>进入主页面查看版本。</p><p>前往lazyvim官网<a href="https://www.lazyvim.org/">🚀 Getting Started | LazyVim</a>，查看最低neovim版本要求，来确认你的neovim版本是否确实低于最低要求了。</p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208154713417.png" alt="image-20250208154713417" style="zoom:80%;" /><br>好吧，apt有时候确实维护的很慢，uos上才只能安装0.3版本的</center></div><p>接下来你需要卸载你的旧版neovim，如果你是通过apt安装的：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove neovim <span class="comment"># 直接卸载掉</span></span><br></pre></td></tr></table></figure><p>然后自己手动去官网下载一份Release版本的，安装教程见<a href="">Ubuntu下neovim+lazyvim安装及配置</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;参考教程：&lt;a href=&quot;https://docs.yuzaicn.com/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Vim%E9%85%8D%E7%BD%AE/nvim/neovim-linux&quot;&gt;linux下使用neovim但是出现版本</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="(˘•ω•˘)" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/"/>
+    
+    <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
+    
+    <category term="问题解决" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    
+    <category term="neovim" scheme="https://chunyujin.top/tags/neovim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lazyvim无法识别编程语言检测</title>
+    <link href="https://chunyujin.top/chunyujin/57e65ccd.html"/>
+    <id>https://chunyujin.top/chunyujin/57e65ccd.html</id>
+    <published>2025-05-31T09:00:00.000Z</published>
+    <updated>2026-01-12T02:43:02.870Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210030622683.png" alt="image-20250210030622683"></p><p><a href="https://github.com/nvim-treesitter/nvim-treesitter/issues/1985">执行 lua 时出错无法加载解析器：uv_dlopen：cpp.so 不是有效的 Win32 应用程序。·问题 #1985 ·nvim-treesitter&#x2F;nvim-treesitter — Error executing lua Failed to load parser: uv_dlopen: cpp.so is not a valid Win32 application. · Issue #1985 · nvim-treesitter&#x2F;nvim-treesitter</a></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210030642442.png" alt="image-20250210030642442"></p><p><a href="https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support">Windows 支持 ·nvim-treesitter&#x2F;nvim-treesitter 维基 — Windows support · nvim-treesitter&#x2F;nvim-treesitter Wiki</a></p><p>里面给出了通过配置lua来解决问题的方法</p><p>但是有一个致命的问题就是我不懂lua语言，因此不知道配置文件应该怎么配置，所以当务之急就是学习lua语言</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210030622683.png&quot; alt=&quot;image-20250210030622683&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="(˘•ω•˘)" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/"/>
+    
+    <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
+    
+    <category term="问题解决" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
     
     
     <category term="neovim" scheme="https://chunyujin.top/tags/neovim/"/>

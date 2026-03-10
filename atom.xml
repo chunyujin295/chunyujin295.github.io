@@ -50,6 +50,36 @@
   </entry>
   
   <entry>
+    <title>MinGW构建的坑(libgcc_s_seh-1,libstdc++-6和 libwinpthread-1)</title>
+    <link href="https://chunyujin.top/chunyujin/845149a0.html"/>
+    <id>https://chunyujin.top/chunyujin/845149a0.html</id>
+    <published>2026-03-09T05:24:00.000Z</published>
+    <updated>2026-03-09T06:46:09.975Z</updated>
+    
+    <content type="html"><![CDATA[<p>在Windows用mingw编译的C&#x2F;C++程序默认会依赖这三个动态库：</p><ul><li><code>libgcc_s_seh-1.dll</code>： 该库是 GCC 提供的一个运行时库，用于处理 C 和 C++ 程序中的一些基本运算。SEH 代表结构化异常处理，这是 Windows 系统上的一种异常处理机制。</li><li><code>libstdc+±6.dll</code>： 该库是 GCC 提供的 C++ 标准库的动态链接库文件，它包含了 C++ 程序运行时需要的标准库实现。在 Windows 平台上，许多使用 C++ 编写的应用程序都依赖这个 DLL 文件。</li><li><code>libwinpthread-1.dll</code>： 该库是 GnuWin 工具集中的一个 DLL 文件，它提供了 POSIX 线程库（pthreads）的 Windows 实现。</li></ul><p>所以说编出来的程序，还需要自己手动拷贝这三个库到可执行目录才行。（很麻烦）</p><p>gcc提供了静态链接这几个库的方法：</p><blockquote><p>静态链接libgcc_s_seh-1.dll<br>链接时增加链接选项 -static-libgcc</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o myprogram myprogram.c -static-libgcc</span><br></pre></td></tr></table></figure><p>静态链接libstdc+±6<br>链接时增加链接选项 -static-libstdc++</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o myprogram main.cpp -static-libstdc++</span><br></pre></td></tr></table></figure><p>静态链接libwinpthread-1.dll<br>暂时没法发现静态链接libwinpthread-1.dll的专用链接选项，不过可以通过链接选项 -static来实现。不过链接选项-static相当于将libstdc+±6和libgcc_s_seh-1也静态链接了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o myprogram main.cpp -static</span><br></pre></td></tr></table></figure></blockquote><p>对于cmake来说，可以在构建的时候，静态链接这三个库，下面是千问给出的两个cmake写法：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对某一target生效</span></span><br><span class="line"><span class="keyword">if</span> (MINGW)</span><br><span class="line">    <span class="keyword">target_link_options</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> PRIVATE</span><br><span class="line">        -static-libgcc</span><br><span class="line">        -static-libstdc++</span><br><span class="line">        -Wl,-Bstatic</span><br><span class="line">        -lwinpthread</span><br><span class="line">        -Wl,-Bdynamic</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">endif</span>()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对所有构建项目生效</span></span><br><span class="line"><span class="keyword">if</span> (MINGW)</span><br><span class="line">    <span class="keyword">add_link_options</span>(</span><br><span class="line">        -static-libgcc</span><br><span class="line">        -static-libstdc++</span><br><span class="line">        -Wl,-Bstatic</span><br><span class="line">        -lwinpthread</span><br><span class="line">        -Wl,-Bdynamic</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">endif</span>()</span><br></pre></td></tr></table></figure><p>注意事项：</p><p>你的项目作为最下层的target，依赖很多第三方库以及项目中的其他target，所以需要确保MinGW下，他们也是静态链接了上面的三个库，或者如果有些库你并不可控，无法修改他们的cmake选项，那么将他们打包成静态库，然后被你的最终target静态链接，也是可以的。</p><blockquote><p>参考链接：<a href="https://blog.csdn.net/flysnow010/article/details/138123797">mingw静态链接(libgcc_s_seh-1,libstdc++-6和 libwinpthread-1)_libwinpthread-1.dll-CSDN博客</a></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在Windows用mingw编译的C&amp;#x2F;C++程序默认会依赖这三个动态库：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;libgcc_s_seh-1.dll&lt;/code&gt;： 该库是 GCC 提供的一个运行时库，用于处理 C 和 C++ 程序中的一些基本运算。SEH 代表结</summary>
+      
+    
+    
+    
+    <category term="Learn" scheme="https://chunyujin.top/categories/Learn/"/>
+    
+    <category term="Cpp" scheme="https://chunyujin.top/categories/Learn/Cpp/"/>
+    
+    <category term="MinGW" scheme="https://chunyujin.top/categories/Learn/Cpp/MinGW/"/>
+    
+    
+    <category term="MinGW" scheme="https://chunyujin.top/tags/MinGW/"/>
+    
+  </entry>
+  
+  <entry>
     <title>msys2与msvc编译ffmpeg-有人成功有人失败了</title>
     <link href="https://chunyujin.top/chunyujin/bf110e6a.html"/>
     <id>https://chunyujin.top/chunyujin/bf110e6a.html</id>
@@ -80,36 +110,6 @@
     <category term="MinGW" scheme="https://chunyujin.top/tags/MinGW/"/>
     
     <category term="Ffmpeg" scheme="https://chunyujin.top/tags/Ffmpeg/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MinGW构建的坑(libgcc_s_seh-1,libstdc++-6和 libwinpthread-1)</title>
-    <link href="https://chunyujin.top/chunyujin/845149a0.html"/>
-    <id>https://chunyujin.top/chunyujin/845149a0.html</id>
-    <published>2026-03-09T05:24:00.000Z</published>
-    <updated>2026-03-09T06:46:09.975Z</updated>
-    
-    <content type="html"><![CDATA[<p>在Windows用mingw编译的C&#x2F;C++程序默认会依赖这三个动态库：</p><ul><li><code>libgcc_s_seh-1.dll</code>： 该库是 GCC 提供的一个运行时库，用于处理 C 和 C++ 程序中的一些基本运算。SEH 代表结构化异常处理，这是 Windows 系统上的一种异常处理机制。</li><li><code>libstdc+±6.dll</code>： 该库是 GCC 提供的 C++ 标准库的动态链接库文件，它包含了 C++ 程序运行时需要的标准库实现。在 Windows 平台上，许多使用 C++ 编写的应用程序都依赖这个 DLL 文件。</li><li><code>libwinpthread-1.dll</code>： 该库是 GnuWin 工具集中的一个 DLL 文件，它提供了 POSIX 线程库（pthreads）的 Windows 实现。</li></ul><p>所以说编出来的程序，还需要自己手动拷贝这三个库到可执行目录才行。（很麻烦）</p><p>gcc提供了静态链接这几个库的方法：</p><blockquote><p>静态链接libgcc_s_seh-1.dll<br>链接时增加链接选项 -static-libgcc</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o myprogram myprogram.c -static-libgcc</span><br></pre></td></tr></table></figure><p>静态链接libstdc+±6<br>链接时增加链接选项 -static-libstdc++</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o myprogram main.cpp -static-libstdc++</span><br></pre></td></tr></table></figure><p>静态链接libwinpthread-1.dll<br>暂时没法发现静态链接libwinpthread-1.dll的专用链接选项，不过可以通过链接选项 -static来实现。不过链接选项-static相当于将libstdc+±6和libgcc_s_seh-1也静态链接了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o myprogram main.cpp -static</span><br></pre></td></tr></table></figure></blockquote><p>对于cmake来说，可以在构建的时候，静态链接这三个库，下面是千问给出的两个cmake写法：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对某一target生效</span></span><br><span class="line"><span class="keyword">if</span> (MINGW)</span><br><span class="line">    <span class="keyword">target_link_options</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> PRIVATE</span><br><span class="line">        -static-libgcc</span><br><span class="line">        -static-libstdc++</span><br><span class="line">        -Wl,-Bstatic</span><br><span class="line">        -lwinpthread</span><br><span class="line">        -Wl,-Bdynamic</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">endif</span>()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对所有构建项目生效</span></span><br><span class="line"><span class="keyword">if</span> (MINGW)</span><br><span class="line">    <span class="keyword">add_link_options</span>(</span><br><span class="line">        -static-libgcc</span><br><span class="line">        -static-libstdc++</span><br><span class="line">        -Wl,-Bstatic</span><br><span class="line">        -lwinpthread</span><br><span class="line">        -Wl,-Bdynamic</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">endif</span>()</span><br></pre></td></tr></table></figure><p>注意事项：</p><p>你的项目作为最下层的target，依赖很多第三方库以及项目中的其他target，所以需要确保MinGW下，他们也是静态链接了上面的三个库，或者如果有些库你并不可控，无法修改他们的cmake选项，那么将他们打包成静态库，然后被你的最终target静态链接，也是可以的。</p><blockquote><p>参考链接：<a href="https://blog.csdn.net/flysnow010/article/details/138123797">mingw静态链接(libgcc_s_seh-1,libstdc++-6和 libwinpthread-1)_libwinpthread-1.dll-CSDN博客</a></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在Windows用mingw编译的C&amp;#x2F;C++程序默认会依赖这三个动态库：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;libgcc_s_seh-1.dll&lt;/code&gt;： 该库是 GCC 提供的一个运行时库，用于处理 C 和 C++ 程序中的一些基本运算。SEH 代表结</summary>
-      
-    
-    
-    
-    <category term="Learn" scheme="https://chunyujin.top/categories/Learn/"/>
-    
-    <category term="Cpp" scheme="https://chunyujin.top/categories/Learn/Cpp/"/>
-    
-    <category term="MinGW" scheme="https://chunyujin.top/categories/Learn/Cpp/MinGW/"/>
-    
-    
-    <category term="MinGW" scheme="https://chunyujin.top/tags/MinGW/"/>
     
   </entry>
   
@@ -183,9 +183,9 @@
     
     <category term="Ubuntu" scheme="https://chunyujin.top/tags/Ubuntu/"/>
     
-    <category term="frp" scheme="https://chunyujin.top/tags/frp/"/>
-    
     <category term="远程ssh" scheme="https://chunyujin.top/tags/%E8%BF%9C%E7%A8%8Bssh/"/>
+    
+    <category term="frp" scheme="https://chunyujin.top/tags/frp/"/>
     
   </entry>
   
@@ -338,39 +338,6 @@
   </entry>
   
   <entry>
-    <title>vim中调出终端的几种方法</title>
-    <link href="https://chunyujin.top/chunyujin/8babbc76.html"/>
-    <id>https://chunyujin.top/chunyujin/8babbc76.html</id>
-    <published>2025-06-02T03:11:00.000Z</published>
-    <updated>2026-01-12T02:43:02.858Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="在vim中打开一个内置终端"><a href="#在vim中打开一个内置终端" class="headerlink" title="在vim中打开一个内置终端"></a>在vim中打开一个内置终端</h1><p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:term</span><br><span class="line">或</span><br><span class="line">:terminal</span><br></pre></td></tr></table></figure><p>用于启动一个内置的终端模拟器，进入到vim的终端模式。这个命令允许用户在 Vim 编辑器中直接运行一个交互式的 shell 或其他终端程序，而无需离开 Vim 环境。这在需要同时编辑文件和运行终端命令时特别有用。</p><h2 id="如何修改终端模拟器"><a href="#如何修改终端模拟器" class="headerlink" title="如何修改终端模拟器"></a>如何修改终端模拟器</h2><p>见vim的简单配置教程</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;在vim中打开一个内置终端&quot;&gt;&lt;a href=&quot;#在vim中打开一个内置终端&quot; class=&quot;headerlink&quot; title=&quot;在vim中打开一个内置终端&quot;&gt;&lt;/a&gt;在vim中打开一个内置终端&lt;/h1&gt;&lt;p&gt;命令：&lt;/p&gt;
-&lt;figure class=&quot;hig</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="(˘•ω•˘)" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/"/>
-    
-    <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
-    
-    <category term="学习" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="vim学习" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AD%A6%E4%B9%A0/vim%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="vim" scheme="https://chunyujin.top/tags/vim/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vim学习资料推荐</title>
     <link href="https://chunyujin.top/chunyujin/feaee67e.html"/>
     <id>https://chunyujin.top/chunyujin/feaee67e.html</id>
@@ -437,6 +404,39 @@
   </entry>
   
   <entry>
+    <title>vim中调出终端的几种方法</title>
+    <link href="https://chunyujin.top/chunyujin/8babbc76.html"/>
+    <id>https://chunyujin.top/chunyujin/8babbc76.html</id>
+    <published>2025-06-02T03:11:00.000Z</published>
+    <updated>2026-01-12T02:43:02.858Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="在vim中打开一个内置终端"><a href="#在vim中打开一个内置终端" class="headerlink" title="在vim中打开一个内置终端"></a>在vim中打开一个内置终端</h1><p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:term</span><br><span class="line">或</span><br><span class="line">:terminal</span><br></pre></td></tr></table></figure><p>用于启动一个内置的终端模拟器，进入到vim的终端模式。这个命令允许用户在 Vim 编辑器中直接运行一个交互式的 shell 或其他终端程序，而无需离开 Vim 环境。这在需要同时编辑文件和运行终端命令时特别有用。</p><h2 id="如何修改终端模拟器"><a href="#如何修改终端模拟器" class="headerlink" title="如何修改终端模拟器"></a>如何修改终端模拟器</h2><p>见vim的简单配置教程</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;在vim中打开一个内置终端&quot;&gt;&lt;a href=&quot;#在vim中打开一个内置终端&quot; class=&quot;headerlink&quot; title=&quot;在vim中打开一个内置终端&quot;&gt;&lt;/a&gt;在vim中打开一个内置终端&lt;/h1&gt;&lt;p&gt;命令：&lt;/p&gt;
+&lt;figure class=&quot;hig</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="(˘•ω•˘)" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/"/>
+    
+    <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
+    
+    <category term="学习" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vim学习" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AD%A6%E4%B9%A0/vim%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="vim" scheme="https://chunyujin.top/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
     <title>我的neovim配置文件地址</title>
     <link href="https://chunyujin.top/chunyujin/2c42a54b.html"/>
     <id>https://chunyujin.top/chunyujin/2c42a54b.html</id>
@@ -468,18 +468,18 @@
   </entry>
   
   <entry>
-    <title>Windows下lazyvim的rg安装和配置</title>
-    <link href="https://chunyujin.top/chunyujin/5d69b84a.html"/>
-    <id>https://chunyujin.top/chunyujin/5d69b84a.html</id>
+    <title>Windows下lazyvim的fzf安装和配置</title>
+    <link href="https://chunyujin.top/chunyujin/8e71814d.html"/>
+    <id>https://chunyujin.top/chunyujin/8e71814d.html</id>
     <published>2025-06-01T03:00:00.000Z</published>
-    <updated>2026-01-12T02:43:02.867Z</updated>
+    <updated>2026-01-12T02:43:02.868Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="lazyvim的依据文本查询功能"><a href="#lazyvim的依据文本查询功能" class="headerlink" title="lazyvim的依据文本查询功能"></a>lazyvim的依据文本查询功能</h2><p>在lazyvim中，如果想要根据文本内容进行搜索，可以在开始界面使用g按钮</p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250601110400511.png" alt="image-20250601110400511" style="zoom:80%;" /><br>但是我们发现提示需要安装rg这个软件在Windows系统上</center></div><p>lazyvim的依据文本查询功能依赖于rg(ripgrep)软件，这是一个用来根据内容进行查询的跨平台工具，安装了它，我们可以查询一些大概知道有什么内容但是忘记了名字和位置的文件。</p><p>进入GitHub安装release发布版本：<a href="https://github.com/BurntSushi/ripgrep/releases/tag/14.1.1">Release 14.1.1 · BurntSushi&#x2F;ripgrep</a></p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208012313894.png" alt="image-20250208012313894" style="zoom:80%;" /><br>安装MSVC版本可能需要你配置了MSVC工具链</center></div><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208012446748.png" alt="image-20250208012446748" style="zoom:80%;" /><br>解压到你能找到的地方</center></div><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208012601645.png" alt="image-20250208012601645" style="zoom:80%;" /><br>添加到环境变量</center></div><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208012849171.png" alt="20250208012849171" style="zoom:80%;" /><br>lazyvim可以使用Find Text功能了</center></div><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250601110734614.png" alt="image-20250601110734614" style="zoom:80%;" />]]></content>
+    <content type="html"><![CDATA[<h1 id="lazyvim的查找文件功能"><a href="#lazyvim的查找文件功能" class="headerlink" title="lazyvim的查找文件功能"></a>lazyvim的查找文件功能</h1><p>依赖于fzf软件，这是一个go语言编写的跨平台的文件模糊查找工具，Windows下可以直接访问GitHub官网进行relase版本的下载和安装：<a href="https://github.com/junegunn/fzf/releases">Releases · junegunn&#x2F;fzf</a></p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208010839553.png" alt="image-20250208010839553" style="zoom:80%;" /><br>选择好版本</center></div><p>解压完之后发现直接就是一个.exe程序，将其添加在环境变量中以便在任何位置都能使用它：</p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208011255173.png" alt="image-20250208011255173" style="zoom:80%;" /><br>可以先将fzf.exe转移到其他路径下</center></div><p>终端中输入<code>fzf</code>即可执行：</p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208011452369.png" alt="image-20250208011452369" style="zoom:80%;" /></center></div><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208013038024.png" alt="image-20250208013038024" style="zoom:80%;" /><br>现在lazyvim支持文件查询功能了</ber></center></div><blockquote><p>fzf更详细的安装及配置，可以查看<a href="">fzf安装配置及使用</a></p></blockquote><h1 id="新版本lazyvim安装fzf方法"><a href="#新版本lazyvim安装fzf方法" class="headerlink" title="新版本lazyvim安装fzf方法"></a>新版本lazyvim安装fzf方法</h1><p>现在最新版本的lazyvim中可以通过内部直接安装的方式启动fzf：</p><p>lazyextras中搜索fzf-lua或者editor.fzf</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250601105734662.png" alt="image-20250601105734662" style="zoom:80%;" /><p>按x直接安装即可</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;lazyvim的依据文本查询功能&quot;&gt;&lt;a href=&quot;#lazyvim的依据文本查询功能&quot; class=&quot;headerlink&quot; title=&quot;lazyvim的依据文本查询功能&quot;&gt;&lt;/a&gt;lazyvim的依据文本查询功能&lt;/h2&gt;&lt;p&gt;在lazyvim中，如果想要</summary>
+    <summary type="html">&lt;h1 id=&quot;lazyvim的查找文件功能&quot;&gt;&lt;a href=&quot;#lazyvim的查找文件功能&quot; class=&quot;headerlink&quot; title=&quot;lazyvim的查找文件功能&quot;&gt;&lt;/a&gt;lazyvim的查找文件功能&lt;/h1&gt;&lt;p&gt;依赖于fzf软件，这是一个go语言编写的跨平</summary>
       
     
     
@@ -500,18 +500,18 @@
   </entry>
   
   <entry>
-    <title>Windows下lazyvim的fzf安装和配置</title>
-    <link href="https://chunyujin.top/chunyujin/8e71814d.html"/>
-    <id>https://chunyujin.top/chunyujin/8e71814d.html</id>
+    <title>Windows下lazyvim的rg安装和配置</title>
+    <link href="https://chunyujin.top/chunyujin/5d69b84a.html"/>
+    <id>https://chunyujin.top/chunyujin/5d69b84a.html</id>
     <published>2025-06-01T03:00:00.000Z</published>
-    <updated>2026-01-12T02:43:02.868Z</updated>
+    <updated>2026-01-12T02:43:02.867Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="lazyvim的查找文件功能"><a href="#lazyvim的查找文件功能" class="headerlink" title="lazyvim的查找文件功能"></a>lazyvim的查找文件功能</h1><p>依赖于fzf软件，这是一个go语言编写的跨平台的文件模糊查找工具，Windows下可以直接访问GitHub官网进行relase版本的下载和安装：<a href="https://github.com/junegunn/fzf/releases">Releases · junegunn&#x2F;fzf</a></p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208010839553.png" alt="image-20250208010839553" style="zoom:80%;" /><br>选择好版本</center></div><p>解压完之后发现直接就是一个.exe程序，将其添加在环境变量中以便在任何位置都能使用它：</p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208011255173.png" alt="image-20250208011255173" style="zoom:80%;" /><br>可以先将fzf.exe转移到其他路径下</center></div><p>终端中输入<code>fzf</code>即可执行：</p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208011452369.png" alt="image-20250208011452369" style="zoom:80%;" /></center></div><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208013038024.png" alt="image-20250208013038024" style="zoom:80%;" /><br>现在lazyvim支持文件查询功能了</ber></center></div><blockquote><p>fzf更详细的安装及配置，可以查看<a href="">fzf安装配置及使用</a></p></blockquote><h1 id="新版本lazyvim安装fzf方法"><a href="#新版本lazyvim安装fzf方法" class="headerlink" title="新版本lazyvim安装fzf方法"></a>新版本lazyvim安装fzf方法</h1><p>现在最新版本的lazyvim中可以通过内部直接安装的方式启动fzf：</p><p>lazyextras中搜索fzf-lua或者editor.fzf</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250601105734662.png" alt="image-20250601105734662" style="zoom:80%;" /><p>按x直接安装即可</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="lazyvim的依据文本查询功能"><a href="#lazyvim的依据文本查询功能" class="headerlink" title="lazyvim的依据文本查询功能"></a>lazyvim的依据文本查询功能</h2><p>在lazyvim中，如果想要根据文本内容进行搜索，可以在开始界面使用g按钮</p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250601110400511.png" alt="image-20250601110400511" style="zoom:80%;" /><br>但是我们发现提示需要安装rg这个软件在Windows系统上</center></div><p>lazyvim的依据文本查询功能依赖于rg(ripgrep)软件，这是一个用来根据内容进行查询的跨平台工具，安装了它，我们可以查询一些大概知道有什么内容但是忘记了名字和位置的文件。</p><p>进入GitHub安装release发布版本：<a href="https://github.com/BurntSushi/ripgrep/releases/tag/14.1.1">Release 14.1.1 · BurntSushi&#x2F;ripgrep</a></p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208012313894.png" alt="image-20250208012313894" style="zoom:80%;" /><br>安装MSVC版本可能需要你配置了MSVC工具链</center></div><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208012446748.png" alt="image-20250208012446748" style="zoom:80%;" /><br>解压到你能找到的地方</center></div><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208012601645.png" alt="image-20250208012601645" style="zoom:80%;" /><br>添加到环境变量</center></div><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208012849171.png" alt="20250208012849171" style="zoom:80%;" /><br>lazyvim可以使用Find Text功能了</center></div><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250601110734614.png" alt="image-20250601110734614" style="zoom:80%;" />]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;lazyvim的查找文件功能&quot;&gt;&lt;a href=&quot;#lazyvim的查找文件功能&quot; class=&quot;headerlink&quot; title=&quot;lazyvim的查找文件功能&quot;&gt;&lt;/a&gt;lazyvim的查找文件功能&lt;/h1&gt;&lt;p&gt;依赖于fzf软件，这是一个go语言编写的跨平</summary>
+    <summary type="html">&lt;h2 id=&quot;lazyvim的依据文本查询功能&quot;&gt;&lt;a href=&quot;#lazyvim的依据文本查询功能&quot; class=&quot;headerlink&quot; title=&quot;lazyvim的依据文本查询功能&quot;&gt;&lt;/a&gt;lazyvim的依据文本查询功能&lt;/h2&gt;&lt;p&gt;在lazyvim中，如果想要</summary>
       
     
     
@@ -595,18 +595,20 @@
   </entry>
   
   <entry>
-    <title>lazyvim安装了但是不生效</title>
-    <link href="https://chunyujin.top/chunyujin/9a70019a.html"/>
-    <id>https://chunyujin.top/chunyujin/9a70019a.html</id>
+    <title>neovim配置的卸载</title>
+    <link href="https://chunyujin.top/chunyujin/b5d0b033.html"/>
+    <id>https://chunyujin.top/chunyujin/b5d0b033.html</id>
     <published>2025-05-31T09:00:00.000Z</published>
-    <updated>2026-01-12T02:43:02.869Z</updated>
+    <updated>2026-01-12T02:43:02.868Z</updated>
     
-    <content type="html"><![CDATA[<p>参考教程：<a href="https://docs.yuzaicn.com/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Vim%E9%85%8D%E7%BD%AE/nvim/neovim-linux">linux下使用neovim但是出现版本过低的问题无法使用lazyvim | Yuzai Blog</a></p><p>如果你确实安装了lazyvim，并在.config下添加了nvim文件夹，但是启动nvim的时候发现lazyvim并没有开始配置。</p><p>或许是因为你的nvim版本太老了，你可以使用<code>nvim --version</code>查看自己的版本，或者干脆直接<code>nvim</code>进入主页面查看版本。</p><p>前往lazyvim官网<a href="https://www.lazyvim.org/">🚀 Getting Started | LazyVim</a>，查看最低neovim版本要求，来确认你的neovim版本是否确实低于最低要求了。</p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208154713417.png" alt="image-20250208154713417" style="zoom:80%;" /><br>好吧，apt有时候确实维护的很慢，uos上才只能安装0.3版本的</center></div><p>接下来你需要卸载你的旧版neovim，如果你是通过apt安装的：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove neovim <span class="comment"># 直接卸载掉</span></span><br></pre></td></tr></table></figure><p>然后自己手动去官网下载一份Release版本的，安装教程见<a href="">Ubuntu下neovim+lazyvim安装及配置</a></p>]]></content>
+    <content type="html"><![CDATA[<p>如果你想清空所有的neovim配置，比如我此前安装了lazyvim配置，但是现在想要清除掉，获取最原始的neovim，并安装ayamir-nvim的配置，你应该查看此教程。</p><p>当然，如果你对原有配置想要备份一下，可以改一下名或者直接使用文件备份</p><h1 id="删除所有配置"><a href="#删除所有配置" class="headerlink" title="删除所有配置"></a>删除所有配置</h1><p>如果你想删除所有的配置，那么：</p><p>删除以下内容：</p><ul><li><code>~/.config/nvim</code>（在 Linux 或 MacOS 上）</li><li><code>~\AppData\local\nvim</code>（在 Windows 上）</li></ul><p>当然，如何你将nvim安装在了其他地方，你需要自己去删除</p><p>为了确保还可以删除以下文件夹：</p><ul><li><code>~/.local/share/nvim</code>（在 Linux 或 MacOS 上）</li><li><code>~\AppData\local\nvim-data</code>（在 Windows 上）</li></ul><p>同样，如果你修改了配置文件的保存位置，也应该去对应位置删除</p><blockquote><p>可以参考<a href="https://chunyujin.top/chunyujin/1036c7b0">《修改nvim安装位置以及Windows下修改配置文件保存位置的方式》</a></p></blockquote><h1 id="删除指定配置"><a href="#删除指定配置" class="headerlink" title="删除指定配置"></a>删除指定配置</h1><p>但是如果仔细观察，可以发现，其实一台机器上可以同时存在多套配置</p><p>例如，根据 <a href="https://github.com/folke/lazy.nvim">lazy vim 自述文件页面</a>，要卸载 lazy.nvim，需要删除以下文件和目录：</p><ul><li><strong>data数据</strong>: <code>~/.local/share/nvim/lazy</code></li><li><strong>state状态</strong>: <code>~/.local/state/nvim/lazy</code></li><li><strong>lockfile锁定文件</strong>: <code>~/.config/nvim/lazy-lock.json</code></li></ul><p>至于关于共存配置的问题，后续我还会再研究，然后在此记录</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;参考教程：&lt;a href=&quot;https://docs.yuzaicn.com/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Vim%E9%85%8D%E7%BD%AE/nvim/neovim-linux&quot;&gt;linux下使用neovim但是出现版本</summary>
+    <summary type="html">&lt;p&gt;如果你想清空所有的neovim配置，比如我此前安装了lazyvim配置，但是现在想要清除掉，获取最原始的neovim，并安装ayamir-nvim的配置，你应该查看此教程。&lt;/p&gt;
+&lt;p&gt;当然，如果你对原有配置想要备份一下，可以改一下名或者直接使用文件备份&lt;/p&gt;
+&lt;h1 </summary>
       
     
     
@@ -617,7 +619,7 @@
     
     <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
     
-    <category term="问题解决" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <category term="配置及使用" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
     
     
     <category term="neovim" scheme="https://chunyujin.top/tags/neovim/"/>
@@ -625,18 +627,21 @@
   </entry>
   
   <entry>
-    <title>lazyvim中blick_cmp_fuzzy无法安装</title>
-    <link href="https://chunyujin.top/chunyujin/6b20be27.html"/>
-    <id>https://chunyujin.top/chunyujin/6b20be27.html</id>
+    <title>修改配置文件夹nvim的位置及Windows下修改配置文件保存位置的方式</title>
+    <link href="https://chunyujin.top/chunyujin/1036c7b0.html"/>
+    <id>https://chunyujin.top/chunyujin/1036c7b0.html</id>
     <published>2025-05-31T09:00:00.000Z</published>
     <updated>2026-01-12T02:43:02.869Z</updated>
     
-    <content type="html"><![CDATA[<img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210012646986.png" alt="image-20250210012646986" style="zoom:80%;" /><p>问题讨论：<a href="https://github.com/LazyVim/LazyVim/issues/5483">bug: module ‘blink_cmp_fuzzy’ not found · Issue #5483 · LazyVim&#x2F;LazyVim</a></p><p>这里给出了解决方案：blink_cmp_fuzzy的安装依赖于curl</p><p>安装教程：<a href="https://blog.csdn.net/hadues/article/details/101788327">Curl命令详解-CSDN博客</a></p><p>里面教程图片给错了，curl官网<a href="https://curl.se/download.html">curl - Download</a>找下载的时候，应该往下拉，找二进制包进行安装，不要安装最顶部的源码包，里面没有可执行程序。</p><p>或者直接进这个<a href="https://curl.se/windows/">curl for Windows</a></p><p>之后bin目录添加到环境变量即可。</p><p>检查安装是否成功</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --version</span><br></pre></td></tr></table></figure><p>值得注意的是，power shell对其支持不太好，cmd模式下才生效：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210013747348.png" alt="image-20250210013747348" style="zoom:80%;" /><p><a href="https://www.lazyvim.org/extras/coding/blink"> Blink | LazyVim</a></p><p>之后我在官网上找到了Blink的启用方法，输入<code>: LazyExtras</code>来启用这些额外命令</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210015514875.png" alt="image-20250210015514875"></p><p>你会进入到启动额外插件的界面，界面提示你按下x键就可以启用下面的未启用的插件，我发现blick相关插件没有启动，另外在上面GitHub讨论上说了cmp相关也需要安装。</p><p>于是我就将这些加进去了，并且也加了一些其他的插件。然后回到lazy中update了。之后重启nvim，再update。</p><p>最后<code>:LazyHealth</code>一下，检查lazyvim的健康。</p><p>发现插件装多了确实卡。。。</p><p>但是总之算是知道了lazyvim的插件使用流程了，直接去官网查看各种插件，然后回头想用的时候直接<code>:LazyExtras</code>下新增，或者进lazy的update进行新增，该安装就去install安装。想配置就按官网去写.lua</p>]]></content>
+    <content type="html"><![CDATA[<p>nvim位置可以改，nvimdata位置也可以改</p><p>甚至Windows的各种应用的缓存位置也可以改</p><p>这样就不怕C盘爆满了</p><p><a href="https://www.cnblogs.com/jye159X/p/18304273">XDG Base Directory 规范 &amp;&amp; 修改Neovim的默认配置文件路径 &amp;&amp; 设备同时共享多个Nvim配置 - wenli7363 - 博客园</a></p><p><a href="https://kimi.moonshot.cn/chat/cumbousc75rept641q6g">XDG_CONFIG_HOME环境变量介绍 - Kimi.ai</a></p><blockquote><p>需要注意的是，这个环境变量也会被其他软件使用，例如Nushell配置文件也是依据该环境变量而保存的，所以建议给这个环境变量路径设置为一个比较通用的文件夹名称，例如叫config</p></blockquote><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250212233310607.png" alt="image-20250212233310607"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250212233323012.png" alt="image-20250212233323012"></p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250212233340111.png" alt="image-20250212233340111"></p><p>后来别忘了把用户&#x2F;AppData&#x2F;Local下的lazygit也放到你设置的环境变量的路径下，这样之前的配置信息才能找到，我估计也是lazyvim配置了lazygit的配置文件路径：</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250213004442821.png" alt="image-20250213004442821"></p><p>目前基本上能正常使用，就是不知道<code>XDG_CONFIG_HOME</code>这个环境变量会不会被其他的应用也使用，到时候出了问题，也需要将对应软件的缓存文件迁移到这里来</p><hr><p>同样，nvim-data文件也能迁移，按照最上面的教程，配置一个<code>XDG_DATA_HOME</code>路径就行</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250213004906741.png" alt="image-20250213004906741"></p><p>然后把nvim-data文件夹迁移过来或者直接删掉也行</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250213005257587.png" alt="image-20250213005257587"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210012646986.png&quot; alt=&quot;image-20250210012646986&quot; style=&quot;zoom:80%;&quot;</summary>
+    <summary type="html">&lt;p&gt;nvim位置可以改，nvimdata位置也可以改&lt;/p&gt;
+&lt;p&gt;甚至Windows的各种应用的缓存位置也可以改&lt;/p&gt;
+&lt;p&gt;这样就不怕C盘爆满了&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/jye159X/p/18304273&quot;&gt;XDG</summary>
       
     
     
@@ -647,7 +652,7 @@
     
     <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
     
-    <category term="问题解决" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <category term="配置及使用" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
     
     
     <category term="neovim" scheme="https://chunyujin.top/tags/neovim/"/>

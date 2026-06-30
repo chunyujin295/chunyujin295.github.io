@@ -617,21 +617,20 @@
   </entry>
   
   <entry>
-    <title>Ubuntu下neovim安装</title>
-    <link href="https://chunyujin.top/chunyujin/86e5a8ba.html"/>
-    <id>https://chunyujin.top/chunyujin/86e5a8ba.html</id>
+    <title>neovim配置的卸载</title>
+    <link href="https://chunyujin.top/chunyujin/b5d0b033.html"/>
+    <id>https://chunyujin.top/chunyujin/b5d0b033.html</id>
     <published>2025-05-31T09:00:00.000Z</published>
-    <updated>2026-01-12T02:43:02.859Z</updated>
+    <updated>2026-01-12T02:43:02.868Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>本教程的安装教程仅提供一种或几种最简单的方案，更多方案可以自行百度</p></blockquote><h1 id="neovim安装"><a href="#neovim安装" class="headerlink" title="neovim安装"></a>neovim安装</h1><h2 id="通过apt安装"><a href="#通过apt安装" class="headerlink" title="通过apt安装"></a>通过apt安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install neovim</span><br></pre></td></tr></table></figure><p>安装完执行<code>nvim</code>即可启动</p><h2 id="去官网下载Release版本"><a href="#去官网下载Release版本" class="headerlink" title="去官网下载Release版本"></a>去官网下载Release版本</h2><p>有时候apt维护的neovim版本很低，甚至达不到lazyvim的最低版本要求，因此我们直接去下载最新的Release版本。</p><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://github.com/neovim/neovim/blob/master/INSTALL.md">neovim&#x2F;INSTALL.md at master · neovim&#x2F;neovim</a></p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208155443844.png" alt="image-20250208155443844" style="zoom:80%;" /><br>选择适合你的版本</center></div><p>或者使用<code>wget</code>或<code>curl</code>命令进行下载</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>解压之后移动到合适的路径</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar xzvf nvim-linux-x86_64.tar.gz</span><br><span class="line">sudo <span class="built_in">mv</span> nvim-linux-x86_64 /usr/local/neovim</span><br><span class="line"><span class="comment"># 路径随便，也可以是~/software啥的，只要确保你不会误删除就行</span></span><br></pre></td></tr></table></figure><h3 id="添加到环境变量"><a href="#添加到环境变量" class="headerlink" title="添加到环境变量"></a>添加到环境变量</h3><p>确保能在全局进行使用</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果你的终端是bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$PATH:/usr/local/neovim/bin&#x27;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc <span class="comment"># 重新运行bash配置文件使配置生效</span></span><br><span class="line"><span class="comment"># 如果你的终端是zsh</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$PATH:/usr/local/neovim/bin&#x27;</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">source</span> ~/.zshrc <span class="comment"># 重新运行zsh配置文件使配置生效</span></span><br></pre></td></tr></table></figure><p>尝试<code>nvim</code>是否生效，从主界面检查一下版本，或者使用<code>nvim --version</code></p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208164233189.png" alt="image-20250208164233189" style="zoom:80%;" /><br>现在就是最新的了，超级新</center></div>]]></content>
+    <content type="html"><![CDATA[<p>如果你想清空所有的neovim配置，比如我此前安装了lazyvim配置，但是现在想要清除掉，获取最原始的neovim，并安装ayamir-nvim的配置，你应该查看此教程。</p><p>当然，如果你对原有配置想要备份一下，可以改一下名或者直接使用文件备份</p><h1 id="删除所有配置"><a href="#删除所有配置" class="headerlink" title="删除所有配置"></a>删除所有配置</h1><p>如果你想删除所有的配置，那么：</p><p>删除以下内容：</p><ul><li><code>~/.config/nvim</code>（在 Linux 或 MacOS 上）</li><li><code>~\AppData\local\nvim</code>（在 Windows 上）</li></ul><p>当然，如何你将nvim安装在了其他地方，你需要自己去删除</p><p>为了确保还可以删除以下文件夹：</p><ul><li><code>~/.local/share/nvim</code>（在 Linux 或 MacOS 上）</li><li><code>~\AppData\local\nvim-data</code>（在 Windows 上）</li></ul><p>同样，如果你修改了配置文件的保存位置，也应该去对应位置删除</p><blockquote><p>可以参考<a href="https://chunyujin.top/chunyujin/1036c7b0">《修改nvim安装位置以及Windows下修改配置文件保存位置的方式》</a></p></blockquote><h1 id="删除指定配置"><a href="#删除指定配置" class="headerlink" title="删除指定配置"></a>删除指定配置</h1><p>但是如果仔细观察，可以发现，其实一台机器上可以同时存在多套配置</p><p>例如，根据 <a href="https://github.com/folke/lazy.nvim">lazy vim 自述文件页面</a>，要卸载 lazy.nvim，需要删除以下文件和目录：</p><ul><li><strong>data数据</strong>: <code>~/.local/share/nvim/lazy</code></li><li><strong>state状态</strong>: <code>~/.local/state/nvim/lazy</code></li><li><strong>lockfile锁定文件</strong>: <code>~/.config/nvim/lazy-lock.json</code></li></ul><p>至于关于共存配置的问题，后续我还会再研究，然后在此记录</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本教程的安装教程仅提供一种或几种最简单的方案，更多方案可以自行百度&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;neovim安装&quot;&gt;&lt;a href=&quot;#neovim安装&quot; class=&quot;headerlink&quot; title=&quot;neovim安装</summary>
+    <summary type="html">&lt;p&gt;如果你想清空所有的neovim配置，比如我此前安装了lazyvim配置，但是现在想要清除掉，获取最原始的neovim，并安装ayamir-nvim的配置，你应该查看此教程。&lt;/p&gt;
+&lt;p&gt;当然，如果你对原有配置想要备份一下，可以改一下名或者直接使用文件备份&lt;/p&gt;
+&lt;h1 </summary>
       
     
     
@@ -642,7 +641,7 @@
     
     <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
     
-    <category term="安装" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AE%89%E8%A3%85/"/>
+    <category term="配置及使用" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
     
     
     <category term="neovim" scheme="https://chunyujin.top/tags/neovim/"/>

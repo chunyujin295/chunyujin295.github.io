@@ -617,20 +617,18 @@
   </entry>
   
   <entry>
-    <title>neovim配置的卸载</title>
-    <link href="https://chunyujin.top/chunyujin/b5d0b033.html"/>
-    <id>https://chunyujin.top/chunyujin/b5d0b033.html</id>
+    <title>lazyvim中blick_cmp_fuzzy无法安装</title>
+    <link href="https://chunyujin.top/chunyujin/6b20be27.html"/>
+    <id>https://chunyujin.top/chunyujin/6b20be27.html</id>
     <published>2025-05-31T09:00:00.000Z</published>
-    <updated>2026-01-12T02:43:02.868Z</updated>
+    <updated>2026-01-12T02:43:02.869Z</updated>
     
-    <content type="html"><![CDATA[<p>如果你想清空所有的neovim配置，比如我此前安装了lazyvim配置，但是现在想要清除掉，获取最原始的neovim，并安装ayamir-nvim的配置，你应该查看此教程。</p><p>当然，如果你对原有配置想要备份一下，可以改一下名或者直接使用文件备份</p><h1 id="删除所有配置"><a href="#删除所有配置" class="headerlink" title="删除所有配置"></a>删除所有配置</h1><p>如果你想删除所有的配置，那么：</p><p>删除以下内容：</p><ul><li><code>~/.config/nvim</code>（在 Linux 或 MacOS 上）</li><li><code>~\AppData\local\nvim</code>（在 Windows 上）</li></ul><p>当然，如何你将nvim安装在了其他地方，你需要自己去删除</p><p>为了确保还可以删除以下文件夹：</p><ul><li><code>~/.local/share/nvim</code>（在 Linux 或 MacOS 上）</li><li><code>~\AppData\local\nvim-data</code>（在 Windows 上）</li></ul><p>同样，如果你修改了配置文件的保存位置，也应该去对应位置删除</p><blockquote><p>可以参考<a href="https://chunyujin.top/chunyujin/1036c7b0">《修改nvim安装位置以及Windows下修改配置文件保存位置的方式》</a></p></blockquote><h1 id="删除指定配置"><a href="#删除指定配置" class="headerlink" title="删除指定配置"></a>删除指定配置</h1><p>但是如果仔细观察，可以发现，其实一台机器上可以同时存在多套配置</p><p>例如，根据 <a href="https://github.com/folke/lazy.nvim">lazy vim 自述文件页面</a>，要卸载 lazy.nvim，需要删除以下文件和目录：</p><ul><li><strong>data数据</strong>: <code>~/.local/share/nvim/lazy</code></li><li><strong>state状态</strong>: <code>~/.local/state/nvim/lazy</code></li><li><strong>lockfile锁定文件</strong>: <code>~/.config/nvim/lazy-lock.json</code></li></ul><p>至于关于共存配置的问题，后续我还会再研究，然后在此记录</p>]]></content>
+    <content type="html"><![CDATA[<img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210012646986.png" alt="image-20250210012646986" style="zoom:80%;" /><p>问题讨论：<a href="https://github.com/LazyVim/LazyVim/issues/5483">bug: module ‘blink_cmp_fuzzy’ not found · Issue #5483 · LazyVim&#x2F;LazyVim</a></p><p>这里给出了解决方案：blink_cmp_fuzzy的安装依赖于curl</p><p>安装教程：<a href="https://blog.csdn.net/hadues/article/details/101788327">Curl命令详解-CSDN博客</a></p><p>里面教程图片给错了，curl官网<a href="https://curl.se/download.html">curl - Download</a>找下载的时候，应该往下拉，找二进制包进行安装，不要安装最顶部的源码包，里面没有可执行程序。</p><p>或者直接进这个<a href="https://curl.se/windows/">curl for Windows</a></p><p>之后bin目录添加到环境变量即可。</p><p>检查安装是否成功</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --version</span><br></pre></td></tr></table></figure><p>值得注意的是，power shell对其支持不太好，cmd模式下才生效：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210013747348.png" alt="image-20250210013747348" style="zoom:80%;" /><p><a href="https://www.lazyvim.org/extras/coding/blink"> Blink | LazyVim</a></p><p>之后我在官网上找到了Blink的启用方法，输入<code>: LazyExtras</code>来启用这些额外命令</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210015514875.png" alt="image-20250210015514875"></p><p>你会进入到启动额外插件的界面，界面提示你按下x键就可以启用下面的未启用的插件，我发现blick相关插件没有启动，另外在上面GitHub讨论上说了cmp相关也需要安装。</p><p>于是我就将这些加进去了，并且也加了一些其他的插件。然后回到lazy中update了。之后重启nvim，再update。</p><p>最后<code>:LazyHealth</code>一下，检查lazyvim的健康。</p><p>发现插件装多了确实卡。。。</p><p>但是总之算是知道了lazyvim的插件使用流程了，直接去官网查看各种插件，然后回头想用的时候直接<code>:LazyExtras</code>下新增，或者进lazy的update进行新增，该安装就去install安装。想配置就按官网去写.lua</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;如果你想清空所有的neovim配置，比如我此前安装了lazyvim配置，但是现在想要清除掉，获取最原始的neovim，并安装ayamir-nvim的配置，你应该查看此教程。&lt;/p&gt;
-&lt;p&gt;当然，如果你对原有配置想要备份一下，可以改一下名或者直接使用文件备份&lt;/p&gt;
-&lt;h1 </summary>
+    <summary type="html">&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210012646986.png&quot; alt=&quot;image-20250210012646986&quot; style=&quot;zoom:80%;&quot;</summary>
       
     
     
@@ -641,7 +639,7 @@
     
     <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
     
-    <category term="配置及使用" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
+    <category term="问题解决" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
     
     
     <category term="neovim" scheme="https://chunyujin.top/tags/neovim/"/>

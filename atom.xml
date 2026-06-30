@@ -393,40 +393,6 @@
   </entry>
   
   <entry>
-    <title>vim学习资料推荐</title>
-    <link href="https://chunyujin.top/chunyujin/feaee67e.html"/>
-    <id>https://chunyujin.top/chunyujin/feaee67e.html</id>
-    <published>2025-06-02T03:11:00.000Z</published>
-    <updated>2026-01-12T02:43:02.859Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><p>首推vim内置交互式学习教程，命令行输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vimtutor</span><br></pre></td></tr></table></figure><p>即可打开</p></li><li><p>游戏式vim教程：<a href="https://github.com/chunyujin295/vim-adventure">vim-adventure</a></p><p>里面包含了中文的部署教程，这里再列一个补充教程<a href="https://www.bilibili.com/opus/954236485052137495">免费畅玩VIM Adventures（VIM大冒险）</a></p></li><li><p>一些网站：</p><p>由浅入深学习：</p><ul><li><a href="https://wsdjeg.net/vim-galore-zh-cn/#vim-%E5%93%B2%E5%AD%A6">vim从入门到精通</a></li><li><a href="https://zhuanlan.zhihu.com/p/96801314">精通vim你应该理解的几个名词</a></li><li><a href="https://vim.fandom.com/wiki/Vim_Tips_Wiki">vim_tips_wiki</a></li><li><a href="https://www.runoob.com/linux/linux-vim.html">vim菜鸟教程</a></li></ul><p>速查表&#x2F;技巧教程：</p><ul><li><a href="https://blog.csdn.net/qq_54177358/article/details/130402370">vim常用技巧</a></li><li><a href="https://blog.donothing.site/2019/11/23/vim-skill/">vim使用技巧整理</a></li><li><a href="https://cloud.tencent.com/developer/article/2157419">vim搜索及高亮取消</a></li></ul></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;首推vim内置交互式学习教程，命令行输入&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre</summary>
-      
-    
-    
-    
-    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
-    
-    <category term="(˘•ω•˘)" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/"/>
-    
-    <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
-    
-    <category term="学习" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="vim学习" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AD%A6%E4%B9%A0/vim%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="vim" scheme="https://chunyujin.top/tags/vim/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vim中调出终端的几种方法</title>
     <link href="https://chunyujin.top/chunyujin/8babbc76.html"/>
     <id>https://chunyujin.top/chunyujin/8babbc76.html</id>
@@ -472,6 +438,40 @@
       
       
     <summary type="html">&lt;p&gt;Windows用户现在前往&lt;a href=&quot;https://www.vim.org/&quot;&gt;vim官网&lt;/a&gt;，点击安装链接，跳转到GitHub之后，发现发现版名称为”gvim”而不是vim，因为gvim是vim的扩展版本，vim存在于纯命令行交互的环境中，而随着现在图形化界面</summary>
+      
+    
+    
+    
+    <category term="Skill" scheme="https://chunyujin.top/categories/Skill/"/>
+    
+    <category term="(˘•ω•˘)" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/"/>
+    
+    <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
+    
+    <category term="学习" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vim学习" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AD%A6%E4%B9%A0/vim%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="vim" scheme="https://chunyujin.top/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim学习资料推荐</title>
+    <link href="https://chunyujin.top/chunyujin/feaee67e.html"/>
+    <id>https://chunyujin.top/chunyujin/feaee67e.html</id>
+    <published>2025-06-02T03:11:00.000Z</published>
+    <updated>2026-01-12T02:43:02.859Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>首推vim内置交互式学习教程，命令行输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vimtutor</span><br></pre></td></tr></table></figure><p>即可打开</p></li><li><p>游戏式vim教程：<a href="https://github.com/chunyujin295/vim-adventure">vim-adventure</a></p><p>里面包含了中文的部署教程，这里再列一个补充教程<a href="https://www.bilibili.com/opus/954236485052137495">免费畅玩VIM Adventures（VIM大冒险）</a></p></li><li><p>一些网站：</p><p>由浅入深学习：</p><ul><li><a href="https://wsdjeg.net/vim-galore-zh-cn/#vim-%E5%93%B2%E5%AD%A6">vim从入门到精通</a></li><li><a href="https://zhuanlan.zhihu.com/p/96801314">精通vim你应该理解的几个名词</a></li><li><a href="https://vim.fandom.com/wiki/Vim_Tips_Wiki">vim_tips_wiki</a></li><li><a href="https://www.runoob.com/linux/linux-vim.html">vim菜鸟教程</a></li></ul><p>速查表&#x2F;技巧教程：</p><ul><li><a href="https://blog.csdn.net/qq_54177358/article/details/130402370">vim常用技巧</a></li><li><a href="https://blog.donothing.site/2019/11/23/vim-skill/">vim使用技巧整理</a></li><li><a href="https://cloud.tencent.com/developer/article/2157419">vim搜索及高亮取消</a></li></ul></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;首推vim内置交互式学习教程，命令行输入&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre</summary>
       
     
     

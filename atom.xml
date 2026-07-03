@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>浴巾的贼船</title>
+  <title>Towel</title>
   <icon>https://www.gravatar.com/avatar/4693869db7cae9524536dea3133cf541</icon>
   
   <link href="https://chunyujin.top/atom.xml" rel="self"/>
@@ -105,36 +105,6 @@
   </entry>
   
   <entry>
-    <title>MinGW构建的坑(libgcc_s_seh-1,libstdc++-6和 libwinpthread-1)</title>
-    <link href="https://chunyujin.top/chunyujin/845149a0.html"/>
-    <id>https://chunyujin.top/chunyujin/845149a0.html</id>
-    <published>2026-03-09T05:24:00.000Z</published>
-    <updated>2026-03-09T06:46:09.975Z</updated>
-    
-    <content type="html"><![CDATA[<p>在Windows用mingw编译的C&#x2F;C++程序默认会依赖这三个动态库：</p><ul><li><code>libgcc_s_seh-1.dll</code>： 该库是 GCC 提供的一个运行时库，用于处理 C 和 C++ 程序中的一些基本运算。SEH 代表结构化异常处理，这是 Windows 系统上的一种异常处理机制。</li><li><code>libstdc+±6.dll</code>： 该库是 GCC 提供的 C++ 标准库的动态链接库文件，它包含了 C++ 程序运行时需要的标准库实现。在 Windows 平台上，许多使用 C++ 编写的应用程序都依赖这个 DLL 文件。</li><li><code>libwinpthread-1.dll</code>： 该库是 GnuWin 工具集中的一个 DLL 文件，它提供了 POSIX 线程库（pthreads）的 Windows 实现。</li></ul><p>所以说编出来的程序，还需要自己手动拷贝这三个库到可执行目录才行。（很麻烦）</p><p>gcc提供了静态链接这几个库的方法：</p><blockquote><p>静态链接libgcc_s_seh-1.dll<br>链接时增加链接选项 -static-libgcc</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o myprogram myprogram.c -static-libgcc</span><br></pre></td></tr></table></figure><p>静态链接libstdc+±6<br>链接时增加链接选项 -static-libstdc++</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o myprogram main.cpp -static-libstdc++</span><br></pre></td></tr></table></figure><p>静态链接libwinpthread-1.dll<br>暂时没法发现静态链接libwinpthread-1.dll的专用链接选项，不过可以通过链接选项 -static来实现。不过链接选项-static相当于将libstdc+±6和libgcc_s_seh-1也静态链接了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o myprogram main.cpp -static</span><br></pre></td></tr></table></figure></blockquote><p>对于cmake来说，可以在构建的时候，静态链接这三个库，下面是千问给出的两个cmake写法：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对某一target生效</span></span><br><span class="line"><span class="keyword">if</span> (MINGW)</span><br><span class="line">    <span class="keyword">target_link_options</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> PRIVATE</span><br><span class="line">        -static-libgcc</span><br><span class="line">        -static-libstdc++</span><br><span class="line">        -Wl,-Bstatic</span><br><span class="line">        -lwinpthread</span><br><span class="line">        -Wl,-Bdynamic</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">endif</span>()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对所有构建项目生效</span></span><br><span class="line"><span class="keyword">if</span> (MINGW)</span><br><span class="line">    <span class="keyword">add_link_options</span>(</span><br><span class="line">        -static-libgcc</span><br><span class="line">        -static-libstdc++</span><br><span class="line">        -Wl,-Bstatic</span><br><span class="line">        -lwinpthread</span><br><span class="line">        -Wl,-Bdynamic</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">endif</span>()</span><br></pre></td></tr></table></figure><p>注意事项：</p><p>你的项目作为最下层的target，依赖很多第三方库以及项目中的其他target，所以需要确保MinGW下，他们也是静态链接了上面的三个库，或者如果有些库你并不可控，无法修改他们的cmake选项，那么将他们打包成静态库，然后被你的最终target静态链接，也是可以的。</p><blockquote><p>参考链接：<a href="https://blog.csdn.net/flysnow010/article/details/138123797">mingw静态链接(libgcc_s_seh-1,libstdc++-6和 libwinpthread-1)_libwinpthread-1.dll-CSDN博客</a></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在Windows用mingw编译的C&amp;#x2F;C++程序默认会依赖这三个动态库：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;libgcc_s_seh-1.dll&lt;/code&gt;： 该库是 GCC 提供的一个运行时库，用于处理 C 和 C++ 程序中的一些基本运算。SEH 代表结</summary>
-      
-    
-    
-    
-    <category term="Learn" scheme="https://chunyujin.top/categories/Learn/"/>
-    
-    <category term="Cpp" scheme="https://chunyujin.top/categories/Learn/Cpp/"/>
-    
-    <category term="MinGW" scheme="https://chunyujin.top/categories/Learn/Cpp/MinGW/"/>
-    
-    
-    <category term="MinGW" scheme="https://chunyujin.top/tags/MinGW/"/>
-    
-  </entry>
-  
-  <entry>
     <title>msys2与msvc编译ffmpeg-有人成功有人失败了</title>
     <link href="https://chunyujin.top/chunyujin/bf110e6a.html"/>
     <id>https://chunyujin.top/chunyujin/bf110e6a.html</id>
@@ -165,6 +135,36 @@
     <category term="MinGW" scheme="https://chunyujin.top/tags/MinGW/"/>
     
     <category term="Ffmpeg" scheme="https://chunyujin.top/tags/Ffmpeg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MinGW构建的坑(libgcc_s_seh-1,libstdc++-6和 libwinpthread-1)</title>
+    <link href="https://chunyujin.top/chunyujin/845149a0.html"/>
+    <id>https://chunyujin.top/chunyujin/845149a0.html</id>
+    <published>2026-03-09T05:24:00.000Z</published>
+    <updated>2026-03-09T06:46:09.975Z</updated>
+    
+    <content type="html"><![CDATA[<p>在Windows用mingw编译的C&#x2F;C++程序默认会依赖这三个动态库：</p><ul><li><code>libgcc_s_seh-1.dll</code>： 该库是 GCC 提供的一个运行时库，用于处理 C 和 C++ 程序中的一些基本运算。SEH 代表结构化异常处理，这是 Windows 系统上的一种异常处理机制。</li><li><code>libstdc+±6.dll</code>： 该库是 GCC 提供的 C++ 标准库的动态链接库文件，它包含了 C++ 程序运行时需要的标准库实现。在 Windows 平台上，许多使用 C++ 编写的应用程序都依赖这个 DLL 文件。</li><li><code>libwinpthread-1.dll</code>： 该库是 GnuWin 工具集中的一个 DLL 文件，它提供了 POSIX 线程库（pthreads）的 Windows 实现。</li></ul><p>所以说编出来的程序，还需要自己手动拷贝这三个库到可执行目录才行。（很麻烦）</p><p>gcc提供了静态链接这几个库的方法：</p><blockquote><p>静态链接libgcc_s_seh-1.dll<br>链接时增加链接选项 -static-libgcc</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o myprogram myprogram.c -static-libgcc</span><br></pre></td></tr></table></figure><p>静态链接libstdc+±6<br>链接时增加链接选项 -static-libstdc++</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o myprogram main.cpp -static-libstdc++</span><br></pre></td></tr></table></figure><p>静态链接libwinpthread-1.dll<br>暂时没法发现静态链接libwinpthread-1.dll的专用链接选项，不过可以通过链接选项 -static来实现。不过链接选项-static相当于将libstdc+±6和libgcc_s_seh-1也静态链接了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -o myprogram main.cpp -static</span><br></pre></td></tr></table></figure></blockquote><p>对于cmake来说，可以在构建的时候，静态链接这三个库，下面是千问给出的两个cmake写法：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对某一target生效</span></span><br><span class="line"><span class="keyword">if</span> (MINGW)</span><br><span class="line">    <span class="keyword">target_link_options</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> PRIVATE</span><br><span class="line">        -static-libgcc</span><br><span class="line">        -static-libstdc++</span><br><span class="line">        -Wl,-Bstatic</span><br><span class="line">        -lwinpthread</span><br><span class="line">        -Wl,-Bdynamic</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">endif</span>()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对所有构建项目生效</span></span><br><span class="line"><span class="keyword">if</span> (MINGW)</span><br><span class="line">    <span class="keyword">add_link_options</span>(</span><br><span class="line">        -static-libgcc</span><br><span class="line">        -static-libstdc++</span><br><span class="line">        -Wl,-Bstatic</span><br><span class="line">        -lwinpthread</span><br><span class="line">        -Wl,-Bdynamic</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">endif</span>()</span><br></pre></td></tr></table></figure><p>注意事项：</p><p>你的项目作为最下层的target，依赖很多第三方库以及项目中的其他target，所以需要确保MinGW下，他们也是静态链接了上面的三个库，或者如果有些库你并不可控，无法修改他们的cmake选项，那么将他们打包成静态库，然后被你的最终target静态链接，也是可以的。</p><blockquote><p>参考链接：<a href="https://blog.csdn.net/flysnow010/article/details/138123797">mingw静态链接(libgcc_s_seh-1,libstdc++-6和 libwinpthread-1)_libwinpthread-1.dll-CSDN博客</a></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在Windows用mingw编译的C&amp;#x2F;C++程序默认会依赖这三个动态库：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;libgcc_s_seh-1.dll&lt;/code&gt;： 该库是 GCC 提供的一个运行时库，用于处理 C 和 C++ 程序中的一些基本运算。SEH 代表结</summary>
+      
+    
+    
+    
+    <category term="Learn" scheme="https://chunyujin.top/categories/Learn/"/>
+    
+    <category term="Cpp" scheme="https://chunyujin.top/categories/Learn/Cpp/"/>
+    
+    <category term="MinGW" scheme="https://chunyujin.top/categories/Learn/Cpp/MinGW/"/>
+    
+    
+    <category term="MinGW" scheme="https://chunyujin.top/tags/MinGW/"/>
     
   </entry>
   
@@ -238,9 +238,9 @@
     
     <category term="Ubuntu" scheme="https://chunyujin.top/tags/Ubuntu/"/>
     
-    <category term="frp" scheme="https://chunyujin.top/tags/frp/"/>
-    
     <category term="远程ssh" scheme="https://chunyujin.top/tags/%E8%BF%9C%E7%A8%8Bssh/"/>
+    
+    <category term="frp" scheme="https://chunyujin.top/tags/frp/"/>
     
   </entry>
   
@@ -393,19 +393,20 @@
   </entry>
   
   <entry>
-    <title>vim中调出终端的几种方法</title>
-    <link href="https://chunyujin.top/chunyujin/8babbc76.html"/>
-    <id>https://chunyujin.top/chunyujin/8babbc76.html</id>
+    <title>vim学习资料推荐</title>
+    <link href="https://chunyujin.top/chunyujin/feaee67e.html"/>
+    <id>https://chunyujin.top/chunyujin/feaee67e.html</id>
     <published>2025-06-02T03:11:00.000Z</published>
-    <updated>2026-01-12T02:43:02.858Z</updated>
+    <updated>2026-01-12T02:43:02.859Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="在vim中打开一个内置终端"><a href="#在vim中打开一个内置终端" class="headerlink" title="在vim中打开一个内置终端"></a>在vim中打开一个内置终端</h1><p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:term</span><br><span class="line">或</span><br><span class="line">:terminal</span><br></pre></td></tr></table></figure><p>用于启动一个内置的终端模拟器，进入到vim的终端模式。这个命令允许用户在 Vim 编辑器中直接运行一个交互式的 shell 或其他终端程序，而无需离开 Vim 环境。这在需要同时编辑文件和运行终端命令时特别有用。</p><h2 id="如何修改终端模拟器"><a href="#如何修改终端模拟器" class="headerlink" title="如何修改终端模拟器"></a>如何修改终端模拟器</h2><p>见vim的简单配置教程</p>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>首推vim内置交互式学习教程，命令行输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vimtutor</span><br></pre></td></tr></table></figure><p>即可打开</p></li><li><p>游戏式vim教程：<a href="https://github.com/chunyujin295/vim-adventure">vim-adventure</a></p><p>里面包含了中文的部署教程，这里再列一个补充教程<a href="https://www.bilibili.com/opus/954236485052137495">免费畅玩VIM Adventures（VIM大冒险）</a></p></li><li><p>一些网站：</p><p>由浅入深学习：</p><ul><li><a href="https://wsdjeg.net/vim-galore-zh-cn/#vim-%E5%93%B2%E5%AD%A6">vim从入门到精通</a></li><li><a href="https://zhuanlan.zhihu.com/p/96801314">精通vim你应该理解的几个名词</a></li><li><a href="https://vim.fandom.com/wiki/Vim_Tips_Wiki">vim_tips_wiki</a></li><li><a href="https://www.runoob.com/linux/linux-vim.html">vim菜鸟教程</a></li></ul><p>速查表&#x2F;技巧教程：</p><ul><li><a href="https://blog.csdn.net/qq_54177358/article/details/130402370">vim常用技巧</a></li><li><a href="https://blog.donothing.site/2019/11/23/vim-skill/">vim使用技巧整理</a></li><li><a href="https://cloud.tencent.com/developer/article/2157419">vim搜索及高亮取消</a></li></ul></li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;在vim中打开一个内置终端&quot;&gt;&lt;a href=&quot;#在vim中打开一个内置终端&quot; class=&quot;headerlink&quot; title=&quot;在vim中打开一个内置终端&quot;&gt;&lt;/a&gt;在vim中打开一个内置终端&lt;/h1&gt;&lt;p&gt;命令：&lt;/p&gt;
-&lt;figure class=&quot;hig</summary>
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;首推vim内置交互式学习教程，命令行输入&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre</summary>
       
     
     
@@ -426,20 +427,19 @@
   </entry>
   
   <entry>
-    <title>vim学习资料推荐</title>
-    <link href="https://chunyujin.top/chunyujin/feaee67e.html"/>
-    <id>https://chunyujin.top/chunyujin/feaee67e.html</id>
+    <title>vim中调出终端的几种方法</title>
+    <link href="https://chunyujin.top/chunyujin/8babbc76.html"/>
+    <id>https://chunyujin.top/chunyujin/8babbc76.html</id>
     <published>2025-06-02T03:11:00.000Z</published>
-    <updated>2026-01-12T02:43:02.859Z</updated>
+    <updated>2026-01-12T02:43:02.858Z</updated>
     
-    <content type="html"><![CDATA[<ol><li><p>首推vim内置交互式学习教程，命令行输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vimtutor</span><br></pre></td></tr></table></figure><p>即可打开</p></li><li><p>游戏式vim教程：<a href="https://github.com/chunyujin295/vim-adventure">vim-adventure</a></p><p>里面包含了中文的部署教程，这里再列一个补充教程<a href="https://www.bilibili.com/opus/954236485052137495">免费畅玩VIM Adventures（VIM大冒险）</a></p></li><li><p>一些网站：</p><p>由浅入深学习：</p><ul><li><a href="https://wsdjeg.net/vim-galore-zh-cn/#vim-%E5%93%B2%E5%AD%A6">vim从入门到精通</a></li><li><a href="https://zhuanlan.zhihu.com/p/96801314">精通vim你应该理解的几个名词</a></li><li><a href="https://vim.fandom.com/wiki/Vim_Tips_Wiki">vim_tips_wiki</a></li><li><a href="https://www.runoob.com/linux/linux-vim.html">vim菜鸟教程</a></li></ul><p>速查表&#x2F;技巧教程：</p><ul><li><a href="https://blog.csdn.net/qq_54177358/article/details/130402370">vim常用技巧</a></li><li><a href="https://blog.donothing.site/2019/11/23/vim-skill/">vim使用技巧整理</a></li><li><a href="https://cloud.tencent.com/developer/article/2157419">vim搜索及高亮取消</a></li></ul></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="在vim中打开一个内置终端"><a href="#在vim中打开一个内置终端" class="headerlink" title="在vim中打开一个内置终端"></a>在vim中打开一个内置终端</h1><p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:term</span><br><span class="line">或</span><br><span class="line">:terminal</span><br></pre></td></tr></table></figure><p>用于启动一个内置的终端模拟器，进入到vim的终端模式。这个命令允许用户在 Vim 编辑器中直接运行一个交互式的 shell 或其他终端程序，而无需离开 Vim 环境。这在需要同时编辑文件和运行终端命令时特别有用。</p><h2 id="如何修改终端模拟器"><a href="#如何修改终端模拟器" class="headerlink" title="如何修改终端模拟器"></a>如何修改终端模拟器</h2><p>见vim的简单配置教程</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;首推vim内置交互式学习教程，命令行输入&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre</summary>
+    <summary type="html">&lt;h1 id=&quot;在vim中打开一个内置终端&quot;&gt;&lt;a href=&quot;#在vim中打开一个内置终端&quot; class=&quot;headerlink&quot; title=&quot;在vim中打开一个内置终端&quot;&gt;&lt;/a&gt;在vim中打开一个内置终端&lt;/h1&gt;&lt;p&gt;命令：&lt;/p&gt;
+&lt;figure class=&quot;hig</summary>
       
     
     

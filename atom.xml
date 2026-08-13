@@ -617,21 +617,18 @@
   </entry>
   
   <entry>
-    <title>Ubuntu下neovim安装</title>
-    <link href="https://chunyujin.top/chunyujin/86e5a8ba.html"/>
-    <id>https://chunyujin.top/chunyujin/86e5a8ba.html</id>
+    <title>lazyvim中blick_cmp_fuzzy无法安装</title>
+    <link href="https://chunyujin.top/chunyujin/6b20be27.html"/>
+    <id>https://chunyujin.top/chunyujin/6b20be27.html</id>
     <published>2025-05-31T09:00:00.000Z</published>
-    <updated>2026-01-12T02:43:02.859Z</updated>
+    <updated>2026-01-12T02:43:02.869Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>本教程的安装教程仅提供一种或几种最简单的方案，更多方案可以自行百度</p></blockquote><h1 id="neovim安装"><a href="#neovim安装" class="headerlink" title="neovim安装"></a>neovim安装</h1><h2 id="通过apt安装"><a href="#通过apt安装" class="headerlink" title="通过apt安装"></a>通过apt安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install neovim</span><br></pre></td></tr></table></figure><p>安装完执行<code>nvim</code>即可启动</p><h2 id="去官网下载Release版本"><a href="#去官网下载Release版本" class="headerlink" title="去官网下载Release版本"></a>去官网下载Release版本</h2><p>有时候apt维护的neovim版本很低，甚至达不到lazyvim的最低版本要求，因此我们直接去下载最新的Release版本。</p><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://github.com/neovim/neovim/blob/master/INSTALL.md">neovim&#x2F;INSTALL.md at master · neovim&#x2F;neovim</a></p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208155443844.png" alt="image-20250208155443844" style="zoom:80%;" /><br>选择适合你的版本</center></div><p>或者使用<code>wget</code>或<code>curl</code>命令进行下载</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>解压之后移动到合适的路径</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar xzvf nvim-linux-x86_64.tar.gz</span><br><span class="line">sudo <span class="built_in">mv</span> nvim-linux-x86_64 /usr/local/neovim</span><br><span class="line"><span class="comment"># 路径随便，也可以是~/software啥的，只要确保你不会误删除就行</span></span><br></pre></td></tr></table></figure><h3 id="添加到环境变量"><a href="#添加到环境变量" class="headerlink" title="添加到环境变量"></a>添加到环境变量</h3><p>确保能在全局进行使用</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果你的终端是bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$PATH:/usr/local/neovim/bin&#x27;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc <span class="comment"># 重新运行bash配置文件使配置生效</span></span><br><span class="line"><span class="comment"># 如果你的终端是zsh</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$PATH:/usr/local/neovim/bin&#x27;</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">source</span> ~/.zshrc <span class="comment"># 重新运行zsh配置文件使配置生效</span></span><br></pre></td></tr></table></figure><p>尝试<code>nvim</code>是否生效，从主界面检查一下版本，或者使用<code>nvim --version</code></p><div><center><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250208164233189.png" alt="image-20250208164233189" style="zoom:80%;" /><br>现在就是最新的了，超级新</center></div>]]></content>
+    <content type="html"><![CDATA[<img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210012646986.png" alt="image-20250210012646986" style="zoom:80%;" /><p>问题讨论：<a href="https://github.com/LazyVim/LazyVim/issues/5483">bug: module ‘blink_cmp_fuzzy’ not found · Issue #5483 · LazyVim&#x2F;LazyVim</a></p><p>这里给出了解决方案：blink_cmp_fuzzy的安装依赖于curl</p><p>安装教程：<a href="https://blog.csdn.net/hadues/article/details/101788327">Curl命令详解-CSDN博客</a></p><p>里面教程图片给错了，curl官网<a href="https://curl.se/download.html">curl - Download</a>找下载的时候，应该往下拉，找二进制包进行安装，不要安装最顶部的源码包，里面没有可执行程序。</p><p>或者直接进这个<a href="https://curl.se/windows/">curl for Windows</a></p><p>之后bin目录添加到环境变量即可。</p><p>检查安装是否成功</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --version</span><br></pre></td></tr></table></figure><p>值得注意的是，power shell对其支持不太好，cmd模式下才生效：</p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210013747348.png" alt="image-20250210013747348" style="zoom:80%;" /><p><a href="https://www.lazyvim.org/extras/coding/blink"> Blink | LazyVim</a></p><p>之后我在官网上找到了Blink的启用方法，输入<code>: LazyExtras</code>来启用这些额外命令</p><p><img src="https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210015514875.png" alt="image-20250210015514875"></p><p>你会进入到启动额外插件的界面，界面提示你按下x键就可以启用下面的未启用的插件，我发现blick相关插件没有启动，另外在上面GitHub讨论上说了cmp相关也需要安装。</p><p>于是我就将这些加进去了，并且也加了一些其他的插件。然后回到lazy中update了。之后重启nvim，再update。</p><p>最后<code>:LazyHealth</code>一下，检查lazyvim的健康。</p><p>发现插件装多了确实卡。。。</p><p>但是总之算是知道了lazyvim的插件使用流程了，直接去官网查看各种插件，然后回头想用的时候直接<code>:LazyExtras</code>下新增，或者进lazy的update进行新增，该安装就去install安装。想配置就按官网去写.lua</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本教程的安装教程仅提供一种或几种最简单的方案，更多方案可以自行百度&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;neovim安装&quot;&gt;&lt;a href=&quot;#neovim安装&quot; class=&quot;headerlink&quot; title=&quot;neovim安装</summary>
+    <summary type="html">&lt;img src=&quot;https://map--depot.oss-cn-hangzhou.aliyuncs.com/image/image-20250210012646986.png&quot; alt=&quot;image-20250210012646986&quot; style=&quot;zoom:80%;&quot;</summary>
       
     
     
@@ -642,7 +639,7 @@
     
     <category term="neovim" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/"/>
     
-    <category term="安装" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E5%AE%89%E8%A3%85/"/>
+    <category term="问题解决" scheme="https://chunyujin.top/categories/Skill/%CB%98%E2%80%A2%CF%89%E2%80%A2%CB%98/neovim/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
     
     
     <category term="neovim" scheme="https://chunyujin.top/tags/neovim/"/>
